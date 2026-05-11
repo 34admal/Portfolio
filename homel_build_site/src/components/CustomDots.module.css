@@ -1,0 +1,48 @@
+/* components/CustomDots.module.css */
+
+.slickDots {
+  position: absolute;
+  bottom: 10px; /* Отступ снизу */
+  left: 50%;
+  /* transform: translateX(-50%); */ /* Убираем transform, если он мешает */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  /* !!! Убираем !important, но делаем селектор более специфичным */
+  /* Если у вас есть класс для родительского контейнера слайдера, например, .sliderWrapper */
+  /* .sliderWrapper .slickDots { */
+  /*   gap: 8px; */
+  /* } */
+  /* Или, если вы уверены, что этот класс уникален для вашего слайдера */
+  gap: 8px; /* Задаем нужное расстояние между точками */
+}
+
+.slickDot,
+.slickDotActive {
+  width: 12px; /* Размер точки */
+  height: 12px; /* Размер точки */
+  margin: 0 5px; /* Расстояние между точками */
+  background-color: rgba(255, 255, 255, 0.5); /* Цвет неактивной точки */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.slickDotActive {
+  background-color: #FF8C00; /* Цвет активной точки */
+}
+
+/* Стиль при наведении */
+.slickDot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.slickDotActive:hover {
+  background-color: #FFA500; /* Цвет активной точки при наведении */
+}
+

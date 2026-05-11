@@ -1,0 +1,132 @@
+/* HeroSection.module.css */
+span {
+  color: #fff
+}
+section{margin-bottom: 96px;}
+
+
+
+.slider_container {
+  /*width: 100%;  Занимает всю ширину родительского элемента */
+  max-width: 640px; /* Максимальная ширина слайдера */
+  /* margin: 0 auto; Центрирует слайдер */
+
+}
+.slogan_block {
+  /* Стили для текста */
+  /*width: 50%;  Занимает половину ширины */
+  padding-right: 20px; /* Добавляем отступ справа */
+}
+
+.construction_repair_gomel {
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: bold;
+}
+button {
+  box-sizing: border-box;
+  border: 3px solid rgba(255, 122, 0, 1);
+  border-radius: 10px;
+  background: rgba(28, 29, 30, 1);
+  color: #fff;
+  font-style: SemiBold;
+  font-size: 16px;
+  font-weight: 600}
+
+.future_together {
+  font-size: 22px;
+  font-weight: 400;
+}
+.main_content_block {
+  display: flex; /* Используем Flexbox */
+  flex-direction: row; /* Располагаем элементы в ряд */
+  align-items: center; /* Выравниваем элементы по вертикали по центру */
+  justify-content: space-between; /* Размещаем элементы по краям */
+  width: 100%; /* Занимает всю ширину родительского элемента (container) */
+}
+
+.slider_container {
+  width: 40%; /* Занимает другую половину ширины (или меньше, если нужно) */
+}
+/* -------------------------------СТИЛИ СЛАйдера ---------- */
+/* HeroSection.module.css */
+/* Стили для слайдера */
+.slider {
+  width: 640px; /* Задаем фиксированную ширину слайдера */
+  position: relative; /* Важно: для позиционирования стрелок */
+}
+
+.slideImage {
+  width: 100%; /* Изображения занимают всю ширину слайда */
+  height: auto; /* Высота автоматически подстраивается */
+  object-fit: cover; /* Изображения обрезаются, чтобы заполнить слайд */
+}
+
+/* Стили для точек навигации */
+.slick-dots {
+  position: absolute; /* Абсолютное позиционирование */
+  bottom: 20px; /* Отступ снизу */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Центрируем по горизонтали */
+  display: flex; /* Используем Flexbox для точек */
+  justify-content: center; /* Центрируем точки по горизонтали */
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+}
+
+.slick-dots li button {
+  width: 10px; /* Ширина точки */
+  height: 10px; /* Высота точки */
+  border-radius: 50%; /* Круглая форма */
+  background-color: rgba(255, 255, 255, 0.5); /* Цвет фона точки */
+  border: none; /* Убираем рамку */
+  cursor: pointer; /* Курсор при наведении */
+  margin: 0 5px; /* Отступы между точками */
+  padding: 0;
+}
+
+.slick-dots li.slick-active button {
+  background-color: white; /* Цвет активной точки */
+}
+/* Стили для HeroSection (если они есть) */
+.main_content_block {
+  display: flex; /* Используем Flexbox */
+  flex-direction: row; /* Располагаем элементы в ряд */
+  align-items: center; /* Выравниваем элементы по вертикали по центру */
+  justify-content: space-between; /* Размещаем элементы по краям */
+  width: 100%; /* Занимает всю ширину родительского элемента (container) */
+}
+
+.slogan_block {
+  /* Стили для текста */
+  /* width: 50%;  Убери это, если нужно, чтобы блок занимал место по контенту */
+  padding-right: 20px; /* Добавляем отступ справа */
+}
+/* HeroSection.module.css */
+/* HeroSection.module.css */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  width: 28.7px;
+  height: 57.5px;
+  border: solid 1px #ff7a00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Размер символов */
+  color: #ff7a00; /* Оранжевый цвет */
+  background-color: rgba(0, 0, 0, 0.5); /* Добавил фон для видимости */
+}
+
+.nextArrow {
+  right: 20px; /* Или нужное расстояние от края */
+}
+
+.prevArrow {
+  left: 20px; /* Или нужное расстояние от края */
+}
+

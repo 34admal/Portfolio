@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/Layout.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1774900034161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1774900282352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n // components/Layout.jsx\r\n import React from 'react';\r\n \r\n+\r\n function Layout({ children }) {\r\n   return (\r\n     <div className=\"container\">\r\n       {children}\r\n"
+                },
+                {
+                    "date": 1774975593743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n // components/Layout.jsx\r\n import React from 'react';\r\n+import styles from './Layout.module.css';\r\n \r\n-\r\n function Layout({ children }) {\r\n   return (\r\n-    <div className=\"container\">\r\n+    <div className=container\">\r\n       {children}\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1774975607544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+// components/Layout.jsx\r\n+import React from 'react';\r\n+import styles from './Layout.module.css';\r\n+\r\n+function Layout({ children }) {\r\n+  return (\r\n+    <div className={st}container\">\r\n+      {children}\r\n+    </div>\r\n+  );\r\n+}\r\n+\r\n+export default Layout;\r\n"
+                },
+                {
+                    "date": 1774975613994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,24 +3,11 @@\n import styles from './Layout.module.css';\r\n \r\n function Layout({ children }) {\r\n   return (\r\n-    <div className={st}container\">\r\n+    <div className={styles.container}container\">\r\n       {children}\r\n     </div>\r\n   );\r\n }\r\n \r\n export default Layout;\r\n-// components/Layout.jsx\r\n-import React from 'react';\r\n-import styles from './Layout.module.css';\r\n-\r\n-function Layout({ children }) {\r\n-  return (\r\n-    <div className=container\">\r\n-      {children}\r\n-    </div>\r\n-  );\r\n-}\r\n-\r\n-export default Layout;\r\n"
+                },
+                {
+                    "date": 1774975622445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+// components/Layout.jsx\r\n+import React from 'react';\r\n+import styles from './Layout.module.css';\r\n+\r\n+function Layout({ children }) {\r\n+  return (\r\n+    <div className={styles.container}>\r\n+      {children}\r\n+    </div>\r\n+  );\r\n+}\r\n+\r\n+export default Layout;\r\n"
+                }
+            ],
+            "date": 1774900034161,
+            "name": "Commit-0",
+            "content": "// components/Layout.jsx\r\nimport React from 'react';\r\n\r\nfunction Layout({ children }) {\r\n  return (\r\n    <div className=\"container\">\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default Layout;\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/CustomDots.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1778481943517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1778481943517,
+            "name": "Commit-0",
+            "content": "// components/CustomDots.jsx\r\n\r\nimport React from 'react';\r\nimport styles from './CustomDots.module.css'; // Импортируем стили для точек\r\n\r\n// Компонент для одной точки навигации\r\nfunction CustomDot(props) {\r\n  const { onClick, index, active } = props; // Получаем свойства от react-slick\r\n\r\n  return (\r\n    <li\r\n      className={`${styles.slickDot} ${active ? styles.slickDotActive : ''}`} // Применяем классы для активной/неактивной точки\r\n      onClick={() => onClick(index)} // Вызываем onClick при клике на точку\r\n      role=\"button\" // Для доступности\r\n      tabIndex=\"0\" // Для доступности\r\n      onKeyDown={(e) => { if (e.key === 'Enter') onClick(index); }} // Обработка нажатия Enter\r\n    >\r\n      {/* Здесь может быть содержимое точки, если нужно, но для простого кружка не нужно */}\r\n    </li>\r\n  );\r\n}\r\n\r\n// Компонент, который будет рендерить все точки\r\nfunction CustomDots(props) {\r\n  const { dots } = props; // Получаем массив точек от react-slick\r\n\r\n  // dots - это массив элементов, которые react-slick генерирует для каждой точки.\r\n  // Нам нужно пройтись по ним и обернуть каждый в наш CustomDot.\r\n  return (\r\n    <ul className={styles.slickDots}> {/* Контейнер для всех точек */}\r\n      {dots.map((dot, index) => (\r\n        // dot - это уже готовый элемент точки от react-slick,\r\n        // но мы хотим заменить его на наш CustomDot.\r\n        // Поэтому мы передаем index и информацию об активности.\r\n        // onClick мы берем из props, так как он передается в appendDots.\r\n        <CustomDot\r\n          key={index}\r\n          index={index}\r\n          active={dot.props.className.includes('slick-active')} // Проверяем, является ли точка активной\r\n          onClick={() => props.onClick(index)} // Передаем функцию для переключения слайда\r\n        />\r\n      ))}\r\n    </ul>\r\n  );\r\n}\r\n\r\nexport default CustomDots;\r\n"
+        }
+    ]
+}

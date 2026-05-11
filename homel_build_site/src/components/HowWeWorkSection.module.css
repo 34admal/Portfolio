@@ -1,0 +1,182 @@
+/* HowWeWorkSection.module.css */
+/* img {
+  margin-top: 14.63px;
+} */
+p {
+  color: #fff;
+}
+.section_header {
+  padding-top: 59px;
+}
+
+.header__number {
+  margin-left: 320px;
+}
+/* .menu__callback {
+  font-style: Medium;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 5%;
+  text-align: right;
+  color: rgba(255, 122, 0, 1);
+} */
+
+.how_we_work {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: url("./images/backGroundImage.png");
+  background-size: cover;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.headingNumber {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 73px;
+  letter-spacing: 5%;
+  color: rgba(255, 122, 0, 0.5);
+  margin: 0 13px 0 0;
+}
+.stepDescription {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-align: left;
+}
+
+.stepGroupTop {
+      margin-top: 45px;
+  display: flex;
+ 
+}
+
+.block01 {
+  display: flex;
+  flex: 1;
+  margin-left: 221px;
+}
+.block01 .stepDescription {
+  width: 373px;
+  margin: 9px 0 54px 13px;
+  font-family: Montserrat;
+
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-align: left;
+}
+
+.block03 {
+  display: flex;
+  flex: 1;
+}
+.block02 {
+  display: flex;
+    justify-content: flex-start;
+  flex: 1;
+  margin-left: 221px;
+
+  
+}
+.block04 {
+  display: flex;
+  flex: 1;
+
+  align-items: flex-start;
+}
+.block02 .stepDescription {
+  margin: 25px 0 8px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-align: left;
+}
+.block03 .stepDescription {
+  display: inline-block;
+  width: 295px;
+  word-break: break-word;
+
+  margin: 14px 0 15px 27px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-align: left;
+  color: #fff;
+}
+
+.block04 .stepDescription {
+  display: inline-block;
+  width: 307px;
+  /* height: 66px; */
+  margin: 8px 0 0 17px;
+  word-break: break-word;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-align: left;
+  color: #fff;
+}
+
+.block05 {
+  display: flex;
+
+  justify-content: center;
+  margin-top: 38px;
+    margin-bottom: 50px;
+  margin: 0 auto;
+}
+.block05 .stepDescription {
+  display: inline-block;
+  width: 274px;
+  word-break: break-word;
+  margin: 19px 0 10px 24px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-align: left;
+  color: #fff;
+}
+.orangeLine {
+  display: inline-block;
+  width: 203px;
+  height: 3px;
+  background-color: rgba(255, 122, 0, 1);
+}
+
+.section_title {
+  margin: 0 273px 0 240px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.section_header > .orangeLine:first-child {
+  margin-left: 120px;
+}
+/*.stepGroupBottom{} */

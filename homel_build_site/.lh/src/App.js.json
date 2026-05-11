@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1774974818536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1774974840230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n \n // import Header from './components/Header';\n import Footer from './components/Footer';\n-import Main from \"./components/Main\";\n \n+\n import './App.css';\n \n function App() {\n   \n"
+                },
+                {
+                    "date": 1774974854184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import React,{ useState, useEffect } from 'react';\n import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n \n // import Header from './components/Header';\n+\n import Footer from './components/Footer';\n \n \n import './App.css';\n"
+                },
+                {
+                    "date": 1774974863276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n // import React from 'react';\n import React,{ useState, useEffect } from 'react';\n import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n \n-// import Header from './components/Header';\n+ import Header from './components/Header';\n \n import Footer from './components/Footer';\n \n \n"
+                },
+                {
+                    "date": 1774974868375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import React,{ useState, useEffect } from 'react';\n import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n \n  import Header from './components/Header';\n-\n+import\n import Footer from './components/Footer';\n \n \n import './App.css';\n"
+                },
+                {
+                    "date": 1774974877819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import React,{ useState, useEffect } from 'react';\n import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n \n  import Header from './components/Header';\n-import\n+import \n import Footer from './components/Footer';\n \n \n import './App.css';\n"
+                },
+                {
+                    "date": 1774974887222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,37 @@\n+import logo from './logo.svg';\n+// import React from 'react';\n+import React,{ useState, useEffect } from 'react';\n+import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n+\n+ import Header from './components/Header';\n+import HeroSection from './components/HeroSection';\n+import Footer from './components/Footer';\n+\n+\n+import './App.css';\n+\n+function App() {\n+  \n+  return (\n+  <> <div >\n+  \n+  <Main />\n+  \n+  \n+   {/* <Router>\n+        \n+        <Routes>\n+           <Route exact path=\"/\" element={<Home />} />\n+          <Route exact path=\"/about\" element={<About />} /> \n+        \n+        </Routes>\n+        \n+         <Main/>\n+        <Footer/> \n+      </Router> */}\n+      \n+    </div></>\n+     \n+  )\n+}\n+export default App;\n"
+                },
+                {
+                    "date": 1774974917013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,37 @@\n+import logo from './logo.svg';\n+// import React from 'react';\n+import React,{ useState, useEffect } from 'react';\n+import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n+\n+ import Header from './components/Header';\n+import HeroSection from './components/HeroSection';\n+import Footer from './components/Footer';\n+\n+\n+import './App.css';\n+\n+function App() {\n+  \n+  return (\n+  <> <div >\n+  \n+  <H />\n+  \n+  \n+   {/* <Router>\n+        \n+        <Routes>\n+           <Route exact path=\"/\" element={<Home />} />\n+          <Route exact path=\"/about\" element={<About />} /> \n+        \n+        </Routes>\n+        \n+         <Main/>\n+        <Footer/> \n+      </Router> */}\n+      \n+    </div></>\n+     \n+  )\n+}\n+export default App;\n"
+                },
+                {
+                    "date": 1774974922738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+import logo from './logo.svg';\n+// import React from 'react';\n+import React,{ useState, useEffect } from 'react';\n+import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n+\n+ import Header from './components/Header';\n+import HeroSection from './components/HeroSection';\n+import Footer from './components/Footer';\n+\n+\n+import './App.css';\n+\n+function App() {\n+  \n+  return (\n+  <> <div >\n+  \n+  <Header />\n+  \n+  \n+  \n+   {/* <Router>\n+        \n+        <Routes>\n+           <Route exact path=\"/\" element={<Home />} />\n+          <Route exact path=\"/about\" element={<About />} /> \n+        \n+        </Routes>\n+        \n+         <Main/>\n+        <Footer/> \n+      </Router> */}\n+      \n+    </div></>\n+     \n+  )\n+}\n+export default App;\n"
+                },
+                {
+                    "date": 1774974928991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+import logo from './logo.svg';\n+// import React from 'react';\n+import React,{ useState, useEffect } from 'react';\n+import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n+\n+ import Header from './components/Header';\n+import HeroSection from './components/HeroSection';\n+import Footer from './components/Footer';\n+\n+\n+import './App.css';\n+\n+function App() {\n+  \n+  return (\n+  <> <div >\n+  \n+  <Header />\n+  <HeroSection\n+  \n+  \n+   {/* <Router>\n+        \n+        <Routes>\n+           <Route exact path=\"/\" element={<Home />} />\n+          <Route exact path=\"/about\" element={<About />} /> \n+        \n+        </Routes>\n+        \n+         <Main/>\n+        <Footer/> \n+      </Router> */}\n+      \n+    </div></>\n+     \n+  )\n+}\n+export default App;\n"
+                },
+                {
+                    "date": 1774974988748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+import logo from './logo.svg';\n+// import React from 'react';\n+import React,{ useState, useEffect } from 'react';\n+import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n+\n+ import Header from './components/Header';\n+import HeroSection from './components/HeroSection';\n+import Footer from './components/Footer';\n+\n+\n+import './App.css';\n+\n+function App() {\n+  \n+  return (\n+  <> <div >\n+  \n+  <Header />\n+  <HeroSection/>\n+  \n+  \n+   {/* <Router>\n+        \n+        <Routes>\n+           <Route exact path=\"/\" element={<Home />} />\n+          <Route exact path=\"/about\" element={<About />} /> \n+        \n+        </Routes>\n+        \n+         <Main/>\n+        <Footer/> \n+      </Router> */}\n+      \n+    </>\n+     \n+  )\n+}\n+export default App;\n"
+                },
+                {
+                    "date": 1774974996287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+import logo from './logo.svg';\n+// import React from 'react';\n+import React,{ useState, useEffect } from 'react';\n+import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n+\n+ import Header from './components/Header';\n+import HeroSection from './components/HeroSection';\n+import Footer from './components/Footer';\n+\n+\n+import './App.css';\n+\n+function App() {\n+  \n+  return (\n+  <> <>\n+  \n+  <Header />\n+  <HeroSection/>\n+  \n+  \n+   {/* <Router>\n+        \n+        <Routes>\n+           <Route exact path=\"/\" element={<Home />} />\n+          <Route exact path=\"/about\" element={<About />} /> \n+        \n+        </Routes>\n+        \n+         <Main/>\n+        <Footer/> \n+      </Router> */}\n+      \n+    </>\n+     \n+  )\n+}\n+export default App;\n"
+                },
+                {
+                    "date": 1774975038022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import logo from './logo.svg';\n // import React from 'react';\n import React,{ useState, useEffect } from 'react';\n import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n-import \n+import L\n  import Header from './components/Header';\n import HeroSection from './components/HeroSection';\n import Footer from './components/Footer';\n \n"
+                },
+                {
+                    "date": 1774975049322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+import logo from './logo.svg';\n+// import React from 'react';\n+import React,{ useState, useEffect } from 'react';\n+import { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n+import Layout from './components/Layout';\n+ import Header from './components/Header';\n+import HeroSection from './components/HeroSection';\n+import Footer from './components/Footer';\n+\n+\n+import './App.css';\n+\n+function App() {\n+  \n+  return (\n+  <> \n+  <\n+  <Header />\n+  <HeroSection/>\n+  \n+  \n+   {/* <Router>\n+        \n+        <Routes>\n+           <Route exact path=\"/\" element={<Home />} />\n+          <Route exact path=\"/about\" element={<About />} /> \n+        \n+        </Routes>\n+        \n+         <Main/>\n+        <Footer/> \n+      </Router> */}\n+      \n+    </>\n+     \n+  )\n+}\n+export default App;\n"
+                }
+            ],
+            "date": 1774974818536,
+            "name": "Commit-0",
+            "content": "import logo from './logo.svg';\n// import React from 'react';\nimport React,{ useState, useEffect } from 'react';\nimport { BrowserRouter as Router, Routes, Route, Link } from \"react-router-dom\";\n\n// import Header from './components/Header';\nimport Footer from './components/Footer';\nimport Main from \"./components/Main\";\n\nimport './App.css';\n\nfunction App() {\n  \n  return (\n  <> <div >\n  \n  <Main />\n  \n  \n   {/* <Router>\n        \n        <Routes>\n           <Route exact path=\"/\" element={<Home />} />\n          <Route exact path=\"/about\" element={<About />} /> \n        \n        </Routes>\n        \n         <Main/>\n        <Footer/> \n      </Router> */}\n      \n    </div></>\n     \n  )\n}\nexport default App;\n"
+        }
+    ]
+}

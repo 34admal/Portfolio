@@ -1,0 +1,38 @@
+
+header{
+    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+img{
+    margin-top: 14.63px;
+}
+.menu li {font-style: Medium;
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 5%;
+/* text-align: left; */
+list-style-type: none;
+color: white;}
+
+
+ul{ display: flex;
+gap:69px;
+}
+
+.header__number{
+    margin-left: 320px;
+}
+.menu__callback{
+  
+ font-style: Medium;
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 5%;
+text-align: right;
+color: rgba(255, 122, 0, 1)}
