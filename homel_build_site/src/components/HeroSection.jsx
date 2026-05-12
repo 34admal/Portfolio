@@ -1,7 +1,7 @@
 // components/HeroSection.jsx
 import React from "react";
 import MySlider from './MySlider';
-import styles from './HeroSection.module.css'; // Импортируем стили HeroSection
+import styles from './HeroSection.module.css';
 
 function HeroSection() {
   return (

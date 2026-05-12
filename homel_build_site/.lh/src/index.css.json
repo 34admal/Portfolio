@@ -11,12 +11,12 @@
                 },
                 {
                     "date": 1774703882972,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');\n \n body {\n-  /* margin: 0;\n-  padding: 0; */\n+  margin: 0;\n+  padding: 0;\n  font-family: Montserrat;\n  background-color: black\n }\n .container {\n"
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');\n \n body {\n-  \n+  margin: 0;\n+  padding: 0;\n  font-family: Montserrat;\n  background-color: black\n }\n .container {\n"
                 }
             ],
             "date": 1774703870164,
             "name": "Commit-0",
-            "content": "@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');\n\nbody {\n  /* margin: 0;\n  padding: 0; */\n font-family: Montserrat;\n background-color: black\n}\n.container {\n  width: 100%;\n  max-width: 1440px;\n  margin: 0 auto}"
+            "content": "@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');\n\nbody {\n  \n font-family: Montserrat;\n background-color: black\n}\n.container {\n  width: 100%;\n  max-width: 1440px;\n  margin: 0 auto}"
         }
     ]
 }

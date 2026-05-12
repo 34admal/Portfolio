@@ -10,17 +10,17 @@ function NextArrow(props) {
       style={{
         ...style,
         position: 'absolute',
-        right: '10px', // Устанавливаем конкретный отступ
+        right: '10px', 
         top: '50%',
         transform: 'translateY(-50%)',
         zIndex: 10,
-        width: '30px', // Уменьшаем размер контейнера, чтобы он соответствовал размеру стрелки
+        width: '30px', 
         height: '30px',
         cursor: 'pointer',
       }}
       onClick={onClick}
     >
-      {/* Пусто */}
+      {}
     </div>
   );
 }
@@ -33,17 +33,17 @@ function PrevArrow(props) {
       style={{
         ...style,
         position: 'absolute',
-        left: '10px', // Устанавливаем конкретный отступ
+        left: '10px',
         top: '50%',
         transform: 'translateY(-50%)',
         zIndex: 10,
-        width: '30px', // Уменьшаем размер контейнера
+        width: '30px', 
         height: '30px',
         cursor: 'pointer',
       }}
       onClick={onClick}
     >
-      {/* Пусто */}
+      {}
     </div>
   );
 }

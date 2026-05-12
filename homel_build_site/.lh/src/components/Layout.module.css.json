@@ -12,7 +12,7 @@
             ],
             "date": 1774900249041,
             "name": "Commit-0",
-            "content": "/*Layout.module.css */\r\n.container {\r\n  max-width: 1440px;\r\n  margin: 0 auto;\r\n \r\n}"
+            "content": "\r\n.container {\r\n  max-width: 1440px;\r\n  margin: 0 auto;\r\n \r\n}"
         }
     ]
 }

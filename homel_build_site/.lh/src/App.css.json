@@ -24,7 +24,7 @@
             ],
             "date": 1774705189275,
             "name": "Commit-0",
-            "content": "/* import \n\n*body { padding: 0;\n  margin: 0;\n background: rgba(10, 10, 10, 1);\n  font-family: Montserrat;\n} */\n\n"
+            "content": "\n\n"
         }
     ]
 }

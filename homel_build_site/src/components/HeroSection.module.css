@@ -1,4 +1,4 @@
-/* HeroSection.module.css */
+
 span {
   color: #fff
 }
@@ -7,15 +7,15 @@ section{margin-bottom: 96px;}
 
 
 .slider_container {
-  /*width: 100%;  Занимает всю ширину родительского элемента */
-  max-width: 640px; /* Максимальная ширина слайдера */
-  /* margin: 0 auto; Центрирует слайдер */
+  
+  max-width: 640px; 
+  
 
 }
 .slogan_block {
-  /* Стили для текста */
-  /*width: 50%;  Занимает половину ширины */
-  padding-right: 20px; /* Добавляем отступ справа */
+  
+  
+  padding-right: 20px; 
 }
 
 .construction_repair_gomel {
@@ -38,73 +38,73 @@ button {
   font-weight: 400;
 }
 .main_content_block {
-  display: flex; /* Используем Flexbox */
-  flex-direction: row; /* Располагаем элементы в ряд */
-  align-items: center; /* Выравниваем элементы по вертикали по центру */
-  justify-content: space-between; /* Размещаем элементы по краям */
-  width: 100%; /* Занимает всю ширину родительского элемента (container) */
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%; 
 }
 
 .slider_container {
-  width: 40%; /* Занимает другую половину ширины (или меньше, если нужно) */
+  width: 40%; 
 }
-/* -------------------------------СТИЛИ СЛАйдера ---------- */
-/* HeroSection.module.css */
-/* Стили для слайдера */
+
+
+
 .slider {
-  width: 640px; /* Задаем фиксированную ширину слайдера */
-  position: relative; /* Важно: для позиционирования стрелок */
+  width: 640px; 
+  position: relative; 
 }
 
 .slideImage {
-  width: 100%; /* Изображения занимают всю ширину слайда */
-  height: auto; /* Высота автоматически подстраивается */
-  object-fit: cover; /* Изображения обрезаются, чтобы заполнить слайд */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
 }
 
-/* Стили для точек навигации */
+
 .slick-dots {
-  position: absolute; /* Абсолютное позиционирование */
-  bottom: 20px; /* Отступ снизу */
-  left: 50%; /* Центрируем по горизонтали */
-  transform: translateX(-50%); /* Центрируем по горизонтали */
-  display: flex; /* Используем Flexbox для точек */
-  justify-content: center; /* Центрируем точки по горизонтали */
-  list-style: none; /* Убираем маркеры списка */
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: flex; 
+  justify-content: center; 
+  list-style: none; 
   padding: 0;
   margin: 0;
 }
 
 .slick-dots li button {
-  width: 10px; /* Ширина точки */
-  height: 10px; /* Высота точки */
-  border-radius: 50%; /* Круглая форма */
-  background-color: rgba(255, 255, 255, 0.5); /* Цвет фона точки */
-  border: none; /* Убираем рамку */
-  cursor: pointer; /* Курсор при наведении */
-  margin: 0 5px; /* Отступы между точками */
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%; 
+  background-color: rgba(255, 255, 255, 0.5); 
+  border: none; 
+  cursor: pointer; 
+  margin: 0 5px; 
   padding: 0;
 }
 
 .slick-dots li.slick-active button {
-  background-color: white; /* Цвет активной точки */
+  background-color: white; 
 }
-/* Стили для HeroSection (если они есть) */
+
 .main_content_block {
-  display: flex; /* Используем Flexbox */
-  flex-direction: row; /* Располагаем элементы в ряд */
-  align-items: center; /* Выравниваем элементы по вертикали по центру */
-  justify-content: space-between; /* Размещаем элементы по краям */
-  width: 100%; /* Занимает всю ширину родительского элемента (container) */
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%; 
 }
 
 .slogan_block {
-  /* Стили для текста */
-  /* width: 50%;  Убери это, если нужно, чтобы блок занимал место по контенту */
-  padding-right: 20px; /* Добавляем отступ справа */
+  
+  
+  padding-right: 20px; 
 }
-/* HeroSection.module.css */
-/* HeroSection.module.css */
+
+
 .arrow {
   position: absolute;
   top: 50%;
@@ -117,16 +117,16 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px; /* Размер символов */
-  color: #ff7a00; /* Оранжевый цвет */
-  background-color: rgba(0, 0, 0, 0.5); /* Добавил фон для видимости */
+  font-size: 24px; 
+  color: #ff7a00; 
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .nextArrow {
-  right: 20px; /* Или нужное расстояние от края */
+  right: 20px; 
 }
 
 .prevArrow {
-  left: 20px; /* Или нужное расстояние от края */
+  left: 20px; 
 }
 

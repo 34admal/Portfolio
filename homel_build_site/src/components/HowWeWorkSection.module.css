@@ -1,4 +1,4 @@
-/* HowWeWorkSection.module.css */
+
 /* img {
   margin-top: 14.63px;
 } */
@@ -126,7 +126,7 @@ p {
 .block04 .stepDescription {
   display: inline-block;
   width: 307px;
-  /* height: 66px; */
+  
   margin: 8px 0 0 17px;
   word-break: break-word;
   font-family: Montserrat;
@@ -179,4 +179,4 @@ p {
 .section_header > .orangeLine:first-child {
   margin-left: 120px;
 }
-/*.stepGroupBottom{} */
+

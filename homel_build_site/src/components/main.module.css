@@ -1,4 +1,4 @@
-/* main.module.css */
+
 
 span {
   color: #fff;
@@ -12,7 +12,7 @@ span {
 .slogan_block {
 
   box-sizing: border-box; /* Важно для правильного расчета ширины с padding 
-  padding-right: 20px; /* Добавьте отступ справа, чтобы не накладывался на карусель*/
+  padding-right: 20px; 
 }
 
 .construction_repair_gomel {
@@ -155,41 +155,41 @@ justify-content: center;
   display: inline-block;
   height: 2px;
   background-color: orange;
-  width: 120px; /* Ширина линий */
-  margin: 0; /* Сброс margin по умолчанию */
+  width: 120px; 
+  margin: 0; 
 }
 
-/* styles.module.css */
+
 .how_we_work {
-  /* Другие стили */
+  
 }
 
 .overlay {
-  /* Другие стили */
+  
 }
 
 .section_header {
-  /* Другие стили */
-  display: flex; /* Для корректного отображения элементов */
-  justify-content: space-between; /* Распределяем элементы по ширине */
-  align-items: center; /* Центрируем элементы по вертикали */
+  
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
 }
 
 .orangeLine {
   display: inline-block;
   height: 2px;
   background-color: orange;
-  width: 120px; /* Ширина линий */
+  width: 120px; 
 }
 
 .section_title {
   text-transform: uppercase;
   font-size: 24px;
-  /* Другие стили */
+  
 }
 
 .section_header > .orangeLine::first-child {
-  margin-right: auto; /* Отталкивает первую линию вправо */
+  margin-right: auto; 
   margin-left: 0;
 }
 
