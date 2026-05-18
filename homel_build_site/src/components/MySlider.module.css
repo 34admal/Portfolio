@@ -1,74 +1,81 @@
-/* 
-  ВАНЕШНІ КАНТЭЙНЕР (Рамка)
-  Вярні сюды сваю вышыню 520px, якая табе падабалася.
-  display: flex і align-items: center прымушаюць слайдэр 
-  заўсёды быць ідэальна па цэнтры па вертыкалі, робячы адступы зверху і знізу роўнымі.
-*/
+/* ВНЕШНИЙ КОНТЕЙНЕР (Оранжевая рамка ровно из Фигмы) */
 .sliderFrameContainer {
   position: relative;
-  display: flex;
-  align-items: center; /* АЎТАМАЦЫЧНАЕ ВЫРАЎНОЎВАННЕ ЗВЕРХУ І ЗНІЗУ */
   
-  width: 100%;
-  height: 520px; /* Твая рабочая вышыня */
+  width: 658px; 
+  height: 520px; /* Жесткая высота рамки, как в макете */
   
   border-top: 10px solid #ff7a00;
   border-bottom: 10px solid #ff7a00;
   border-left: 10px solid #ff7a00;
   border-right: none; 
   
-  box-sizing: border-box;
+  /* Возвращаем правильный border-box, чтобы рамка была ровно 520px */
+  box-sizing: border-box !important;
 }
 
-/* 
-  САМ СЛАЙДЭР
-  position: relative дазваляе рухаць яго па гарызанталі праз left,
-  але па вертыкалі яго трымае флексбокс бацькі.
-*/
+/* САМ СЛАЙДЕР С КАРТИНКОЙ */
 .sliderWrapper {
-  position: relative;
-  width: 640px; 
-  height: 440px; 
-  z-index: 10;
+  position: absolute; /* Намертво привязываем к координатам родительской рамки */
   
   /* 
-    ЗРУХ ПА ГАРЫЗАНТАЛІ:
-    Калі табе трэба пасунуць яго ўлева адносна рамкі — пакінь -35px.
-    Каардынату top адсюль цалкам прыбіраем, каб не ламаць цэнтраванне!
+    МАТЕМАТИКА МАКЕТА:
+    Высота рамки (внутри border-box): 520px - 10px (верхний бордер) - 10px (нижний бордер) = 500px чистой внутренней высоты.
+    Высота слайдера: 440px.
+    Остается свободных: 500px - 440px = 60px.
+    Чтобы получить отступ ровно по 40px от ВНЕШНЕГО края оранжевых линий:
+    Мы вычитаем толщину бордера (10px) и получаем чистые координаты: 30px сверху и 30px снизу!
   */
-  left: -35px; 
+  top: 30px !important; 
+  bottom: 30px !important;
+  
+  /* Наш безопасный сдвиг влево для наезда на рамку */
+  margin-left: -35px !important; 
+  
+  width: 640px !important; 
+  height: 440px !important; 
+  z-index: 10;
 }
 
-/* АКНО СЛАЙДЭРА (Чыстае, без каардынат зруху) */
+/* ОКНО СЛАЙДЕРА */
 .sliderWindow {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 640px;
+  height: 440px;
   overflow: hidden; 
   z-index: 2;
 }
 
+/* ЛЕНТА СЛАЙДОВ */
 .slidesTrack {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 440px;
+  cursor: grab;
 }
 
+.slidesTrack:active {
+  cursor: grabbing;
+}
+
+/* ОДИНОЧНЫЙ СЛАЙД */
 .slide {
-  min-width: 100%;
-  width: 100%;
-  height: 100%;
+  min-width: 640px;
+  width: 640px;
+  height: 440px;
   flex-shrink: 0;
 }
 
+/* САМА КАРТИНКА */
 .sliderImg {
-  width: 100%;
-  height: 100%;
+  width: 640px;
+  height: 440px; 
   display: block; 
   object-fit: cover;
+  user-select: none;
 }
 
-/* СТРЭЛКІ */
+/* СТРЕЛКИ */
 .arrowPrevWrapper,
 .arrowNextWrapper {
   position: absolute;
@@ -80,17 +87,18 @@
 .arrowPrevWrapper { left: 20px; }
 .arrowNextWrapper { right: 20px; }
 
-/* КРОПКІ */
+/* ТОЧКИ */
 .dotsContainer {
   position: absolute;
   bottom: 25px; 
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  display: flex;
+  align-items: center;
 }
 
 .dotWrapper {
-  display: inline-block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -98,6 +106,7 @@
   cursor: pointer;
   transition: background 0.3s ease;
   margin: 0 6px;
+  flex-shrink: 0;
 }
 
 .activeDot {

@@ -7,7 +7,7 @@ header{
     align-items: flex-end;
 
 }
-img{
+.headerLogo{
     margin-top: 14.63px;
 }
 .menu li {font-style: Medium;

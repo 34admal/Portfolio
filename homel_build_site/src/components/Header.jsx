@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 function Header() {
   return (
     <header>
-      <img src={header__logo} alt="image logo safehouse" />
+      <img src={header__logo} alt="image logo safehouse" className={styles.headerLogo} />
       <div className={styles.menu}>
         <nav>
           <ul>

@@ -1,4 +1,3 @@
-// components/MySlider.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './MySlider.module.css';
 
@@ -25,10 +24,9 @@ const MySlider = () => {
   const trackRef = useRef(null);
   const isLockRef = useRef(false);
   
-  // Каардынаты для свайпаў (і для тачаў, і для мышкі)
   const startX = useRef(0);
   const endX = useRef(0);
-  const isDragging = useRef(false); // Сцяг, які паказвае, што мышка заціснута і рухаецца
+  const isDragging = useRef(false);
 
   const nextSlide = () => {
     if (isLockRef.current) return;
@@ -69,12 +67,11 @@ const MySlider = () => {
     isLockRef.current = false;
   };
 
-  // Агульная логіка для апрацоўкі выніку свайпа (і мышка, і тач)
   const checkSwipeDirection = () => {
     if (!startX.current || !endX.current) return;
     
     const diffX = startX.current - endX.current;
-    const minSwipeDistance = 50; // Мінімальны зрух у пікселях
+    const minSwipeDistance = 50;
 
     if (diffX > minSwipeDistance) {
       nextSlide();
@@ -86,22 +83,21 @@ const MySlider = () => {
     endX.current = 0;
   };
 
-  // ЛАГІКА ТАЧ-СВАЙПАЎ ДЛЯ МАБІЛЬНЫХ
+  // Выпраўлена: бярэм першы тач з агульнага масіва touches
   const handleTouchStart = (e) => {
-    startX.current = e.targetTouches.clientX;
+    startX.current = e.touches[0].clientX;
   };
 
   const handleTouchMove = (e) => {
-    endX.current = e.targetTouches.clientX;
+    endX.current = e.touches[0].clientX;
   };
 
   const handleTouchEnd = () => {
     checkSwipeDirection();
   };
 
-  // ЛАГІКА СВАЙПАЎ МЫШКАЙ ДЛЯ КАМПУТАРАЎ
   const handleMouseDown = (e) => {
-    e.preventDefault(); // Забараняем стандартнае перацягванне малюнка браўзэрам
+    e.preventDefault(); 
     startX.current = e.clientX;
     isDragging.current = true;
   };
@@ -120,10 +116,9 @@ const MySlider = () => {
   const handleMouseLeave = () => {
     if (!isDragging.current) return;
     isDragging.current = false;
-    checkSwipeDirection(); // Калі мышка вылецела за межы слайдэра — залічваем свайп
+    checkSwipeDirection();
   };
 
-  // Дынамічны лік актыўнай кропкі для аранжавай падсветкі
   let currentActiveDot = currentIndex - 1;
   if (currentIndex === 0) {
     currentActiveDot = originalImages.length - 1; 
@@ -136,7 +131,6 @@ const MySlider = () => {
       <div className={styles.sliderWrapper}>
         <div className={styles.sliderWindow}>
           
-          {/* Навешваем і тач-падзеі, і падзеі мышкі на стужку */}
           <div 
             ref={trackRef}
             className={styles.slidesTrack} 
@@ -149,8 +143,7 @@ const MySlider = () => {
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseLeave}
             style={{ 
-              transform: `translateX(-${currentIndex * 100}%)`,
-              cursor: isDragging.current ? 'grabbing' : 'grab' // Мяняем курсор пры зацісканні
+              transform: `translateX(-${currentIndex * 100}%)`
             }}
           >
             {imagesWithClones.map((img, index) => (
@@ -173,9 +166,7 @@ const MySlider = () => {
                 key={index} 
                 className={`${styles.dotWrapper} ${index === currentActiveDot ? styles.activeDot : ''}`}
                 onClick={() => goToSlide(index)}
-              >
-                <div style={{ width: "100%", height: "100%", color: "transparent" }}>{index}</div>
-              </div>
+              />
             ))}
           </div>
 

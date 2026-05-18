@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1779113061825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1779113067489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import header__logo from \"./images/logo.png\";\r\n+import styles from \"./header.module.css\";\r\n+\r\n+function Header() {\r\n+  return (\r\n+    <header>\r\n+      <img src={header__logo} alt=\"image logo safehouse\" className= />\r\n+      <div className={styles.menu}>\r\n+        <nav>\r\n+          <ul>\r\n+            <li>Портфолио</li>\r\n+            <li>Услуги</li>\r\n+            <li>Цены</li>\r\n+            <li>Контакты</li>\r\n+            <li className={styles.header__number}>+375 (25) 123-45-67</li>\r\n+          </ul>\r\n+        </nav>\r\n+        <p className={styles.menu__callback}>Заказать звонок</p>\r\n+      </div>\r\n+    </header>\r\n+  );\r\n+}\r\n+\r\n+export default Header;\r\n"
+                },
+                {
+                    "date": 1779113075471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import header__logo from \"./images/logo.png\";\r\n+import styles from \"./header.module.css\";\r\n+\r\n+function Header() {\r\n+  return (\r\n+    <header>\r\n+      <img src={header__logo} alt=\"image logo safehouse\" className={st} />\r\n+      <div className={styles.menu}>\r\n+        <nav>\r\n+          <ul>\r\n+            <li>Портфолио</li>\r\n+            <li>Услуги</li>\r\n+            <li>Цены</li>\r\n+            <li>Контакты</li>\r\n+            <li className={styles.header__number}>+375 (25) 123-45-67</li>\r\n+          </ul>\r\n+        </nav>\r\n+        <p className={styles.menu__callback}>Заказать звонок</p>\r\n+      </div>\r\n+    </header>\r\n+  );\r\n+}\r\n+\r\n+export default Header;\r\n"
+                }
+            ],
+            "date": 1779113061825,
+            "name": "Commit-0",
+            "content": "import header__logo from \"./images/logo.png\";\r\nimport styles from \"./header.module.css\";\r\n\r\nfunction Header() {\r\n  return (\r\n    <header>\r\n      <img src={header__logo} alt=\"image logo safehouse\"  />\r\n      <div className={styles.menu}>\r\n        <nav>\r\n          <ul>\r\n            <li>Портфолио</li>\r\n            <li>Услуги</li>\r\n            <li>Цены</li>\r\n            <li>Контакты</li>\r\n            <li className={styles.header__number}>+375 (25) 123-45-67</li>\r\n          </ul>\r\n        </nav>\r\n        <p className={styles.menu__callback}>Заказать звонок</p>\r\n      </div>\r\n    </header>\r\n  );\r\n}\r\n\r\nexport default Header;\r\n"
+        }
+    ]
+}
