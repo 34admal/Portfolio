@@ -1,108 +1,117 @@
-
 span {
-  color: #fff
+  color: #fff;
 }
-section{margin-bottom: 96px;}
-
-
+section {
+  margin-bottom: 96px;
+}
 
 .slider_container {
-  
-  max-width: 640px; 
-  
-
+  max-width: 640px;
 }
 .slogan_block {
+ display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   
+  /* 3. Опускаем блок ниже строго по макету: 
+        72px сверху — это макетный отступ от верхней границы секции до начала текста */
+  margin: 72px 0 0 29px; 
   
-  padding-right: 20px; 
+  width: 531px;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .construction_repair_gomel {
-  font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
   font-size: 60px;
+  line-height: 70px;
   font-weight: bold;
+  color: #ffffff;
+  margin: 0;
 }
-button {
-  box-sizing: border-box;
-  border: 3px solid rgba(255, 122, 0, 1);
+.button {
+  width: 300px;
+  height: 51px;
+  margin: 85px 265px 53px 32px;
+  padding: 14px 35.9px 21px 34px;
   border-radius: 10px;
-  background: rgba(28, 29, 30, 1);
-  color: #fff;
-  font-style: SemiBold;
-  font-size: 16px;
-  font-weight: 600}
+  color: #ffffff;
+  border: solid 3px #ff7a00;
+  background-color: #1c1d1e;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #ff7a00;
+  color: #1c1d1e ; 
+}
 
 .future_together {
+   width: 321px;
+   margin: 73px 247px 85px 29px;
   font-size: 22px;
   font-weight: 400;
 }
 .main_content_block {
-  display: flex; 
-  flex-direction: row; 
-  align-items: center; 
-  justify-content: space-between; 
-  width: 100%; 
+ margin: 6px auto 0 auto; 
+  
+  position: relative;
+  box-sizing: border-box;
 }
 
 .slider_container {
-  width: 658px; 
+  width: 658px;
 }
 
-
-
 .slider {
-  width: 640px; 
-  position: relative; 
+  width: 640px;
+  position: relative;
 }
 
 .slideImage {
-  width: 100%; 
-  height: auto; 
-  object-fit: cover; 
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-
 .slick-dots {
-  position: absolute; 
-  bottom: 20px; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  display: flex; 
-  justify-content: center; 
-  list-style: none; 
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .slick-dots li button {
-  width: 10px; 
-  height: 10px; 
-  border-radius: 50%; 
-  background-color: rgba(255, 255, 255, 0.5); 
-  border: none; 
-  cursor: pointer; 
-  margin: 0 5px; 
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
   padding: 0;
 }
 
 .slick-dots li.slick-active button {
-  background-color: white; 
+  background-color: white;
 }
 
 .main_content_block {
-  display: flex; 
-  flex-direction: row; 
-  align-items: center; 
-  justify-content: space-between; 
-  width: 100%; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.slogan_block {
-  
-  
-  padding-right: 20px; 
-}
 
 
 .arrow {
@@ -117,16 +126,15 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px; 
-  color: #ff7a00; 
-  background-color: rgba(0, 0, 0, 0.5); 
+  font-size: 24px;
+  color: #ff7a00;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .nextArrow {
-  right: 20px; 
+  right: 20px;
 }
 
 .prevArrow {
-  left: 20px; 
+  left: 20px;
 }
-

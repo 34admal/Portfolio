@@ -1,8 +1,13 @@
 
+/* Новае правіла для Pixel Perfect кантролю памераў */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-body { padding: 0;
+body { 
+  padding: 0;
   margin: 0;
- background: rgba(10, 10, 10, 1);
-  font-family: Montserrat;
-} 
+  background: rgba(10, 10, 10, 1);
+  font-family: 'Montserrat', sans-serif; /* Montserrat застаецца для ўсяго сайта */
+}
 

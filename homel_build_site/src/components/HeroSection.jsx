@@ -9,13 +9,14 @@ function HeroSection() {
            <section>
         <div className={styles.main_content_block}>
           <div className={styles.slogan_block}>
-            <span className={styles.construction_repair_gomel}>
-              Строительство и ремонт в Гомеле
-            </span>
+            <div className={styles.construction_repair_gomel}>
+             
+              {"Строительство и\u00A0ремонт в Гомеле"}
+            </div>
             <span className={styles.future_together}>
               Надежное будущее строим вместе
             </span>
-            <button>Получить консультацию</button>
+            <button className={styles.button}>Получить консультацию</button>
           </div>
 
           <div className={styles.slider_container}>
