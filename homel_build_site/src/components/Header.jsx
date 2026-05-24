@@ -8,16 +8,25 @@ function Header() {
 
       <nav className={styles.nav}>
         <ul>
-          <li className={styles.navLink}>Портфолио</li>
-          <li className={styles.navLink}>Услуги</li>
-          <li className={styles.navLink}>Цены</li>
-          <li className={styles.navLink}>Контакты</li>
+          
+          <li className={styles.navLink}>
+            <a href="#portfolio">Портфолио</a>
+          </li>
+          <li className={styles.navLink}>
+            <a href="#services">Услуги</a>
+          </li>
+          <li className={styles.navLink}>
+            <a href="#prices">Цены</a>
+          </li>
+          <li className={styles.navLink}>
+            <a href="#contacts">Контакты</a>
+          </li>
 
-         
+          
           <li className={styles.contactsBlock}>
-      <span className={styles.phone}>+375 (25) 123-45-67</span>
-      <span className={styles.callback}>Заказать звонок</span>
-    </li>
+            <span className={styles.phone}>+375 (25) 123-45-67</span>
+            <span className={styles.callback}>Заказать звонок</span>
+          </li>
         </ul>
       </nav>
     </header>
