@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Layout from "./components/Layout";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
-import  HowWeWorkSection from "./components/HowWeWorkSection"; 
+import  HowWeWorkSection from "./components/HowWeWorkSection";
+import OurServices from "./components/OurServices"; 
 import Footer from "./components/Footer";
 
 import "./App.css";
@@ -22,6 +23,7 @@ function App() {
         <Header />
         <HeroSection />
         <HowWeWorkSection/>
+        <OurServices/>
       </Layout>
 
       {/* <Router>
