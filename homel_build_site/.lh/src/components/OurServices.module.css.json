@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 30,
             "patches": [
                 {
                     "date": 1779808128511,
@@ -60,6 +60,74 @@
                 {
                     "date": 1779809720754,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n .services__title{\r\n       display: block;\r\n- text-align: center \r\n+ text-align: center\r\n   \r\n   font-family: Montserrat;\r\n   font-size: 30px;\r\n   font-weight: normal;\r\n"
+                },
+                {
+                    "date": 1779865378427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n+\r\n+\r\n+\r\n .services__title{\r\n       display: block;\r\n- text-align: center\r\n+ text-align: center;\r\n   \r\n   font-family: Montserrat;\r\n   font-size: 30px;\r\n   font-weight: normal;\r\n"
+                },
+                {
+                    "date": 1779865384996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+  \r\n+\r\n+.services__title{\r\n+      display: block;\r\n+ text-align: center;\r\n+  \r\n+  font-family: Montserrat;\r\n+  font-size: 30px;\r\n+  font-weight: normal;\r\n+  font-stretch: normal;\r\n+  font-style: normal;\r\n+  line-height: normal;\r\n+  letter-spacing: normal;\r\n+  text-align: left;\r\n+  color: #fff;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779865390189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   width: 100%;\r\n   display: flex;\r\n   flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n   box-sizing: border-box;\r\n-  \r\n+}\r\n \r\n .services__title{\r\n       display: block;\r\n  text-align: center;\r\n@@ -18,22 +18,5 @@\n   line-height: normal;\r\n   letter-spacing: normal;\r\n   text-align: left;\r\n   color: #fff;\r\n-}\n-\r\n-\r\n-\r\n-.services__title{\r\n-      display: block;\r\n- text-align: center;\r\n-  \r\n-  font-family: Montserrat;\r\n-  font-size: 30px;\r\n-  font-weight: normal;\r\n-  font-stretch: normal;\r\n-  font-style: normal;\r\n-  line-height: normal;\r\n-  letter-spacing: normal;\r\n-  text-align: left;\r\n-  color: #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779865421272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.services__title {\r\n+  align-self: center;     /* Центрирует span внутри flex-контейнера */\r\n+  text-align: center;     /* Корректно отображает текст, если он перенесется */\r\n+  font-family: 'Montserrat', sans-serif;\r\n+  font-size: 30px;\r\n+  font-weight: 700;\r\n+  color: #ffffff;\r\n+  margin-top: 60px;       /* Макетный отступ сверху */\r\n+  margin-bottom: 50px;    /* Отступ снизу, где будут карточки */\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779865473316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.services__title {\r\n+font-family: Montserrat;\r\n+  font-size: 30px;\r\n+  font-weight: normal;\r\n+  font-stretch: normal;\r\n+  font-style: normal;\r\n+  line-height: normal;\r\n+  letter-spacing: normal;\r\n+  text-align: left;\r\n+  color: #fff;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779865523255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.services__title {\r\n+  \r\n+font-family: Montserrat;\r\n+  font-size: 30px;\r\n+  font-weight: normal;\r\n+  font-stretch: normal;\r\n+  font-style: normal;\r\n+  line-height: normal;\r\n+  letter-spacing: normal;\r\n+  text-align: left;\r\n+  color: #fff;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779865659249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.services__title {\r\n+  align-self: center;     /* Центрирует span внутри flex-контейнера */\r\n+  text-align: center; \r\n+ font-family: Montserrat;\r\n+  font-size: 30px;\r\n+  font-weight: normal;\r\n+  font-stretch: normal;\r\n+  font-style: normal;\r\n+  line-height: normal;\r\n+  letter-spacing: normal;\r\n+  text-align: left;\r\n+  color: #fff;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779865742421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.services__title {\r\n+  align-self: center;     \r\n+  text-align: center; \r\n+ font-family: Montserrat;\r\n+  font-size: 30px;\r\n+  font-weight: normal;\r\n+  font-stretch: normal;\r\n+  font-style: normal;\r\n+  line-height: normal;\r\n+  letter-spacing: normal;\r\n+  text-align: left;\r\n+  color: #fff;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779865926082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.services__title {\r\n+  align-self: center;     \r\n+  text-align: center; \r\n+ font-family: 'Montserrat', sans-serif;\r\n+  font-size: 30px;\r\n+  font-weight: normal;\r\n+  font-stretch: normal;\r\n+  font-style: normal;\r\n+  line-height: normal;\r\n+  letter-spacing: normal;\r\n+  text-align: left;\r\n+  color: #fff;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779866077438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n .services__title {\r\n   align-self: center;     \r\n   text-align: center; \r\n- font-family: 'Montserrat', sans-serif;\r\n+ font-family: 'Montserrat';\r\n   font-size: 30px;\r\n   font-weight: normal;\r\n   font-stretch: normal;\r\n   font-style: normal;\r\n"
+                },
+                {
+                    "date": 1779866241341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.services__title {\r\n+  align-self: center;     \r\n+  text-align: center; \r\n+ font-family: 'Montserrat';\r\n+  font-size: 30px;\r\n+  font-weight: 400;;\r\n+  font-stretch: normal;\r\n+  font-style: normal;\r\n+  line-height: normal;\r\n+  letter-spacing: normal;\r\n+  text-align: left;\r\n+  color: #fff;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779887000194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,147 +17,6 @@\n   line-height: normal;\r\n   letter-spacing: normal;\r\n   text-align: left;\r\n   color: #fff;\r\n-}\n-\r\n-.services {\r\n-  width: 100%;\r\n-  display: flex;\r\n-  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n-  box-sizing: border-box;\r\n }\r\n \r\n-.services__title {\r\n-  align-self: center;     \r\n-  text-align: center; \r\n- font-family: 'Montserrat';\r\n-  font-size: 30px;\r\n-  font-weight: normal;\r\n-  font-stretch: normal;\r\n-  font-style: normal;\r\n-  line-height: normal;\r\n-  letter-spacing: normal;\r\n-  text-align: left;\r\n-  color: #fff;\r\n-}\n-\r\n-.services {\r\n-  width: 100%;\r\n-  display: flex;\r\n-  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.services__title {\r\n-  align-self: center;     \r\n-  text-align: center; \r\n- font-family: Montserrat;\r\n-  font-size: 30px;\r\n-  font-weight: normal;\r\n-  font-stretch: normal;\r\n-  font-style: normal;\r\n-  line-height: normal;\r\n-  letter-spacing: normal;\r\n-  text-align: left;\r\n-  color: #fff;\r\n-}\n-\r\n-.services {\r\n-  width: 100%;\r\n-  display: flex;\r\n-  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.services__title {\r\n-  align-self: center;     /* Центрирует span внутри flex-контейнера */\r\n-  text-align: center; \r\n- font-family: Montserrat;\r\n-  font-size: 30px;\r\n-  font-weight: normal;\r\n-  font-stretch: normal;\r\n-  font-style: normal;\r\n-  line-height: normal;\r\n-  letter-spacing: normal;\r\n-  text-align: left;\r\n-  color: #fff;\r\n-}\n-\r\n-.services {\r\n-  width: 100%;\r\n-  display: flex;\r\n-  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.services__title {\r\n-  \r\n-font-family: Montserrat;\r\n-  font-size: 30px;\r\n-  font-weight: normal;\r\n-  font-stretch: normal;\r\n-  font-style: normal;\r\n-  line-height: normal;\r\n-  letter-spacing: normal;\r\n-  text-align: left;\r\n-  color: #fff;\r\n-}\n-\r\n-.services {\r\n-  width: 100%;\r\n-  display: flex;\r\n-  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.services__title {\r\n-font-family: Montserrat;\r\n-  font-size: 30px;\r\n-  font-weight: normal;\r\n-  font-stretch: normal;\r\n-  font-style: normal;\r\n-  line-height: normal;\r\n-  letter-spacing: normal;\r\n-  text-align: left;\r\n-  color: #fff;\r\n-}\n-\r\n-.services {\r\n-  width: 100%;\r\n-  display: flex;\r\n-  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.services__title {\r\n-  align-self: center;     /* Центрирует span внутри flex-контейнера */\r\n-  text-align: center;     /* Корректно отображает текст, если он перенесется */\r\n-  font-family: 'Montserrat', sans-serif;\r\n-  font-size: 30px;\r\n-  font-weight: 700;\r\n-  color: #ffffff;\r\n-  margin-top: 60px;       /* Макетный отступ сверху */\r\n-  margin-bottom: 50px;    /* Отступ снизу, где будут карточки */\r\n-}\n-\r\n-.services {\r\n-  width: 100%;\r\n-  display: flex;\r\n-  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.services__title{\r\n-      display: block;\r\n- text-align: center;\r\n-  \r\n-  font-family: Montserrat;\r\n-  font-size: 30px;\r\n-  font-weight: normal;\r\n-  font-stretch: normal;\r\n-  font-style: normal;\r\n-  line-height: normal;\r\n-  letter-spacing: normal;\r\n-  text-align: left;\r\n-  color: #fff;\r\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779887027029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,4 +19,9 @@\n   text-align: left;\r\n   color: #fff;\r\n }\r\n \r\n+.services__line{ align-self: center;\r\n+  width: 300px;\r\n+  height: 3px;\r\n+  background-color: #ff7a00;\r\n+  margin-top: 17.5px;}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779888582483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n   line-height: normal;\r\n   letter-spacing: normal;\r\n   text-align: left;\r\n   color: #fff;\r\n+  \r\n }\r\n \r\n .services__line{ align-self: center;\r\n   width: 300px;\r\n"
+                },
+                {
+                    "date": 1779888759648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.services__title {\r\n+  align-self: center;     \r\n+  text-align: center; \r\n+ font-family: 'Montserrat';\r\n+  font-size: 30px;\r\n+  font-weight: 400;;\r\n+  font-stretch: normal;\r\n+  font-style: normal;\r\n+  line-height: normal;\r\n+  letter-spacing: normal;\r\n+  text-align: left;\r\n+  color: #fff;\r\n+  transform: translateX(37.5px);\r\n+}\r\n+\r\n+.services__line{ align-self: center;\r\n+  width: 300px;\r\n+  height: 3px;\r\n+  background-color: #ff7a00;\r\n+  margin-top: 17.5px;}\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779888772571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+\r\n+.services {\r\n+  width: 100%;\r\n+  display: flex;\r\n+  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.services__title {\r\n+  align-self: center;     \r\n+  text-align: center; \r\n+ font-family: 'Montserrat';\r\n+  font-size: 30px;\r\n+  font-weight: 400;;\r\n+  font-stretch: normal;\r\n+  font-style: normal;\r\n+  line-height: normal;\r\n+  letter-spacing: normal;\r\n+  text-align: left;\r\n+  color: #fff;\r\n+  transform: translateX(37.5px);\r\n+}\r\n+\r\n+.services__line{ align-self: center;\r\n+  width: 300px;\r\n+  height: 3px;\r\n+  background-color: #ff7a00;\r\n+  margin-top: 17.5px;\r\n+  transform: translateX(37.5px);}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1779888779343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,17 @@\n-\r\n .services {\r\n   width: 100%;\r\n   display: flex;\r\n   flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */\r\n   box-sizing: border-box;\r\n }\r\n \r\n .services__title {\r\n-  align-self: center;     \r\n-  text-align: center; \r\n- font-family: 'Montserrat';\r\n+  align-self: center;\r\n+  text-align: center;\r\n+  font-family: \"Montserrat\";\r\n   font-size: 30px;\r\n-  font-weight: 400;;\r\n+  font-weight: 400;\r\n   font-stretch: normal;\r\n   font-style: normal;\r\n   line-height: normal;\r\n   letter-spacing: normal;\r\n@@ -20,11 +19,12 @@\n   color: #fff;\r\n   transform: translateX(37.5px);\r\n }\r\n \r\n-.services__line{ align-self: center;\r\n+.services__line {\r\n+  align-self: center;\r\n   width: 300px;\r\n   height: 3px;\r\n   background-color: #ff7a00;\r\n   margin-top: 17.5px;\r\n\\ No newline at end of file\n-  transform: translateX(37.5px)\r\n-}\n+  transform: translateX(37.5px);\r\n+}\r\n"
                 }
             ],
             "date": 1779808128511,
