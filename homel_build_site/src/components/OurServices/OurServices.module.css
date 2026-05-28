@@ -28,3 +28,79 @@
   margin-top: 17.5px;
   transform: translateX(37.5px);
 }
+
+.services__board {
+  align-self: center;
+  box-sizing: border-box;
+  /* border: 4px solid rgba(241, 125, 17, 1); <- УДАЛЯЕМ эту оранжевую рамку отсюда */
+  background-color: transparent; /* Убираем общий фон, он будет у карточек */
+  display: flex;
+  flex-direction: row;
+  margin-top: 72px;
+  gap: 30px; /* Зазор между левой колонкой и правой карточкой (подберите точный по макету) */
+}
+
+/* Левая часть: задаем идеальный шаг в 15px между всеми вкладками */
+.services__tabs {
+  display: flex;
+  flex-direction: column;
+  width: 386px; 
+  flex-shrink: 0; 
+}
+
+/* 1-я карточка (Отделочные работы): отступ вниз ровно 15px */
+.tabCard:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+/* 2-я карточка (Строительство домов): отступ вниз ровно 14px */
+.tabCard:nth-child(2) {
+  margin-bottom: 14px;
+}
+
+/* 3-я карточка (Электрика): отступ вниз ровно 16px */
+.tabCard:nth-child(3) {
+  margin-bottom: 16px;
+}
+
+/* 4-я карточка (Сантехника): отступ снизу не нужен */
+.tabCard:nth-child(4) {
+  margin-bottom: 0;
+}
+
+/* Базовый стиль одной карточки-вкладки */
+.tabCard {
+  width: 386px;  
+  height: 177px; 
+  box-sizing: border-box;
+  border: 4px solid rgba(241, 125, 17, 1); /* Переносим оранжевую рамку на сами вкладки */
+  background-color: #171d11; /* Каждая плашка имеет свой темный фон */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+}
+
+.services__contentBox {
+  width: 590px;                 /* Точная ширина из Pixso */
+  height: 753px;                /* Точная высота из Pixso */
+  box-sizing: border-box;
+  flex-shrink: 0;               /* Защита от сжатия */
+  
+  border: 4px solid #f17d11;    /* Оранжевая рамка 4px из кода на скрине */
+  background-color: #171d11;    /* Цвет фона из кода на скрине */
+  
+  /* Внутренние отступы строго из панели CSS на скриншоте: */
+  padding: 43px 33px 86px 103px; /* сверху | справа | снизу | слева */
+  
+  display: flex;
+  flex-direction: column;
+}
+

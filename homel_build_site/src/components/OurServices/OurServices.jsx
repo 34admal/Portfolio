@@ -69,7 +69,7 @@ function OurServices() {
     <span className={styles.services__title}>НАШИ УСЛУГИ</span>
     <span className={styles.services__line}></span>
 
-    <div className={styles.services__mainWrapper}>
+    <div className={styles.services__board}>
       
       {/* ЛЕВАЯ ЧАСТЬ: 4 карточки-вкладки с будущими фонами */}
       <div className={styles.services__tabs}>
