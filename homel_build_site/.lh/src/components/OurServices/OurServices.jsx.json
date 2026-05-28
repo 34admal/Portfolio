@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/OurServices/OurServices.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1779965110011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1779965125689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState } from \"react\";\r\n+import OurServices from \"./components/OurServices/OurServices\";\r\n \r\n-\r\n // Финальные списки строго по карточкам с макета\r\n const servicesData = {\r\n   plumbing: {\r\n     title: \"Сантехника\",\r\n"
+                },
+                {
+                    "date": 1779965456867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { useState } from \"react\";\r\n-import OurServices from \"./components/OurServices/OurServices\";\r\n+import styles from \"./OurServices.module.css\";\r\n \r\n // Финальные списки строго по карточкам с макета\r\n const servicesData = {\r\n   plumbing: {\r\n"
+                }
+            ],
+            "date": 1779965110011,
+            "name": "Commit-0",
+            "content": "import { useState } from \"react\";\r\n\r\n\r\n// Финальные списки строго по карточкам с макета\r\nconst servicesData = {\r\n  plumbing: {\r\n    title: \"Сантехника\",\r\n    list: [\r\n      \"Замена труб в ванной и туалете\",\r\n      \"Замена труб в ванной\",\r\n      \"Замена труб на пластиковые\",\r\n      \"Монтаж трубопроводов ПВХ\",\r\n      \"Замена и демонтаж радиаторов отопления\",\r\n      \"Перенос и установка счетчиков\",\r\n      \"Монтаж и ремонт водопровода\",\r\n      \"Монтаж отопления\",\r\n      \"Монтаж канализации\",\r\n      \"Замена и перенос полотенцесушителя\",\r\n      \"Установка кранов на полотенцесушитель\",\r\n      \"Установка инсталляций\",\r\n      \"Установка всех видов сантехнического оборудования\",\r\n      \"Замена батарей отопления\"\r\n    ]\r\n  },\r\n  finishing: {\r\n    title: \"Отделочные работы\",\r\n    list: [\r\n      \"Электромонтажные и сантехнические работы\",\r\n      \"Демонтажные работы\",\r\n      \"Штукатурные работы\",\r\n      \"Малярные работы\",\r\n      \"Монтаж ГКЛ\",\r\n      \"Облицовка стен и потолков\",\r\n      \"Укладка плитки\",\r\n      \"Укладка всех видов напольных покрытий\"\r\n    ]\r\n  },\r\n  construction: {\r\n    title: \"Строительство домов\",\r\n    list: [\r\n      \"Проектирование деревянных домов\",\r\n      \"Устройство фундаментов\",\r\n      \"Монтаж стенового комплекта\",\r\n      \"Кровельные работы\",\r\n      \"Внутренние отделочные работы\",\r\n      \"Фасады загородных домов\",\r\n      \"Инженерные сети\"\r\n    ]\r\n  },\r\n  electricity: {\r\n    title: \"Электрика\",\r\n    list: [\r\n      \"Проектирование систем электроснабжения\",\r\n      \"Монтаж силовой электропроводки\",\r\n      \"Установка систем автоматизации\",\r\n      \"Сборка распределительных электрощитов\",\r\n      \"Подключение силового оборудования\",\r\n      \"Установка осветительных приборов\",\r\n      \"Пусконаладочные работы\"\r\n    ]\r\n  }\r\n};\r\n\r\nfunction OurServices() {\r\n  const [activeTab, setActiveTab] = useState(\"plumbing\");\r\n\r\n  return (\r\n  <section className={styles.services}>\r\n    <span className={styles.services__title}>НАШИ УСЛУГИ</span>\r\n    <span className={styles.services__line}></span>\r\n\r\n    <div className={styles.services__mainWrapper}>\r\n      \r\n      {/* ЛЕВАЯ ЧАСТЬ: 4 карточки-вкладки с будущими фонами */}\r\n      <div className={styles.services__tabs}>\r\n        <div className={`${styles.tabCard} ${activeTab === \"finishing\" ? styles.active : \"\"}`} onClick={() => setActiveTab(\"finishing\")}>Отделочные работы</div>\r\n        <div className={`${styles.tabCard} ${activeTab === \"construction\" ? styles.active : \"\"}`} onClick={() => setActiveTab(\"construction\")}>Строительство домов</div>\r\n        <div className={`${styles.tabCard} ${activeTab === \"electricity\" ? styles.active : \"\"}`} onClick={() => setActiveTab(\"electricity\")}>Электрика</div>\r\n        <div className={`${styles.tabCard} ${activeTab === \"plumbing\" ? styles.active : \"\"}`} onClick={() => setActiveTab(\"plumbing\")}>Сантехника</div>\r\n      </div>\r\n\r\n      {/* ПРАВАЯ ЧАСТЬ: Пока просто пустая заглушка под контент */}\r\n      <div className={styles.services__contentBox}></div>\r\n\r\n    </div>\r\n  </section>\r\n);\r\n}\r\n\r\nexport default OurServices;\r\n"
+        }
+    ]
+}
