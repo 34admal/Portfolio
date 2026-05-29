@@ -1,7 +1,7 @@
 .services {
   width: 100%;
   display: flex;
-  flex-direction: column; /* Выстраивает заголовок и будущие карточки вертикально */
+  flex-direction: column;
   box-sizing: border-box;
 }
 
@@ -32,15 +32,15 @@
 .services__board {
   align-self: center;
   box-sizing: border-box;
-  /* border: 4px solid rgba(241, 125, 17, 1); <- УДАЛЯЕМ эту оранжевую рамку отсюда */
-  background-color: transparent; /* Убираем общий фон, он будет у карточек */
+ 
+  background-color: transparent; 
   display: flex;
   flex-direction: row;
   margin-top: 72px;
-  gap: 30px; /* Зазор между левой колонкой и правой карточкой (подберите точный по макету) */
+  gap: 30px; 
 }
 
-/* Левая часть: задаем идеальный шаг в 15px между всеми вкладками */
+
 .services__tabs {
   display: flex;
   flex-direction: column;
@@ -48,33 +48,33 @@
   flex-shrink: 0; 
 }
 
-/* 1-я карточка (Отделочные работы): отступ вниз ровно 15px */
+
 .tabCard:nth-child(1) {
   margin-bottom: 15px;
 }
 
-/* 2-я карточка (Строительство домов): отступ вниз ровно 14px */
+
 .tabCard:nth-child(2) {
   margin-bottom: 14px;
 }
 
-/* 3-я карточка (Электрика): отступ вниз ровно 16px */
+
 .tabCard:nth-child(3) {
   margin-bottom: 16px;
 }
 
-/* 4-я карточка (Сантехника): отступ снизу не нужен */
+
 .tabCard:nth-child(4) {
   margin-bottom: 0;
 }
 
-/* Базовый стиль одной карточки-вкладки */
+
 .tabCard {
   width: 386px;  
   height: 177px; 
   box-sizing: border-box;
-  border: 4px solid rgba(241, 125, 17, 1); /* Переносим оранжевую рамку на сами вкладки */
-  background-color: #171d11; /* Каждая плашка имеет свой темный фон */
+  border: 4px solid rgba(241, 125, 17, 1);
+  background-color: #171d11;
   
   display: flex;
   align-items: center;
@@ -96,12 +96,10 @@
   box-sizing: border-box;
   flex-shrink: 1;       
   
-  /* УДАЛЯЕМ: border: 4px solid #f17d11; */
-  
-  /* ДОБАВЛЯЕМ: Идеально ровную рамку в 4px через внутреннюю тень */
+ 
   box-shadow: inset 0 0 0 4px #f17d11; 
   
-  background-color: #171d11;    
+  
   padding-top: 43px;
   padding-left: 103px;
   padding-right: 33px;
@@ -113,9 +111,9 @@
 
 .infoTitle {
   display: block;          
-  /* width: 454px; <- УДАЛЯЕМ эту фиксированную ширину */
-  width: max-content;      /* Текст займет ширину строго по длине слова */
-  margin: 0 auto 48px auto; /* СТРОГО ДОБАВЛЯЕМ: центрирует блок слова по оси контента, оставляя 48px снизу */
+ 
+  width: max-content;    
+  margin: 0 auto 48px auto; 
   
   text-align: center;      
   font-family: 'Montserrat', sans-serif;
@@ -135,17 +133,17 @@
   
   /* Строго по макету */
   line-height: 22px;       
-  letter-spacing: 0.9px; /* Соответствует letter-spacing: 5% при 18px */
+  letter-spacing: 0.9px;
   text-align: left;
   
-  /* Макетный отступ между абзацами */
+ 
   margin-bottom: 15px; 
 }
 
 .infoList {
-  /* width: 454px; <- УДАЛЯЕМ эту жесткую ширину */
-  max-width: 454px;     /* Заменяем на максимальную ширину по макету */
-  width: 100%;          /* Позволяет списку быть гибким и не выдавливать рамки */
+ 
+  max-width: 454px;     
+  width: 100%;          
   
   height: 541px;
   list-style: none; 

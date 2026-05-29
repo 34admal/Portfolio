@@ -22,7 +22,7 @@ function OurServices() {
 
         {/* ПРАВАЯ ЧАСТЬ */}
         <div className={styles.services__contentBox}>
-  {/* Заменили h3 на обычный span с тем же классом */}
+ 
   <span className={styles.infoTitle}>{servicesData[activeTab].title}</span>
   <ul className={styles.infoList}>
     {servicesData[activeTab].list.map((item, index) => (
