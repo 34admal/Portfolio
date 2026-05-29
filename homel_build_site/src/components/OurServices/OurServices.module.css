@@ -89,18 +89,71 @@
 }
 
 .services__contentBox {
-  width: 590px;                 /* Точная ширина из Pixso */
-  height: 753px;                /* Точная высота из Pixso */
+  background-image: url('./image_OurServices/plumbing-bg.png');
+ max-width: 590px;     
+  width: 100%;          
+  height: 753px;
   box-sizing: border-box;
-  flex-shrink: 0;               /* Защита от сжатия */
+  flex-shrink: 1;       
   
-  border: 4px solid #f17d11;    /* Оранжевая рамка 4px из кода на скрине */
-  background-color: #171d11;    /* Цвет фона из кода на скрине */
+  /* УДАЛЯЕМ: border: 4px solid #f17d11; */
   
-  /* Внутренние отступы строго из панели CSS на скриншоте: */
-  padding: 43px 33px 86px 103px; /* сверху | справа | снизу | слева */
+  /* ДОБАВЛЯЕМ: Идеально ровную рамку в 4px через внутреннюю тень */
+  box-shadow: inset 0 0 0 4px #f17d11; 
   
+  background-color: #171d11;    
+  padding-top: 43px;
+  padding-left: 103px;
+  padding-right: 33px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
+
+.infoTitle {
+  display: block;          
+  /* width: 454px; <- УДАЛЯЕМ эту фиксированную ширину */
+  width: max-content;      /* Текст займет ширину строго по длине слова */
+  margin: 0 auto 48px auto; /* СТРОГО ДОБАВЛЯЕМ: центрирует блок слова по оси контента, оставляя 48px снизу */
+  
+  text-align: center;      
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;   
+  font-weight: 400;        
+  line-height: 29px;       
+  letter-spacing: 1.2px;   
+  color: rgba(241, 125, 17, 1); 
+}
+
+
+.infoItem {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px; 
+  font-weight: normal;
+  color: #ffffff;
+  
+  /* Строго по макету */
+  line-height: 22px;       
+  letter-spacing: 0.9px; /* Соответствует letter-spacing: 5% при 18px */
+  text-align: left;
+  
+  /* Макетный отступ между абзацами */
+  margin-bottom: 15px; 
+}
+
+.infoList {
+  /* width: 454px; <- УДАЛЯЕМ эту жесткую ширину */
+  max-width: 454px;     /* Заменяем на максимальную ширину по макету */
+  width: 100%;          /* Позволяет списку быть гибким и не выдавливать рамки */
+  
+  height: 541px;
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;    
+}
+
+
+
 
