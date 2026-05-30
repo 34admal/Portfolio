@@ -74,7 +74,7 @@
   height: 177px; 
   box-sizing: border-box;
   border: 4px solid rgba(241, 125, 17, 1);
-  background-color: #171d11;
+ 
   
   display: flex;
   align-items: center;
@@ -89,32 +89,46 @@
 }
 
 .services__contentBox {
-  background-image: url('./image_OurServices/plumbing-bg.png');
- max-width: 590px;     
-  width: 100%;          
-  height: 753px;
+  width: 590px;             /* Строго по макету */
+  height: 753px;            /* Строго по макету, теперь высота лево/право совпадет */
   box-sizing: border-box;
-  flex-shrink: 1;       
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 4px #f17d11;
   
- 
-  box-shadow: inset 0 0 0 4px #f17d11; 
+  background-image: url('./image_OurServices/plumbing-bg.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
   
-  
-  padding-top: 43px;
-  padding-left: 103px;
-  padding-right: 33px;
-  padding-bottom: 40px;
   display: flex;
+  flex-direction: column;   /* Возвращаем строгий вертикальный поток */
+  align-items: center;      /* Центрируем текст по горизонтали */
+  
+  padding-top: 43px;        /* Отступ до заголовка строго по макету */
+  padding-bottom: 40px;     /* Защитный отступ снизу */
+  overflow: hidden;         /* Чтобы сам контейнер карточки не растягивался */
+}
+
+
+.infoList {
+  max-width: 454px;     
+  width: 100%;          
+  height: 541px;           /* Строго фиксированная высота текстового фрейма */
+  list-style: none; 
+  padding: 0;
+  
+  /* СТРОГО ИСПРАВЛЯЕМ: margin: 0 auto; идеально отцентрирует весь список по центру карточки ровно под заголовком */
+  margin: 0 auto;         
+  
+  overflow-y: auto;        /* Чистый макетный скроллбар для длинных текстов */
+  display: flex;       
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;      
 }
 
 .infoTitle {
   display: block;          
- 
-  width: max-content;    
-  margin: 0 auto 48px auto; 
-  
+  width: 454px;            
   text-align: center;      
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;   
@@ -122,36 +136,42 @@
   line-height: 29px;       
   letter-spacing: 1.2px;   
   color: rgba(241, 125, 17, 1); 
+  
+  margin: 0 auto;
 }
 
-
 .infoItem {
+  width: 100%;             /* Строка занимает всю ширину контейнера списка */
   font-family: 'Montserrat', sans-serif;
   font-size: 18px; 
   font-weight: normal;
   color: #ffffff;
+  line-height: 22px;    
+  letter-spacing: 0.9px; 
   
-  /* Строго по макету */
-  line-height: 22px;       
-  letter-spacing: 0.9px;
-  text-align: left;
-  
- 
-  margin-bottom: 15px; 
+  text-align: left;        /* СТРОГО ФИКСИРУЕМ: выравнивание букв по левому краю */
+  margin-bottom: 15px;  
+  padding: 0;
 }
 
 .infoList {
- 
+ width: 100%;
   max-width: 454px;     
-  width: 100%;          
-  
-  height: 541px;
+  height: 541px;        
   list-style: none; 
   padding: 0;
-  margin: 0;
-  overflow-y: auto;    
+  
+  /* СТРОГО ФИКСИРУЕМ: margin-top: 48px железно раздвинет заголовок и список на макетное расстояние */
+  margin: 48px auto 0 auto; 
+  
+  overflow-y: auto;     
+  display: flex;       
+  flex-direction: column;
+  align-items: flex-start; 
 }
 
-
+.infoItem:last-child {
+  margin-bottom: 0;
+}
 
 
