@@ -81,16 +81,39 @@
   justify-content: center;
   cursor: pointer;
   
-  font-family: 'Montserrat', sans-serif;
+  
   font-size: 18px;
   font-weight: 500;
   color: #ffffff;
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Чтобы внутри можно было делать эффекты */
+}
+
+/* 1. Картинка для первой плашки — Отделочные работы */
+.tabCard:nth-child(1) {
+  /* Темное наложение + твоя локальная картинка */
+  background-image:  
+                    url('./image_OurServices/otdelka.png');
+}
+
+.tabCard:nth-child(2) {
+  background-image: url('./image_OurServices/build_house.png')
+}
+
+.tabCard:nth-child(3) {
+  background-image: url('./image_OurServices/electric.png');
+}
+
+.tabCard:nth-child(4) {
+  background-image: url('./image_OurServices/plumbing-bg.png');
 }
 
 .services__contentBox {
-  width: 590px;             /* Строго по макету */
-  height: 753px;            /* Строго по макету, теперь высота лево/право совпадет */
+  width: 590px;            
+  height: 753px;            
   box-sizing: border-box;
   flex-shrink: 0;
   box-shadow: inset 0 0 0 4px #f17d11;
@@ -101,26 +124,26 @@
   background-size: contain;
   
   display: flex;
-  flex-direction: column;   /* Возвращаем строгий вертикальный поток */
-  align-items: center;      /* Центрируем текст по горизонтали */
+  flex-direction: column;   
+  align-items: center;      
   
-  padding-top: 43px;        /* Отступ до заголовка строго по макету */
-  padding-bottom: 40px;     /* Защитный отступ снизу */
-  overflow: hidden;         /* Чтобы сам контейнер карточки не растягивался */
+  padding-top: 43px;        
+  padding-bottom: 40px;     
+  overflow: hidden;         
 }
 
 
 .infoList {
   max-width: 454px;     
   width: 100%;          
-  height: 541px;           /* Строго фиксированная высота текстового фрейма */
+  height: 541px;         
   list-style: none; 
   padding: 0;
   
-  /* СТРОГО ИСПРАВЛЯЕМ: margin: 0 auto; идеально отцентрирует весь список по центру карточки ровно под заголовком */
+ 
   margin: 0 auto;         
   
-  overflow-y: auto;        /* Чистый макетный скроллбар для длинных текстов */
+  overflow-y: auto;       
   display: flex;       
   flex-direction: column;
   align-items: center;      
@@ -141,15 +164,15 @@
 }
 
 .infoItem {
-  width: 100%;             /* Строка занимает всю ширину контейнера списка */
-  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  
   font-size: 18px; 
   font-weight: normal;
   color: #ffffff;
   line-height: 22px;    
   letter-spacing: 0.9px; 
   
-  text-align: left;        /* СТРОГО ФИКСИРУЕМ: выравнивание букв по левому краю */
+  text-align: left;       
   margin-bottom: 15px;  
   padding: 0;
 }
@@ -161,7 +184,7 @@
   list-style: none; 
   padding: 0;
   
-  /* СТРОГО ФИКСИРУЕМ: margin-top: 48px железно раздвинет заголовок и список на макетное расстояние */
+ 
   margin: 48px auto 0 auto; 
   
   overflow-y: auto;     

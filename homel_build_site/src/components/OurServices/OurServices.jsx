@@ -20,7 +20,7 @@ function OurServices() {
           <div className={`${styles.tabCard} ${activeTab === "plumbing" ? styles.active : ""}`} onClick={() => setActiveTab("plumbing")}>Сантехника</div>
         </div>
 
-        {/* ПРАВАЯ ЧАСТЬ */}
+       
         <div className={styles.services__contentBox}>
  
   <span className={styles.infoTitle}>{servicesData[activeTab].title}</span>
