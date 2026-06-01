@@ -1,6 +1,10 @@
 import { useState } from "react";
 import styles from "./OurServices.module.css";
-import { servicesData } from "./servicesData"; 
+import { servicesData } from "./servicesData";
+import iconFinishing from "./image_OurServices/finishing-icon.png";
+import iconConstruction from "./image_OurServices/construction-icon.png";
+import iconElectricity from "./image_OurServices/electricity-icon.png";
+import iconPlumbing from "./image_OurServices/plumbing-icon.png"; 
 
 function OurServices() {
   const [activeTab, setActiveTab] = useState("plumbing");
@@ -13,12 +17,28 @@ function OurServices() {
       <div className={styles.services__board}>
         
         {/* ЛЕВАЯ ЧАСТЬ */}
-        <div className={styles.services__tabs}>
-          <div className={`${styles.tabCard} ${activeTab === "finishing" ? styles.active : ""}`} onClick={() => setActiveTab("finishing")}>Отделочные работы</div>
-          <div className={`${styles.tabCard} ${activeTab === "construction" ? styles.active : ""}`} onClick={() => setActiveTab("construction")}>Строительство домов</div>
-          <div className={`${styles.tabCard} ${activeTab === "electricity" ? styles.active : ""}`} onClick={() => setActiveTab("electricity")}>Электрика</div>
-          <div className={`${styles.tabCard} ${activeTab === "plumbing" ? styles.active : ""}`} onClick={() => setActiveTab("plumbing")}>Сантехника</div>
-        </div>
+<div className={styles.services__tabs}>
+  <div className={`${styles.tabCard} ${activeTab === "finishing" ? styles.active : ""}`} onClick={() => setActiveTab("finishing")}>
+    Отделочные работы
+    <img src={iconFinishing} className={styles.tabCard__icon} alt="" />
+  </div>
+  
+  <div className={`${styles.tabCard} ${activeTab === "construction" ? styles.active : ""}`} onClick={() => setActiveTab("construction")}>
+    Строительство домов
+    <img src={iconConstruction} className={styles.tabCard__icon} alt="" />
+  </div>
+  
+  <div className={`${styles.tabCard} ${activeTab === "electricity" ? styles.active : ""}`} onClick={() => setActiveTab("electricity")}>
+    Электрика
+    <img src={iconElectricity} className={styles.tabCard__icon} alt="" />
+  </div>
+  
+  <div className={`${styles.tabCard} ${activeTab === "plumbing" ? styles.active : ""}`} onClick={() => setActiveTab("plumbing")}>
+  Сантехника
+  <img src={iconPlumbing} className={styles.tabCard__icon} alt="" />
+</div>
+</div>
+
 
        
         <div className={styles.services__contentBox}>

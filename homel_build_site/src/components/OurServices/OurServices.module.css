@@ -197,4 +197,16 @@
   margin-bottom: 0;
 }
 
+.tabCard__icon {
+  position: absolute;
+  left: 11.7px; 
+  z-index: 5;
+  bottom: 10px;
+  width: 23px;
+  height: 35px;
+}
+
+.tabCard:nth-child(4) .tabCard__icon {
+  left: 11.8px; 
+}
 
