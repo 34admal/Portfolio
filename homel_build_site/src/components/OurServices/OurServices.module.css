@@ -73,7 +73,7 @@
   width: 386px;  
   height: 177px; 
   box-sizing: border-box;
-  border: 4px solid rgba(241, 125, 17, 1);
+  /* border: 4px solid rgba(241, 125, 17, 1); */
  
   
   display: flex;
@@ -197,16 +197,51 @@
   margin-bottom: 0;
 }
 
-.tabCard__icon {
+.tabIcon {
   position: absolute;
   left: 11.7px; 
   z-index: 5;
-  bottom: 10px;
-  width: 23px;
-  height: 35px;
+  border: none; 
 }
 
-.tabCard:nth-child(4) .tabCard__icon {
+/* 1. Отделочные работы */
+.tabCard:nth-child(1) .tabIcon {
+  width: 22px;
+  height: 22px;
+  bottom: 11.9px;
+}
+
+/* 2. Строительство домов */
+.tabCard:nth-child(2) .tabIcon {
+  width: 22px;
+  height: 22px;
+  bottom: 15.1px;
+}
+
+/* 3. Электрика */
+.tabCard:nth-child(3) .tabIcon {
+  width: 22.7px;
+  height: 35.2px;
+  bottom: 14.7px;
+}
+
+/* 4. Сантехника */
+.tabCard:nth-child(4) .tabIcon {
   left: 11.8px; 
+  width: 22.1px;
+  height: 33.1px;
+  bottom: 16.1px;
+}
+.tabCard.active {
+  color: #f17d11; /* Тот самый макетный оранжевый цвет */
 }
 
+.tabIcon {
+  position: absolute;
+  left: 11.7px; 
+  z-index: 5;
+  
+  /* СТРОГО ДОБАВЛЯЕМ ЭТИ ДВЕ СТРОКИ: */
+  image-rendering: -webkit-optimize-contrast; /* Отключает замыливание и смешивание цветов */
+  transform: translateZ(0); 
+}
