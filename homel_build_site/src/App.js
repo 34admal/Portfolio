@@ -12,6 +12,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import  HowWeWorkSection from "./components/HowWeWorkSection";
 import OurServices from "./components/OurServices/OurServices";
+import PromoBlock from "./components/PromoBlock/PromoBlock";
 import Footer from "./components/Footer";
 
 import "./App.css";
@@ -24,6 +25,7 @@ function App() {
         <HeroSection />
         <HowWeWorkSection/>
         <OurServices/>
+        <PromoBlock/>
       </Layout>
 
       {/* <Router>

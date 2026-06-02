@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/PromoBlock/PromoBlock.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1780408974811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1780409091196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,18 @@\n import styles from \"./PromoBlock.module.css\";\r\n+\r\n+function PromoBlock() {\r\n+  return (\r\n+    <section className={styles.promo}>\r\n+      <div className={styles.promo__container}>\r\n+        <p className={styles.promo__text}>\r\n+          Для многих ремонт — это что-то вроде стихийного бедствия, но чем тщательнее вы его спланируете, тем проще будет его пережить. А уютная, привлекательная и чистая квартира – это мечта любого человека.\r\n+        </p>\r\n+        <span className={styles.promo__accent}>\r\n+          Давайте воплотим Ваши мечты в реальность!\r\n+        </span>\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default PromoBlock;\r\n"
+                }
+            ],
+            "date": 1780408974811,
+            "name": "Commit-0",
+            "content": "import styles from \"./PromoBlock.module.css\";\r\n"
+        }
+    ]
+}
