@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/Feedback/Feedback.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1780488935122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1780489208598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n-      {/* Весь остальной каркас разметки остаётся без изменений */}\r\n+     \r\n     </section>\r\n   );\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1780488935121,
+            "name": "Commit-0",
+            "content": "import styles from \"./Feedback.module.css\";\r\n\r\nfunction Feedback() {\r\n  return (\r\n    <section className={styles.feedback}>\r\n      {/* Весь остальной каркас разметки остаётся без изменений */}\r\n    </section>\r\n  );\r\n}\r\n\r\nexport default Feedback;\r\n"
+        }
+    ]
+}
