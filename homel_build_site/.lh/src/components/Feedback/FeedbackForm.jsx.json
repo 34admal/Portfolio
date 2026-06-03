@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/Feedback/FeedbackForm.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1780498803381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1780499206836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n \r\n function FeedbackForm() {\r\n   return (\r\n     <form className={styles.form}>\r\n-      {/* Сюда по очереди пойдут инпуты и кнопка */}\r\n+      ЗАПОЛНИТЕ ФОРМУ\r\n     </form>\r\n   );\r\n }\r\n \r\n export default FeedbackForm;\r\n+\r\n"
+                },
+                {
+                    "date": 1780501866270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function FeedbackForm() {\r\n   return (\r\n     <form className={styles.form}>\r\n-      ЗАПОЛНИТЕ ФОРМУ\r\n+     <span></span> ЗАПОЛНИТЕ ФОРМУ\r\n     </form>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1780501883901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import styles from \"./FeedbackForm.module.css\";\r\n+\r\n+function FeedbackForm() {\r\n+  return (\r\n+    <form className={styles.form}>\r\n+     <span className={styles.form}>ЗАПОЛНИТЕ ФОРМУ</span> \r\n+    </form>\r\n+  );\r\n+}\r\n+\r\n+export default FeedbackForm;\r\n+\r\n"
+                },
+                {
+                    "date": 1780501896713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function FeedbackForm() {\r\n   return (\r\n     <form className={styles.form}>\r\n-     <span className={styles.form}>ЗАПОЛНИТЕ ФОРМУ</span> \r\n+     <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span> \r\n     </form>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1780502095581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import styles from \"./FeedbackForm.module.css\";\r\n+\r\n+function FeedbackForm() {\r\n+  return (\r\n+    <form className={styles.form}>\r\n+     <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n+      \r\n+    </form>\r\n+  );\r\n+}\r\n+\r\n+export default FeedbackForm;\r\n+\r\n"
+                }
+            ],
+            "date": 1780498803381,
+            "name": "Commit-0",
+            "content": "import styles from \"./FeedbackForm.module.css\";\r\n\r\nfunction FeedbackForm() {\r\n  return (\r\n    <form className={styles.form}>\r\n      {/* Сюда по очереди пойдут инпуты и кнопка */}\r\n    </form>\r\n  );\r\n}\r\n\r\nexport default FeedbackForm;\r\n"
+        }
+    ]
+}

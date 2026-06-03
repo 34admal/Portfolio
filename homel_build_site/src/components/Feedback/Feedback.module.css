@@ -1,0 +1,29 @@
+.feedback {
+  width: 100%;
+  height: 672px;             
+  box-sizing: border-box;
+  margin-top: 43px;
+  
+  background-image: url('./images/feedback-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  justify-content: center;
+}
+
+.feedback__container {
+  width: 100%;
+  max-width: 1440px;        
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;       
+  
+  display: flex;
+  align-items: flex-start;  /* Прижимаем контент к верху для точного отсчета margin */
+}
+
+
+  
+  

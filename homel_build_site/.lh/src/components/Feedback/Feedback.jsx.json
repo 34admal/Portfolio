@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1780488935122,
@@ -12,6 +12,22 @@
                 {
                     "date": 1780489208598,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n-      {/* Весь остальной каркас разметки остаётся без изменений */}\r\n+     \r\n     </section>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1780492853948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import styles from \"./Feedback.module.css\";\r\n+\r\n+function Feedback() {\r\n+  return   <section className={styles.feedback}>\r\n+      <div className={styles.feedback__container}>\r\n+        {/* Сюда дальше пойдет карточка формы */}\r\n+      </div>\r\n+    </section>\r\n+}\r\n+\r\n+export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780493364755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import styles from \"./Feedback.module.css\";\r\n+\r\n+function Feedback() {\r\n+  return (\r\n+    <section className={styles.feedback}>\r\n+      <div className={styles.feedback__container}>\r\n+        {/* Сюда дальше пойдет карточка формы */}\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780496839424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,33 +3,13 @@\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n-        {/* Сюда дальше пойдет карточка формы */}\r\n+        <div className={styles.formCard}>\r\n+          {/* Сюда пойдут элементы формы */}\r\n+        </div>\r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n \r\n export default Feedback;\r\n-import styles from \"./Feedback.module.css\";\r\n-\r\n-function Feedback() {\r\n-  return   <section className={styles.feedback}>\r\n-      <div className={styles.feedback__container}>\r\n-        {/* Сюда дальше пойдет карточка формы */}\r\n-      </div>\r\n-    </section>\r\n-}\r\n-\r\n-export default Feedback;\r\n-import styles from \"./Feedback.module.css\";\r\n-\r\n-function Feedback() {\r\n-  return (\r\n-    <section className={styles.feedback}>\r\n-     \r\n-    </section>\r\n-  );\r\n-}\r\n-\r\n-export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780498935412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import styles from \"./Feedback.module.css\";\r\n+import FeedbackForm from \"./FeedbackForm\";\r\n \r\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n         <div className={styles.formCard}>\r\n-          {/* Сюда пойдут элементы формы */}\r\n+          <FeedbackForm />\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
                 }
             ],
             "date": 1780488935121,
