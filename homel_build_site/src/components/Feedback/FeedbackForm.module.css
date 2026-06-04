@@ -43,8 +43,6 @@
   margin-top: 3.1px;
 }
 
-
-
 .label:nth-of-type(2) {
   margin-top: 18.2px;
 }
@@ -53,3 +51,78 @@
   margin-top: 17.2px;
   margin-left: 51px;
 }
+
+.label_name {
+  margin-top: 23.24px;
+  margin-left: 50px;
+}
+
+.label_phone {
+  margin-top: 18.2px;
+  margin-left: 50px;
+}
+
+.label_text {
+  margin-top: 17.2px;
+  margin-left: 51px;
+}
+
+.textarea {
+  width: 285px;
+  height: 146.53px;
+  border-radius: 10px;
+  border: 2px solid #ff7a00;
+  background: transparent;
+  box-sizing: border-box;
+  margin-top: 16.7px;
+  margin-left: 51px;
+  color: #ffffff;
+  padding: 10px 14px;
+  outline: none;
+  resize: none;
+}
+
+.textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.submitBtn {
+  width: 285px;
+  height: 50.53px;
+  border-radius: 10px;
+  border: 2px solid #ff7a00;
+  background: transparent;
+  box-sizing: border-box;
+  margin-top: 25.27px;
+  margin-left: 51px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submitBtn {
+  width: 285px;
+  height: 50.53px;
+  border-radius: 10px;
+  border: 2px solid #ff7a00;
+  background: transparent;
+  box-sizing: border-box;
+  margin-top: 25.27px;
+  margin-left: 51px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  /* Свойства текста из макета */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600; /* Соответствует SemiBold */
+  letter-spacing: 0.8px;
+}
+
+.submitBtn:hover {
+  background-color: #ff7a00;
+  color: #1c1d1e;
+}
+
+
+
