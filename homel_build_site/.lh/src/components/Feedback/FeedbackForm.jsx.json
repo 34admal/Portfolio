@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1780498803381,
@@ -28,6 +28,26 @@
                 {
                     "date": 1780502095581,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import styles from \"./FeedbackForm.module.css\";\r\n+\r\n+function FeedbackForm() {\r\n+  return (\r\n+    <form className={styles.form}>\r\n+     <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n+      \r\n+    </form>\r\n+  );\r\n+}\r\n+\r\n+export default FeedbackForm;\r\n+\r\n"
+                },
+                {
+                    "date": 1780561933904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,35 +3,12 @@\n function FeedbackForm() {\r\n   return (\r\n     <form className={styles.form}>\r\n      <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n+     <span className={styles.label}>Ваше имя</span>\r\n       \r\n     </form>\r\n   );\r\n }\r\n \r\n export default FeedbackForm;\r\n \r\n-import styles from \"./FeedbackForm.module.css\";\r\n-\r\n-function FeedbackForm() {\r\n-  return (\r\n-    <form className={styles.form}>\r\n-     <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span> \r\n-    </form>\r\n-  );\r\n-}\r\n-\r\n-export default FeedbackForm;\r\n-\r\n-import styles from \"./FeedbackForm.module.css\";\r\n-\r\n-function FeedbackForm() {\r\n-  return (\r\n-    <form className={styles.form}>\r\n-     <span></span> ЗАПОЛНИТЕ ФОРМУ\r\n-    </form>\r\n-  );\r\n-}\r\n-\r\n-export default FeedbackForm;\r\n-\r\n"
+                },
+                {
+                    "date": 1780563259820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import styles from \"./FeedbackForm.module.css\";\r\n+\r\n+function FeedbackForm() {\r\n+  return (\r\n+    <form className={styles.form}>\r\n+     <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n+     <span className={styles.label}>Ваше имя</span>\r\n+     <span className={styles.line}></span>\r\n+      \r\n+    </form>\r\n+  );\r\n+}\r\n+\r\n+export default FeedbackForm;\r\n+\r\n"
+                },
+                {
+                    "date": 1780563946148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import styles from \"./FeedbackForm.module.css\";\r\n+\r\n+function FeedbackForm() {\r\n+  return (\r\n+    <form className={styles.form}>\r\n+     <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n+     <span className={styles.label}>Ваше имя</span>\r\n+     <span className={styles.line}></span>\r\n+     <span className={styles.label}>Номер телефона</span>\r\n+<span className={styles.line}></span>\r\n+ \r\n+    </form>\r\n+  );\r\n+}\r\n+\r\n+export default FeedbackForm;\r\n+\r\n"
+                },
+                {
+                    "date": 1780565396516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import styles from \"./FeedbackForm.module.css\";\r\n+\r\n+function FeedbackForm() {\r\n+  return (\r\n+  <form className={styles.form}>\r\n+  {/* Группа 1 */}\r\n+  <div className={styles.formGroup}>\r\n+    <span className={styles.label}>Ваше имя</span>\r\n+    <span className={styles.line}></span>\r\n+  </div>\r\n+\r\n+  {/* Группа 2 */}\r\n+  <div className={styles.formGroup}>\r\n+    <span className={styles.label}>Номер телефона</span>\r\n+    <span className={styles.line}></span>\r\n+  </div>\r\n+\r\n+  {/* Группа 3 */}\r\n+  <div className={styles.formGroup}>\r\n+    <span className={styles.label}>Опишите Вашу заявку</span>\r\n+    <textarea className={styles.textarea}></textarea>\r\n+  </div>\r\n+</form>\r\n+  );\r\n+}\r\n+\r\n+export default FeedbackForm;\r\n+\r\n"
+                },
+                {
+                    "date": 1780566048020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import styles from \"./FeedbackForm.module.css\";\r\n+\r\n+function FeedbackForm() {\r\n+  return (\r\n+ <form className={styles.form}>\r\n+  <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n+\r\n+  <span className={`${styles.label} ${styles.label_name}`}>Ваше имя</span>\r\n+  <span className={styles.line}></span>\r\n+\r\n+  <span className={`${styles.label} ${styles.label_phone}`}>Номер телефона</span>\r\n+  <span className={styles.line}></span>\r\n+\r\n+  <span className={`${styles.label} ${styles.label_text}`}>Опишите Вашу заявку</span>\r\n+  <textarea className={styles.textarea}></textarea>\r\n+</form>\r\n+  );\r\n+}\r\n+\r\n+export default FeedbackForm;\r\n+\r\n"
                 }
             ],
             "date": 1780498803381,
