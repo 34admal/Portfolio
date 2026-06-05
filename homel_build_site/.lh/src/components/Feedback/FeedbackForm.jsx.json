@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1780498803381,
@@ -60,6 +60,22 @@
                 {
                     "date": 1780591505017,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import styles from \"./FeedbackForm.module.css\";\r\n+\r\n+function FeedbackForm() {\r\n+  return (\r\n+    <form className={styles.form}>\r\n+      <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n+\r\n+      <span className={`${styles.label} ${styles.label_name}`}>Ваше имя</span>\r\n+      <span className={styles.line}></span>\r\n+\r\n+      <span className={`${styles.label} ${styles.label_phone}`}>\r\n+        Номер телефона\r\n+      </span>\r\n+      <span className={styles.line}></span>\r\n+\r\n+      <span className={`${styles.label} ${styles.label_text}`}>\r\n+        Опишите Вашу заявку\r\n+      </span>\r\n+      <textarea className={styles.textarea}></textarea>\r\n+\r\n+      <button type=\"submit\" className={styles.submitBtn}>\r\n+        Получить консультацию\r\n+      </button>\r\n+    </form>\r\n+  );\r\n+}\r\n+\r\n+export default FeedbackForm;\r\n"
+                },
+                {
+                    "date": 1780642027381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,50 +2,20 @@\n \r\n function FeedbackForm() {\r\n   return (\r\n     <form className={styles.form}>\r\n-      <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n-\r\n-      <span className={`${styles.label} ${styles.label_name}`}>Ваше имя</span>\r\n-      <span className={styles.line}></span>\r\n-\r\n-      <span className={`${styles.label} ${styles.label_phone}`}>\r\n-        Номер телефона\r\n-      </span>\r\n-      <span className={styles.line}></span>\r\n-\r\n-      <span className={`${styles.label} ${styles.label_text}`}>\r\n-        Опишите Вашу заявку\r\n-      </span>\r\n-      <textarea className={styles.textarea}></textarea>\r\n-\r\n-      <button type=\"submit\" className={styles.submitBtn}>\r\n-        Получить консультацию\r\n-      </button>\r\n-    </form>\r\n-  );\r\n-}\r\n-\r\n-export default FeedbackForm;\r\n-import styles from \"./FeedbackForm.module.css\";\r\n-\r\n-function FeedbackForm() {\r\n-  return (\r\n- <form className={styles.form}>\r\n   <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n \r\n-  <span className={`${styles.label} ${styles.label_name}`}>Ваше имя</span>\r\n+  <input type=\"text\" placeholder=\"Ваше имя\" className={`${styles.input} ${styles.label_name}`} />\r\n   <span className={styles.line}></span>\r\n \r\n-  <span className={`${styles.label} ${styles.label_phone}`}>Номер телефона</span>\r\n+  <input type=\"tel\" placeholder=\"Номер телефона\" className={`${styles.input} ${styles.label_phone}`} />\r\n   <span className={styles.line}></span>\r\n \r\n   <span className={`${styles.label} ${styles.label_text}`}>Опишите Вашу заявку</span>\r\n   <textarea className={styles.textarea}></textarea>\r\n+</form>\r\n \r\n-  \r\n-</form>\r\n   );\r\n }\r\n \r\n export default FeedbackForm;\r\n-\r\n"
+                },
+                {
+                    "date": 1780643003481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,12 @@\n   <span className={styles.line}></span>\r\n \r\n   <span className={`${styles.label} ${styles.label_text}`}>Опишите Вашу заявку</span>\r\n   <textarea className={styles.textarea}></textarea>\r\n+\r\n+  <button type=\"submit\" className={styles.submitBtn}>\r\n+    Получить консультацию\r\n+  </button>\r\n </form>\r\n \r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1780643598442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n \r\n   <button type=\"submit\" className={styles.submitBtn}>\r\n     Получить консультацию\r\n   </button>\r\n+  \r\n </form>\r\n \r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1780646060407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import styles from \"./FeedbackForm.module.css\";\r\n+\r\n+function FeedbackForm() {\r\n+  return (\r\n+    <form className={styles.form}>\r\n+  <span className={styles.title}>ЗАПОЛНИТЕ ФОРМУ</span>\r\n+\r\n+  <input type=\"text\" placeholder=\"Ваше имя\" className={`${styles.input} ${styles.label_name}`} />\r\n+  <span className={styles.line}></span>\r\n+\r\n+  <input type=\"tel\" placeholder=\"Номер телефона\" className={`${styles.input} ${styles.label_phone}`} />\r\n+  <span className={styles.line}></span>\r\n+\r\n+  <span className={`${styles.label} ${styles.label_text}`}>Опишите Вашу заявку</span>\r\n+  <textarea className={styles.textarea}></textarea>\r\n+\r\n+  <button type=\"submit\" className={styles.submitBtn}>\r\n+    Получить консультацию\r\n+  </button>\r\n+\r\n+<label htmlFor=\"policy\" className={styles.checkboxContainer}>\r\n+  <input type=\"checkbox\" id=\"policy\" className={styles.checkboxHidden} />\r\n+  <span className={styles.checkboxCustom}></span>\r\n+  <span className={styles.checkboxText}>\r\n+    Принимаю условия Политики конфиденциальности\r\n+  </span>\r\n+</label>\r\n+</form>\r\n+\r\n+  );\r\n+}\r\n+\r\n+export default FeedbackForm;\r\n"
                 }
             ],
             "date": 1780498803381,

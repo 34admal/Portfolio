@@ -112,10 +112,9 @@
   color: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
   
-  /* Свойства текста из макета */
-  font-family: 'Montserrat', sans-serif;
+ 
   font-size: 16px;
-  font-weight: 600; /* Соответствует SemiBold */
+  font-weight: 600; 
   letter-spacing: 0.8px;
 }
 
@@ -123,6 +122,70 @@
   background-color: #ff7a00;
   color: #1c1d1e;
 }
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.checkboxText {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400; /* Regular */
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 5%; /* Из макета 5% */
+  color: #ffffff;
+  text-align: left;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 16.1px;
+  margin-left: 51px;
+  cursor: pointer;
+}
+
+.checkboxCustom {
+  width: 16px;
+  height: 16.17px;
+  border: 1px solid #ff7a00;
+  border-radius: 5px;
+  background: transparent;
+  box-sizing: border-box;
+  margin-right: 5px; /* Зазор между квадратиком и текстом Политики */
+  display: inline-block;
+  flex-shrink: 0; /* Чтобы квадратик не сжимался, если текст перенесется */
+}
+/* Переписываем скрытие, чтобы белый квадрат гарантированно исчез */
+.checkboxHidden {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+
+/* .checkboxHidden:checked + .checkboxCustom {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 11 11'%3E%3Cpath d='M0.912 0.55L4.56 8.635L9.912 0.55' stroke='%23FFFFFF' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} */
+
+.active {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 11 11'%3E%3Cpath d='M0.912 0.55L4.56 8.635L9.912 0.55' stroke='%23FFFFFF' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+
 
 
 
