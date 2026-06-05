@@ -21,8 +21,15 @@
   position: relative;       
   
   display: flex;
-  align-items: flex-start;  /* Прижимаем контент к верху для точного отсчета margin */
+  align-items: flex-start;  
 }
+
+.formCard {
+  margin-top: 54px;
+  margin-left: 222px;
+  width: 390px; 
+}
+
 
 
   

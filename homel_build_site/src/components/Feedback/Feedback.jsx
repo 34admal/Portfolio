@@ -5,9 +5,7 @@ function Feedback() {
   return (
     <section className={styles.feedback}>
       <div className={styles.feedback__container}>
-        <div className={styles.formCard}>
-          <FeedbackForm />
-        </div>
+        <FeedbackForm />
       </div>
     </section>
   );

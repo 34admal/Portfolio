@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1780488935122,
@@ -28,6 +28,22 @@
                 {
                     "date": 1780498935412,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import styles from \"./Feedback.module.css\";\r\n+import FeedbackForm from \"./FeedbackForm\";\r\n \r\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n         <div className={styles.formCard}>\r\n-          {/* Сюда пойдут элементы формы */}\r\n+          <FeedbackForm />\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+                },
+                {
+                    "date": 1780675135554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n         <div className={styles.formCard}>\r\n           <FeedbackForm />\r\n-        </div>\r\n+        \r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1780675141304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n-        <div className={styles.formCard}>\r\n+        \r\n           <FeedbackForm />\r\n         \r\n       </div>\r\n     </section>\r\n"
+                },
+                {
+                    "date": 1780675171650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n         \r\n-          <FeedbackForm />\r\n+        <FeedbackForm className={styles.formCard} />\r\n         \r\n       </div>\r\n     </section>\r\n   );\r\n"
+                },
+                {
+                    "date": 1780676131548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,9 @@\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n-        \r\n-        <FeedbackForm className={styles.formCard} />\r\n-        \r\n+        <FeedbackForm />\r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n"
                 }
             ],
             "date": 1780488935121,
