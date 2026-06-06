@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 22,
             "patches": [
                 {
                     "date": 1780488935122,
@@ -44,6 +44,58 @@
                 {
                     "date": 1780676131548,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,9 @@\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n-        \r\n-        <FeedbackForm className={styles.formCard} />\r\n-        \r\n+        <FeedbackForm />\r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1780759164887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n         <FeedbackForm />\r\n+        \r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1780760848480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import styles from \"./Feedback.module.css\";\r\n import FeedbackForm from \"./FeedbackForm\";\r\n \r\n+\r\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n         <FeedbackForm />\r\n-        \r\n+\r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1780760853697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import styles from \"./Feedback.module.css\";\r\n import FeedbackForm from \"./FeedbackForm\";\r\n+ peopleImg from \"./image_Feedback/people.png\"; \r\n \r\n-\r\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n       <div className={styles.feedback__container}>\r\n"
+                },
+                {
+                    "date": 1780760878530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import styles from \"./Feedback.module.css\";\r\n import FeedbackForm from \"./FeedbackForm\";\r\n- peopleImg from \"./image_Feedback/people.png\"; \r\n+ peopleImg from \"./imageFeedback/people.png\"; \r\n \r\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n"
+                },
+                {
+                    "date": 1780760887785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import styles from \"./Feedback.module.css\";\r\n+import FeedbackForm from \"./FeedbackForm\";\r\n+ peopleImg from \"./image/Feedback/people.png\"; \r\n+\r\n+function Feedback() {\r\n+  return (\r\n+    <section className={styles.feedback}>\r\n+      <div className={styles.feedback__container}>\r\n+        <FeedbackForm />\r\n+\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780760912318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import styles from \"./Feedback.module.css\";\r\n+import FeedbackForm from \"./FeedbackForm\";\r\n+ peopleImg from \"./Feedback/people.png\"; \r\n+\r\n+function Feedback() {\r\n+  return (\r\n+    <section className={styles.feedback}>\r\n+      <div className={styles.feedback__container}>\r\n+        <FeedbackForm />\r\n+\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780760917374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import styles from \"./Feedback.module.css\";\r\n+import FeedbackForm from \"./FeedbackForm\";\r\n+ peopleImg from \"./Feedback//people.png\"; \r\n+\r\n+function Feedback() {\r\n+  return (\r\n+    <section className={styles.feedback}>\r\n+      <div className={styles.feedback__container}>\r\n+        <FeedbackForm />\r\n+\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780760931949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import styles from \"./Feedback.module.css\";\r\n+import FeedbackForm from \"./FeedbackForm\";\r\n+ peopleImg from \"./Feedback; \r\n+\r\n+function Feedback() {\r\n+  return (\r\n+    <section className={styles.feedback}>\r\n+      <div className={styles.feedback__container}>\r\n+        <FeedbackForm />\r\n+\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780760975749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import styles from \"./Feedback.module.css\";\r\n+import FeedbackForm from \"./FeedbackForm\";\r\n+ peopleImg from \"./Feedback/; \r\n+\r\n+function Feedback() {\r\n+  return (\r\n+    <section className={styles.feedback}>\r\n+      <div className={styles.feedback__container}>\r\n+        <FeedbackForm />\r\n+\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780760981112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,84 +13,4 @@\n   );\r\n }\r\n \r\n export default Feedback;\r\n-import styles from \"./Feedback.module.css\";\r\n-import FeedbackForm from \"./FeedbackForm\";\r\n- peopleImg from \"./Feedback; \r\n-\r\n-function Feedback() {\r\n-  return (\r\n-    <section className={styles.feedback}>\r\n-      <div className={styles.feedback__container}>\r\n-        <FeedbackForm />\r\n-\r\n-      </div>\r\n-    </section>\r\n-  );\r\n-}\r\n-\r\n-export default Feedback;\r\n-import styles from \"./Feedback.module.css\";\r\n-import FeedbackForm from \"./FeedbackForm\";\r\n- peopleImg from \"./Feedback//people.png\"; \r\n-\r\n-function Feedback() {\r\n-  return (\r\n-    <section className={styles.feedback}>\r\n-      <div className={styles.feedback__container}>\r\n-        <FeedbackForm />\r\n-\r\n-      </div>\r\n-    </section>\r\n-  );\r\n-}\r\n-\r\n-export default Feedback;\r\n-import styles from \"./Feedback.module.css\";\r\n-import FeedbackForm from \"./FeedbackForm\";\r\n- peopleImg from \"./Feedback/people.png\"; \r\n-\r\n-function Feedback() {\r\n-  return (\r\n-    <section className={styles.feedback}>\r\n-      <div className={styles.feedback__container}>\r\n-        <FeedbackForm />\r\n-\r\n-      </div>\r\n-    </section>\r\n-  );\r\n-}\r\n-\r\n-export default Feedback;\r\n-import styles from \"./Feedback.module.css\";\r\n-import FeedbackForm from \"./FeedbackForm\";\r\n- peopleImg from \"./image/Feedback/people.png\"; \r\n-\r\n-function Feedback() {\r\n-  return (\r\n-    <section className={styles.feedback}>\r\n-      <div className={styles.feedback__container}>\r\n-        <FeedbackForm />\r\n-\r\n-      </div>\r\n-    </section>\r\n-  );\r\n-}\r\n-\r\n-export default Feedback;\r\n-import styles from \"./Feedback.module.css\";\r\n-import FeedbackForm from \"./FeedbackForm\";\r\n- peopleImg from \"./imageFeedback/people.png\"; \r\n-\r\n-function Feedback() {\r\n-  return (\r\n-    <section className={styles.feedback}>\r\n-      <div className={styles.feedback__container}>\r\n-        <FeedbackForm />\r\n-\r\n-      </div>\r\n-    </section>\r\n-  );\r\n-}\r\n-\r\n-export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780760988990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import styles from \"./Feedback.module.css\";\r\n import FeedbackForm from \"./FeedbackForm\";\r\n- peopleImg from \"./Feedback/; \r\n+ peopleImg from \"; \r\n \r\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n"
+                },
+                {
+                    "date": 1780760994255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import styles from \"./Feedback.module.css\";\r\n+import FeedbackForm from \"./FeedbackForm\";\r\n+ peopleImg from \"./\"; \r\n+\r\n+function Feedback() {\r\n+  return (\r\n+    <section className={styles.feedback}>\r\n+      <div className={styles.feedback__container}>\r\n+        <FeedbackForm />\r\n+\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default Feedback;\r\n"
+                },
+                {
+                    "date": 1780760999905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import styles from \"./Feedback.module.css\";\r\n import FeedbackForm from \"./FeedbackForm\";\r\n- peopleImg from \"\"; \r\n+ peopleImg from \"/\"; \r\n \r\n function Feedback() {\r\n   return (\r\n     <section className={styles.feedback}>\r\n"
                 }
             ],
             "date": 1780488935121,
