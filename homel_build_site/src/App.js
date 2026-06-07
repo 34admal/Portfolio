@@ -14,6 +14,7 @@ import  HowWeWorkSection from "./components/HowWeWorkSection";
 import OurServices from "./components/OurServices/OurServices";
 import PromoBlock from "./components/PromoBlock/PromoBlock";
 import Feedback from "./components/Feedback/Feedback";
+import AboutUs from "./components/AboutUs/AboutUs";
 import Footer from "./components/Footer";
 
 import "./App.css";
@@ -28,6 +29,7 @@ function App() {
         <OurServices/>
         <PromoBlock/>
         <Feedback/>
+        <AboutUs/>
       </Layout>
 
       {/* <Router>
