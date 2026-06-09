@@ -1,8 +1,9 @@
 
 .feedback {
   width: 100%;
+ width: 100%;
   box-sizing: border-box;
-  margin-top: 43px;
+  margin-top: 110px;
   display: flex;
   justify-content: center;
 }
@@ -11,7 +12,7 @@
 .feedback__container {
   width: 100%;
   max-width: 1440px;        
-  height: 603.3px;
+  height: 603.3px; 
   box-sizing: border-box;
   
   background-image: url('./images/feedback-bg.png');
@@ -20,9 +21,12 @@
   background-repeat: no-repeat;
   
   display: flex;
-  align-items: flex-end; 
+  align-items: flex-start; 
+  overflow: visible;      
 }
 
 .people {
   margin-left: 44px;
+   flex-shrink: 0;      
+  align-self: flex-end;
 }
