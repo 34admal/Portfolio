@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1780813176331,
@@ -20,6 +20,54 @@
                 {
                     "date": 1780813418161,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+.about {\r\n+  width: 100%;\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.about__container {\r\n+  width: 100%;\r\n+  max-width: 1440px;\r\n+  margin: 0 auto;\r\n+  box-sizing: border-box;\r\n+}\r\n+h2{color: wh}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1780990737591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,32 +5,12 @@\n \r\n .about__container {\r\n   width: 100%;\r\n   max-width: 1440px;\r\n+  height: 528px; /* Точная высота фона из макета */\r\n   margin: 0 auto;\r\n   box-sizing: border-box;\r\n+  \r\n+  /* Соединяем темное наложение и картинку из локальной папки images */\r\n+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), \r\n+              url('./images/about-bg.jpg') center/cover no-repeat;\r\n }\r\n-h2{color: wh}\n-.about {\r\n-  width: 100%;\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.about__container {\r\n-  width: 100%;\r\n-  max-width: 1440px;\r\n-  margin: 0 auto;\r\n-  box-sizing: border-box;\r\n-}\r\n-h2{co}\n-.about {\r\n-  width: 100%;\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.about__container {\r\n-  width: 100%;\r\n\\ No newline at end of file\n-  max-width: 1440px;\r\n-  margin: 0 auto;\r\n-  box-sizing: border-box;\r\n-}\r\n-h2\n"
+                },
+                {
+                    "date": 1780990765769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,11 @@\n-.about {\r\n-  width: 100%;\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n .about__container {\r\n   width: 100%;\r\n   max-width: 1440px;\r\n-  height: 528px; /* Точная высота фона из макета */\r\n+  height: 528px;\r\n   margin: 0 auto;\r\n   box-sizing: border-box;\r\n   \r\n-  /* Соединяем темное наложение и картинку из локальной папки images */\r\n+  /* Исправили расширение строго на .png */\r\n   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), \r\n-              url('./images/about-bg.jpg') center/cover no-repeat;\r\n+              url('./images/about-bg.png') center/cover no-repeat;\r\n }\r\n"
+                },
+                {
+                    "date": 1780990830044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n   height: 528px;\r\n   margin: 0 auto;\r\n   box-sizing: border-box;\r\n   \r\n-  /* Исправили расширение строго на .png */\r\n+  \r\n   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), \r\n               url('./images/about-bg.png') center/cover no-repeat;\r\n }\r\n"
+                },
+                {
+                    "date": 1780991195271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,16 @@\n+.about {\r\n+  width: 100%;\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n .about__container {\r\n   width: 100%;\r\n   max-width: 1440px;\r\n-  height: 528px;\r\n+  height: 528px; /* Браузер перестанет сжимать блок по высоте */\r\n   margin: 0 auto;\r\n   box-sizing: border-box;\r\n   \r\n-  \r\n+  /* Подключаем наше наложение и строго .png картинку */\r\n   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), \r\n               url('./images/about-bg.png') center/cover no-repeat;\r\n }\r\n"
+                },
+                {
+                    "date": 1780991224971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,5 @@\n   /* Подключаем наше наложение и строго .png картинку */\r\n   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), \r\n               url('./images/about-bg.png') center/cover no-repeat;\r\n }\r\n+s\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1780991231463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+.about {\r\n+  width: 100%;\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.about__container {\r\n+  width: 100%;\r\n+  max-width: 1440px;\r\n+  height: 528px; /* Браузер перестанет сжимать блок по высоте */\r\n+  margin: 0 auto;\r\n+  box-sizing: border-box;\r\n+  \r\n+  /* Подключаем наше наложение и строго .png картинку */\r\n+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), \r\n+              url('./images/about-bg.png') center/cover no-repeat;\r\n+}\r\n+span{}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1780991243156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+.about {\r\n+  width: 100%;\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.about__container {\r\n+  width: 100%;\r\n+  max-width: 1440px;\r\n+  height: 528px; /* Браузер перестанет сжимать блок по высоте */\r\n+  margin: 0 auto;\r\n+  box-sizing: border-box;\r\n+  \r\n+  /* Подключаем наше наложение и строго .png картинку */\r\n+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), \r\n+              url('./images/about-bg.png') center/cover no-repeat;\r\n+}\r\n+span{color: burlywood;}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1780991281654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+.about {\r\n+  width: 100%;\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.about__container {\r\n+  width: 100%;\r\n+  max-width: 1440px;\r\n+  height: 528px; /* Браузер перестанет сжимать блок по высоте */\r\n+  margin: 0 auto;\r\n+  box-sizing: border-box;\r\n+  \r\n+  /* Подключаем наше наложение и строго .png картинку */\r\n+  background: \r\n+              url('./images/about-bg.png') center/cover no-repeat;\r\n+}\r\n+span{color: burlywood;}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1780991661454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+.about__container {\r\n+  width: 100%;\r\n+  max-width: 1440px;\r\n+  height: 528px;\r\n+  margin: 0 auto;\r\n+  box-sizing: border-box;\r\n+  \r\n+  /* Оставили только чистый импорт фоновой картинки */\r\n+  background: url('./images/about-bg.png') center/cover no-repeat;\r\n+}\r\n"
+                },
+                {
+                    "date": 1780992121191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+\r\n+.about__container {\r\n+  width: 100%;\r\n+  max-width: 1440px;\r\n+  height: 528px;\r\n+  margin: 0 auto;\r\n+  box-sizing: border-box;\r\n+  \r\n+  /* Оставили только чистый импорт фоновой картинки */\r\n+  background: url('./images/about-bg.png') center/cover no-repeat;\r\n+}\r\n"
+                },
+                {
+                    "date": 1780992129150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n .about {\r\n   width: 100%;\r\n   box-sizing: border-box;\r\n-  margin-top: 128px; /* Тот самый макетный отступ от верхнего компонента */\r\n+  margin-top: 128px; \r\n }\r\n \r\n .about__container {\r\n   width: 100%;\r\n"
+                },
+                {
+                    "date": 1780992740334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+.about {\r\n+  width: 100%;\r\n+  box-sizing: border-box;\r\n+  margin-top: 128px; \r\n+}\r\n+\r\n+.about__container {\r\n+  width: 100%;\r\n+  max-width: 1440px;\r\n+  height: 528px;\r\n+  margin: 0 auto;\r\n+  box-sizing: border-box;\r\n+  background: url('./images/about-bg.png') center/cover no-repeat;\r\n+  \r\n+  /* Добавляем флексы для разделения левой (текст) и правой (круги) частей */\r\n+  display: flex;\r\n+  justify-content: space-between;\r\n+  align-items: flex-start;\r\n+  padding: 35px 176px 0 222px; /* Сразу задали точные макетные отступы: 35px сверху, 176px справа, 222px слева */\r\n+}\r\n+\r\n+.title {\r\n+  font-family: 'Montserrat', sans-serif;\r\n+  font-weight: 400;\r\n+  font-size: 70px;\r\n+  line-height: 85px;\r\n+  letter-spacing: 0.05em;\r\n+  color: #ff7a00;\r\n+  display: block;\r\n+}\r\n"
                 }
             ],
             "date": 1780813176331,

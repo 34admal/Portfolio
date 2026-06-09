@@ -1,12 +1,29 @@
 .about {
   width: 100%;
   box-sizing: border-box;
+  margin-top: 128px; 
 }
 
 .about__container {
   width: 100%;
   max-width: 1440px;
+  height: 528px;
   margin: 0 auto;
   box-sizing: border-box;
+  background: url('./images/about-bg.png') center/cover no-repeat;
+  
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 35px 176px 0 222px;
 }
-h2{color: white}
+
+.title {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 85px;
+  letter-spacing: 0.05em; /* 5% */
+  color: #ff7a00;
+  display: block;
+}
