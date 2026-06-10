@@ -1,29 +1,44 @@
-.about {
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 128px; 
-}
-
-.about__container {
-  width: 100%;
-  max-width: 1440px;
-  height: 528px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  background: url('./images/about-bg.png') center/cover no-repeat;
-  
-  
+.leftContent {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: flex-start;
-  padding: 35px 176px 0 222px;
+  margin-top: 35px;
 }
 
 .title {
   font-weight: 400;
   font-size: 70px;
   line-height: 85px;
-  letter-spacing: 0.05em; /* 5% */
+  letter-spacing: 0.05em;
   color: #ff7a00;
+  display: block;
+  margin-left: 119px; /* Исправлено строго на 119px по честной линейке макета */
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 488px;       
+  margin-left: 119px; /* Стоит строго по той же линии в 119px */
+}
+
+/* Первый элемент отталкивается от заголовка О НАС */
+.item:nth-of-type(1) {
+  margin-top: 48px;   
+}
+
+.text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.line {
+  width: 488px;
+  height: 2px;
+  background-color: #ff7a00;
   display: block;
 }

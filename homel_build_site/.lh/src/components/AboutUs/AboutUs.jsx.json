@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1780813129076,
@@ -16,6 +16,10 @@
                 {
                     "date": 1780993444077,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,31 @@\n function AboutUs() {\r\n   return (\r\n     <section className={styles.about}>\r\n       <div className={styles.about__container}>\r\n-        <span className={styles.title}>О НАС</span>\r\n+        \r\n+        {/* Объединяем всю левую часть в один блок */}\r\n+        <div className={styles.leftContent}>\r\n+          <span className={styles.title}>О НАС</span>\r\n+          \r\n+          <ul className={styles.list}>\r\n+            <li className={styles.listItem}>Качественное проведение работ</li>\r\n+            <li className={styles.listItem}>Обсуждение работы на каждом этапе</li>\r\n+            <li className={styles.listItem}>Профессиональный инструмент</li>\r\n+            <li className={styles.listItem}>Начинаем работу без аванса</li>\r\n+            <li className={styles.listItem}>Доступные цены</li>\r\n+          </ul>\r\n+        </div>\r\n+\r\n+        {/* Правая часть (пока просто заглушка для круга) */}\r\n+        <div className={styles.rightContent}>\r\n+          {/* Тут будут наши круги */}\r\n+        </div>\r\n+\r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n \r\n export default AboutUs;\r\n \r\n+\r\n"
+                },
+                {
+                    "date": 1781082439303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,22 +4,37 @@\n   return (\r\n     <section className={styles.about}>\r\n       <div className={styles.about__container}>\r\n         \r\n-        {/* Объединяем всю левую часть в один блок */}\r\n         <div className={styles.leftContent}>\r\n           <span className={styles.title}>О НАС</span>\r\n           \r\n-          <ul className={styles.list}>\r\n-            <li className={styles.listItem}>Качественное проведение работ</li>\r\n-            <li className={styles.listItem}>Обсуждение работы на каждом этапе</li>\r\n-            <li className={styles.listItem}>Профессиональный инструмент</li>\r\n-            <li className={styles.listItem}>Начинаем работу без аванса</li>\r\n-            <li className={styles.listItem}>Доступные цены</li>\r\n-          </ul>\r\n+          <div className={styles.item}>\r\n+            <span className={styles.text}>Качественное проведение работ</span>\r\n+            <span className={styles.line}></span>\r\n+          </div>\r\n+\r\n+          <div className={styles.item}>\r\n+            <span className={styles.text}>Обсуждение работы на каждом этапе</span>\r\n+            <span className={styles.line}></span>\r\n+          </div>\r\n+\r\n+          <div className={styles.item}>\r\n+            <span className={styles.text}>Профессиональный инструмент</span>\r\n+            <span className={styles.line}></span>\r\n+          </div>\r\n+\r\n+          <div className={styles.item}>\r\n+            <span className={styles.text}>Начинаем работу без аванса</span>\r\n+            <span className={styles.line}></span>\r\n+          </div>\r\n+\r\n+          <div className={styles.item}>\r\n+            <span className={styles.text}>Доступные цены</span>\r\n+            <span className={styles.line}></span>\r\n+          </div>\r\n         </div>\r\n \r\n-        {/* Правая часть (пока просто заглушка для круга) */}\r\n         <div className={styles.rightContent}>\r\n           {/* Тут будут наши круги */}\r\n         </div>\r\n \r\n"
                 }
             ],
             "date": 1780813129076,
