@@ -67,10 +67,31 @@
   height: 320px;
   border-radius: 50%;
   border: 3px solid #ff7a00;
-  
-  
   margin-top: 93px;
   margin-left: 225px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
+
+.circleTop {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-top: 96px;
+}
+
+.circleNumber {
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 122px;
+  color: #ff7a00;
+  margin-top: 30px;
+}
+
+
 
 
