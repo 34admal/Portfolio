@@ -5,7 +5,13 @@ import styles from "./AboutUs.module.css";
 function AboutUs() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentData = circleData[currentIndex];
+   useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % circleData.length);
+  }, 3000);
 
+  return () => clearInterval(interval);
+}, []);
   return (
     <section className={styles.about}>
       <div className={styles.about__container}>

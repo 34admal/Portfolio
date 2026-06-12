@@ -19,7 +19,7 @@
   box-sizing: border-box;
   background: url('./images/about-bg.png') center/cover no-repeat;
   
-  /* Только выстраиваем элементы в горизонтальный ряд */
+ 
   display: flex;
   align-items: flex-start;
 }
@@ -63,16 +63,17 @@
 }
 
 .rightContent {
-  width: 320px;
+width: 320px;
   height: 320px;
   border-radius: 50%;
-  border: 3px solid #ff7a00;
   margin-top: 93px;
   margin-left: 225px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
+ 
+  outline: 3px solid #ff7a00;
+  outline-offset: -3px;
 }
 
 
@@ -87,10 +88,10 @@
 .circleNumber {
   font-weight: 700;
   font-size: 100px;
-  line-height: normal;
+  line-height: 122px;
   color: #ff7a00;
   margin-top: 38px;
-  margin-bottom: 0; /* Убираем этот отступ, он лишний */
+ 
 }
 
 .circleBottom {
@@ -100,10 +101,7 @@
   letter-spacing: 0.05em;
   color: #ffffff;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 54px; 
+  width: 224px; 
+  margin-top: auto; 
+  margin-bottom: 54px;
 }
-
-
-
-
