@@ -9,7 +9,6 @@ function AboutUs() {
   const interval = setInterval(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % circleData.length);
   }, 3000);
-
   return () => clearInterval(interval);
 }, []);
   return (
