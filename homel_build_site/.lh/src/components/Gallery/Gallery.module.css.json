@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/components/Gallery/Gallery.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1781600796225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1781600887630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import styles from \"./Gallery.module.css\";\r\n \r\n-export default function Gallery() {\r\n+function Gallery() {\r\n   return (\r\n     <section className={styles.section}>\r\n       <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n     </section>\r\n   );\r\n }\r\n+\r\n+export default Gallery;\r\n"
+                },
+                {
+                    "date": 1781600975249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +0,0 @@\n-import styles from \"./Gallery.module.css\";\r\n-\r\n-function Gallery() {\r\n-  return (\r\n-    <section className={styles.section}>\r\n-      <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n-    </section>\r\n-  );\r\n-}\r\n-\r\n-export default Gallery;\r\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1781601005933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,12 @@\n-\n+.section {\r\n+  margin-top: 83px;\r\n+}\r\n+\r\n+.title {\r\n+  font-family: \"Montserrat\", sans-serif;\r\n+  font-size: 30px;\r\n+  font-weight: 400;\r\n+  line-height: normal;\r\n+  text-transform: uppercase;\r\n+  color: #fff;\r\n+}\r\n"
+                },
+                {
+                    "date": 1781603045108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n .section {\r\n   margin-top: 83px;\r\n+  display: flex;\r\n+  align-items: baseline;\r\n+  padding-left: 119px;\r\n }\r\n \r\n+\r\n .title {\r\n   font-family: \"Montserrat\", sans-serif;\r\n   font-size: 30px;\r\n   font-weight: 400;\r\n"
+                },
+                {
+                    "date": 1781603353413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,17 @@\n   padding-left: 119px;\r\n }\r\n \r\n \r\n+/* Убираем margin-right у title и переносим на конкретную линию */\r\n .title {\r\n-  font-family: \"Montserrat\", sans-serif;\r\n   font-size: 30px;\r\n   font-weight: 400;\r\n   line-height: normal;\r\n   text-transform: uppercase;\r\n   color: #fff;\r\n }\r\n+\r\n+.lineRight {\r\n+  margin-left: 268px;\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1781603361676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   padding-left: 119px;\r\n }\r\n \r\n \r\n-/* Убираем margin-right у title и переносим на конкретную линию */\r\n+\r\n .title {\r\n   font-size: 30px;\r\n   font-weight: 400;\r\n   line-height: normal;\r\n"
+                },
+                {
+                    "date": 1781603417583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,18 @@\n   align-items: baseline;\r\n   padding-left: 119px;\r\n }\r\n \r\n+.line {\r\n+  display: block;\r\n+  width: 203px;\r\n+  height: 3px;\r\n+  background-color: #ff7a00;\r\n+}\r\n \r\n+.lineLeft {\r\n+  margin-right: 269px;\r\n+}\r\n \r\n .title {\r\n   font-size: 30px;\r\n   font-weight: 400;\r\n"
+                }
+            ],
+            "date": 1781600796225,
+            "name": "Commit-0",
+            "content": "import styles from \"./Gallery.module.css\";\r\n\r\nexport default function Gallery() {\r\n  return (\r\n    <section className={styles.section}>\r\n      <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n    </section>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

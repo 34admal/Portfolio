@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Gallery/Gallery.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1781600970782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1781602323038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,14 @@\n import styles from \"./Gallery.module.css\";\r\n \r\n function Gallery() {\r\n   return (\r\n-    <section className={styles.section}>\r\n-      <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n-    </section>\r\n+   <section className={styles.section}>\r\n+  <span className={styles.line} />\r\n+  <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n+  <span className={styles.line} />\r\n+</section>\r\n+\r\n   );\r\n }\r\n \r\n export default Gallery;\r\n"
+                },
+                {
+                    "date": 1781603286642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import styles from \"./Gallery.module.css\";\r\n \r\n function Gallery() {\r\n   return (\r\n-   <section className={styles.section}>\r\n-  <span className={styles.line} />\r\n-  <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n-  <span className={styles.line} />\r\n-</section>\r\n-\r\n+    <section className={styles.section}>\r\n+      <span className={`${styles.line} ${styles.lineLeft}`} />\r\n+      <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n+      <span className={`${styles.line} ${styles.lineRight}`} />\r\n+    </section>\r\n   );\r\n }\r\n \r\n export default Gallery;\r\n+\r\n"
+                }
+            ],
+            "date": 1781600970782,
+            "name": "Commit-0",
+            "content": "import styles from \"./Gallery.module.css\";\r\n\r\nfunction Gallery() {\r\n  return (\r\n    <section className={styles.section}>\r\n      <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n    </section>\r\n  );\r\n}\r\n\r\nexport default Gallery;\r\n"
+        }
+    ]
+}

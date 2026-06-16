@@ -15,6 +15,7 @@ import OurServices from "./components/OurServices/OurServices";
 import PromoBlock from "./components/PromoBlock/PromoBlock";
 import Feedback from "./components/Feedback/Feedback";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/Footer";
 
 import "./App.css";
@@ -30,6 +31,7 @@ function App() {
         <PromoBlock/>
         <Feedback/>
         <AboutUs/>
+        <Gallery/>
       </Layout>
 
       {/* <Router>
