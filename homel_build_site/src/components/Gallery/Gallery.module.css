@@ -1,0 +1,30 @@
+.section {
+  margin-top: 83px;
+  display: flex;
+  align-items: baseline;
+  padding-left: 119px;
+}
+
+.line {
+  display: block;
+  width: 203px;
+  height: 3px;
+  background-color: #ff7a00;
+}
+
+.lineLeft {
+  margin-right: 269px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.lineRight {
+  margin-left: 268px;
+}
+
