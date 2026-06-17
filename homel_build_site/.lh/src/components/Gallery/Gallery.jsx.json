@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1781600970782,
@@ -16,6 +16,26 @@
                 {
                     "date": 1781603286642,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import styles from \"./Gallery.module.css\";\r\n \r\n function Gallery() {\r\n   return (\r\n-   <section className={styles.section}>\r\n-  <span className={styles.line} />\r\n-  <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n-  <span className={styles.line} />\r\n-</section>\r\n-\r\n+    <section className={styles.section}>\r\n+      <span className={`${styles.line} ${styles.lineLeft}`} />\r\n+      <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n+      <span className={`${styles.line} ${styles.lineRight}`} />\r\n+    </section>\r\n   );\r\n }\r\n \r\n export default Gallery;\r\n+\r\n"
+                },
+                {
+                    "date": 1781704763740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n     <section className={styles.section}>\r\n       <span className={`${styles.line} ${styles.lineLeft}`} />\r\n       <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n       <span className={`${styles.line} ${styles.lineRight}`} />\r\n+\r\n+      \r\n     </section>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1781705433704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,18 @@\n \r\n function Gallery() {\r\n   return (\r\n     <section className={styles.section}>\r\n-      <span className={`${styles.line} ${styles.lineLeft}`} />\r\n-      <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n-      <span className={`${styles.line} ${styles.lineRight}`} />\r\n+      <div className={styles.headerRow}>\r\n+        <span className={`${styles.line} ${styles.lineLeft}`} />\r\n+        <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n+        <span className={`${styles.line} ${styles.lineRight}`} />\r\n+      </div>\r\n \r\n-      \r\n+      <div className={styles.content}>\r\n+        <div className={styles.tileBlock} />\r\n+      </div>\r\n     </section>\r\n   );\r\n }\r\n \r\n export default Gallery;\r\n-\r\n"
+                },
+                {
+                    "date": 1781708026938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import styles from \"./Gallery.module.css\";\r\n+\r\n+\r\n+function Gallery() {\r\n+  return (\r\n+    <section className={styles.section}>\r\n+      <div className={styles.headerRow}>\r\n+        <span className={`${styles.line} ${styles.lineLeft}`} />\r\n+        <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n+        <span className={`${styles.line} ${styles.lineRight}`} />\r\n+      </div>\r\n+\r\n+      <div className={styles.content}>\r\n+        <div className={styles.tileBlock} />\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default Gallery;\r\n"
+                },
+                {
+                    "date": 1781708201927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import styles from \"./Gallery.module.css\";\r\n+import tileImg from \"./images/tile.png\";\r\n+\r\n+function Gallery() {\r\n+  return (\r\n+    <section className={styles.section}>\r\n+      <div className={styles.headerRow}>\r\n+        <span className={`${styles.line} ${styles.lineLeft}`} />\r\n+        <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n+        <span className={`${styles.line} ${styles.lineRight}`} />\r\n+      </div>\r\n+ <div className={styles.tileBlock}>\r\n+        <img src={tileImg} alt=\"Плитка\" className={styles.photo} />\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+}\r\n+\r\n+export default Gallery;\r\n"
+                },
+                {
+                    "date": 1781709232039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n         <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>\r\n         <span className={`${styles.line} ${styles.lineRight}`} />\r\n       </div>\r\n  <div className={styles.tileBlock}>\r\n+  \r\n         <img src={tileImg} alt=\"Плитка\" className={styles.photo} />\r\n       </div>\r\n     </section>\r\n   );\r\n"
                 }
             ],
             "date": 1781600970782,

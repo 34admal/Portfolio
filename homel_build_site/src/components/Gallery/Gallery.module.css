@@ -1,5 +1,10 @@
+
 .section {
   margin-top: 83px;
+}
+
+
+.headerRow {
   display: flex;
   align-items: baseline;
   padding-left: 119px;
@@ -27,4 +32,41 @@
 .lineRight {
   margin-left: 268px;
 }
+
+.content {
+  width: 100%;
+}
+
+.tileBlock {
+  margin-top: 99px;
+  margin-left: 119px;
+  position: relative;
+  width: 360px;
+  height: 360px;
+}
+
+.contour {
+  display: block;
+  position: absolute;
+  right: -27px;
+  bottom: -24px;
+  width: 350px;
+  height: 350px;
+  box-sizing: border-box;
+  border: 3px solid #ff7a00;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.photo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 18px;
+  z-index: 2;
+}
+
+
+
 
