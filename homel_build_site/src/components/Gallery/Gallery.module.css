@@ -67,6 +67,28 @@
   z-index: 2;
 }
 
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 360px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
 
+.categoryTitle {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 360px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 4;
+}
 
 

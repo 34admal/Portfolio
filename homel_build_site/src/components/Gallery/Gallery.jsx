@@ -12,7 +12,10 @@ function Gallery() {
  <div className={styles.tileBlock}>
    <span className={styles.contour} />
         <img src={tileImg} alt="Плитка" className={styles.photo} />
+         <div className={styles.overlay} />
+        <span className={styles.categoryTitle}>ПЛИТКА</span>
       </div>
+     
     </section>
   );
 }
