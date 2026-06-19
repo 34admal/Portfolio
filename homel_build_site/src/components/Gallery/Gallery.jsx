@@ -1,6 +1,7 @@
 import styles from "./Gallery.module.css";
 import tileImg from "./images/tile.png";
 
+
 function Gallery() {
   return (
     <section className={styles.section}>
@@ -9,13 +10,15 @@ function Gallery() {
         <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>
         <span className={`${styles.line} ${styles.lineRight}`} />
       </div>
- <div className={styles.tileBlock}>
-   <span className={styles.contour} />
+      <div className={styles.tileBlock}>
+        <span className={styles.contour} />
         <img src={tileImg} alt="Плитка" className={styles.photo} />
-         <div className={styles.overlay} />
+        <div className={styles.overlay} />
         <span className={styles.categoryTitle}>ПЛИТКА</span>
       </div>
-     
+
+       {/* блок под Кладку */}
+      <div className={styles.masonryBlock} />
     </section>
   );
 }

@@ -3,7 +3,6 @@
   margin-top: 83px;
 }
 
-
 .headerRow {
   display: flex;
   align-items: baseline;
@@ -91,4 +90,6 @@
   z-index: 4;
 }
 
-
+.masonryBlock{
+  
+}
