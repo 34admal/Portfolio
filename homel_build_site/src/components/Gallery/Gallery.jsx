@@ -1,5 +1,6 @@
 import styles from "./Gallery.module.css";
 import tileImg from "./images/tile.png";
+import masonryImg from "./images/masonry.png";
 
 
 function Gallery() {
@@ -17,8 +18,9 @@ function Gallery() {
         <span className={styles.categoryTitle}>ПЛИТКА</span>
       </div>
 
-       {/* блок под Кладку */}
-      <div className={styles.masonryBlock} />
+<div className={styles.masonryBlock}>
+        <img src={masonryImg} alt="Кладка" className={styles.photo} />
+      </div>
     </section>
   );
 }
