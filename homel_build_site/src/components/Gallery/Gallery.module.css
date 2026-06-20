@@ -127,4 +127,48 @@
   z-index: 3;
 }
 
+.titleMasonry {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 360px;
+  text-align: center;
+  z-index: 4;
+}
+
+.finishingBlock {
+  position: relative;
+  width: 387px;
+  height: 384px;
+  margin-left: 47px;
+}
+
+.contourFinishing {
+  display: block;
+  position: absolute;
+  top: 34px;
+  left: 37px;
+  width: 350px;
+  height: 350px;
+  box-sizing: border-box;
+  border: 3px solid #ff7a00;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.overlayFinishing {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 360px;
+  height: 66px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+
+
+
+
+
 

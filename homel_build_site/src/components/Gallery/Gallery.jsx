@@ -1,7 +1,7 @@
 import styles from "./Gallery.module.css";
 import tileImg from "./images/tile.png";
 import masonryImg from "./images/masonry.png";
-
+import finishingImg from "./images/finishing.png";
 
 function Gallery() {
   return (
@@ -19,14 +19,14 @@ function Gallery() {
           <span className={styles.categoryTitle}>ПЛИТКА</span>
         </div>
 
-        <div className={styles.masonryBlock}>
-          <span className={styles.contourMasonry} />
-          <img src={masonryImg} alt="Кладка" className={styles.photo} />
-          <div className={styles.overlayMasonry} />
-  <span className={styles.categoryTitle}>КЛАДКА</span>
+        <div className={styles.finishingBlock}>
+  <span className={styles.contourFinishing} />
+  <img src={finishingImg} alt="Отделка" className={styles.photo} />
+  <div className={styles.overlayFinishing} />
+  <span className={styles.categoryTitle}>ОТДЕЛКА</span>
 </div>
-        </div>
-      
+
+      </div>
     </section>
   );
 }
