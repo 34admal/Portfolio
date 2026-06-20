@@ -33,16 +33,27 @@
 }
 
 .content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 99px;
   width: 100%;
 }
 
 .tileBlock {
-  margin-top: 99px;
   margin-left: 119px;
   position: relative;
   width: 360px;
   height: 360px;
 }
+
+
+.masonryBlock {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  margin-left: 47px;
+}
+
 
 .contour {
   display: block;
@@ -90,6 +101,30 @@
   z-index: 4;
 }
 
-.masonryBlock{
-  
+.masonryBlock {
+  position: relative;
 }
+
+.contourMasonry {
+  display: block;
+  position: absolute;
+  right: -26px;
+  bottom: -24px;
+  width: 350px;
+  height: 350px;
+  box-sizing: border-box;
+  border: 3px solid #ff7a00;
+  border-radius: 10px;
+  z-index: 1;
+}
+.overlayMasonry {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 360px;
+  height: 68px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+
