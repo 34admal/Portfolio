@@ -11,7 +11,9 @@ function Gallery() {
         <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>
         <span className={`${styles.line} ${styles.lineRight}`} />
       </div>
+
       <div className={styles.content}>
+        {/* Блок 1: ПЛИТКА */}
         <div className={styles.tileBlock}>
           <span className={styles.contour} />
           <img src={tileImg} alt="Плитка" className={styles.photo} />
@@ -19,13 +21,21 @@ function Gallery() {
           <span className={styles.categoryTitle}>ПЛИТКА</span>
         </div>
 
-        <div className={styles.finishingBlock}>
-  <span className={styles.contourFinishing} />
-  <img src={finishingImg} alt="Отделка" className={styles.photo} />
-  <div className={styles.overlayFinishing} />
-  <span className={styles.categoryTitle}>ОТДЕЛКА</span>
-</div>
+        {/* Блок 2: КЛАДКА */}
+        <div className={styles.masonryBlock}>
+          <span className={styles.contourMasonry} />
+          <img src={masonryImg} alt="Кладка" className={styles.photo} />
+          <div className={styles.overlayMasonry} />
+          <span className={`${styles.categoryTitle} ${styles.titleMasonry}`}>КЛАДКА</span>
+        </div>
 
+        {/* Блок 3: ОТДЕЛКА */}
+        <div className={styles.finishingBlock}>
+          <span className={styles.contourFinishing} />
+          <img src={finishingImg} alt="Отделка" className={styles.photo} />
+          <div className={styles.overlayFinishing} />
+          <span className={styles.categoryTitle}>ОТДЕЛКА</span>
+        </div>
       </div>
     </section>
   );

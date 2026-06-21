@@ -39,27 +39,34 @@
   width: 100%;
 }
 
+/* ПЛИТКА */
 .tileBlock {
   margin-left: 119px;
   position: relative;
-  width: 360px;
-  height: 360px;
+  width: 387px;
+  height: 384px;
 }
 
 
 .masonryBlock {
   position: relative;
-  width: 360px;
-  height: 360px;
-  margin-left: 47px;
+  width: 386px; 
+  height: 384px;
+  margin-left: 20px; 
 }
 
+.finishingBlock {
+  position: relative;
+  width: 387px;
+  height: 384px;
+  margin-left: 21px;
+}
 
 .contour {
   display: block;
   position: absolute;
-  right: -27px;
-  bottom: -24px;
+  top: 34px;
+  left: 37px;
   width: 350px;
   height: 350px;
   box-sizing: border-box;
@@ -67,29 +74,53 @@
   border-radius: 10px;
   z-index: 1;
 }
+.overlay {
+  position: absolute;
+  top: 290px;
+  left: 0;
+  width: 360px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  z-index: 3;
+}
 
 .photo {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 18px;
-  z-index: 2;
+ 
+  z-index: 2; 
 }
 
-.overlay {
+.overlayMasonry {
   position: absolute;
-  bottom: 0;
+  top: 292px;
   left: 0;
   width: 360px;
-  height: 70px;
+  height: 68px;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  z-index: 3;
+}
+
+
+.overlayFinishing {
+  position: absolute;
+  top: 294px;
+  left: 0;
+  width: 360px;
+  height: 66px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 3;
 }
 
+
 .categoryTitle {
   position: absolute;
-  bottom: 20px;
+  top: 316px; 
+  bottom: auto;
   left: 0;
   width: 360px;
   text-align: center;
@@ -101,15 +132,27 @@
   z-index: 4;
 }
 
-.masonryBlock {
-  position: relative;
+
+.titleMasonry {
+  position: absolute;
+  top: 316px; 
+  left: 0;
+  width: 360px;
+  text-align: center;
+  z-index: 4;
+}
+
+
+.finishingBlock .categoryTitle {
+  bottom: auto;
+  top: 316px;
 }
 
 .contourMasonry {
   display: block;
   position: absolute;
-  right: -26px;
-  bottom: -24px;
+  top: 34px;
+  left: 36px;
   width: 350px;
   height: 350px;
   box-sizing: border-box;
@@ -117,31 +160,7 @@
   border-radius: 10px;
   z-index: 1;
 }
-.overlayMasonry {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 360px;
-  height: 68px;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 3;
-}
 
-.titleMasonry {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  width: 360px;
-  text-align: center;
-  z-index: 4;
-}
-
-.finishingBlock {
-  position: relative;
-  width: 387px;
-  height: 384px;
-  margin-left: 47px;
-}
 
 .contourFinishing {
   display: block;
@@ -155,20 +174,3 @@
   border-radius: 10px;
   z-index: 1;
 }
-
-.overlayFinishing {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 360px;
-  height: 66px;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 3;
-}
-
-
-
-
-
-
-
