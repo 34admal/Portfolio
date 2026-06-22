@@ -3,6 +3,7 @@ import tileImg from "./images/tile.png";
 import masonryImg from "./images/masonry.png";
 import finishingImg from "./images/finishing.png";
 import roofingImg from "./images/roof.png";
+import plumbingImg from "./images/plumbing.png";
 
 function Gallery() {
   return (
@@ -43,6 +44,14 @@ function Gallery() {
           <img src={roofingImg} alt="Кровля" className={styles.photo} />
         <div className={styles.overlay} />
   <span className={styles.categoryTitle}>КРОВЛЯ</span>
+        </div>
+
+        {/* 2. Новый блок 5: САНТЕХНИКА */}
+        <div className={styles.plumbingBlock}>
+          <span className={styles.contourPlumbing} />
+          <img src={plumbingImg} alt="Сантехника" className={styles.photo} />
+           <div className={styles.overlay} />
+  <span className={styles.categoryTitle}>САНТЕХНИКА</span>
         </div>
 
       </div>

@@ -197,3 +197,32 @@
 }
 
 
+.plumbingBlock {
+  position: relative;
+  width: 386px;
+  height: 384px;
+  margin-top: 72px;
+  margin-left: 47px;
+}
+
+.contourPlumbing {
+  display: block;
+  position: absolute;
+  top: 34px;
+  left: 36px;
+  width: 350px;
+  height: 350px;
+  box-sizing: border-box;
+  border: 3px solid #ff7a00;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.plumbingBlock .categoryTitle {
+  bottom: 20px;
+  top: auto;
+}
+
+
+
+
