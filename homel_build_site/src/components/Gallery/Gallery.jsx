@@ -2,6 +2,7 @@ import styles from "./Gallery.module.css";
 import tileImg from "./images/tile.png";
 import masonryImg from "./images/masonry.png";
 import finishingImg from "./images/finishing.png";
+import roofingImg from "./images/roof.png";
 
 function Gallery() {
   return (
@@ -36,6 +37,14 @@ function Gallery() {
           <div className={styles.overlayFinishing} />
           <span className={styles.categoryTitle}>ОТДЕЛКА</span>
         </div>
+         {/* 2. Новый блок 4: КРОВЛЯ */}
+        <div className={styles.roofingBlock}>
+          <span className={styles.contourRoofing} />
+          <img src={roofingImg} alt="Кровля" className={styles.photo} />
+        <div className={styles.overlay} />
+  <span className={styles.categoryTitle}>КРОВЛЯ</span>
+        </div>
+
       </div>
     </section>
   );
