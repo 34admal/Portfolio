@@ -4,6 +4,7 @@ import masonryImg from "./images/masonry.png";
 import finishingImg from "./images/finishing.png";
 import roofingImg from "./images/roof.png";
 import plumbingImg from "./images/plumbing.png";
+import electricityImg from "./images/electricity.png";
 
 function Gallery() {
   return (
@@ -52,6 +53,14 @@ function Gallery() {
           <img src={plumbingImg} alt="Сантехника" className={styles.photo} />
            <div className={styles.overlay} />
   <span className={styles.categoryTitle}>САНТЕХНИКА</span>
+        </div>
+
+        {/* 2. Новый блок 6: ЭЛЕКТРИКА */}
+        <div className={styles.electricityBlock}>
+          <span className={styles.contourElectricity} />
+          <img src={electricityImg} alt="Электрика" className={styles.photo} />
+          <div className={styles.overlay} />
+          <span className={styles.categoryTitle}>ЭЛЕКТРИКА</span>
         </div>
 
       </div>

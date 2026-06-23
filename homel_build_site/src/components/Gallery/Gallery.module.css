@@ -202,7 +202,7 @@
   width: 386px;
   height: 384px;
   margin-top: 72px;
-  margin-left: 47px;
+  margin-left: 20px;
 }
 
 .contourPlumbing {
@@ -218,10 +218,47 @@
   z-index: 1;
 }
 
-.plumbingBlock .categoryTitle {
-  bottom: 20px;
-  top: auto;
+.categoryTitle {
+  position: absolute;
+  top: 316px; /* Вместо bottom: 20px */
+  bottom: auto;
+  left: 0;
+  width: 360px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 4;
 }
+
+
+.electricityBlock {
+  position: relative;
+  width: 386px;
+  height: 384px;
+  margin-top: 72px;
+  margin-left: 21px; 
+}
+
+
+.contourElectricity {
+  display: block;
+  position: absolute;
+  top: 34px;
+  left: 36px;
+  width: 350px;
+  height: 350px;
+  box-sizing: border-box;
+  border: 3px solid #ff7a00;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+
+
+
 
 
 
