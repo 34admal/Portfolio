@@ -1,3 +1,7 @@
+import { useState } from "react";
+import GalleryModal from "./GalleryModal/GalleryModal";
+
+
 import styles from "./Gallery.module.css";
 import tileImg from "./images/tile.png";
 import masonryImg from "./images/masonry.png";
@@ -7,6 +11,8 @@ import plumbingImg from "./images/plumbing.png";
 import electricityImg from "./images/electricity.png";
 
 function Gallery() {
+  const [activeTitle, setActiveTitle] = useState(null);
+
   return (
     <section className={styles.section}>
       <div className={styles.headerRow}>
