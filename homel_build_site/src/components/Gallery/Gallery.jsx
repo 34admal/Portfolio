@@ -12,7 +12,7 @@ import electricityImg from "./images/electricity.png";
 
 function Gallery() {
   const [activeTitle, setActiveTitle] = useState(null);
-
+  
   return (
     <section className={styles.section}>
       <div className={styles.headerRow}>
@@ -45,7 +45,7 @@ function Gallery() {
           <div className={styles.overlayFinishing} />
           <span className={styles.categoryTitle}>ОТДЕЛКА</span>
         </div>
-         {/* 2. Новый блок 4: КРОВЛЯ */}
+         {/* 2. блок 4: КРОВЛЯ */}
         <div className={styles.roofingBlock}>
           <span className={styles.contourRoofing} />
           <img src={roofingImg} alt="Кровля" className={styles.photo} />
