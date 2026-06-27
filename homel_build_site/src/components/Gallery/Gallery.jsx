@@ -70,6 +70,7 @@ function Gallery() {
         </div>
 
       </div>
+      <GalleryModal isOpen={true} />
     </section>
   );
 }

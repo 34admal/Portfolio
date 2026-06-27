@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1782288188647,
@@ -20,6 +20,14 @@
                 {
                     "date": 1782492101338,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,26 +5,11 @@\n function GalleryModal() {\r\n   return (\r\n     <div className={styles.modalOverlay}>\r\n       <div className={styles.modalWindow}>\r\n-        {/* Контент модального окна будет здесь */}\r\n+        \r\n       </div>\r\n     </div>\r\n   );\r\n }\r\n \r\n export default GalleryModal;\r\n-\r\n-\r\n-import styles from \"./GalleryModal.module.css\";\r\n-\r\n-function GalleryModal() {\r\n-  return (\r\n-    <div className={styles.modalOverlay}>\r\n-      <div className={styles.modalWindow}>\r\n-        {/* Контент модального окна будет здесь */}\r\n-      </div>\r\n-    </div>\r\n-  );\r\n-}\r\n-\r\n-export default GalleryModal;\r\n"
+                },
+                {
+                    "date": 1782577606739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,18 @@\n \r\n \r\n import styles from \"./GalleryModal.module.css\";\r\n \r\n-function GalleryModal() {\r\n+function GalleryModal({ isOpen }) {\r\n+  if (!isOpen) return null;\r\n+\r\n   return (\r\n     <div className={styles.modalOverlay}>\r\n       <div className={styles.modalWindow}>\r\n-        \r\n+        {/* Контент фрейма добавим следующим шагом */}\r\n       </div>\r\n     </div>\r\n   );\r\n }\r\n \r\n export default GalleryModal;\r\n+\r\n"
+                },
+                {
+                    "date": 1782578257930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n \r\n \r\n import styles from \"./GalleryModal.module.css\";\r\n \r\n-function GalleryModal({ isOpen }) {\r\n+function GalleryModal({ isOpen, title }) {\r\n   if (!isOpen) return null;\r\n \r\n   return (\r\n     <div className={styles.modalOverlay}>\r\n       <div className={styles.modalWindow}>\r\n-        {/* Контент фрейма добавим следующим шагом */}\r\n+        <button className={styles.closeButton}>✕</button>\r\n+        <h2 className={styles.modalTitle}>{title || \"КРОВЛЯ\"}</h2>\r\n       </div>\r\n     </div>\r\n   );\r\n }\r\n"
                 }
             ],
             "date": 1782288188647,
