@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1782288188647,
@@ -28,6 +28,22 @@
                 {
                     "date": 1782578257930,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n \r\n \r\n import styles from \"./GalleryModal.module.css\";\r\n \r\n-function GalleryModal({ isOpen }) {\r\n+function GalleryModal({ isOpen, title }) {\r\n   if (!isOpen) return null;\r\n \r\n   return (\r\n     <div className={styles.modalOverlay}>\r\n       <div className={styles.modalWindow}>\r\n-        {/* Контент фрейма добавим следующим шагом */}\r\n+        <button className={styles.closeButton}>✕</button>\r\n+        <h2 className={styles.modalTitle}>{title || \"КРОВЛЯ\"}</h2>\r\n       </div>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1782642673353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,10 @@\n     <div className={styles.modalOverlay}>\r\n       <div className={styles.modalWindow}>\r\n         <button className={styles.closeButton}>✕</button>\r\n         <h2 className={styles.modalTitle}>{title || \"КРОВЛЯ\"}</h2>\r\n+\r\n+        \r\n       </div>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1782642685020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+\r\n+\r\n+import styles from \"./GalleryModal.module.css\";\r\n+\r\n+function GalleryModal({ isOpen, title }) {\r\n+  if (!isOpen) return null;\r\n+\r\n+  return (\r\n+    <div className={styles.modalOverlay}>\r\n+      <div className={styles.modalWindow}>\r\n+        <button className={styles.closeButton}>✕</button>\r\n+        <h2 className={styles.modalTitle}>{title || \"КРОВЛЯ\"}</h2>\r\n+\r\n+        <div className={styles.photoGrid}>\r\n+          \r\n+        </div>\r\n+      </div>\r\n+    </div>\r\n+  );\r\n+}\r\n+\r\n+export default GalleryModal;\r\n+\r\n"
+                },
+                {
+                    "date": 1782643615221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+\r\n+\r\n+import styles from \"./GalleryModal.module.css\";\r\n+\r\n+\r\n+function GalleryModal({ isOpen, title }) {\r\n+  if (!isOpen) return null;\r\n+\r\n+  return (\r\n+    <div className={styles.modalOverlay}>\r\n+      <div className={styles.modalWindow}>\r\n+        <button className={styles.closeButton}>✕</button>\r\n+        <h2 className={styles.modalTitle}>{title || \"КРОВЛЯ\"}</h2>\r\n+\r\n+        <div className={styles.photoGrid}>\r\n+          \r\n+        </div>\r\n+      </div>\r\n+    </div>\r\n+  );\r\n+}\r\n+\r\n+export default GalleryModal;\r\n+\r\n"
+                },
+                {
+                    "date": 1782643703543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+\r\n+\r\n+import styles from \"./GalleryModal.module.css\";\r\n+import roofImg1 from \"./images/roofImg1.png\";\r\n+import roofImg2 from \"./images/roofImg2.png\";\r\n+import roofImg3 from \"./images/roofImg3.png\";\r\n+import roofImg4 from \"./images/roofImg4.png\";\r\n+import roofImg5 from \"./images/roofImg5.png\";\r\n+import roofImg6 from \"./images/roofImg6.png\";\r\n+\r\n+\r\n+\r\n+function GalleryModal({ isOpen, title }) {\r\n+  if (!isOpen) return null;\r\n+\r\n+  return (\r\n+    <div className={styles.modalOverlay}>\r\n+      <div className={styles.modalWindow}>\r\n+        <button className={styles.closeButton}>✕</button>\r\n+        <h2 className={styles.modalTitle}>{title || \"КРОВЛЯ\"}</h2>\r\n+\r\n+        <div className={styles.photoGrid}>\r\n+          \r\n+        </div>\r\n+      </div>\r\n+    </div>\r\n+  );\r\n+}\r\n+\r\n+export default GalleryModal;\r\n+\r\n"
                 }
             ],
             "date": 1782288188647,

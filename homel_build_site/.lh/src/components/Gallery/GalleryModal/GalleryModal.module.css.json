@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1782577760678,
@@ -24,6 +24,10 @@
                 {
                     "date": 1782578757963,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+.modalOverlay {\r\n+  position: fixed;\r\n+  top: 0;\r\n+  left: 0;\r\n+  width: 100vw;\r\n+  height: 100vh;\r\n+  background: rgba(18, 18, 18, 0.6);\r\n+  backdrop-filter: blur(10px);\r\n+  z-index: 100;\r\n+  display: flex;\r\n+  justify-content: center;\r\n+  align-items: center;\r\n+}\r\n+\r\n+.modalWindow {\r\n+  background: #121212;\r\n+  border: 1px solid rgba(255, 255, 255, 0.1);\r\n+  border-radius: 24px;\r\n+  padding: 40px;\r\n+  max-width: 95vw;\r\n+  max-height: 85vh;\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+}\r\n+\r\n+.modalTitle {\r\n+  font-size: 40px;\r\n+  font-weight: 400;\r\n+  line-height: 40px;\r\n+  color: rgba(255, 255, 255, 1);\r\n+  text-align: left;\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1782642888094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,62 +30,5 @@\n   color: rgba(255, 255, 255, 1);\r\n   text-align: left;\r\n }\r\n \r\n-.modalOverlay {\r\n-  position: fixed;\r\n-  top: 0;\r\n-  left: 0;\r\n-  width: 100vw;\r\n-  height: 100vh;\r\n-  background: rgba(18, 18, 18, 0.6);\r\n-  backdrop-filter: blur(10px);\r\n-  z-index: 100;\r\n-  display: flex;\r\n-  justify-content: center;\r\n-  align-items: center;\r\n-}\r\n \r\n-.modalWindow {\r\n-  background: #121212;\r\n-  border: 1px solid rgba(255, 255, 255, 0.1);\r\n-  border-radius: 24px;\r\n-  padding: 40px;\r\n-  max-width: 95vw;\r\n-  max-height: 85vh;\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-}\r\n-\r\n-.modalTitle {\r\n-  font-size: 40px;\r\n-  font-weight: 400;\r\n-  line-height: 40px;\r\n-  color: rgba(255, 255, 255, 1);\r\n-  text-align: left;\r\n-  \r\n-.modalOverlay {\r\n-  position: fixed;\r\n-  top: 0;\r\n-  left: 0;\r\n-  width: 100vw;\r\n-  height: 100vh;\r\n-  background: rgba(18, 18, 18, 0.6);\r\n-  backdrop-filter: blur(10px);\r\n-  z-index: 100;\r\n-  display: flex;\r\n-  justify-content: center;\r\n-  align-items: center;\r\n-}\r\n-\r\n-.modalWindow {\r\n-  background: #121212;\r\n-  border: 1px solid rgba(255, 255, 255, 0.1);\r\n-  border-radius: 24px;\r\n-  padding: 40px;\r\n-  max-width: 95vw;\r\n-  max-height: 85vh;\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-}\r\n-\r\n-\r\n"
                 }
             ],
             "date": 1782577760678,
