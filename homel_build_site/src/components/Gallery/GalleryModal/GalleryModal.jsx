@@ -11,13 +11,15 @@ import roofImg6 from "./images/roofImg6.png";
 const roofImages = [roofImg1, roofImg2, roofImg3, roofImg4, roofImg5, roofImg6];
 
 
-function GalleryModal({ isOpen, title }) {
+function GalleryModal({ isOpen, title, onClose }) {
   if (!isOpen) return null;
 
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalWindow}>
-        <button className={styles.closeButton}>✕</button>
+        <button className={styles.closeButton} onClick={onClose} aria-label="Закрыть галерею">
+  <span className={styles.closeLine}></span>
+</button>
         <span className={styles.modalTitle}>{title || "КРОВЛЯ"}</span>
 
        <div className={styles.photoGrid}>
