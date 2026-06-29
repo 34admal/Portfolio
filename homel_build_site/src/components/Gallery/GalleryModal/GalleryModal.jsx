@@ -18,11 +18,20 @@ function GalleryModal({ isOpen, title }) {
     <div className={styles.modalOverlay}>
       <div className={styles.modalWindow}>
         <button className={styles.closeButton}>✕</button>
-        <h2 className={styles.modalTitle}>{title || "КРОВЛЯ"}</h2>
+        <span className={styles.modalTitle}>{title || "КРОВЛЯ"}</span>
 
-        <div className={styles.photoGrid}>
-          
-        </div>
+       <div className={styles.photoGrid}>
+  {roofImages.map((src, index) => (
+    <img 
+      key={index} 
+      src={src} 
+      alt={`Кровля ${index + 1}`} 
+      className={styles.modalPhoto} /* Вернули класс для управления шириной */
+    />
+  ))}
+</div>
+
+
       </div>
     </div>
   );
