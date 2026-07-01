@@ -7,10 +7,10 @@ import roofImg4 from "./images/roofImg4.png";
 import roofImg5 from "./images/roofImg5.png";
 import roofImg6 from "./images/roofImg6.png";
 
-const roofImages = [roofImg1, roofImg2, roofImg3, roofImg4, roofImg5, roofImg6, roofImg3, roofImg4, roofImg5, roofImg6];
+const roofImages = [roofImg1, roofImg2, roofImg3, roofImg4, roofImg5, roofImg6, roofImg1, roofImg2, roofImg3, roofImg4, roofImg5, roofImg6];
 
 function GalleryModal({ isOpen, title, onClose }) {
-  const windowRef = useRef(null);
+  const scrollContainerRef = useRef(null);
   const trackRef = useRef(null);
   const thumbRef = useRef(null);
   
@@ -18,7 +18,7 @@ function GalleryModal({ isOpen, title, onClose }) {
   const currentThumbTop = useRef(0);
   const isDragging = useRef(false);
 
-  // Блокировка прокрутки страницы сзади
+ 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -30,11 +30,11 @@ function GalleryModal({ isOpen, title, onClose }) {
     };
   }, [isOpen]);
 
-  // Прокрутка колесиком мыши
+ 
   const handleScroll = () => {
     if (isDragging.current) return;
 
-    const el = windowRef.current;
+    const el = scrollContainerRef.current;
     const track = trackRef.current;
     const thumb = thumbRef.current;
     if (!el || !track || !thumb) return;
@@ -52,10 +52,10 @@ function GalleryModal({ isOpen, title, onClose }) {
     }
   };
 
-  // Мгновенный Drag-and-Drop по всему окну браузера без лагов
+ 
   const handleMouseDown = (e) => {
     e.preventDefault();
-    const el = windowRef.current;
+    const el = scrollContainerRef.current;
     const track = trackRef.current;
     const thumb = thumbRef.current;
     if (!el || !track || !thumb) return;
@@ -99,19 +99,20 @@ function GalleryModal({ isOpen, title, onClose }) {
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
-      <div 
-        className={styles.modalWindow} 
-        ref={windowRef} 
-        onScroll={handleScroll}
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className={styles.modalWindow} onClick={(e) => e.stopPropagation()}>
+        
         <button className={styles.closeButton} onClick={onClose} aria-label="Закрыть галерею">
           <span className={styles.closeLine}></span>
         </button>
         
         <span className={styles.modalTitle}>{title || "КРОВЛЯ"}</span>
         
-        <div className={styles.contentRow}>
+       
+        <div 
+          className={styles.scrollContainer} 
+          ref={scrollContainerRef}
+          onScroll={handleScroll}
+        >
           <div className={styles.photoGrid}>
             {roofImages.map((src, index) => (
               <img 
@@ -123,6 +124,7 @@ function GalleryModal({ isOpen, title, onClose }) {
             ))}
           </div>
           
+          {/* Рельсы лежат внутри контейнера и всегда равны его видимой высоте */}
           <div className={styles.customScrollTrack} ref={trackRef}>
             <div 
               className={styles.customScrollThumb}

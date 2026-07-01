@@ -1,27 +1,145 @@
-/* Дорожка скролла — центрирует бегунок между своих границ */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(18, 18, 18, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modalWindow {
+  position: relative;
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 32px;
+  width: 1040px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+}
+
+
+.closeButton {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Линии кастомного крестика */
+.closeLine {
+  position: relative;
+  width: 20px;
+  height: 1.5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: rotate(45deg);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.closeLine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  transform: rotate(90deg);
+}
+
+.closeButton:hover .closeLine {
+  background-color: rgba(255, 255, 255, 1);
+  transform: rotate(135deg);
+}
+
+
+.modalTitle {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.scrollContainer {
+  width: 100%;
+  overflow-y: auto;   
+  
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Трехколоночная адаптивная сетка фотографий */
+.photoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  padding-right: 64px; 
+}
+
+
+.modalPhoto {
+  width: calc((100% - (40px * 2)) / 3);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
 .customScrollTrack {
   position: absolute;
-  top: 96px;
-  right: 24px;         /* Чуть прижали к правому краю, чтобы освободить место */
-  bottom: 32px;        /* Подняли нижнюю границу, чтобы дорожка не обрезалась снизу окна */
-  width: 15px;         /* Строго 15px из макета */
+  top: 96px;           
+  right: 36px;        
+  bottom: 32px;        
+  width: 15px;         
   background: transparent;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 5;
-  display: flex;       /* Включаем флекс для идеального центрирования круга */
+  display: flex;       
   justify-content: center;
 }
 
-/* Бегунок — идеальный круг, позиционируемый по оси Y через JS */
+
 .customScrollThumb {
   position: absolute;
-  width: 15px;         /* Полностью перекрывает ширину колеи от линии до линии */
+  width: 15px;
   height: 15px;
   background: #ffffff;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   transition: background-color 0.2s ease;
-  /* Убрали transform: translateX(-50%), так как flex-контейнер сам отцентрировал круг */
+}
+
+
+.customScrollThumb:hover {
+  background-color: #f0f0f0;
 }
