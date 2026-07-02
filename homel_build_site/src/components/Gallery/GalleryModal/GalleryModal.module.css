@@ -143,3 +143,12 @@
 .customScrollThumb:hover {
   background-color: #f0f0f0;
 }
+
+/* Стильный архитектурный скелетон для пустых категорий */
+.modalPhotoPlaceholder {
+  width: calc((100% - (40px * 2)) / 3); /* Наша жесткая трехколоночная сетка */
+  aspect-ratio: 1 / 1;                  /* Идеальный квадрат */
+  border: 1px dashed rgba(255, 255, 255, 0.15); /* Деликатный пунктир */
+  border-radius: 12px;                  /* Скругление как у живых фото */
+  background: rgba(255, 255, 255, 0.01); /* Легчайшая подложка */
+}

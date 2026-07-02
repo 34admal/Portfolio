@@ -15,22 +15,21 @@ function GalleryModal({ isOpen, title, onClose }) {
   const thumbRef = useRef(null);
   
   const [thumbTop, setThumbTop] = useState(0);
-  const currentThumbTop = useRef(0);
   const isDragging = useRef(false);
 
- 
+  // Блокировка прокрутки страницы сзади
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      currentThumbTop.current = 0;
       setThumbTop(0);
+      if (scrollContainerRef.current) scrollContainerRef.current.scrollTop = 0;
     }
     return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
- 
+  // Скролл колесиком мыши
   const handleScroll = () => {
     if (isDragging.current) return;
 
@@ -45,14 +44,11 @@ function GalleryModal({ isOpen, title, onClose }) {
     if (scrollHeight > 0) {
       const maxTrackY = track.clientHeight - thumb.clientHeight;
       const percentage = scrollTop / scrollHeight;
-      const newTop = percentage * maxTrackY;
-      
-      currentThumbTop.current = newTop;
-      thumb.style.transform = `translateY(${newTop}px)`;
+      setThumbTop(percentage * maxTrackY);
     }
   };
 
- 
+  // Drag-and-Drop без лагов
   const handleMouseDown = (e) => {
     e.preventDefault();
     const el = scrollContainerRef.current;
@@ -61,10 +57,9 @@ function GalleryModal({ isOpen, title, onClose }) {
     if (!el || !track || !thumb) return;
 
     isDragging.current = true;
-    el.style.scrollBehavior = "auto";
 
     const startY = e.clientY;
-    const startTop = currentThumbTop.current;
+    const startTop = thumbTop;
     const maxTrackY = track.clientHeight - thumb.clientHeight;
     const scrollHeight = el.scrollHeight - el.clientHeight;
 
@@ -73,9 +68,7 @@ function GalleryModal({ isOpen, title, onClose }) {
       let newTop = startTop + deltaY;
 
       newTop = Math.max(0, Math.min(newTop, maxTrackY));
-      
-      currentThumbTop.current = newTop;
-      thumb.style.transform = `translateY(${newTop}px)`;
+      setThumbTop(newTop);
 
       if (maxTrackY > 0 && scrollHeight > 0) {
         el.scrollTop = (newTop / maxTrackY) * scrollHeight;
@@ -84,9 +77,6 @@ function GalleryModal({ isOpen, title, onClose }) {
 
     const handleMouseUp = () => {
       isDragging.current = false;
-      if (el) el.style.scrollBehavior = "";
-      setThumbTop(currentThumbTop.current);
-
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
     };
@@ -101,30 +91,46 @@ function GalleryModal({ isOpen, title, onClose }) {
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalWindow} onClick={(e) => e.stopPropagation()}>
         
+        {/* Кнопка закрытия работает через onClick={onClose} */}
         <button className={styles.closeButton} onClick={onClose} aria-label="Закрыть галерею">
           <span className={styles.closeLine}></span>
         </button>
         
         <span className={styles.modalTitle}>{title || "КРОВЛЯ"}</span>
         
-       
+        {/* Контейнер, который скроллится колесиком */}
         <div 
           className={styles.scrollContainer} 
           ref={scrollContainerRef}
           onScroll={handleScroll}
         >
           <div className={styles.photoGrid}>
-            {roofImages.map((src, index) => (
-              <img 
-                key={index} 
-                src={src} 
-                alt={`Кровля ${index + 1}`} 
-                className={styles.modalPhoto}
-              />
-            ))}
+            {title === "КРОВЛЯ" ? (
+              roofImages.map((src, index) => (
+                <img 
+                  key={index} 
+                  src={src} 
+                  alt={`Кровля ${index + 1}`} 
+                  className={styles.modalPhoto}
+                />
+              ))
+            ) : (
+              /* Сетка 3х3 для проверки скролла в пустых категориях */
+              <>
+                <div className={styles.modalPhotoPlaceholder} />
+                <div className={styles.modalPhotoPlaceholder} />
+                <div className={styles.modalPhotoPlaceholder} />
+                <div className={styles.modalPhotoPlaceholder} />
+                <div className={styles.modalPhotoPlaceholder} />
+                <div className={styles.modalPhotoPlaceholder} />
+                <div className={styles.modalPhotoPlaceholder} />
+                <div className={styles.modalPhotoPlaceholder} />
+                <div className={styles.modalPhotoPlaceholder} />
+              </>
+            )}
           </div>
           
-          {/* Рельсы лежат внутри контейнера и всегда равны его видимой высоте */}
+          {/* Рельсы заперты строго внутри scrollContainer и никуда не уплывают */}
           <div className={styles.customScrollTrack} ref={trackRef}>
             <div 
               className={styles.customScrollThumb}
@@ -134,6 +140,7 @@ function GalleryModal({ isOpen, title, onClose }) {
             ></div>
           </div>
         </div>
+
       </div>
     </div>
   );
