@@ -23,7 +23,7 @@ function Gallery() {
 
       <div className={styles.content}>
         {/* Блок 1: ПЛИТКА */}
-        <div className={styles.tileBlock}>
+        <div className={styles.tileBlock} onClick={() => setActiveTitle("ПЛИТКА")}>
           <span className={styles.contour} />
           <img src={tileImg} alt="Плитка" className={styles.photo} />
           <div className={styles.overlay} />
@@ -31,7 +31,7 @@ function Gallery() {
         </div>
 
         {/* Блок 2: КЛАДКА */}
-        <div className={styles.masonryBlock}>
+        <div className={styles.masonryBlock} onClick={() => setActiveTitle("КЛАДКА")}>
           <span className={styles.contourMasonry} />
           <img src={masonryImg} alt="Кладка" className={styles.photo} />
           <div className={styles.overlayMasonry} />
@@ -39,14 +39,14 @@ function Gallery() {
         </div>
 
         {/* Блок 3: ОТДЕЛКА */}
-        <div className={styles.finishingBlock}>
+        <div className={styles.finishingBlock} onClick={() => setActiveTitle("ОТДЕЛКА")}>
           <span className={styles.contourFinishing} />
           <img src={finishingImg} alt="Отделка" className={styles.photo} />
           <div className={styles.overlayFinishing} />
           <span className={styles.categoryTitle}>ОТДЕЛКА</span>
         </div>
          {/* 2. блок 4: КРОВЛЯ */}
-        <div className={styles.roofingBlock}>
+        <div className={styles.roofingBlock} onClick={() => setActiveTitle("КРОВЛЯ")}>
           <span className={styles.contourRoofing} />
           <img src={roofingImg} alt="Кровля" className={styles.photo} />
         <div className={styles.overlay} />
@@ -54,7 +54,7 @@ function Gallery() {
         </div>
 
         {/* 2. Новый блок 5: САНТЕХНИКА */}
-        <div className={styles.plumbingBlock}>
+       <div className={styles.plumbingBlock} onClick={() => setActiveTitle("САНТЕХНИКА")}>
           <span className={styles.contourPlumbing} />
           <img src={plumbingImg} alt="Сантехника" className={styles.photo} />
            <div className={styles.overlay} />
@@ -62,7 +62,7 @@ function Gallery() {
         </div>
 
         {/* 2. Новый блок 6: ЭЛЕКТРИКА */}
-        <div className={styles.electricityBlock}>
+        <div className={styles.electricityBlock} onClick={() => setActiveTitle("ЭЛЕКТРИКА")}>
           <span className={styles.contourElectricity} />
           <img src={electricityImg} alt="Электрика" className={styles.photo} />
           <div className={styles.overlay} />
@@ -70,7 +70,11 @@ function Gallery() {
         </div>
 
       </div>
-      <GalleryModal isOpen={true} />
+      <GalleryModal 
+  isOpen={Boolean(activeTitle)} 
+  title={activeTitle} 
+  onClose={() => setActiveTitle(null)} 
+/>
     </section>
   );
 }

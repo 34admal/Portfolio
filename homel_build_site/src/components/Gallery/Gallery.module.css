@@ -256,6 +256,14 @@
   z-index: 1;
 }
 
+.tileBlock { cursor: pointer; }
+.masonryBlock { cursor: pointer; }
+.finishingBlock { cursor: pointer; }
+.roofingBlock { cursor: pointer; }
+.plumbingBlock { cursor: pointer; }
+.electricityBlock { cursor: pointer; }
+
+
 
 
 
