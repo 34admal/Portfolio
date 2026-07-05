@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/PriceComponent/PriceComponent.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1783243047679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1783243071621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { priceData } from \"./priceData\";\r\n import styles from \"./PriceComponent.module.css\";\r\n \r\n function PriceComponent() {\r\n-  // По умолчанию открываем кровлю, так как она у нас базовая по макету\r\n+ \r\n   const [activeTab, setActiveTab] = useState(\"кровля\");\r\n \r\n   // Автоматически получаем список категорий из ключей priceData\r\n   const categories = Object.keys(priceData);\r\n"
+                },
+                {
+                    "date": 1783246287960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,24 +2,27 @@\n import { priceData } from \"./priceData\";\r\n import styles from \"./PriceComponent.module.css\";\r\n \r\n function PriceComponent() {\r\n- \r\n+  // Наш рабочий стейт для управления вкладками\r\n   const [activeTab, setActiveTab] = useState(\"кровля\");\r\n-\r\n-  // Автоматически получаем список категорий из ключей priceData\r\n+  \r\n+  // Получаем список категорий для верхнего меню\r\n   const categories = Object.keys(priceData);\r\n \r\n+  // Вытаскиваем массив работ строго для текущей активной вкладки\r\n+  const currentItems = priceData[activeTab] || [];\r\n+\r\n   return (\r\n     <section className={styles.priceSection}>\r\n-      {/* Шапка блока с линиями по бокам, в стиле вашей галереи */}\r\n+      {/* Шапка блока */}\r\n       <div className={styles.headerRow}>\r\n         <span className={`${styles.line} ${styles.lineLeft}`} />\r\n         <span className={styles.title}>ПРАЙС-ЛИСТ</span>\r\n         <span className={`${styles.line} ${styles.lineRight}`} />\r\n       </div>\r\n \r\n-      {/* Горизонтальное меню табов */}\r\n+      {/* Горизонтальное меню вкладок */}\r\n       <div className={styles.tabsMenu}>\r\n         {categories.map((cat) => (\r\n           <button\r\n             key={cat}\r\n@@ -30,13 +33,24 @@\n           </button>\r\n         ))}\r\n       </div>\r\n \r\n-      {/* Временный текстовый маркер для проверки кликов */}\r\n-      <div style={{ color: \"#fff\", marginTop: \"20px\", textTransform: \"uppercase\", textAlign: \"center\" }}>\r\n-        Активный раздел: {activeTab}\r\n+      {/* Динамическая таблица цен */}\r\n+      <div className={styles.tableContainer}>\r\n+        <table className={styles.priceTable}>\r\n+          <tbody>\r\n+            {currentItems.map((item) => (\r\n+              <tr key={item.id} className={styles.tableRow}>\r\n+                <td className={styles.itemName}>{item.name}</td>\r\n+                <td className={styles.itemUnit}>{item.unit}</td>\r\n+                <td className={styles.itemPrice}>{item.price} руб.</td>\r\n+              </tr>\r\n+            ))}\r\n+          </tbody>\r\n+        </table>\r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n \r\n export default PriceComponent;\r\n+\r\n"
+                }
+            ],
+            "date": 1783243047679,
+            "name": "Commit-0",
+            "content": "import { useState } from \"react\";\r\nimport { priceData } from \"./priceData\";\r\nimport styles from \"./PriceComponent.module.css\";\r\n\r\nfunction PriceComponent() {\r\n  // По умолчанию открываем кровлю, так как она у нас базовая по макету\r\n  const [activeTab, setActiveTab] = useState(\"кровля\");\r\n\r\n  // Автоматически получаем список категорий из ключей priceData\r\n  const categories = Object.keys(priceData);\r\n\r\n  return (\r\n    <section className={styles.priceSection}>\r\n      {/* Шапка блока с линиями по бокам, в стиле вашей галереи */}\r\n      <div className={styles.headerRow}>\r\n        <span className={`${styles.line} ${styles.lineLeft}`} />\r\n        <span className={styles.title}>ПРАЙС-ЛИСТ</span>\r\n        <span className={`${styles.line} ${styles.lineRight}`} />\r\n      </div>\r\n\r\n      {/* Горизонтальное меню табов */}\r\n      <div className={styles.tabsMenu}>\r\n        {categories.map((cat) => (\r\n          <button\r\n            key={cat}\r\n            className={`${styles.tabButton} ${activeTab === cat ? styles.activeTab : \"\"}`}\r\n            onClick={() => setActiveTab(cat)}\r\n          >\r\n            {cat.toUpperCase()}\r\n          </button>\r\n        ))}\r\n      </div>\r\n\r\n      {/* Временный текстовый маркер для проверки кликов */}\r\n      <div style={{ color: \"#fff\", marginTop: \"20px\", textTransform: \"uppercase\", textAlign: \"center\" }}>\r\n        Активный раздел: {activeTab}\r\n      </div>\r\n    </section>\r\n  );\r\n}\r\n\r\nexport default PriceComponent;\r\n"
+        }
+    ]
+}
