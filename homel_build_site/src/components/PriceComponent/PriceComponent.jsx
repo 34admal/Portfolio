@@ -14,12 +14,10 @@ function PriceComponent() {
 
   return (
     <section className={styles.priceSection}>
-      {/* Шапка блока */}
-      <div className={styles.headerRow}>
-        <span className={`${styles.line} ${styles.lineLeft}`} />
-        <span className={styles.title}>ПРАЙС-ЛИСТ</span>
-        <span className={`${styles.line} ${styles.lineRight}`} />
-      </div>
+     
+        <span className={styles.title}>ПРАЙС-ЛИСТ НА УСЛУГИ</span>
+        
+     
 
       {/* Горизонтальное меню вкладок */}
       <div className={styles.tabsMenu}>
@@ -35,14 +33,21 @@ function PriceComponent() {
       </div>
 
       {/* Динамическая таблица цен */}
-      <div className={styles.tableContainer}>
+       <div className={styles.tableContainer}>
         <table className={styles.priceTable}>
+          <thead>
+            <tr className={styles.thRow}>
+              <th className={styles.thName}>Наименование работ</th>
+              <th className={styles.thUnit}>Ед. измерения</th>
+              <th className={styles.thPrice}>Цена от, руб</th>
+            </tr>
+          </thead>
           <tbody>
             {currentItems.map((item) => (
               <tr key={item.id} className={styles.tableRow}>
                 <td className={styles.itemName}>{item.name}</td>
                 <td className={styles.itemUnit}>{item.unit}</td>
-                <td className={styles.itemPrice}>{item.price} руб.</td>
+                <td className={styles.itemPrice}>{item.price}</td>
               </tr>
             ))}
           </tbody>

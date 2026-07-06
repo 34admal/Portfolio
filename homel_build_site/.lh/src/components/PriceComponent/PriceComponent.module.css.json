@@ -3,11 +3,39 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1783246435133,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1783355298056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,9 @@\n /* Основной контейнер секции */\r\n .priceSection {\r\n-  padding: 64px 0;\r\n-  background-color: #121212;\r\n-  width: 100%;\r\n-  max-width: 1040px;\r\n-  margin: 0 auto;\r\n-  font-family: inherit;\r\n+  margin-top: 115px; /* Жесткий макетный отступ МЕЖДУ компонентами */\r\n }\r\n+}\r\n \r\n /* Шапка блока с линиями по бокам (копия стиля Галереи) */\r\n .headerRow {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1783355306070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n /* Основной контейнер секции */\r\n .priceSection {\r\n-  margin-top: 115px; /* Жесткий макетный отступ МЕЖДУ компонентами */\r\n+  margin-top: 115px; \r\n }\r\n-}\r\n \r\n+\r\n /* Шапка блока с линиями по бокам (копия стиля Галереи) */\r\n .headerRow {\r\n   display: flex;\r\n   align-items: center;\r\n"
+                },
+                {
+                    "date": 1783355333406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,12 @@\n-/* Основной контейнер секции */\r\n+\r\n .priceSection {\r\n   margin-top: 115px; \r\n }\r\n \r\n \r\n-/* Шапка блока с линиями по бокам (копия стиля Галереи) */\r\n-.headerRow {\r\n-  display: flex;\r\n-  align-items: center;\r\n-  justify-content: center;\r\n-  margin-bottom: 48px;\r\n-  width: 100%;\r\n-}\r\n \r\n+\r\n .title {\r\n   font-size: 32px;\r\n   font-weight: 500;\r\n   color: #ffffff;\r\n"
+                },
+                {
+                    "date": 1783355805055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,15 +6,19 @@\n \r\n \r\n \r\n .title {\r\n-  font-size: 32px;\r\n-  font-weight: 500;\r\n-  color: #ffffff;\r\n-  padding: 0 24px;\r\n-  letter-spacing: 1px;\r\n+  display: block;\r\n+  color: rgba(255, 255, 255, 1);\r\n+  font-size: 30px;\r\n+  font-weight: 400;\r\n+  line-height: 37px;\r\n+  text-transform: uppercase;\r\n+  text-align: center; /* Центрируем по сетке экрана из скриншота */\r\n+  margin-bottom: 32px; /* Внутренний макетный отступ до плашки меню */\r\n }\r\n \r\n+\r\n .line {\r\n   flex-grow: 1;\r\n   height: 1px;\r\n   background: rgba(255, 255, 255, 0.1);\r\n"
+                },
+                {
+                    "date": 1783355832494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,13 +17,8 @@\n   margin-bottom: 32px; /* Внутренний макетный отступ до плашки меню */\r\n }\r\n \r\n \r\n-.line {\r\n-  flex-grow: 1;\r\n-  height: 1px;\r\n-  background: rgba(255, 255, 255, 0.1);\r\n-}\r\n \r\n /* Горизонтальное меню переключения вкладок */\r\n .tabsMenu {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1783355842607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n \r\n \r\n-/* Горизонтальное меню переключения вкладок */\r\n+\r\n .tabsMenu {\r\n   display: flex;\r\n   justify-content: space-between;\r\n   gap: 12px;\r\n"
+                },
+                {
+                    "date": 1783355850517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   font-weight: 400;\r\n   line-height: 37px;\r\n   text-transform: uppercase;\r\n   text-align: center; /* Центрируем по сетке экрана из скриншота */\r\n-  margin-bottom: 32px; /* Внутренний макетный отступ до плашки меню */\r\n+  \r\n }\r\n \r\n \r\n \r\n"
                 }
             ],
             "date": 1783246435133,

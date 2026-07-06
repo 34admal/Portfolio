@@ -1,37 +1,25 @@
-/* Основной контейнер секции */
+
 .priceSection {
-  padding: 64px 0;
-  background-color: #121212;
-  width: 100%;
-  max-width: 1040px;
-  margin: 0 auto;
-  font-family: inherit;
+  margin-top: 115px; 
 }
 
-/* Шапка блока с линиями по бокам (копия стиля Галереи) */
-.headerRow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 48px;
-  width: 100%;
-}
+
+
 
 .title {
-  font-size: 32px;
-  font-weight: 500;
-  color: #ffffff;
-  padding: 0 24px;
-  letter-spacing: 1px;
+  display: block;
+  color: rgba(255, 255, 255, 1);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-align: center; 
+  
 }
 
-.line {
-  flex-grow: 1;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-}
 
-/* Горизонтальное меню переключения вкладок */
+
+
 .tabsMenu {
   display: flex;
   justify-content: space-between;
