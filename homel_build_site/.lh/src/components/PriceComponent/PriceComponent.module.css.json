@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 19,
             "patches": [
                 {
                     "date": 1783246435133,
@@ -36,6 +36,54 @@
                 {
                     "date": 1783355850517,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   font-weight: 400;\r\n   line-height: 37px;\r\n   text-transform: uppercase;\r\n   text-align: center; /* Центрируем по сетке экрана из скриншота */\r\n-  margin-bottom: 32px; /* Внутренний макетный отступ до плашки меню */\r\n+  \r\n }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1783440199893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   font-size: 30px;\r\n   font-weight: 400;\r\n   line-height: 37px;\r\n   text-transform: uppercase;\r\n-  text-align: center; /* Центрируем по сетке экрана из скриншота */\r\n+  text-align: center; \r\n   \r\n }\r\n \r\n \r\n@@ -105,11 +105,4 @@\n   width: 10%;\r\n   text-align: center;\r\n }\r\n \r\n-/* Цена (выравниваем по правому краю) */\r\n-.itemPrice {\r\n-  font-weight: 500;\r\n-  width: 20%;\r\n-  text-align: right;\r\n-  white-space: nowrap; /* Чтобы \"руб.\" не улетало на новую строку */\r\n-}\r\n"
+                },
+                {
+                    "date": 1783440214525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,4 +105,5 @@\n   width: 10%;\r\n   text-align: center;\r\n }\r\n \r\n+\r\n"
+                },
+                {
+                    "date": 1783440229148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,15 +84,10 @@\n .tableRow:hover {\r\n   background-color: rgba(255, 255, 255, 0.02); /* Легкий интерактивный блик */\r\n }\r\n \r\n-/* Общие стили для ячеек */\r\n-.tableRow td {\r\n-  padding: 20px 0;\r\n-  font-size: 16px;\r\n-  color: #ffffff;\r\n-}\r\n \r\n+\r\n /* Наименование работы (прижимаем влево) */\r\n .itemName {\r\n   font-weight: 400;\r\n   width: 70%; /* Занимает большую часть строки */\r\n"
+                },
+                {
+                    "date": 1783440243966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,86 +19,6 @@\n \r\n \r\n \r\n \r\n-.tabsMenu {\r\n-  display: flex;\r\n-  justify-content: space-between;\r\n-  gap: 12px;\r\n-  margin-bottom: 40px;\r\n-  width: 100%;\r\n-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\r\n-  padding-bottom: 16px;\r\n-}\r\n \r\n-.tabButton {\r\n-  background: none;\r\n-  border: none;\r\n-  font-size: 16px;\r\n-  font-weight: 500;\r\n-  color: rgba(255, 255, 255, 0.4);\r\n-  cursor: pointer;\r\n-  padding: 8px 4px;\r\n-  letter-spacing: 0.5px;\r\n-  transition: color 0.2s ease, transform 0.2s ease;\r\n-  position: relative;\r\n-}\r\n \r\n-.tabButton:hover {\r\n-  color: rgba(255, 255, 255, 0.8);\r\n-}\r\n-\r\n-/* Активное состояние вкладки с подчеркиванием */\r\n-.activeTab {\r\n-  color: #ffffff;\r\n-}\r\n-\r\n-.activeTab::after {\r\n-  content: \"\";\r\n-  position: absolute;\r\n-  bottom: -17px; /* Сажаем линию точно на нижнюю рамку меню */\r\n-  left: 0;\r\n-  width: 100%;\r\n-  height: 2px;\r\n-  background-color: #ffffff;\r\n-}\r\n-\r\n-/* Контейнер для таблицы */\r\n-.tableContainer {\r\n-  width: 100%;\r\n-  overflow-x: auto; /* Защита от вылетания на мобилках */\r\n-}\r\n-\r\n-/* Стилизация самой таблицы */\r\n-.priceTable {\r\n-  width: 100%;\r\n-  border-collapse: collapse; /* Схлопываем двойные рамки */\r\n-  text-align: left;\r\n-}\r\n-\r\n-/* Строка таблицы с линией-разделителем */\r\n-.tableRow {\r\n-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\r\n-  transition: background-color 0.2s ease;\r\n-}\r\n-\r\n-.tableRow:hover {\r\n-  background-color: rgba(255, 255, 255, 0.02); /* Легкий интерактивный блик */\r\n-}\r\n-\r\n-\r\n-\r\n-/* Наименование работы (прижимаем влево) */\r\n-.itemName {\r\n-  font-weight: 400;\r\n-  width: 70%; /* Занимает большую часть строки */\r\n-}\r\n-\r\n-/* Единица измерения (по центру) */\r\n-.itemUnit {\r\n-  font-weight: 300;\r\n-  color: rgba(255, 255, 255, 0.5);\r\n-  width: 10%;\r\n-  text-align: center;\r\n-}\r\n-\r\n-\r\n"
+                },
+                {
+                    "date": 1783442243926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,17 @@\n   text-align: center; \r\n   \r\n }\r\n \r\n+.tabContainer {\r\n+  display: flex;\r\n+  align-items: center; \r\n+  margin: 69px auto 0 auto;\r\n+  width: 807px;\r\n+  height: 57px;\r\n+  background-color: rgba(61, 61, 61, 1); /* Точный цвет фона плашки из Figma */\r\n+  box-sizing: border-box;\r\n+}\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1783442251420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   align-items: center; \r\n   margin: 69px auto 0 auto;\r\n   width: 807px;\r\n   height: 57px;\r\n-  background-color: rgba(61, 61, 61, 1); /* Точный цвет фона плашки из Figma */\r\n+  background-color: rgba(61, 61, 61, 1); \r\n   box-sizing: border-box;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1783442474065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,4 +30,6 @@\n \r\n \r\n \r\n \r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1783442487338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,15 @@\n   background-color: rgba(61, 61, 61, 1); \r\n   box-sizing: border-box;\r\n }\r\n \r\n+/* Элемент-разделитель строго по спецификации border из Figma */\r\n+.separator {\r\n+  height: 52px;\r\n+  border-left: 6px solid rgba(49, 49, 49, 1); /* Задаем толщину линии через border */\r\n+  background: none;\r\n+  flex-shrink: 0; /* Запрещаем флексу деформировать линию */\r\n+}\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1783442597136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,4 +39,6 @@\n \r\n \r\n \r\n \r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1783443199624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,41 @@\n   background: none;\r\n   flex-shrink: 0; /* Запрещаем флексу деформировать линию */\r\n }\r\n \r\n+/* Базовый стиль для каждого отдельного таба */\r\n+.tabItem {\r\n+  flex: 1;                 /* Заставляем каждый спан занять равную 1/5 часть плашки */\r\n+  display: flex;\r\n+  align-items: center;\r\n+  justify-content: center; /* Центрируем текст строго посередине своей вкладки */\r\n+  height: 100%;            /* Растягиваем на всю высоту плашки (57px) */\r\n+  \r\n+  /* Стили текста из макета */\r\n+  font-size: 20px;\r\n+  font-weight: 500;\r\n+  line-height: 24px;\r\n+  letter-spacing: 0.05em;\r\n+  color: #FFFFFF;\r\n+  \r\n+  cursor: pointer;\r\n+  box-sizing: border-box;\r\n+  user-select: none;       /* Запрещаем случайное выделение текста при кликах */\r\n+}\r\n \r\n+/* Оранжевая обводка, которая мгновенно проявится на активном табе */\r\n+.tabItem.active {\r\n+  outline: 2px solid #FF7A00;\r\n+  outline-offset: -2px;    /* Вжимаем рамку внутрь, чтобы она не ломала размеры 57px */\r\n+}\r\n+.tabItem {\r\n+  flex: 1;\r\n+  display: flex;\r\n+  align-items: center;\r\n+  justify-content: center;\r\n+  height: 100%;\r\n+  border-right: 6px solid rgba(49, 49, 49, 1);\r\n+}\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1783443223966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,12 +54,9 @@\n   box-sizing: border-box;\r\n   user-select: none;       /* Запрещаем случайное выделение текста при кликах */\r\n }\r\n \r\n-/* Оранжевая обводка, которая мгновенно проявится на активном табе */\r\n-.tabItem.active {\r\n-  outline: 2px solid #FF7A00;\r\n-  outline-offset: -2px;    /* Вжимаем рамку внутрь, чтобы она не ломала размеры 57px */\r\n+\r\n }\r\n .tabItem {\r\n   flex: 1;\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1783443229020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n   user-select: none;       /* Запрещаем случайное выделение текста при кликах */\r\n }\r\n \r\n \r\n-}\r\n+\r\n .tabItem {\r\n   flex: 1;\r\n   display: flex;\r\n   align-items: center;\r\n"
                 }
             ],
             "date": 1783246435133,

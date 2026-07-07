@@ -17,99 +17,57 @@
   
 }
 
-
-
-
-.tabsMenu {
+.tabContainer {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 40px;
-  width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 16px;
+  align-items: center; 
+  margin: 69px auto 0 auto;
+  width: 807px;
+  height: 57px;
+  background-color: rgba(61, 61, 61, 1); 
+  box-sizing: border-box;
 }
 
-.tabButton {
+/* Элемент-разделитель строго по спецификации border из Figma */
+.separator {
+  height: 52px;
+  border-left: 6px solid rgba(49, 49, 49, 1); /* Задаем толщину линии через border */
   background: none;
-  border: none;
-  font-size: 16px;
+  flex-shrink: 0; /* Запрещаем флексу деформировать линию */
+}
+
+/* Базовый стиль для каждого отдельного таба */
+.tabItem {
+  flex: 1;                 /* Заставляем каждый спан занять равную 1/5 часть плашки */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Центрируем текст строго посередине своей вкладки */
+  height: 100%;            /* Растягиваем на всю высоту плашки (57px) */
+  
+  /* Стили текста из макета */
+  font-size: 20px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.4);
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  
   cursor: pointer;
-  padding: 8px 4px;
-  letter-spacing: 0.5px;
-  transition: color 0.2s ease, transform 0.2s ease;
-  position: relative;
+  box-sizing: border-box;
+  user-select: none;       /* Запрещаем случайное выделение текста при кликах */
 }
 
-.tabButton:hover {
-  color: rgba(255, 255, 255, 0.8);
+
+
+.tabItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-right: 6px solid rgba(49, 49, 49, 1);
 }
 
-/* Активное состояние вкладки с подчеркиванием */
-.activeTab {
-  color: #ffffff;
-}
 
-.activeTab::after {
-  content: "";
-  position: absolute;
-  bottom: -17px; /* Сажаем линию точно на нижнюю рамку меню */
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-}
 
-/* Контейнер для таблицы */
-.tableContainer {
-  width: 100%;
-  overflow-x: auto; /* Защита от вылетания на мобилках */
-}
 
-/* Стилизация самой таблицы */
-.priceTable {
-  width: 100%;
-  border-collapse: collapse; /* Схлопываем двойные рамки */
-  text-align: left;
-}
 
-/* Строка таблицы с линией-разделителем */
-.tableRow {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background-color 0.2s ease;
-}
 
-.tableRow:hover {
-  background-color: rgba(255, 255, 255, 0.02); /* Легкий интерактивный блик */
-}
-
-/* Общие стили для ячеек */
-.tableRow td {
-  padding: 20px 0;
-  font-size: 16px;
-  color: #ffffff;
-}
-
-/* Наименование работы (прижимаем влево) */
-.itemName {
-  font-weight: 400;
-  width: 70%; /* Занимает большую часть строки */
-}
-
-/* Единица измерения (по центру) */
-.itemUnit {
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.5);
-  width: 10%;
-  text-align: center;
-}
-
-/* Цена (выравниваем по правому краю) */
-.itemPrice {
-  font-weight: 500;
-  width: 20%;
-  text-align: right;
-  white-space: nowrap; /* Чтобы "руб." не улетало на новую строку */
-}

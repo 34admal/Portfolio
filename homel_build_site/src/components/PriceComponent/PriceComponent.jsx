@@ -1,61 +1,33 @@
-import { useState } from "react";
-import { priceData } from "./priceData";
-import styles from "./PriceComponent.module.css";
+import React, { useState } from 'react';
+import { priceData } from './priceData';
+import css from './PriceComponent.module.css';
 
-function PriceComponent() {
-  // Наш рабочий стейт для управления вкладками
-  const [activeTab, setActiveTab] = useState("кровля");
-  
-  // Получаем список категорий для верхнего меню
+export const PriceComponent = () => {
+  // Получаем массив ключей: ['отделка', 'строительство', 'кровля', 'сантехника', 'электрика']
   const categories = Object.keys(priceData);
-
-  // Вытаскиваем массив работ строго для текущей активной вкладки
-  const currentItems = priceData[activeTab] || [];
+  
+  // Храним активную категорию (по умолчанию первая — 'отделка')
+  const [activeTab, setActiveTab] = useState(categories[0]);
 
   return (
-    <section className={styles.priceSection}>
-     
-        <span className={styles.title}>ПРАЙС-ЛИСТ НА УСЛУГИ</span>
-        
-     
-
-      {/* Горизонтальное меню вкладок */}
-      <div className={styles.tabsMenu}>
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            className={`${styles.tabButton} ${activeTab === cat ? styles.activeTab : ""}`}
-            onClick={() => setActiveTab(cat)}
+    <section className={css.section}>
+      <span className={css.title}>Прайс-лист на услуги</span>
+      
+      {/* Общий контейнер плашки табов */}
+      <div className={css.tabContainer}>
+        {categories.map((category) => (
+          <span
+            key={category}
+            className={`${css.tabItem} ${activeTab === category ? css.active : ''}`}
+            onClick={() => setActiveTab(category)}
           >
-            {cat.toUpperCase()}
-          </button>
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </span>
         ))}
-      </div>
-
-      {/* Динамическая таблица цен */}
-       <div className={styles.tableContainer}>
-        <table className={styles.priceTable}>
-          <thead>
-            <tr className={styles.thRow}>
-              <th className={styles.thName}>Наименование работ</th>
-              <th className={styles.thUnit}>Ед. измерения</th>
-              <th className={styles.thPrice}>Цена от, руб</th>
-            </tr>
-          </thead>
-          <tbody>
-            {currentItems.map((item) => (
-              <tr key={item.id} className={styles.tableRow}>
-                <td className={styles.itemName}>{item.name}</td>
-                <td className={styles.itemUnit}>{item.unit}</td>
-                <td className={styles.itemPrice}>{item.price}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
     </section>
   );
-}
+};
 
 export default PriceComponent;
 
