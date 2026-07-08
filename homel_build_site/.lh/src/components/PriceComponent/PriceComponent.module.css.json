@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1783246435133,
@@ -84,6 +84,22 @@
                 {
                     "date": 1783443229020,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n   user-select: none;       /* Запрещаем случайное выделение текста при кликах */\r\n }\r\n \r\n \r\n-}\r\n+\r\n .tabItem {\r\n   flex: 1;\r\n   display: flex;\r\n   align-items: center;\r\n"
+                },
+                {
+                    "date": 1783509985399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n .separator {\r\n   height: 52px;\r\n   border-left: 6px solid rgba(49, 49, 49, 1); /* Задаем толщину линии через border */\r\n   background: none;\r\n-  flex-shrink: 0; /* Запрещаем флексу деформировать линию */\r\n+  flex-shrink: 0;\r\n }\r\n \r\n /* Базовый стиль для каждого отдельного таба */\r\n .tabItem {\r\n"
+                },
+                {
+                    "date": 1783509991445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   background: none;\r\n   flex-shrink: 0;\r\n }\r\n \r\n-/* Базовый стиль для каждого отдельного таба */\r\n+\r\n .tabItem {\r\n   flex: 1;                 /* Заставляем каждый спан занять равную 1/5 часть плашки */\r\n   display: flex;\r\n   align-items: center;\r\n"
+                },
+                {
+                    "date": 1783509998042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n }\r\n \r\n \r\n .tabItem {\r\n-  flex: 1;                 /* Заставляем каждый спан занять равную 1/5 часть плашки */\r\n+  flex: 1;                 часть плашки */\r\n   display: flex;\r\n   align-items: center;\r\n   justify-content: center; /* Центрируем текст строго посередине своей вкладки */\r\n   height: 100%;            /* Растягиваем на всю высоту плашки (57px) */\r\n"
+                },
+                {
+                    "date": 1783511053896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,13 +36,15 @@\n }\r\n \r\n \r\n .tabItem {\r\n-  flex: 1;                 часть плашки */\r\n+  flex: 1;\r\n   display: flex;\r\n   align-items: center;\r\n-  justify-content: center; /* Центрируем текст строго посередине своей вкладки */\r\n-  height: 100%;            /* Растягиваем на всю высоту плашки (57px) */\r\n+  justify-content: center;\r\n+  height: 100%;\r\n+  border-top: 6px solid rgba(49, 49, 49, 1);    /* Верхний бордер по стилям разделителей */\r\n+  border-right: 6px solid rgba(49, 49, 49, 1);          /* Растягиваем на всю высоту плашки (57px) */\r\n   \r\n   /* Стили текста из макета */\r\n   font-size: 20px;\r\n   font-weight: 500;\r\n"
                 }
             ],
             "date": 1783246435133,

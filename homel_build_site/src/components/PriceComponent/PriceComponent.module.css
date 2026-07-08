@@ -32,16 +32,18 @@
   height: 52px;
   border-left: 6px solid rgba(49, 49, 49, 1); /* Задаем толщину линии через border */
   background: none;
-  flex-shrink: 0; /* Запрещаем флексу деформировать линию */
+  flex-shrink: 0;
 }
 
-/* Базовый стиль для каждого отдельного таба */
+
 .tabItem {
-  flex: 1;                 /* Заставляем каждый спан занять равную 1/5 часть плашки */
+  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center; /* Центрируем текст строго посередине своей вкладки */
-  height: 100%;            /* Растягиваем на всю высоту плашки (57px) */
+  justify-content: center;
+  height: 100%;
+  border-top: 6px solid rgba(49, 49, 49, 1);    /* Верхний бордер по стилям разделителей */
+  border-right: 6px solid rgba(49, 49, 49, 1);          /* Растягиваем на всю высоту плашки (57px) */
   
   /* Стили текста из макета */
   font-size: 20px;
