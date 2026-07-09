@@ -3,17 +3,13 @@ import { priceData } from './priceData';
 import css from './PriceComponent.module.css';
 
 export const PriceComponent = () => {
-  // Получаем массив ключей: ['отделка', 'строительство', 'кровля', 'сантехника', 'электрика']
   const categories = Object.keys(priceData);
-  
-  // Храним активную категорию (по умолчанию первая — 'отделка')
   const [activeTab, setActiveTab] = useState(categories[0]);
 
   return (
     <section className={css.section}>
       <span className={css.title}>Прайс-лист на услуги</span>
       
-      {/* Общий контейнер плашки табов */}
       <div className={css.tabContainer}>
         {categories.map((category) => (
           <span
@@ -28,6 +24,8 @@ export const PriceComponent = () => {
     </section>
   );
 };
+
+
 
 export default PriceComponent;
 
