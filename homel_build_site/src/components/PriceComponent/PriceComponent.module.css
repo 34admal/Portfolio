@@ -3,11 +3,13 @@
 }
 
 .mainWrapper {
-  width: 996px;
+  width: 996px; 
   margin: 69px auto 0 auto;
   background-color: rgba(61, 61, 61, 1);
   box-sizing: border-box;
+  padding-top: 25px; 
 }
+
 
 .title {
   display: block;
@@ -71,4 +73,35 @@
 .tabItem.active + .tabItem {
   border-left: 6px solid transparent;
   margin-left: -6px;
+}
+
+
+.tableHeader {
+  display: flex;
+  width: 100%;
+  margin-top: 25px; 
+  box-sizing: border-box;
+  background-color: rgba(61, 61, 61, 1); 
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.headerCell {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.headerCell:nth-child(1) { flex: 3; justify-content: flex-start; padding-left: 20px; }
+.headerCell:nth-child(2) { flex: 1; justify-content: center; }
+.headerCell:nth-child(3) { flex: 1; justify-content: center; }
+
+.headerCell:nth-child(1) {
+  flex: 3;
+  justify-content: flex-start;
+  padding-left: 60px; 
 }
