@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 88,
+            "activePatchIndex": 92,
             "patches": [
                 {
                     "date": 1783246435133,
@@ -360,6 +360,22 @@
                 {
                     "date": 1783617153221,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   display: flex;\r\n   align-items: center; \r\n   width: 100%;\r\n   height: 57px;\r\n-  background-color: rgba(61, 61, 61, 1); /* Наш нормальный фон подложки */\r\n+  background-color: rgba(61, 61, 61, 1); \r\n   box-sizing: border-box;\r\n   \r\n   border-top: 6px solid rgba(49, 49, 49, 1);\r\n   border-bottom: 6px solid rgba(255, 122, 0, 1);\r\n@@ -52,9 +52,9 @@\n   color: #ffffff;\r\n   cursor: pointer;\r\n   box-sizing: border-box;\r\n   \r\n-  /* Возвращаем сплошные стыки без дыр и гапов */\r\n+  \r\n   border-right: 6px solid rgba(49, 49, 49, 1); \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1783687047023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,8 @@\n   background-color: rgba(61, 61, 61, 1);\r\n   box-sizing: border-box;\r\n }\r\n \r\n-\r\n-\r\n-\r\n .title {\r\n   display: block;\r\n   color: rgba(255, 255, 255, 1);\r\n   font-size: 30px;\r\n"
+                },
+                {
+                    "date": 1783687060350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,10 +48,9 @@\n   letter-spacing: 1px;\r\n   color: #ffffff;\r\n   cursor: pointer;\r\n   box-sizing: border-box;\r\n-  \r\n-  \r\n+   \r\n   border-right: 6px solid rgba(49, 49, 49, 1); \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1783687066589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,14 +52,12 @@\n    \r\n   border-right: 6px solid rgba(49, 49, 49, 1); \r\n }\r\n \r\n-\r\n .tabItem:last-child {\r\n   border-right: none;\r\n }\r\n \r\n-\r\n .tabItem.active {\r\n   font-weight: 600;\r\n   letter-spacing: normal;\r\n   \r\n"
+                },
+                {
+                    "date": 1783687072148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,14 +60,12 @@\n .tabItem.active {\r\n   font-weight: 600;\r\n   letter-spacing: normal;\r\n   \r\n-\r\n   outline: 6px solid rgba(255, 122, 0, 1);\r\n   position: relative;\r\n   z-index: 5;\r\n-  \r\n-  \r\n+    \r\n   border-right: none; \r\n   \r\n   padding-right: 6px; \r\n }\r\n"
                 }
             ],
             "date": 1783246435133,
