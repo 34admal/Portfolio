@@ -79,8 +79,9 @@
 .tableHeader {
   display: flex;
   width: 100%;
+  margin-top: 25px;
   height: 55px;
-  align-items: stretch; /* Расцягваем ячэйкі і іх рамкі на ўсю вышыню шапкі */
+  align-items: stretch;
   background-color: rgba(61, 61, 61, 1);
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 1);
@@ -102,20 +103,81 @@
 .headerCell:nth-child(1) {
   flex: 3;
   display: flex;
-  align-items: center; /* Цэнтраванне тэксту па вертыкалі */
+  align-items: center;
   justify-content: flex-start;
-  padding-left: 60px;
   border-right: 1px solid rgba(255, 255, 255, 1);
+  
+}
+
+
+.cellText {
+  padding-left: 60px; 
 }
 
 .headerCell:nth-child(2) {
   flex: 1;
   justify-content: center;
-  border-right: 1px solid rgba(255, 255, 255, 1); /* Вертикальный разделитель после второй колонки */
+  border-right: 1px solid rgba(255, 255, 255, 1); 
 }
 
 .headerCell:nth-child(3) {
   flex: 1;
   justify-content: center;
-  /* У третьей ячейки разделитель справа не нужен, так как там идет внешний контур шапки */
+ 
+}
+
+.rowCell {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+
+.rowCellText {
+  padding-left: 40px;
+}
+.tableRow {
+  display: flex;
+  width: 100%;
+  height: 31px;
+  align-items: stretch;
+  box-sizing: border-box;
+  background-color: rgba(61, 61, 61, 1);
+  border-left: 1px solid rgba(255, 255, 255, 1);
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.nameCell {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+}
+
+
+.unitCell {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  color: #FFFFFF; 
+}
+
+
+.priceCell {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: #FFFFFF;
 }

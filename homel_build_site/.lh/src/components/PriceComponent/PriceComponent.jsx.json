@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 25,
             "patches": [
                 {
                     "date": 1783243047679,
@@ -84,6 +84,30 @@
                 {
                     "date": 1783705906791,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,30 +9,42 @@\n   return (\r\n     <section className={css.section}>\r\n       <span className={css.title}>Прайс-лист на услуги</span>\r\n       \r\n-      <div className={css.tabContainer}>\r\n-        {categories.map((category) => (\r\n-          <span\r\n-            key={category}\r\n-            className={`${css.tabItem} ${activeTab === category ? css.active : ''}`}\r\n-            onClick={() => setActiveTab(category)}\r\n-          >\r\n-            {category.charAt(0).toUpperCase() + category.slice(1)}\r\n-          </span>\r\n-        ))}\r\n-      </div>\r\n+      {/* Возвращаем главный мега-контейнер */}\r\n+      <div className={css.mainWrapper}>\r\n+        \r\n+        <div className={css.tabContainer}>\r\n+          {categories.map((category) => (\r\n+            <span\r\n+              key={category}\r\n+              className={`${css.tabItem} ${activeTab === category ? css.active : ''}`}\r\n+              onClick={() => setActiveTab(category)}\r\n+            >\r\n+              {category.charAt(0).toUpperCase() + category.slice(1)}\r\n+            </span>\r\n+          ))}\r\n+        </div>\r\n \r\n-      <div className={css.tableHeader}>\r\n-  <span className={css.headerCell}>Наименование работ</span>\r\n-  <span className={css.headerCell}>Ед. измерения</span>\r\n-  <span className={css.headerCell}>Цена от, руб</span>\r\n-</div>\r\n+        <div className={css.tableHeader}>\r\n+          <span className={css.headerCell}>Наименование работ</span>\r\n+          <span className={css.headerCell}>Ед. измерения</span>\r\n+          <span className={css.headerCell}>Цена от, руб</span>\r\n+        </div>\r\n \r\n+        {/* Список строк таблицы на основе активного таба */}\r\n+        <div className={css.tableBody}>\r\n+          {priceData[activeTab].map((row) => (\r\n+            <div key={row.id} className={css.tableRow}>\r\n+              <span className={css.rowCell}>{row.name}</span>\r\n+              <span className={css.rowCell}>{row.unit}</span>\r\n+              <span className={css.rowCell}>{row.price}</span>\r\n+            </div>\r\n+          ))}\r\n+        </div>\r\n+\r\n+      </div>\r\n     </section>\r\n   );\r\n };\r\n \r\n-\r\n-\r\n-export default PriceComponent;\r\n-\r\n+export default PriceComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1783850769638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,11 @@\n           ))}\r\n         </div>\r\n \r\n         <div className={css.tableHeader}>\r\n-          <span className={css.headerCell}>Наименование работ</span>\r\n+          <span className={css.headerCell}>\r\n+  <span className={css.cellText}>Наименование работ</span>\r\n+</span>\r\n           <span className={css.headerCell}>Ед. измерения</span>\r\n           <span className={css.headerCell}>Цена от, руб</span>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1783851427928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,11 @@\n         {/* Список строк таблицы на основе активного таба */}\r\n         <div className={css.tableBody}>\r\n           {priceData[activeTab].map((row) => (\r\n             <div key={row.id} className={css.tableRow}>\r\n-              <span className={css.rowCell}>{row.name}</span>\r\n+              <span className={css.rowCell}>\r\n+  <span className={css.rowCellText}>{row.name}</span>\r\n+</span>\r\n               <span className={css.rowCell}>{row.unit}</span>\r\n               <span className={css.rowCell}>{row.price}</span>\r\n             </div>\r\n           ))}\r\n"
+                },
+                {
+                    "date": 1783852898879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,16 +33,18 @@\n           <span className={css.headerCell}>Цена от, руб</span>\r\n         </div>\r\n \r\n         {/* Список строк таблицы на основе активного таба */}\r\n-        <div className={css.tableBody}>\r\n-          {priceData[activeTab].map((row) => (\r\n-            <div key={row.id} className={css.tableRow}>\r\n-              <span className={css.rowCell}>\r\n-  <span className={css.rowCellText}>{row.name}</span>\r\n-</span>\r\n-              <span className={css.rowCell}>{row.unit}</span>\r\n-              <span className={css.rowCell}>{row.price}</span>\r\n+<div className={css.tableBody}>\r\n+  {priceData[activeTab].map((row) => (\r\n+    <div key={row.id} className={css.tableRow}>\r\n+      <span className={css.rowCell}>\r\n+        <span className={css.rowCellText}>{row.name}</span>\r\n+      </span>\r\n+      <span className={css.rowCell}>{row.unit}</span>\r\n+      <span className={css.rowCell}>{row.price}</span>\r\n+    </div>\r\n+  ))}\r\n             </div>\r\n           ))}\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1783852924601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,10 +41,9 @@\n         <span className={css.rowCellText}>{row.name}</span>\r\n       </span>\r\n       <span className={css.rowCell}>{row.unit}</span>\r\n       <span className={css.rowCell}>{row.price}</span>\r\n-    </div>\r\n-  ))}\r\n+  \r\n             </div>\r\n           ))}\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1783854045702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,15 +36,16 @@\n         {/* Список строк таблицы на основе активного таба */}\r\n <div className={css.tableBody}>\r\n   {priceData[activeTab].map((row) => (\r\n     <div key={row.id} className={css.tableRow}>\r\n-      <span className={css.rowCell}>\r\n+      <div className={css.nameCell}>\r\n         <span className={css.rowCellText}>{row.name}</span>\r\n-      </span>\r\n-      <span className={css.rowCell}>{row.unit}</span>\r\n-      <span className={css.rowCell}>{row.price}</span>\r\n-  \r\n-            </div>\r\n+      </div>\r\n+      <div className={css.unitCell}>{row.unit}</div>\r\n+      <div className={css.priceCell}>{row.price}</div>\r\n+    </div>\r\n+  ))}\r\n+</div>\r\n           ))}\r\n         </div>\r\n \r\n       </div>\r\n"
+                },
+                {
+                    "date": 1783854053122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n       </div>\r\n       <div className={css.unitCell}>{row.unit}</div>\r\n       <div className={css.priceCell}>{row.price}</div>\r\n     </div>\r\n-  ))}\r\n+  \r\n </div>\r\n           ))}\r\n         </div>\r\n \r\n"
                 }
             ],
             "date": 1783243047679,
