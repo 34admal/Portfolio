@@ -1,0 +1,22 @@
+{
+    "sourceFile": "public/generate-price.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1783953244676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1783953319997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,27 @@\n import fs from 'fs';\r\n import path from 'path';\r\n-// Импортируем ваши реальные данные\r\n import priceData from './src/data/priceData.js'; \r\n \r\n function generateCSV() {\r\n-  // Заголовки колонок для Excel (добавляем BOM-маркер для поддержки русской кириллицы в Excel)\r\n   let csvContent = '\\uFEFFКатегория;Наименование работ;Ед. измерения;Цена от, руб\\n';\r\n \r\n-  // Перебираем все категории и строки данных\r\n   Object.keys(priceData).forEach(category => {\r\n     const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);\r\n     \r\n     priceData[category].forEach(row => {\r\n-      // Экранируем кавычки, если они есть в названиях (например, «Грильято»)\r\n       const name = row.name.replace(/\"/g, '\"\"');\r\n       csvContent += `\"${formattedCategory}\";\"${name}\";\"${row.unit}\";${row.price}\\n`;\r\n     });\r\n   });\r\n \r\n-  // Определяем путь к папке public/files\r\n   const dirPath = path.join(process.cwd(), 'public', 'files');\r\n   \r\n-  // Если папок public/files еще нет — создаем их автоматически\r\n   if (!fs.existsSync(dirPath)) {\r\n     fs.mkdirSync(dirPath, { recursive: true });\r\n   }\r\n \r\n-  // Записываем готовый файл\r\n   fs.writeFileSync(path.join(dirPath, 'price-list.csv'), csvContent, 'utf-8');\r\n   console.log('✅ Файл price-list.csv успешно сгенерирован в public/files/');\r\n }\r\n \r\n-generateCSV();\r\n+generateCSV();\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1783953244676,
+            "name": "Commit-0",
+            "content": "import fs from 'fs';\r\nimport path from 'path';\r\n// Импортируем ваши реальные данные\r\nimport priceData from './src/data/priceData.js'; \r\n\r\nfunction generateCSV() {\r\n  // Заголовки колонок для Excel (добавляем BOM-маркер для поддержки русской кириллицы в Excel)\r\n  let csvContent = '\\uFEFFКатегория;Наименование работ;Ед. измерения;Цена от, руб\\n';\r\n\r\n  // Перебираем все категории и строки данных\r\n  Object.keys(priceData).forEach(category => {\r\n    const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);\r\n    \r\n    priceData[category].forEach(row => {\r\n      // Экранируем кавычки, если они есть в названиях (например, «Грильято»)\r\n      const name = row.name.replace(/\"/g, '\"\"');\r\n      csvContent += `\"${formattedCategory}\";\"${name}\";\"${row.unit}\";${row.price}\\n`;\r\n    });\r\n  });\r\n\r\n  // Определяем путь к папке public/files\r\n  const dirPath = path.join(process.cwd(), 'public', 'files');\r\n  \r\n  // Если папок public/files еще нет — создаем их автоматически\r\n  if (!fs.existsSync(dirPath)) {\r\n    fs.mkdirSync(dirPath, { recursive: true });\r\n  }\r\n\r\n  // Записываем готовый файл\r\n  fs.writeFileSync(path.join(dirPath, 'price-list.csv'), csvContent, 'utf-8');\r\n  console.log('✅ Файл price-list.csv успешно сгенерирован в public/files/');\r\n}\r\n\r\ngenerateCSV();\r\n"
+        }
+    ]
+}

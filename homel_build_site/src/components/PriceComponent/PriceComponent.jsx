@@ -49,6 +49,16 @@ export const PriceComponent = () => {
         </div>
 
       </div>
+      <div className={css.btnWrapper}>
+  <a 
+    href="files/price-list.csv" 
+    download="Прайс-лист_на_услуги.csv" 
+    className={css.downloadBtn}
+  >
+    Скачать весь прайс
+  </a>
+</div>
+
     </section>
   );
 };

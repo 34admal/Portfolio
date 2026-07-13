@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 25,
+            "activePatchIndex": 34,
             "patches": [
                 {
                     "date": 1783243047679,
@@ -108,6 +108,42 @@
                 {
                     "date": 1783854053122,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n       </div>\r\n       <div className={css.unitCell}>{row.unit}</div>\r\n       <div className={css.priceCell}>{row.price}</div>\r\n     </div>\r\n-  ))}\r\n+  \r\n </div>\r\n           ))}\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1783953479539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,13 +43,14 @@\n       <div className={css.unitCell}>{row.unit}</div>\r\n       <div className={css.priceCell}>{row.price}</div>\r\n     </div>\r\n   \r\n-</div>\r\n+\r\n           ))}\r\n         </div>\r\n \r\n       </div>\r\n+      \r\n     </section>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1783953654438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,15 @@\n           ))}\r\n         </div>\r\n \r\n       </div>\r\n-      \r\n+  <a \r\n+  href=\"./files/price-list.csv\" \r\n+  download=\"Прайс-лист_на_услуги.csv\" \r\n+  className={css.downloadBtn}\r\n+>\r\n+  Скачать весь прайс\r\n+</a>\r\n     </section>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1783953756974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,10 @@\n         </div>\r\n \r\n       </div>\r\n   <a \r\n-  href=\"./files/price-list.csv\" \r\n+  <a \r\n+  href=\"/files/price-list.csv\" \r\n   download=\"Прайс-лист_на_услуги.csv\" \r\n   className={css.downloadBtn}\r\n >\r\n   Скачать весь прайс\r\n"
+                },
+                {
+                    "date": 1783953776291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,10 +48,9 @@\n           ))}\r\n         </div>\r\n \r\n       </div>\r\n-  <a \r\n-  <a \r\n+<a \r\n   href=\"/files/price-list.csv\" \r\n   download=\"Прайс-лист_на_услуги.csv\" \r\n   className={css.downloadBtn}\r\n >\r\n"
+                },
+                {
+                    "date": 1783955689258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n         </div>\r\n \r\n       </div>\r\n <a \r\n-  href=\"/files/price-list.csv\" \r\n+  href=\"files/price-list.csv\" \r\n   download=\"Прайс-лист_на_услуги.csv\" \r\n   className={css.downloadBtn}\r\n >\r\n   Скачать весь прайс\r\n"
+                },
+                {
+                    "date": 1783956271456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,15 +48,17 @@\n           ))}\r\n         </div>\r\n \r\n       </div>\r\n-<a \r\n-  href=\"files/price-list.csv\" \r\n-  download=\"Прайс-лист_на_услуги.csv\" \r\n-  className={css.downloadBtn}\r\n->\r\n-  Скачать весь прайс\r\n-</a>\r\n+<div className={css.btnContainer}>\r\n+  <a \r\n+    href=\"files/price-list.csv\" \r\n+    download=\"Прайс-лист_на_услуги.csv\" \r\n+    className={css.downloadBtn}\r\n+  >\r\n+    Скачать весь прайс\r\n+  </a>\r\n+</div>\r\n     </section>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1783958564770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,17 +48,9 @@\n           ))}\r\n         </div>\r\n \r\n       </div>\r\n-<div className={css.btnContainer}>\r\n-  <a \r\n-    href=\"files/price-list.csv\" \r\n-    download=\"Прайс-лист_на_услуги.csv\" \r\n-    className={css.downloadBtn}\r\n-  >\r\n-    Скачать весь прайс\r\n-  </a>\r\n-</div>\r\n+\r\n     </section>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1783958571101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,17 @@\n           ))}\r\n         </div>\r\n \r\n       </div>\r\n+      <div className={css.btnContainer}>\r\n+  <a \r\n+    href=\"files/price-list.csv\" \r\n+    download=\"Прайс-лист_на_услуги.csv\" \r\n+    className={css.downloadBtn}\r\n+  >\r\n+    Скачать весь прайс\r\n+  </a>\r\n+</div>\r\n \r\n     </section>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1783959070504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n           ))}\r\n         </div>\r\n \r\n       </div>\r\n-      <div className={css.btnContainer}>\r\n+      <div className={css.btnWrapper}>\r\n   <a \r\n     href=\"files/price-list.csv\" \r\n     download=\"Прайс-лист_на_услуги.csv\" \r\n     className={css.downloadBtn}\r\n"
                 }
             ],
             "date": 1783243047679,

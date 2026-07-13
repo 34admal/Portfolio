@@ -1,0 +1,22 @@
+{
+    "sourceFile": "generate-price.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1783955295555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1783955406561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import fs from 'fs';\r\n import path from 'path';\r\n-import priceData from './src/components/PriceComponent/priceData.js';\r\n+import { priceData } from './src/components/PriceComponent/priceData.js';\r\n \r\n function generateCSV() {\r\n   let csvContent = '\\uFEFFКатегория;Наименование работ;Ед. измерения;Цена от, руб\\n';\r\n \r\n"
+                }
+            ],
+            "date": 1783955295555,
+            "name": "Commit-0",
+            "content": "import fs from 'fs';\r\nimport path from 'path';\r\nimport priceData from './src/components/PriceComponent/priceData.js';\r\n\r\nfunction generateCSV() {\r\n  let csvContent = '\\uFEFFКатегория;Наименование работ;Ед. измерения;Цена от, руб\\n';\r\n\r\n  Object.keys(priceData).forEach(category => {\r\n    const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);\r\n    \r\n    priceData[category].forEach(row => {\r\n      const name = row.name.replace(/\"/g, '\"\"');\r\n      csvContent += `\"${formattedCategory}\";\"${name}\";\"${row.unit}\";${row.price}\\n`;\r\n    });\r\n  });\r\n\r\n  const dirPath = path.join(process.cwd(), 'public', 'files');\r\n  \r\n  if (!fs.existsSync(dirPath)) {\r\n    fs.mkdirSync(dirPath, { recursive: true });\r\n  }\r\n\r\n  fs.writeFileSync(path.join(dirPath, 'price-list.csv'), csvContent, 'utf-8');\r\n  console.log('✅ Файл price-list.csv успешно сгенерирован в public/files/');\r\n}\r\n\r\ngenerateCSV();"
+        }
+    ]
+}
