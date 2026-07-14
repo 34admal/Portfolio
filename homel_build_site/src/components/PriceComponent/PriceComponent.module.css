@@ -7,7 +7,20 @@
   margin: 69px auto 0 auto;
   background-color: rgba(61, 61, 61, 1);
   box-sizing: border-box;
-  padding-top: 25px;
+  position: relative;
+}
+
+.mainWrapper::after {
+  content: "";
+  position: absolute;
+  top: 57px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 6px solid rgba(255, 122, 0, 1);
+  border-top: none;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .title {
@@ -27,7 +40,7 @@
   height: 57px;
   background-color: rgba(61, 61, 61, 1);
   box-sizing: border-box;
-  border-top: 6px solid rgba(49, 49, 49, 1);
+  border-top: none;
   border-bottom: 6px solid rgba(255, 122, 0, 1);
 }
 
@@ -47,6 +60,7 @@
   cursor: pointer;
   box-sizing: border-box;
   border-right: 6px solid rgba(49, 49, 49, 1);
+  border-top: 6px solid rgba(49, 49, 49, 1);
 }
 
 .tabItem:last-child {
@@ -56,16 +70,44 @@
 .tabItem.active {
   font-weight: 600;
   letter-spacing: normal;
-  outline: 6px solid rgba(255, 122, 0, 1);
   position: relative;
-  z-index: 5;
-  border-right: none;
-  padding-right: 6px;
+  border-top: 6px solid rgba(255, 122, 0, 1);
 }
 
 .tabItem.active + .tabItem {
   border-left: 6px solid transparent;
   margin-left: -6px;
+}
+.tabItem.active::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  bottom: 0;
+  left: -6px;
+  right: -6px;
+  border-left: 6px solid rgba(255, 122, 0, 1);
+  border-right: 6px solid rgba(255, 122, 0, 1);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tabItem.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 6px;
+  background-color: rgba(61, 61, 61, 1);
+  z-index: 3;
+}
+
+.tabItem:first-child {
+  border-left: 6px solid rgba(49, 49, 49, 1);
+}
+
+.tabItem:last-child {
+  border-right: 6px solid rgba(49, 49, 49, 1);
 }
 
 .tableHeader {
@@ -77,6 +119,7 @@
   background-color: rgba(61, 61, 61, 1);
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 1);
+  border-top: none;
 }
 
 .headerCell {
@@ -86,7 +129,7 @@
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.05em;
-  color: #FFFFFF;
+  color: #ffffff;
   box-sizing: border-box;
 }
 
@@ -119,7 +162,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   box-sizing: border-box;
 }
 
@@ -155,7 +198,7 @@
   justify-content: center;
   border-right: 1px solid rgba(255, 255, 255, 1);
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .priceCell {
@@ -164,7 +207,7 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .tableRow:last-child {
@@ -196,10 +239,12 @@
   border-radius: 10px;
   border: solid 3px #ff7a00;
   background-color: #1c1d1e;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   box-sizing: border-box;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .downloadBtn:hover {
