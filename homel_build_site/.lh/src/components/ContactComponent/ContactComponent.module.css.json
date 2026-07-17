@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 24,
             "patches": [
                 {
                     "date": 1784301660932,
@@ -36,6 +36,74 @@
                 {
                     "date": 1784302167660,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,6 @@\n   font-style: normal;\r\n   line-height: 37px;\r\n   text-transform: uppercase;\r\n   color: #ffffff;\r\n-  text-align: center; \r\n+ text-align: left;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784303369567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,6 @@\n   font-style: normal;\r\n   line-height: 37px;\r\n   text-transform: uppercase;\r\n   color: #ffffff;\r\n- text-align: left;\r\n+ text-align: center\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784306768748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,6 @@\n   line-height: 37px;\r\n   text-transform: uppercase;\r\n   color: #ffffff;\r\n  text-align: center\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1784306982308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,4 +14,8 @@\n   color: #ffffff;\r\n  text-align: center\r\n }\r\n \r\n+.contentBlock {\r\n+  background-image: url(images/bg-brick-wall.png); /* Без точек и кавычек, сборщик сам подтянет хэш */\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1784306988447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,17 @@\n   color: #ffffff;\r\n  text-align: center\r\n }\r\n \r\n+\r\n+\r\n .contentBlock {\r\n-  background-image: url(images/bg-brick-wall.png); /* Без точек и кавычек, сборщик сам подтянет хэш */\r\n-}\r\n-\r\n+  box-sizing: border-box;\r\n+  margin-top: 64px; /* Точный макетный отступ от заголовка */\r\n+  width: 1440px;\r\n+  height: 680px;\r\n+  background-image: url('images/bg-brick-wall.png');\r\n+  background-repeat: no-repeat;\r\n+  background-position: center;\r\n+  background-size: cover;\r\n+  position: relative;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784307412061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,6 @@\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n   position: relative;\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1784307423074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,4 +28,16 @@\n   background-size: cover;\r\n   position: relative;\r\n }\r\n \r\n+.workers {\r\n+  position: absolute;\r\n+  left: 164px;\r\n+  bottom: 0;\r\n+ \r\n+  width: 531px; /* Поставь тут точную ширину картинки из Figma */\r\n+  height: 500px; /* Поставь тут точную высоту картинки из Figma */\r\n+  background-image: url('images/bg-workers.png');\r\n+  background-repeat: no-repeat;\r\n+  background-position: bottom left;\r\n+  background-size: contain;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784307647130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n \r\n .contentBlock {\r\n   box-sizing: border-box;\r\n-  margin-top: 64px; /* Точный макетный отступ от заголовка */\r\n+  margin-top: 64px; \r\n   width: 1440px;\r\n   height: 680px;\r\n   background-image: url('images/bg-brick-wall.png');\r\n   background-repeat: no-repeat;\r\n"
+                },
+                {
+                    "date": 1784307815240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   left: 164px;\r\n   bottom: 0;\r\n  \r\n   width: 531px; /* Поставь тут точную ширину картинки из Figma */\r\n-  height: 500px; /* Поставь тут точную высоту картинки из Figma */\r\n+  /*height: 500px;  Поставь тут точную высоту картинки из Figma */\r\n   background-image: url('images/bg-workers.png');\r\n   background-repeat: no-repeat;\r\n   background-position: bottom left;\r\n   background-size: contain;\r\n"
+                },
+                {
+                    "date": 1784307827597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   left: 164px;\r\n   bottom: 0;\r\n  \r\n   width: 531px; /* Поставь тут точную ширину картинки из Figma */\r\n-  /*height: 500px;  Поставь тут точную высоту картинки из Figma */\r\n+  /*height: px;  Поставь тут точную высоту картинки из Figma */\r\n   background-image: url('images/bg-workers.png');\r\n   background-repeat: no-repeat;\r\n   background-position: bottom left;\r\n   background-size: contain;\r\n"
+                },
+                {
+                    "date": 1784307833881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   left: 164px;\r\n   bottom: 0;\r\n  \r\n   width: 531px; /* Поставь тут точную ширину картинки из Figma */\r\n-  /*height: px;  Поставь тут точную высоту картинки из Figma */\r\n+  height: 704px;  Поставь тут точную высоту картинки из Figma */\r\n   background-image: url('images/bg-workers.png');\r\n   background-repeat: no-repeat;\r\n   background-position: bottom left;\r\n   background-size: contain;\r\n"
+                },
+                {
+                    "date": 1784307840570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   left: 164px;\r\n   bottom: 0;\r\n  \r\n   width: 531px; /* Поставь тут точную ширину картинки из Figma */\r\n-  height: 704px;  Поставь тут точную высоту картинки из Figma */\r\n+  height: 704px; \r\n   background-image: url('images/bg-workers.png');\r\n   background-repeat: no-repeat;\r\n   background-position: bottom left;\r\n   background-size: contain;\r\n"
+                },
+                {
+                    "date": 1784308189075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,26 +18,38 @@\n \r\n \r\n .contentBlock {\r\n   box-sizing: border-box;\r\n-  margin-top: 64px; \r\n+  margin-top: 64px;\r\n   width: 1440px;\r\n-  height: 680px;\r\n+  height: 704px; /* Общая высота композиции по росту людей */\r\n+  position: relative;\r\n+}\r\n+\r\n+/* Слой 1: Кирпичная стена, прижатая к низу */\r\n+.contentBlock::before {\r\n+  content: '';\r\n+  position: absolute;\r\n+  left: 0;\r\n+  bottom: 0;\r\n+  width: 1440px;\r\n+  height: 680px; /* Строго макетная высота кирпичей */\r\n   background-image: url('images/bg-brick-wall.png');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n-  position: relative;\r\n+  z-index: 1; /* Самый нижний слой */\r\n }\r\n \r\n+/* Слой 2: Рабочие, выступающие над стеной */\r\n .workers {\r\n   position: absolute;\r\n   left: 164px;\r\n   bottom: 0;\r\n- \r\n-  width: 531px; /* Поставь тут точную ширину картинки из Figma */\r\n-  height: 704px; \r\n+  width: 531px; /* Позже скорректируем ширину, если в Figma она другая */\r\n+  height: 704px; /* Люди занимают всю высоту и вылезают на 24px вверх */\r\n   background-image: url('images/bg-workers.png');\r\n   background-repeat: no-repeat;\r\n   background-position: bottom left;\r\n   background-size: contain;\r\n+  z-index: 2; /* Накладываются поверх кирпичной стены */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784308494240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,40 +16,23 @@\n }\r\n \r\n \r\n \r\n-.contentBlock {\r\n+..contentBlock {\r\n   box-sizing: border-box;\r\n   margin-top: 64px;\r\n   width: 1440px;\r\n-  height: 704px; /* Общая высота композиции по росту людей */\r\n-  position: relative;\r\n+  height: 704px; /* Полная высота по росту людей */\r\n+  \r\n+  /* Множественный фон: сначала люди (сверху), затем кирпичи (снизу) */\r\n+  background-image: \r\n+    url('images/bg-workers.png'), \r\n+    url('images/bg-brick-wall.png');\r\n+  \r\n+  /* Точные позиции для каждого фона соответственно */\r\n+  background-position: \r\n+    bottom left 164px, /* Люди: прижаты к низу со смещением 164px слева */\r\n+    bottom left;       /* Кирпичи: от левого нижнего угла */\r\n+  \r\n+  background-repeat: no-repeat, no-repeat;\r\n+  background-size: auto, auto; /* Пиксель в пиксель без растягивания */\r\n }\r\n-\r\n-/* Слой 1: Кирпичная стена, прижатая к низу */\r\n-.contentBlock::before {\r\n-  content: '';\r\n-  position: absolute;\r\n-  left: 0;\r\n-  bottom: 0;\r\n-  width: 1440px;\r\n-  height: 680px; /* Строго макетная высота кирпичей */\r\n-  background-image: url('images/bg-brick-wall.png');\r\n-  background-repeat: no-repeat;\r\n-  background-position: center;\r\n-  background-size: cover;\r\n-  z-index: 1; /* Самый нижний слой */\r\n\\ No newline at end of file\n-}\r\n-\r\n-/* Слой 2: Рабочие, выступающие над стеной */\r\n-.workers {\r\n-  position: absolute;\r\n-  left: 164px;\r\n-  bottom: 0;\r\n-  width: 531px; /* Позже скорректируем ширину, если в Figma она другая */\r\n-  height: 704px; /* Люди занимают всю высоту и вылезают на 24px вверх */\r\n-  background-image: url('images/bg-workers.png');\r\n-  background-repeat: no-repeat;\r\n-  background-position: bottom left;\r\n-  background-size: contain;\r\n-  z-index: 2; /* Накладываются поверх кирпичной стены */\r\n-}\n"
+                },
+                {
+                    "date": 1784308528554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\r\n \r\n \r\n \r\n-..contentBlock {\r\n+.contentBlock {\r\n   box-sizing: border-box;\r\n   margin-top: 64px;\r\n   width: 1440px;\r\n   height: 704px; /* Полная высота по росту людей */\r\n"
+                },
+                {
+                    "date": 1784308729011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,19 +20,19 @@\n .contentBlock {\r\n   box-sizing: border-box;\r\n   margin-top: 64px;\r\n   width: 1440px;\r\n-  height: 704px; /* Полная высота по росту людей */\r\n+  height: 704px; /* Полная высота по каскам людей */\r\n   \r\n-  /* Множественный фон: сначала люди (сверху), затем кирпичи (снизу) */\r\n+  /* Множественный фон: люди поверх кирпичной стены */\r\n   background-image: \r\n     url('images/bg-workers.png'), \r\n     url('images/bg-brick-wall.png');\r\n   \r\n-  /* Точные позиции для каждого фона соответственно */\r\n+  /* Позиционирование: люди со смещением 164px, стена строго от левого нижнего угла */\r\n   background-position: \r\n-    bottom left 164px, /* Люди: прижаты к низу со смещением 164px слева */\r\n-    bottom left;       /* Кирпичи: от левого нижнего угла */\r\n+    left 164px bottom 0, \r\n+    left bottom;\r\n   \r\n   background-repeat: no-repeat, no-repeat;\r\n-  background-size: auto, auto; /* Пиксель в пиксель без растягивания */\r\n-}\r\n+  background-size: auto, auto;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784308800513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   background-image: \r\n     url('images/bg-workers.png'), \r\n     url('images/bg-brick-wall.png');\r\n   \r\n-  /* Позиционирование: люди со смещением 164px, стена строго от левого нижнего угла */\r\n+\r\n   background-position: \r\n     left 164px bottom 0, \r\n     left bottom;\r\n   \r\n"
+                },
+                {
+                    "date": 1784308808125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+.wrapper {\r\n+  box-sizing: border-box;\r\n+  margin-top: 56px\r\n+}\r\n+\r\n+.title {\r\n+  display: block;\r\n+  font-family: inherit; \r\n+  font-size: 30px;\r\n+  font-weight: 400;\r\n+  font-style: normal;\r\n+  line-height: 37px;\r\n+  text-transform: uppercase;\r\n+  color: #ffffff;\r\n+ text-align: center\r\n+}\r\n+\r\n+\r\n+\r\n+.contentBlock {\r\n+  box-sizing: border-box;\r\n+  margin-top: 64px;\r\n+  width: 1440px;\r\n+  height: 704px; \r\n+  \r\n+ \r\n+  background-image: \r\n+    url('images/bg-workers.png'), \r\n+    url('images/bg-brick-wall.png');\r\n+  \r\n+\r\n+  background-position: \r\n+    left 164px bottom 0, \r\n+    left bottom;\r\n+  \r\n+  background-repeat: no-repeat, no-repeat;\r\n+  background-size: auto, auto;\r\n+}\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1784301660932,

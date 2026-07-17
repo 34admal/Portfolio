@@ -12,5 +12,27 @@
   line-height: 37px;
   text-transform: uppercase;
   color: #ffffff;
- text-align: left;
+ text-align: center
+}
+
+
+
+.contentBlock {
+  box-sizing: border-box;
+  margin-top: 64px;
+  width: 1440px;
+  height: 704px; 
+  
+ 
+  background-image: 
+    url('images/bg-workers.png'), 
+    url('images/bg-brick-wall.png');
+  
+
+  background-position: 
+    left 164px bottom 0, 
+    left bottom;
+  
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto;
 }

@@ -5,6 +5,11 @@ export default function ContactComponent() {
    return (
     <section className={css.wrapper}>
       <span className={css.title}>СВЯЖИТЕСЬ С НАМИ ИЛИ ОСТАВЬТЕ ЗАЯВКУ</span>
+
+       <div className={css.contentBlock}>
+        {/* Чистый декоративный слой рабочих через CSS */}
+        <div className={css.workers} />
+      </div>
     </section>
   );
 }
