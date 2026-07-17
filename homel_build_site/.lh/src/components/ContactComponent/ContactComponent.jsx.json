@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1784214422519,
@@ -12,6 +12,10 @@
                 {
                     "date": 1784214435052,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n \r\n export default function ContactComponent() {\r\n   return (\r\n     <section className={css.wrapper}>\r\n-      {/* Контент экрана будем добавлять пошагово */}\r\n+     \r\n     </section>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1784301804938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react';\r\n import css from './ContactComponent.module.css';\r\n \r\n export default function ContactComponent() {\r\n-  return (\r\n+   return (\r\n     <section className={css.wrapper}>\r\n-     \r\n+      <span className={css.title}>СВЯЖИТЕСЬ С НАМИ ИЛИ ОСТАВЬТЕ ЗАЯВКУ</span>\r\n     </section>\r\n-  );\r\n+  );;\r\n }\r\n"
                 }
             ],
             "date": 1784214422519,

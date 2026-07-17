@@ -1,0 +1,16 @@
+.wrapper {
+  box-sizing: border-box;
+  margin-top: 56px
+}
+
+.title {
+  display: block;
+  font-family: inherit; 
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #ffffff;
+ text-align: left;
+}

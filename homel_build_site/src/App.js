@@ -17,6 +17,7 @@ import Feedback from "./components/Feedback/Feedback";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Gallery from "./components/Gallery/Gallery";
 import PriceComponent from "./components/PriceComponent/PriceComponent";
+import ContactComponent from "./components/ContactComponent/ContactComponent";
 import Footer from "./components/Footer";
 
 import "./App.css";
@@ -34,6 +35,7 @@ function App() {
         <AboutUs/>
         <Gallery/>
         <PriceComponent/>
+        <ContactComponent/>
       </Layout>
 
       {/* <Router>
