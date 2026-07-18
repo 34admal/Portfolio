@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1784214422519,
@@ -36,6 +36,14 @@
                 {
                     "date": 1784307385831,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n     <section className={css.wrapper}>\r\n       <span className={css.title}>СВЯЖИТЕСЬ С НАМИ ИЛИ ОСТАВЬТЕ ЗАЯВКУ</span>\r\n \r\n        <div className={css.contentBlock}>\r\n-        {/* Сюда последовательно зайдут люди и форма */}\r\n+        {/* Чистый декоративный слой рабочих через CSS */}\r\n+        <div className={css.workers} />\r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1784357025470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,22 @@\n import React from 'react';\r\n import css from './ContactComponent.module.css';\r\n \r\n-export default function ContactComponent() {\r\n-   return (\r\n+function ContactComponent() {\r\n+  return (\r\n     <section className={css.wrapper}>\r\n       <span className={css.title}>СВЯЖИТЕСЬ С НАМИ ИЛИ ОСТАВЬТЕ ЗАЯВКУ</span>\r\n-\r\n-       <div className={css.contentBlock}>\r\n-        {/* Чистый декоративный слой рабочих через CSS */}\r\n-        <div className={css.workers} />\r\n+      \r\n+      <div className={css.contentBlock}>\r\n+        {/* Левая колонка: Люди */}\r\n+        <div className={css.workersColumn} />\r\n+        \r\n+        {/* Правая колонка: Форма */}\r\n+        <div className={css.formColumn}>\r\n+          {/* Контент формы пойдёт сюда */}\r\n+        </div>\r\n       </div>\r\n     </section>\r\n   );\r\n }\r\n+\r\n+export default ContactComponent;\r\n"
+                },
+                {
+                    "date": 1784357666572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,20 @@\n import React from 'react';\r\n import css from './ContactComponent.module.css';\r\n+import bgWorkers from './images/bg-workers.png';\r\n \r\n function ContactComponent() {\r\n   return (\r\n     <section className={css.wrapper}>\r\n       <span className={css.title}>СВЯЖИТЕСЬ С НАМИ ИЛИ ОСТАВЬТЕ ЗАЯВКУ</span>\r\n       \r\n       <div className={css.contentBlock}>\r\n-        {/* Левая колонка: Люди */}\r\n-        <div className={css.workersColumn} />\r\n+        <div className={css.workersColumn}>\r\n+          <img src={bgWorkers} className={css.workersImg} alt=\"Рабочие\" />\r\n+        </div>\r\n         \r\n-        {/* Правая колонка: Форма */}\r\n         <div className={css.formColumn}>\r\n-          {/* Контент формы пойдёт сюда */}\r\n+          {/* Контент формы */}\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
                 }
             ],
             "date": 1784214422519,

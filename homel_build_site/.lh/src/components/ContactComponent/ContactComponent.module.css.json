@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 24,
+            "activePatchIndex": 34,
             "patches": [
                 {
                     "date": 1784301660932,
@@ -104,6 +104,46 @@
                 {
                     "date": 1784308808125,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+.wrapper {\r\n+  box-sizing: border-box;\r\n+  margin-top: 56px\r\n+}\r\n+\r\n+.title {\r\n+  display: block;\r\n+  font-family: inherit; \r\n+  font-size: 30px;\r\n+  font-weight: 400;\r\n+  font-style: normal;\r\n+  line-height: 37px;\r\n+  text-transform: uppercase;\r\n+  color: #ffffff;\r\n+ text-align: center\r\n+}\r\n+\r\n+\r\n+\r\n+.contentBlock {\r\n+  box-sizing: border-box;\r\n+  margin-top: 64px;\r\n+  width: 1440px;\r\n+  height: 704px; \r\n+  \r\n+ \r\n+  background-image: \r\n+    url('images/bg-workers.png'), \r\n+    url('images/bg-brick-wall.png');\r\n+  \r\n+\r\n+  background-position: \r\n+    left 164px bottom 0, \r\n+    left bottom;\r\n+  \r\n+  background-repeat: no-repeat, no-repeat;\r\n+  background-size: auto, auto;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784357144966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,49 @@\n+.wrapper {\r\n+  box-sizing: border-box;\r\n+  margin-top: 56px\r\n+}\r\n+\r\n+.title {\r\n+  display: block;\r\n+  font-family: inherit; \r\n+  font-size: 30px;\r\n+  font-weight: 400;\r\n+  font-style: normal;\r\n+  line-height: 37px;\r\n+  text-transform: uppercase;\r\n+  color: #ffffff;\r\n+ text-align: center\r\n+}\r\n+\r\n+\r\n+\r\n+.contentBlock {\r\n+  box-sizing: border-box;\r\n+  margin-top: 64px;\r\n+  width: 1440px;\r\n+  height: 680px; /* Чистая высота кирпичной стены */\r\n+  background-image: url('images/bg-brick-wall.png');\r\n+  background-repeat: no-repeat;\r\n+  background-position: center;\r\n+  background-size: cover;\r\n+  \r\n+  display: flex; /* Флекс для нормального потока колонок */\r\n+}\r\n+\r\n+.workersColumn {\r\n+  width: 531px; /* Базовая ширина под людей */\r\n+  height: 704px; /* Полная высота людей */\r\n+  margin-left: 164px; /* Макетный отступ слева */\r\n+  background-image: url('images/bg-workers.png');\r\n+  background-repeat: no-repeat;\r\n+  background-position: bottom left;\r\n+  background-size: auto;\r\n+  \r\n+  position: relative;\r\n+  top: -24px; /* Каски аккуратно выступают вверх над кирпичами, не ломая поток */\r\n+}\r\n+\r\n+.formColumn {\r\n+  flex-grow: 1; /* Занимает оставшееся пространство справа */\r\n+  box-sizing: border-box;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784357518264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n .contentBlock {\r\n   box-sizing: border-box;\r\n   margin-top: 64px;\r\n   width: 1440px;\r\n-  height: 680px; /* Чистая высота кирпичной стены */\r\n+  height: 680px; * Чистая высота кирпичной стены */\r\n   background-image: url('images/bg-brick-wall.png');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n@@ -45,81 +45,5 @@\n \r\n .formColumn {\r\n   flex-grow: 1; /* Занимает оставшееся пространство справа */\r\n   box-sizing: border-box;\r\n-}\n-.wrapper {\r\n-  box-sizing: border-box;\r\n-  margin-top: 56px\r\n-}\r\n-\r\n-.title {\r\n-  display: block;\r\n-  font-family: inherit; \r\n-  font-size: 30px;\r\n-  font-weight: 400;\r\n-  font-style: normal;\r\n-  line-height: 37px;\r\n-  text-transform: uppercase;\r\n-  color: #ffffff;\r\n- text-align: center\r\n-}\r\n-\r\n-\r\n-\r\n-.contentBlock {\r\n-  box-sizing: border-box;\r\n-  margin-top: 64px;\r\n-  width: 1440px;\r\n-  height: 704px; \r\n-  \r\n- \r\n-  background-image: \r\n-    url('images/bg-workers.png'), \r\n-    url('images/bg-brick-wall.png');\r\n-  \r\n-\r\n-  background-position: \r\n-    left 164px bottom 0, \r\n-    left bottom;\r\n-  \r\n-  background-repeat: no-repeat, no-repeat;\r\n-  background-size: auto, auto;\r\n-}\n-.wrapper {\r\n-  box-sizing: border-box;\r\n-  margin-top: 56px\r\n-}\r\n-\r\n-.title {\r\n-  display: block;\r\n-  font-family: inherit; \r\n-  font-size: 30px;\r\n-  font-weight: 400;\r\n-  font-style: normal;\r\n-  line-height: 37px;\r\n-  text-transform: uppercase;\r\n-  color: #ffffff;\r\n- text-align: center\r\n-}\r\n-\r\n-\r\n-\r\n-.contentBlock {\r\n-  box-sizing: border-box;\r\n-  margin-top: 64px;\r\n-  width: 1440px;\r\n-  height: 704px; /* Полная высота по каскам людей */\r\n-  \r\n-  /* Множественный фон: люди поверх кирпичной стены */\r\n-  background-image: \r\n-    url('images/bg-workers.png'), \r\n-    url('images/bg-brick-wall.png');\r\n-  \r\n-\r\n-  background-position: \r\n-    left 164px bottom 0, \r\n-    left bottom;\r\n-  \r\n-  background-repeat: no-repeat, no-repeat;\r\n-  background-size: auto, auto;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784357526848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n   \r\n-  display: flex; /* Флекс для нормального потока колонок */\r\n+  display: flex; \r\n }\r\n \r\n .workersColumn {\r\n   width: 531px; /* Базовая ширина под людей */\r\n"
+                },
+                {
+                    "date": 1784357532109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n .contentBlock {\r\n   box-sizing: border-box;\r\n   margin-top: 64px;\r\n   width: 1440px;\r\n-  height: 680px; * Чистая высота кирпичной стены */\r\n+  height: 680px; \r\n   background-image: url('images/bg-brick-wall.png');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n"
+                },
+                {
+                    "date": 1784357579174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,18 +30,11 @@\n   display: flex; \r\n }\r\n \r\n .workersColumn {\r\n-  width: 531px; /* Базовая ширина под людей */\r\n-  height: 704px; /* Полная высота людей */\r\n-  margin-left: 164px; /* Макетный отступ слева */\r\n-  background-image: url('images/bg-workers.png');\r\n-  background-repeat: no-repeat;\r\n-  background-position: bottom left;\r\n-  background-size: auto;\r\n-  \r\n-  position: relative;\r\n-  top: -24px; /* Каски аккуратно выступают вверх над кирпичами, не ломая поток */\r\n+  width: auto; /* Убираем 531px, блок сам растянется под картинку */\r\n+  flex-shrink: 0; /* Запрещаем флексу сжимать картинку по горизонтали */\r\n+  /* остальное не трогаем */\r\n }\r\n \r\n .formColumn {\r\n   flex-grow: 1; /* Занимает оставшееся пространство справа */\r\n"
+                },
+                {
+                    "date": 1784357725476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,5 +38,5 @@\n \r\n .formColumn {\r\n   flex-grow: 1; /* Занимает оставшееся пространство справа */\r\n   box-sizing: border-box;\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1784357735857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,14 +29,10 @@\n   \r\n   display: flex; \r\n }\r\n \r\n-.workersColumn {\r\n-  width: auto; /* Убираем 531px, блок сам растянется под картинку */\r\n-  flex-shrink: 0; /* Запрещаем флексу сжимать картинку по горизонтали */\r\n-  /* остальное не трогаем */\r\n-}\r\n \r\n+\r\n .formColumn {\r\n   flex-grow: 1; /* Занимает оставшееся пространство справа */\r\n   box-sizing: border-box;\r\n }\r\n"
+                },
+                {
+                    "date": 1784357741786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,21 @@\n   \r\n   display: flex; \r\n }\r\n \r\n+.workersColumn {\r\n+  margin-left: 164px;\r\n+  display: flex;\r\n+  align-items: flex-end; /* Прижимаем картинку к низу */\r\n+}\r\n \r\n+.workersImg {\r\n+  display: block;\r\n+  max-width: 100%;\r\n+  height: auto;\r\n+}\r\n \r\n+\r\n .formColumn {\r\n   flex-grow: 1; /* Занимает оставшееся пространство справа */\r\n   box-sizing: border-box;\r\n }\r\n"
+                },
+                {
+                    "date": 1784358975174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,7 +43,7 @@\n }\r\n \r\n \r\n .formColumn {\r\n-  flex-grow: 1; /* Занимает оставшееся пространство справа */\r\n+  flex-grow: 1; \r\n   box-sizing: border-box;\r\n }\r\n"
+                },
+                {
+                    "date": 1784358988944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,49 +1,46 @@\n .wrapper {\r\n   box-sizing: border-box;\r\n-  margin-top: 56px\r\n+  margin-top: 56px;\r\n }\r\n \r\n .title {\r\n   display: block;\r\n-  font-family: inherit; \r\n+  font-family: inherit;\r\n   font-size: 30px;\r\n   font-weight: 400;\r\n   font-style: normal;\r\n   line-height: 37px;\r\n   text-transform: uppercase;\r\n   color: #ffffff;\r\n- text-align: center\r\n+  text-align: center;\r\n }\r\n \r\n-\r\n-\r\n .contentBlock {\r\n   box-sizing: border-box;\r\n   margin-top: 64px;\r\n   width: 1440px;\r\n-  height: 680px; \r\n-  background-image: url('images/bg-brick-wall.png');\r\n+  height: 680px;\r\n+  background-image: url(\"images/bg-brick-wall.png\");\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n-  \r\n-  display: flex; \r\n+\r\n+  display: flex;\r\n }\r\n \r\n .workersColumn {\r\n   margin-left: 164px;\r\n   display: flex;\r\n-  align-items: flex-end; /* Прижимаем картинку к низу */\r\n+  align-items: flex-end;\r\n }\r\n \r\n .workersImg {\r\n   display: block;\r\n   max-width: 100%;\r\n   height: auto;\r\n }\r\n \r\n-\r\n .formColumn {\r\n-  flex-grow: 1; \r\n+  flex-grow: 1;\r\n   box-sizing: border-box;\r\n }\r\n"
                 }
             ],
             "date": 1784301660932,
