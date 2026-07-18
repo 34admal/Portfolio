@@ -1,6 +1,7 @@
 import React from 'react';
 import css from './ContactComponent.module.css';
 import bgWorkers from './images/bg-workers.png';
+import ContactForm from './ContactForm';
 
 function ContactComponent() {
   return (
@@ -13,7 +14,7 @@ function ContactComponent() {
         </div>
         
         <div className={css.formColumn}>
-          {/* Контент формы */}
+          <ContactForm />
         </div>
       </div>
     </section>

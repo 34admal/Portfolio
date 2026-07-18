@@ -3,16 +3,15 @@
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
-  margin-top: 54px;
-
-  margin-left: 222px;
+  margin-top: 71px;
+  margin-left: 15px; 
   width: 390px;
   height: 468.8px;
-
   border-radius: 15px;
   border: solid 2px #ff7a00;
   background-color: #1c1d1e;
 }
+
 .title {
   padding-top: 24.25px;
   padding-left: 50px;
@@ -97,26 +96,8 @@
   margin-top: 25.27px;
   margin-left: 51px;
   cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-.submitBtn {
-  width: 285px;
-  height: 50.53px;
-  border-radius: 10px;
-  border: 2px solid #ff7a00;
-  background: transparent;
-  box-sizing: border-box;
-  margin-top: 25.27px;
-  margin-left: 51px;
-  cursor: pointer;
   color: #ffffff;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.8px;
@@ -138,10 +119,10 @@
 .checkboxText {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 400; 
+  font-weight: 400;
   font-size: 10px;
   line-height: 12px;
-  letter-spacing: 5%; 
+  letter-spacing: 5%;
   color: #ffffff;
   text-align: left;
 }
@@ -152,18 +133,6 @@
   margin-top: 16.1px;
   margin-left: 51px;
   cursor: pointer;
-}
-
-.checkboxCustom {
-  width: 16px;
-  height: 16.17px;
-  border: 1px solid #ff7a00;
-  border-radius: 5px;
-  background: transparent;
-  box-sizing: border-box;
-  margin-right: 5px; 
-  display: inline-block;
-  flex-shrink: 0; 
 }
 
 .checkboxHidden {

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 63,
+            "activePatchIndex": 67,
             "patches": [
                 {
                     "date": 1780499459322,
@@ -260,6 +260,22 @@
                 {
                     "date": 1780675896601,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n   display: flex;\r\n   flex-direction: column;\r\n   align-items: flex-start;\r\n   box-sizing: border-box;\r\n+  \r\n \r\n   margin-left: 222px;\r\n   width: 390px;\r\n   height: 468.8px;\r\n"
+                },
+                {
+                    "date": 1784395715223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   display: flex;\r\n   flex-direction: column;\r\n   align-items: flex-start;\r\n   box-sizing: border-box;\r\n-  \r\n+  margin-top: 54px;\r\n \r\n   margin-left: 222px;\r\n   width: 390px;\r\n   height: 468.8px;\r\n@@ -96,9 +96,11 @@\n   box-sizing: border-box;\r\n   margin-top: 25.27px;\r\n   margin-left: 51px;\r\n   cursor: pointer;\r\n-  transition: background-color 0.3s ease, color 0.3s ease;\r\n+  transition:\r\n+    background-color 0.3s ease,\r\n+    color 0.3s ease;\r\n }\r\n \r\n .submitBtn {\r\n   width: 285px;\r\n@@ -110,13 +112,14 @@\n   margin-top: 25.27px;\r\n   margin-left: 51px;\r\n   cursor: pointer;\r\n   color: #ffffff;\r\n-  transition: background-color 0.3s ease, color 0.3s ease;\r\n-  \r\n- \r\n+  transition:\r\n+    background-color 0.3s ease,\r\n+    color 0.3s ease;\r\n+\r\n   font-size: 16px;\r\n-  font-weight: 600; \r\n+  font-weight: 600;\r\n   letter-spacing: 0.8px;\r\n }\r\n \r\n .submitBtn:hover {\r\n@@ -132,9 +135,9 @@\n   box-sizing: border-box;\r\n }\r\n \r\n .checkboxText {\r\n-  font-family: 'Montserrat', sans-serif;\r\n+  font-family: \"Montserrat\", sans-serif;\r\n   font-style: normal;\r\n   font-weight: 400; /* Regular */\r\n   font-size: 10px;\r\n   line-height: 12px;\r\n@@ -157,9 +160,9 @@\n   border: 1px solid #ff7a00;\r\n   border-radius: 5px;\r\n   background: transparent;\r\n   box-sizing: border-box;\r\n-  margin-right: 5px; /* Зазор между квадратиком и текстом Политики */\r\n+  margin-right: 5px; \r\n   display: inline-block;\r\n   flex-shrink: 0; /* Чтобы квадратик не сжимался, если текст перенесется */\r\n }\r\n /* Переписываем скрытие, чтобы белый квадрат гарантированно исчез */\r\n@@ -169,26 +172,17 @@\n   width: 0;\r\n   height: 0;\r\n }\r\n \r\n-\r\n-\r\n-\r\n .checkboxCustom {\r\n   width: 16px;\r\n   height: 16.17px;\r\n   border: 1px solid #ff7a00;\r\n   border-radius: 5px;\r\n   background: transparent;\r\n   box-sizing: border-box;\r\n   margin-right: 5px;\r\n-  display: flex;       \r\n+  display: flex;\r\n   align-items: center;\r\n   justify-content: center;\r\n   flex-shrink: 0;\r\n }\r\n-\r\n-\r\n-\r\n-\r\n-\r\n-\r\n"
+                },
+                {
+                    "date": 1784395720851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -162,9 +162,9 @@\n   background: transparent;\r\n   box-sizing: border-box;\r\n   margin-right: 5px; \r\n   display: inline-block;\r\n-  flex-shrink: 0; /* Чтобы квадратик не сжимался, если текст перенесется */\r\n+  flex-shrink: 0; */\r\n }\r\n /* Переписываем скрытие, чтобы белый квадрат гарантированно исчез */\r\n .checkboxHidden {\r\n   opacity: 0;\r\n"
+                },
+                {
+                    "date": 1784395726228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,9 +164,9 @@\n   margin-right: 5px; \r\n   display: inline-block;\r\n   flex-shrink: 0; */\r\n }\r\n-/* Переписываем скрытие, чтобы белый квадрат гарантированно исчез */\r\n+\r\n .checkboxHidden {\r\n   opacity: 0;\r\n   position: absolute;\r\n   width: 0;\r\n"
+                },
+                {
+                    "date": 1784395738281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -140,9 +140,9 @@\n   font-style: normal;\r\n   font-weight: 400; /* Regular */\r\n   font-size: 10px;\r\n   line-height: 12px;\r\n-  letter-spacing: 5%; /* Из макета 5% */\r\n+  letter-spacing: 5%; \r\n   color: #ffffff;\r\n   text-align: left;\r\n }\r\n \r\n@@ -162,9 +162,9 @@\n   background: transparent;\r\n   box-sizing: border-box;\r\n   margin-right: 5px; \r\n   display: inline-block;\r\n-  flex-shrink: 0; */\r\n+  flex-shrink: 0; \r\n }\r\n \r\n .checkboxHidden {\r\n   opacity: 0;\r\n"
                 }
             ],
             "date": 1780499459322,

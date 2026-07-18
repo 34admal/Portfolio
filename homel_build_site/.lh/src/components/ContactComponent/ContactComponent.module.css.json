@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 34,
+            "activePatchIndex": 39,
             "patches": [
                 {
                     "date": 1784301660932,
@@ -144,6 +144,26 @@
                 {
                     "date": 1784358988944,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,49 +1,46 @@\n .wrapper {\r\n   box-sizing: border-box;\r\n-  margin-top: 56px\r\n+  margin-top: 56px;\r\n }\r\n \r\n .title {\r\n   display: block;\r\n-  font-family: inherit; \r\n+  font-family: inherit;\r\n   font-size: 30px;\r\n   font-weight: 400;\r\n   font-style: normal;\r\n   line-height: 37px;\r\n   text-transform: uppercase;\r\n   color: #ffffff;\r\n- text-align: center\r\n+  text-align: center;\r\n }\r\n \r\n-\r\n-\r\n .contentBlock {\r\n   box-sizing: border-box;\r\n   margin-top: 64px;\r\n   width: 1440px;\r\n-  height: 680px; \r\n-  background-image: url('images/bg-brick-wall.png');\r\n+  height: 680px;\r\n+  background-image: url(\"images/bg-brick-wall.png\");\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n-  \r\n-  display: flex; \r\n+\r\n+  display: flex;\r\n }\r\n \r\n .workersColumn {\r\n   margin-left: 164px;\r\n   display: flex;\r\n-  align-items: flex-end; /* Прижимаем картинку к низу */\r\n+  align-items: flex-end;\r\n }\r\n \r\n .workersImg {\r\n   display: block;\r\n   max-width: 100%;\r\n   height: auto;\r\n }\r\n \r\n-\r\n .formColumn {\r\n-  flex-grow: 1; \r\n+  flex-grow: 1;\r\n   box-sizing: border-box;\r\n }\r\n"
+                },
+                {
+                    "date": 1784391685782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,5 +42,6 @@\n \r\n .formColumn {\r\n   flex-grow: 1;\r\n   box-sizing: border-box;\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1784391845538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,6 +42,7 @@\n \r\n .formColumn {\r\n   flex-grow: 1;\r\n   box-sizing: border-box;\r\n-  \r\n+   margin-left: -207px;\r\n+   \r\n }\r\n"
+                },
+                {
+                    "date": 1784392300046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,6 +43,8 @@\n .formColumn {\r\n   flex-grow: 1;\r\n   box-sizing: border-box;\r\n    margin-left: -207px;\r\n-   \r\n+    position: relative; /* Включаем контекст наложения */\r\n+  z-index: 5;\r\n }\r\n+\r\n"
+                },
+                {
+                    "date": 1784395604292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,18 @@\n .formColumn {\r\n   flex-grow: 1;\r\n   box-sizing: border-box;\r\n    margin-left: -207px;\r\n-    position: relative; /* Включаем контекст наложения */\r\n-  z-index: 5;\r\n+    position: relative;\r\n }\r\n+/* Пропускаем клики сквозь кастомный квадрат и галочку прямо на контейнер label */\r\n+.formColumn div[class*=\"checkboxCustom\"],\r\n+.formColumn span[class*=\"checkboxCustom\"],\r\n+.formColumn svg {\r\n+  pointer-events: none;\r\n+}\r\n \r\n+/* Делаем всю область контейнера чувствительной к клику */\r\n+.formColumn label[class*=\"checkboxContainer\"] {\r\n+  cursor: pointer;\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1784395619280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,16 +45,4 @@\n   box-sizing: border-box;\r\n    margin-left: -207px;\r\n     position: relative;\r\n }\r\n-/* Пропускаем клики сквозь кастомный квадрат и галочку прямо на контейнер label */\r\n-.formColumn div[class*=\"checkboxCustom\"],\r\n-.formColumn span[class*=\"checkboxCustom\"],\r\n-.formColumn svg {\r\n-  pointer-events: none;\r\n-}\r\n-\r\n-/* Делаем всю область контейнера чувствительной к клику */\r\n-.formColumn label[class*=\"checkboxContainer\"] {\r\n-  cursor: pointer;\r\n-}\r\n-\r\n"
                 }
             ],
             "date": 1784301660932,
