@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/components/FooterComponent/FooterComponent.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1784564839405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1784564849116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .footer {\r\n   box-sizing: border-box;\r\n-  width: 1440px;\r\n+\r\n   height: 168px; /* Точная высота слоя Rectangle 126 из Pixso */\r\n   display: flex;\r\n }\r\n"
+                },
+                {
+                    "date": 1784564854416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .footer {\r\n   box-sizing: border-box;\r\n \r\n-  height: 168px; /* Точная высота слоя Rectangle 126 из Pixso */\r\n+  height: 168px; \r\n   display: flex;\r\n }\r\n"
+                },
+                {
+                    "date": 1784565129260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,15 @@\n .footer {\r\n   box-sizing: border-box;\r\n+  height: 168px;\r\n+  display: flex;\r\n+}\r\n \r\n-  height: 168px; \r\n+/* Общее правило для всех трех колонок */\r\n+.columnLeft,\r\n+.columnCenter,\r\n+.columnRight {\r\n+  flex: 1; /* Делим ширину строго на 3 равные части */\r\n   display: flex;\r\n-}\r\n+  flex-direction: column;\r\n+  box-sizing: border-box;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784565134905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n /* Общее правило для всех трех колонок */\r\n .columnLeft,\r\n .columnCenter,\r\n .columnRight {\r\n-  flex: 1; /* Делим ширину строго на 3 равные части */\r\n+  flex: 1; \r\n   display: flex;\r\n   flex-direction: column;\r\n   box-sizing: border-box;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1784565340854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,14 @@\n   height: 168px;\r\n   display: flex;\r\n }\r\n \r\n-/* Общее правило для всех трех колонок */\r\n+\r\n .columnLeft,\r\n .columnCenter,\r\n .columnRight {\r\n   flex: 1; \r\n   display: flex;\r\n   flex-direction: column;\r\n   box-sizing: border-box;\r\n\\ No newline at end of file\n-}\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1784565346368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,6 @@\n   font-size: 16px;\r\n   font-weight: 400;\r\n   line-height: 20px;\r\n   letter-spacing: 0.05em;\r\n-  color: #ffffff;\n\\ No newline at end of file\n+  color: #ffffff;\r\n+  \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1784564839405,
+            "name": "Commit-0",
+            "content": ".footer {\r\n  box-sizing: border-box;\r\n  width: 1440px;\r\n  height: 168px; /* Точная высота слоя Rectangle 126 из Pixso */\r\n  display: flex;\r\n}\r\n"
+        }
+    ]
+}

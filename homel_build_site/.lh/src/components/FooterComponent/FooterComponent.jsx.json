@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1784478019764,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1784565092653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,18 @@\n \r\n function FooterComponent() {\r\n   return (\r\n     <footer className={css.footer}>\r\n-      {/* Левая часть: Телефон и Email */}\r\n-      <div className={css.contactsBlock}></div>\r\n+      {/* Левая колонка — контакты */}\r\n+      <div className={css.columnLeft}></div>\r\n \r\n-      {/* Правая часть: Копирайт и УНП */}\r\n-      <div className={css.infoBlock}></div>\r\n+      {/* Центральная колонка — копирайт */}\r\n+      <div className={css.columnCenter}></div>\r\n+\r\n+      {/* Правая колонка — юридические данные */}\r\n+      <div className={css.columnRight}></div>\r\n     </footer>\r\n   );\r\n }\r\n \r\n export default FooterComponent;\r\n+\r\n"
+                },
+                {
+                    "date": 1784565861622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,38 @@\n import React from 'react';\r\n import css from './FooterComponent.module.css';\r\n+import phoneIcon from './images/icon-phone.png';\r\n+import docIcon from './images/icon-doc.png';\r\n \r\n function FooterComponent() {\r\n   return (\r\n     <footer className={css.footer}>\r\n       {/* Левая колонка — контакты */}\r\n-      <div className={css.columnLeft}></div>\r\n+      <div className={css.columnLeft}>\r\n+        <div className={css.row}>\r\n+          <img src={phoneIcon} alt=\"\" className={css.icon} />\r\n+          <span>+375 (29) 111-11-11</span>\r\n+        </div>\r\n+        <div className={css.row}>\r\n+          <img src={docIcon} alt=\"\" className={css.icon} />\r\n+          <span>stroyka@gmail.com</span>\r\n+        </div>\r\n+      </div>\r\n \r\n       {/* Центральная колонка — копирайт */}\r\n-      <div className={css.columnCenter}></div>\r\n+      <div className={css.columnCenter}>\r\n+        <span>© Safehouse 2021</span>\r\n+      </div>\r\n \r\n       {/* Правая колонка — юридические данные */}\r\n-      <div className={css.columnRight}></div>\r\n+      <div className={css.columnRight}>\r\n+        <span>ИП Костин А.Н.</span>\r\n+        <span>УНП 111111111</span>\r\n+        <span>Юридический адрес</span>\r\n+      </div>\r\n     </footer>\r\n   );\r\n }\r\n \r\n export default FooterComponent;\r\n \r\n+\r\n"
                 }
             ],
             "date": 1784478019764,

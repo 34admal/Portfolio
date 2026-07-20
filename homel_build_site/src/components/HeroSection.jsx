@@ -6,7 +6,7 @@ import styles from './HeroSection.module.css';
 function HeroSection() {
   return (
     <>
-           <section>
+           <section className={styles.heroSection}>
         <div className={styles.main_content_block}>
           <div className={styles.slogan_block}>
             <div className={styles.construction_repair_gomel}>

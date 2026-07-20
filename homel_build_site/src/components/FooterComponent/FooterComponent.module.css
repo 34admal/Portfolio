@@ -1,0 +1,38 @@
+.footer {
+  box-sizing: border-box;
+  height: 168px;
+  display: flex;
+}
+
+
+.columnLeft,
+.columnCenter,
+.columnRight {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.columnLeft,
+.columnRight {
+ 
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+
+
+.columnCenter {
+  align-items: center;
+ 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}

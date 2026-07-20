@@ -18,7 +18,8 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Gallery from "./components/Gallery/Gallery";
 import PriceComponent from "./components/PriceComponent/PriceComponent";
 import ContactComponent from "./components/ContactComponent/ContactComponent";
-import Footer from "./components/Footer";
+import FooterComponent from "./components/FooterComponent/FooterComponent";
+
 
 import "./App.css";
 
@@ -36,6 +37,7 @@ function App() {
         <Gallery/>
         <PriceComponent/>
         <ContactComponent/>
+        <FooterComponent/>
       </Layout>
 
       {/* <Router>
