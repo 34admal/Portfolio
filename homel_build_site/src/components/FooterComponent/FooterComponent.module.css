@@ -4,11 +4,10 @@
   display: flex;
 }
 
-
 .columnLeft,
 .columnCenter,
 .columnRight {
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -16,7 +15,6 @@
 
 .columnLeft,
 .columnRight {
- 
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -24,15 +22,80 @@
   color: #ffffff;
 }
 
-
-
 .columnCenter {
   align-items: center;
- 
-  font-family: 'Montserrat', sans-serif;
+
+  justify-content: end;
+    margin-bottom: 16px;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.05em;
   color: #ffffff;
+}
+
+.phoneRow {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 39px; 
+  margin-left: 121px;
+}
+
+.phoneIcon {
+  display: block;
+}
+
+.phoneNumber {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+
+  margin-left: 29px;
+  margin-top: 10px;
+}
+
+.emailRow {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 13px;
+  margin-left: 121px;
+}
+
+.docIcon {
+  display: block;
+}
+
+.emailText {
+  display: block;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+
+  margin-left: 29px;
+  margin-top: 14;
+}
+
+.owner {
+  display: block;
+  margin-top: 30px;    
+  margin-right: 185px;
+}
+
+.unp {
+  display: block;
+  margin-top: 19px;    /* Строго 19px отступа от строки ИП */
+  margin-right: 128px; /* Строго 128px от правого края */
+}
+
+.address {
+  display: block;
+  margin-top: 19px;    /* Строго 19px отступа от строки УНП */
+  margin-right: 134px; /* Строго 134px от правого края монитора */
 }

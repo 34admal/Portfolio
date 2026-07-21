@@ -1,38 +1,37 @@
 import React from 'react';
-import css from './FooterComponent.module.css';
+import styles from './FooterComponent.module.css'; 
 import phoneIcon from './images/icon-phone.png';
 import docIcon from './images/icon-doc.png';
 
 function FooterComponent() {
   return (
-    <footer className={css.footer}>
-      {/* Левая колонка — контакты */}
-      <div className={css.columnLeft}>
-        <div className={css.row}>
-          <img src={phoneIcon} alt="" className={css.icon} />
-          <span>+375 (29) 111-11-11</span>
+    <footer className={styles.footer}>
+      {/* Левая колонка */}
+      <div className={styles.columnLeft}>
+        <div className={styles.phoneRow}>
+          <img src={phoneIcon} alt="Телефон" className={styles.phoneIcon} />
+          <span className={styles.phoneNumber}>+375 (29) 111-11-11</span>
         </div>
-        <div className={css.row}>
-          <img src={docIcon} alt="" className={css.icon} />
-          <span>stroyka@gmail.com</span>
+        
+        <div className={styles.emailRow}>
+          <img src={docIcon} alt="Документ" className={styles.docIcon} />
+          <span className={styles.emailText}>stroyka@gmail.com</span>
         </div>
       </div>
 
-      {/* Центральная колонка — копирайт */}
-      <div className={css.columnCenter}>
-        <span>© Safehouse 2021</span>
+      {/* Центральная колонка */}
+      <div className={ styles.columnCenter}>
+        <span className={styles.copyright}>© Safehouse 2021</span>
       </div>
 
-      {/* Правая колонка — юридические данные */}
-      <div className={css.columnRight}>
-        <span>ИП Костин А.Н.</span>
-        <span>УНП 111111111</span>
-        <span>Юридический адрес</span>
+      {/* Правая колонка */}
+      <div className={styles.columnRight}>
+        <span className={styles.owner}>ИП Костин А.Н.</span>
+        <span className={styles.unp}>УНП 111111111</span>
+        <span className={styles.address}>Юридический адрес</span>
       </div>
     </footer>
   );
 }
 
 export default FooterComponent;
-
-
