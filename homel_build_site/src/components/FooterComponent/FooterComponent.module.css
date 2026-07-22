@@ -90,12 +90,12 @@
 
 .unp {
   display: block;
-  margin-top: 19px;    /* Строго 19px отступа от строки ИП */
-  margin-right: 128px; /* Строго 128px от правого края */
+  margin-top: 19px;   
+  margin-right: 128px;
 }
 
 .address {
   display: block;
-  margin-top: 19px;    /* Строго 19px отступа от строки УНП */
-  margin-right: 134px; /* Строго 134px от правого края монитора */
+  margin-top: 19px;   
+  margin-right: 134px; 
 }

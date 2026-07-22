@@ -6,7 +6,7 @@ import docIcon from './images/icon-doc.png';
 function FooterComponent() {
   return (
     <footer className={styles.footer}>
-      {/* Левая колонка */}
+     
       <div className={styles.columnLeft}>
         <div className={styles.phoneRow}>
           <img src={phoneIcon} alt="Телефон" className={styles.phoneIcon} />
@@ -24,7 +24,7 @@ function FooterComponent() {
         <span className={styles.copyright}>© Safehouse 2021</span>
       </div>
 
-      {/* Правая колонка */}
+      
       <div className={styles.columnRight}>
         <span className={styles.owner}>ИП Костин А.Н.</span>
         <span className={styles.unp}>УНП 111111111</span>

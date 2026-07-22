@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 12,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1784478019764,
@@ -56,6 +56,14 @@
                 {
                     "date": 1784640741525,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\r\n-import styles from './FooterComponent.module.css';  стандартное имя импорта\r\n+import styles from './FooterComponent.module.css'; \r\n import phoneIcon from './images/icon-phone.png';\r\n import docIcon from './images/icon-doc.png';\r\n \r\n function FooterComponent() {\r\n"
+                },
+                {
+                    "date": 1784720450948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       <div className={ styles.columnCenter}>\r\n         <span className={styles.copyright}>© Safehouse 2021</span>\r\n       </div>\r\n \r\n-      {/* Правая колонка */}\r\n+      \r\n       <div className={styles.columnRight}>\r\n         <span className={styles.owner}>ИП Костин А.Н.</span>\r\n         <span className={styles.unp}>УНП 111111111</span>\r\n         <span className={styles.address}>Юридический адрес</span>\r\n"
+                },
+                {
+                    "date": 1784720464192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n function FooterComponent() {\r\n   return (\r\n     <footer className={styles.footer}>\r\n-      {/* Левая колонка */}\r\n+     \r\n       <div className={styles.columnLeft}>\r\n         <div className={styles.phoneRow}>\r\n           <img src={phoneIcon} alt=\"Телефон\" className={styles.phoneIcon} />\r\n           <span className={styles.phoneNumber}>+375 (29) 111-11-11</span>\r\n"
                 }
             ],
             "date": 1784478019764,
