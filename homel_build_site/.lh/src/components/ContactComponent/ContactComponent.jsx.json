@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 12,
+            "activePatchIndex": 13,
             "patches": [
                 {
                     "date": 1784214422519,
@@ -56,6 +56,10 @@
                 {
                     "date": 1784392870036,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,10 @@\n-import React, { useState } from 'react';\r\n+import React from 'react';\r\n import css from './ContactComponent.module.css';\r\n import bgWorkers from './images/bg-workers.png';\r\n-import FeedbackForm from '../Feedback/FeedbackForm';\r\n+import ContactForm from './ContactForm';\r\n \r\n function ContactComponent() {\r\n-  // Локальный стейт для управления галочкой на текущем экране\r\n-  const [localCheck, setLocalCheck] = useState(false);\r\n-\r\n-  // Перехватываем клик по чекбоксу, чтобы предотвратить прыжок наверх\r\n-  const handleFormClick = (e) => {\r\n-    // Находим, был ли клик внутри контейнера чекбокса\r\n-    const target = e.target.closest('label[class*=\"checkboxContainer\"]');\r\n-    if (target) {\r\n-      e.preventDefault(); // Намертво блокируем прыжок браузера по ID вверх страницы\r\n-      setLocalCheck(prev => !prev); // Переключаем галочку локально\r\n-    }\r\n-  };\r\n-\r\n   return (\r\n     <section className={css.wrapper}>\r\n       <span className={css.title}>СВЯЖИТЕСЬ С НАМИ ИЛИ ОСТАВЬТЕ ЗАЯВКУ</span>\r\n       \r\n@@ -25,11 +12,10 @@\n         <div className={css.workersColumn}>\r\n           <img src={bgWorkers} className={css.workersImg} alt=\"Рабочие\" />\r\n         </div>\r\n         \r\n-        {/* Вешаем обработчик на колонку, перехватывая события внутри формы */}\r\n-        <div className={css.formColumn} onClick={handleFormClick}>\r\n-          <FeedbackForm />\r\n+        <div className={css.formColumn}>\r\n+          <ContactForm />\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+                },
+                {
+                    "date": 1784824962094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,19 @@\n import React from 'react';\r\n-import css from './ContactComponent.module.css';\r\n+import styles from './ContactComponent.module.css';\r\n import bgWorkers from './images/bg-workers.png';\r\n import ContactForm from './ContactForm';\r\n \r\n function ContactComponent() {\r\n   return (\r\n-    <section className={css.wrapper}>\r\n-      <span className={css.title}>СВЯЖИТЕСЬ С НАМИ ИЛИ ОСТАВЬТЕ ЗАЯВКУ</span>\r\n+    <section id=\"contacts\" className={styles.wrapper}>\r\n+      <span className={styles.title}>СВЯЖИТЕСЬ С НАМИ ИЛИ ОСТАВЬТЕ ЗАЯВКУ</span>\r\n       \r\n-      <div className={css.contentBlock}>\r\n-        <div className={css.workersColumn}>\r\n-          <img src={bgWorkers} className={css.workersImg} alt=\"Рабочие\" />\r\n+      <div className={styles.contentBlock}>\r\n+        <div className={styles.workersColumn}>\r\n+          <img src={bgWorkers} className={styles.workersImg} alt=\"Рабочие\" />\r\n         </div>\r\n-        \r\n-        <div className={css.formColumn}>\r\n+        <div className={styles.formColumn}>\r\n           <ContactForm />\r\n         </div>\r\n       </div>\r\n     </section>\r\n"
                 }
             ],
             "date": 1784214422519,

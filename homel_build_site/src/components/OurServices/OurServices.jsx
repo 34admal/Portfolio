@@ -11,7 +11,7 @@ function OurServices() {
   const [activeTab, setActiveTab] = useState("plumbing");
 
   return (
-    <section className={styles.services}>
+   <section id="services" className={styles.services}>
       <span className={styles.services__title}>НАШИ УСЛУГИ</span>
       <span className={styles.services__line}></span>
 

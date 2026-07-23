@@ -10,10 +10,10 @@ function Header() {
         <ul>
           
           <li className={styles.navLink}>
-            <a href="#portfolio">Портфолио</a>
+        <a href="#gallery" className={styles.navLink}>Портфолио</a>
           </li>
           <li className={styles.navLink}>
-            <a href="#services">Услуги</a>
+            <a href="#services" className={styles.navLink}>Услуги</a>
           </li>
           <li className={styles.navLink}>
             <a href="#prices">Цены</a>

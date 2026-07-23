@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 28,
             "patches": [
                 {
                     "date": 1779113061825,
@@ -112,6 +112,14 @@
                 {
                     "date": 1779607324907,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n       <img src={header__logo} alt=\"SAFEHOUSE\" className={styles.header__logo} />\r\n \r\n       <nav className={styles.nav}>\r\n         <ul>\r\n-          {/* Канонические якорные ссылки для лендинга */}\r\n+          \r\n           <li className={styles.navLink}>\r\n             <a href=\"#portfolio\">Портфолио</a>\r\n           </li>\r\n           <li className={styles.navLink}>\r\n"
+                },
+                {
+                    "date": 1784823837726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n       <nav className={styles.nav}>\r\n         <ul>\r\n           \r\n           <li className={styles.navLink}>\r\n-            <a href=\"#portfolio\">Портфолио</a>\r\n+        <a href=\"#gallery\" className={styles.navLink}>Портфолио</a>\r\n           </li>\r\n           <li className={styles.navLink}>\r\n             <a href=\"#services\">Услуги</a>\r\n           </li>\r\n"
+                },
+                {
+                    "date": 1784824215037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n           <li className={styles.navLink}>\r\n         <a href=\"#gallery\" className={styles.navLink}>Портфолио</a>\r\n           </li>\r\n           <li className={styles.navLink}>\r\n-            <a href=\"#services\">Услуги</a>\r\n+            <a href=\"#services\" className={styles.navLink}>Услуги</a>\r\n           </li>\r\n           <li className={styles.navLink}>\r\n             <a href=\"#prices\">Цены</a>\r\n           </li>\r\n"
                 }
             ],
             "date": 1779113061825,

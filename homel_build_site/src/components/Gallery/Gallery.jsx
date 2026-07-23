@@ -14,7 +14,7 @@ function Gallery() {
   const [activeTitle, setActiveTitle] = useState(null);
   
   return (
-    <section className={styles.section}>
+     <section id="gallery" className={styles.section}>
       <div className={styles.headerRow}>
         <span className={`${styles.line} ${styles.lineLeft}`} />
         <span className={styles.title}>ГАЛЕРЕЯ РАБОТ</span>
