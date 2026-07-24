@@ -1,34 +1,38 @@
-import header__logo from "./images/logo.png";
-import styles from "./header.module.css";
+import React from 'react';
+import styles from './header.module.css';
+import logo from './images/logo.png'; // Убедитесь, что путь к вашему логотипу верный
 
-function Header() {
+// Внутренняя чистая функция для кнопки, чтобы не раздувать основную разметку
+const BurgerButton = ({ onClick }) => (
+  <button className={styles.burgerBtn} onClick={onClick} aria-label="Меню">
+    <span className={styles.burgerLine}></span>
+    <span className={styles.burgerLine}></span>
+    <span className={styles.burgerLine}></span>
+  </button>
+);
+
+export function Header() {
   return (
     <header className={styles.header}>
-      <img src={header__logo} alt="SAFEHOUSE" className={styles.header__logo} />
-
+      <img src={logo} className={styles.header__logo} alt="SAFEHOUSE" />
+      
       <nav className={styles.nav}>
         <ul>
+          <li className={styles.navLink}><a href="#gallery">Портфолио</a></li>
+          <li className={styles.navLink}><a href="#services">Услуги</a></li>
+          <li className={styles.navLink}><a href="#prices">Цены</a></li>
+          <li className={styles.navLink}><a href="#contacts">Контакты</a></li>
           
-          <li className={styles.navLink}>
-        <a href="#gallery" className={styles.navLink}>Портфолио</a>
-          </li>
-          <li className={styles.navLink}>
-            <a href="#services" className={styles.navLink}>Услуги</a>
-          </li>
-          <li className={styles.navLink}>
-            <a href="#prices">Цены</a>
-          </li>
-          <li className={styles.navLink}>
-            <a href="#contacts">Контакты</a>
-          </li>
-
-          
-          <li className={styles.contactsBlock}>
-            <span className={styles.phone}>+375 (25) 123-45-67</span>
+          {/* Блок контактов, как мы выяснили, сидит внутри списка */}
+          <div className={styles.contactsBlock}>
+            <span>+375 (25) 123-45-67</span>
             <span className={styles.callback}>Заказать звонок</span>
-          </li>
+          </div>
         </ul>
       </nav>
+
+    
+      <BurgerButton onClick={() => console.log('клик')} />
     </header>
   );
 }

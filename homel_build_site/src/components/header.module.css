@@ -59,7 +59,74 @@ ul li {
 }
 /* Respon ------------------------------------------------------ */
 @media (max-width: 1400px) {
+    .header {
+    justify-content: space-between; /* Распределяет лого слева, контакты справа, меню по центру */
+  }
+
+  .nav {
+    margin-left: 0; /* Обнуляем жесткий маржин, чтобы не ломать центровку навигации */
+  }
+  .header__logo {
+    margin-left: 76px;
+  }
+
+  .nav {
+    margin-left: 38px;
+  }
+
+  .nav ul {
+    gap: 40px;   /* Чуть уменьшаем десктопный зазор (было 57px) */
+    width: auto;
+  }
+
   .contactsBlock {
-    margin-left: 120px; /* Уменьшаем десктопный отступ, чтобы блок поместился в строку */
+    margin-left: auto; /* Браузер сам рассчитает идеальный остаток пикселей на любой ширине от 1400 до 1024 */
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .header__logo {
+    margin-left: 20px;
+  }
+}
+.burgerBtn {
+  display: none;
+}
+
+/* burger ---------------------------------------------------*/
+.burgerBtn {
+  display: none;
+}
+
+/* Наш рабочий медиа-запрос */
+@media (max-width: 969px) {
+  /* Прячем десктопные ссылки */
+  .nav {
+    display: none;
+  }
+
+  /* Включаем иконку бургера */
+  .burgerBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 40px; 
+  }
+
+  /* Отрисовываем три полоски */
+  .burgerLine {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    display: block;
   }
 }

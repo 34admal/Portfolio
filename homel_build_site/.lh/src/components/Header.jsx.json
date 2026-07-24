@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 28,
+            "activePatchIndex": 32,
             "patches": [
                 {
                     "date": 1779113061825,
@@ -120,6 +120,22 @@
                 {
                     "date": 1784824215037,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n           <li className={styles.navLink}>\r\n         <a href=\"#gallery\" className={styles.navLink}>Портфолио</a>\r\n           </li>\r\n           <li className={styles.navLink}>\r\n-            <a href=\"#services\">Услуги</a>\r\n+            <a href=\"#services\" className={styles.navLink}>Услуги</a>\r\n           </li>\r\n           <li className={styles.navLink}>\r\n             <a href=\"#prices\">Цены</a>\r\n           </li>\r\n"
+                },
+                {
+                    "date": 1784907701417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,35 +1,39 @@\n-import header__logo from \"./images/logo.png\";\r\n-import styles from \"./header.module.css\";\r\n+import React from 'react';\r\n+import styles from './Header.module.css';\r\n+import logo from './images/logo.png'; // Убедитесь, что путь к вашему логотипу верный\r\n \r\n-function Header() {\r\n+// Внутренняя чистая функция для кнопки, чтобы не раздувать основную разметку\r\n+const BurgerButton = ({ onClick }) => (\r\n+  <button className={styles.burgerBtn} onClick={onClick} aria-label=\"Меню\">\r\n+    <span className={styles.burgerLine}></span>\r\n+    <span className={styles.burgerLine}></span>\r\n+    <span className={styles.burgerLine}></span>\r\n+  </button>\r\n+);\r\n+\r\n+export function Header() {\r\n   return (\r\n     <header className={styles.header}>\r\n-      <img src={header__logo} alt=\"SAFEHOUSE\" className={styles.header__logo} />\r\n-\r\n+      <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n+      \r\n       <nav className={styles.nav}>\r\n         <ul>\r\n+          <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n+          <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n+          <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n+          <li className={styles.navLink}><a href=\"#contacts\">Контакты</a></li>\r\n           \r\n-          <li className={styles.navLink}>\r\n-        <a href=\"#gallery\" className={styles.navLink}>Портфолио</a>\r\n-          </li>\r\n-          <li className={styles.navLink}>\r\n-            <a href=\"#services\" className={styles.navLink}>Услуги</a>\r\n-          </li>\r\n-          <li className={styles.navLink}>\r\n-            <a href=\"#prices\">Цены</a>\r\n-          </li>\r\n-          <li className={styles.navLink}>\r\n-            <a href=\"#contacts\">Контакты</a>\r\n-          </li>\r\n-\r\n-          \r\n-          <li className={styles.contactsBlock}>\r\n-            <span className={styles.phone}>+375 (25) 123-45-67</span>\r\n+          {/* Блок контактов, как мы выяснили, сидит внутри списка */}\r\n+          <div className={styles.contactsBlock}>\r\n+            <span>+375 (25) 123-45-67</span>\r\n             <span className={styles.callback}>Заказать звонок</span>\r\n-          </li>\r\n+          </div>\r\n         </ul>\r\n       </nav>\r\n+\r\n+      {/* Кнопка бургера. Она появится автоматически на 960px на месте скрытого меню */}\r\n+      <BurgerButton onClick={() => console.log('клик')} />\r\n     </header>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1784907895211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\r\n-import styles from './Header.module.css';\r\n+import styles from './eader.module.css';\r\n import logo from './images/logo.png'; // Убедитесь, что путь к вашему логотипу верный\r\n \r\n // Внутренняя чистая функция для кнопки, чтобы не раздувать основную разметку\r\n const BurgerButton = ({ onClick }) => (\r\n"
+                },
+                {
+                    "date": 1784907901787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\r\n-import styles from './eader.module.css';\r\n+import styles from './header.module.css';\r\n import logo from './images/logo.png'; // Убедитесь, что путь к вашему логотипу верный\r\n \r\n // Внутренняя чистая функция для кнопки, чтобы не раздувать основную разметку\r\n const BurgerButton = ({ onClick }) => (\r\n"
+                },
+                {
+                    "date": 1784908755658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n           </div>\r\n         </ul>\r\n       </nav>\r\n \r\n-      {/* Кнопка бургера. Она появится автоматически на 960px на месте скрытого меню */}\r\n+    \r\n       <BurgerButton onClick={() => console.log('клик')} />\r\n     </header>\r\n   );\r\n }\r\n"
                 }
             ],
             "date": 1779113061825,
