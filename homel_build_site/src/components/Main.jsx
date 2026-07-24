@@ -9,10 +9,9 @@ import MySlider from './MySlider';
 import Header from "./Header";
 import Footer from "./Footer";
 
-import styles from './main.module.css'; // Ваши стили для Main
+import styles from './main.module.css'; 
 
-import 'slick-carousel/slick/slick.css'; // Стили React Slick
-import 'slick-carousel/slick/slick-theme.css'; // Тема React Slick
+
 
 
 function Main() {

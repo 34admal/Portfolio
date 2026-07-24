@@ -6,7 +6,7 @@
   color: #ffffff;
 }
 .nav {
-  margin: left 46px;
+  margin-left:  46px;
   width: 100%;
 }
 .nav ul {
@@ -56,4 +56,10 @@ ul li {
 
 .navLink a:hover {
   opacity: 0.8;           
+}
+/* Respon ------------------------------------------------------ */
+@media (max-width: 1400px) {
+  .contactsBlock {
+    margin-left: 120px; /* Уменьшаем десктопный отступ, чтобы блок поместился в строку */
+  }
 }
