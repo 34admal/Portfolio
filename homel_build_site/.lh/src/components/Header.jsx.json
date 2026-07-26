@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 38,
+            "activePatchIndex": 41,
             "patches": [
                 {
                     "date": 1779113061825,
@@ -160,6 +160,18 @@
                 {
                     "date": 1784967607425,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,17 @@\n import React from 'react';\r\n import styles from './header.module.css';\r\n import logo from './images/logo.png';\r\n- \r\n+const BurgerButton = ({ isOpen, onClick }) => (\r\n+  <button className={styles.burgerBtn} onClick={onClick}>\r\n+    <span className={styles.burgerLine}></span>\r\n+    <span className={styles.burgerLine}></span>\r\n+    <span className={styles.burgerLine}></span>\r\n+  </button>\r\n+); \r\n \r\n export function Header() {\r\n+  \r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n"
+                },
+                {
+                    "date": 1785081301791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,26 +9,26 @@\n   </button>\r\n ); \r\n \r\n export function Header() {\r\n-  \r\n+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n+const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n       <nav className={styles.nav}>\r\n-        <ul>\r\n-          <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n-          <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n-          <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n-          <li className={styles.navLink}><a href=\"#contacts\">Контакты</a></li>\r\n-          \r\n-          <div className={styles.contactsBlock}>\r\n-            <span>+375 (25) 123-45-67</span>\r\n-            <span className={styles.callback}>Заказать звонок</span>\r\n-          </div>\r\n-        </ul>\r\n-      </nav>\r\n+  <ul>\r\n+    <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n+    <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n+    <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n+    <li className={styles.navLink}><a href=\"#contacts\">Контакты</a></li>\r\n+  </ul>\r\n+  <div className={styles.contactsBlock}>\r\n+    <span>+375 (25) 123-45-67</span>\r\n+    <span className={styles.callback}>Заказать звонок</span>\r\n+  </div>\r\n+</nav>\r\n       <BurgerButton isOpen={isMenuOpen} onClick={toggleMenu} />\r\n     </header>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1785081468066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,19 +16,20 @@\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n       <nav className={styles.nav}>\r\n-  <ul>\r\n-    <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n-    <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n-    <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n-    <li className={styles.navLink}><a href=\"#contacts\">Контакты</a></li>\r\n-  </ul>\r\n-  <div className={styles.contactsBlock}>\r\n-    <span>+375 (25) 123-45-67</span>\r\n-    <span className={styles.callback}>Заказать звонок</span>\r\n-  </div>\r\n-</nav>\r\n+        <ul>\r\n+          <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n+          <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n+          <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n+          <li className={styles.navLink}><a href=\"#contacts\">Контакты</a></li>\r\n+          \r\n+          <div className={styles.contactsBlock}>\r\n+            <span>+375 (25) 123-45-67</span>\r\n+            <span className={styles.callback}>Заказать звонок</span>\r\n+          </div>\r\n+        </ul>\r\n+      </nav>\r\n       <BurgerButton isOpen={isMenuOpen} onClick={toggleMenu} />\r\n     </header>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1785083621149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,10 @@\n import React from 'react';\r\n import styles from './header.module.css';\r\n import logo from './images/logo.png';\r\n const BurgerButton = ({ isOpen, onClick }) => (\r\n-  <button className={styles.burgerBtn} onClick={onClick}>\r\n-    <span className={styles.burgerLine}></span>\r\n-    <span className={styles.burgerLine}></span>\r\n-    <span className={styles.burgerLine}></span>\r\n-  </button>\r\n-); \r\n+  <button className={styles.burgerBtn} onClick={onClick} />\r\n+);; \r\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n"
                 }
             ],
             "date": 1779113061825,

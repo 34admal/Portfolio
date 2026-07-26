@@ -62,16 +62,69 @@ ul li {
   display: none; 
 }
 @media (max-width: 768px) {
-  .nav {
+  /* Отменяем скрытие всего списка, делаем его "прозрачным" для разметки */
+  .nav ul {
+    display: contents;
+  }
+
+  /* Теперь скрываем строго ссылки */
+  .navLink {
     display: none;
   }
 
+  /* Контакты остаются видимыми, сбрасываем им десктопный маржин */
+  .contactsBlock {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .burgerBtn {
     display: flex;
-   
+    position: relative; /* нужно для точного позиционирования линий внутри */
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    
+    /* Рисуем центральную линию */
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-size: 100% 2px; /* толщина линии 2px */
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .mobileMenu {
-   
+ .burgerBtn::before,
+  .burgerBtn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px; /* толщина линий */
+    background-color: #ffffff;
   }
+
+  /* Смещаем верхнюю линию к верхнему краю */
+  .burgerBtn::before {
+    top: 0;
+  }
+
+  /* Смещаем нижнюю линию к нижнему краю */
+  .burgerBtn::after {
+    bottom: 0;
+  }
+
+.header {
+    justify-content: space-between;
+  }
+
+  .contactsBlock {
+    /* Полностью обнуляем десктопный margin-left, чтобы флексы хедера сами отцентровали блок */
+    margin-left: 0;
+}
+}
+
+.header ~ * {
+  display: none !important;
 }

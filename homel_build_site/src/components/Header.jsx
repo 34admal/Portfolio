@@ -2,12 +2,8 @@ import React from 'react';
 import styles from './header.module.css';
 import logo from './images/logo.png';
 const BurgerButton = ({ isOpen, onClick }) => (
-  <button className={styles.burgerBtn} onClick={onClick}>
-    <span className={styles.burgerLine}></span>
-    <span className={styles.burgerLine}></span>
-    <span className={styles.burgerLine}></span>
-  </button>
-); 
+  <button className={styles.burgerBtn} onClick={onClick} />
+);; 
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
