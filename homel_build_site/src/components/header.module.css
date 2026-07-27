@@ -36,12 +36,14 @@ ul li {
   flex-shrink: 0; 
 } 
 
-.contactsBlock { 
-  display: flex; 
-  flex-direction: column; 
-  align-items: flex-end; 
-  margin-left: 310px; 
-} 
+.contactsBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  margin-left: 310px;
+  white-space: nowrap;  
+}
 
 .callback { 
   margin-top: 6px; 
@@ -61,18 +63,32 @@ ul li {
 .burgerBtn {
   display: none; 
 }
+
+@media (max-width: 1200px) {
+  
+
+  .navLink {
+    font-size: 13px; 
+  }
+
+  .contactsBlock {
+    margin-left: 200px;
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 768px) {
-  /* Отменяем скрытие всего списка, делаем его "прозрачным" для разметки */
+ 
   .nav ul {
     display: contents;
   }
 
-  /* Теперь скрываем строго ссылки */
+  
   .navLink {
     display: none;
   }
 
-  /* Контакты остаются видимыми, сбрасываем им десктопный маржин */
+  
   .contactsBlock {
     display: flex;
     margin-left: auto;
@@ -80,7 +96,7 @@ ul li {
   }
   .burgerBtn {
     display: flex;
-    position: relative; /* нужно для точного позиционирования линий внутри */
+    position: relative;
     width: 30px;
     height: 20px;
     background: none;
@@ -88,9 +104,9 @@ ul li {
     cursor: pointer;
     padding: 0;
     
-    /* Рисуем центральную линию */
+    
     background-image: linear-gradient(#ffffff, #ffffff);
-    background-size: 100% 2px; /* толщина линии 2px */
+    background-size: 100% 2px; 
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -101,16 +117,16 @@ ul li {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px; /* толщина линий */
+    height: 2px;
     background-color: #ffffff;
   }
 
-  /* Смещаем верхнюю линию к верхнему краю */
+  
   .burgerBtn::before {
     top: 0;
   }
 
-  /* Смещаем нижнюю линию к нижнему краю */
+ 
   .burgerBtn::after {
     bottom: 0;
   }
@@ -120,7 +136,7 @@ ul li {
   }
 
   .contactsBlock {
-    /* Полностью обнуляем десктопный margin-left, чтобы флексы хедера сами отцентровали блок */
+  
     margin-left: 0;
 }
 }
