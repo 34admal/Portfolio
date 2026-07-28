@@ -5,20 +5,28 @@
   color: #ffffff; 
 } 
 
-.nav { 
-  margin-left: 46px; 
-  width: auto; 
-} 
+.nav {
+  margin-left: 46px;
+  width: auto;
+}
 
-.nav ul { 
-  display: flex; 
-  flex-direction: row; 
-  gap: 69px; 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
-  width: auto; 
-} 
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  gap:  4.79vw; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.contactsBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 310px;
+  white-space: nowrap
+}
 
 ul li { 
   font-size: 16px; 
@@ -36,14 +44,7 @@ ul li {
   flex-shrink: 0; 
 } 
 
-.contactsBlock {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  
-  margin-left: 310px;
-  white-space: nowrap;  
-}
+
 
 .callback { 
   margin-top: 6px; 
@@ -63,9 +64,41 @@ ul li {
 .burgerBtn {
   display: none; 
 }
+@media (max-width: 1366px) {
+  .header__logo {
+    margin-left: 86px;
+    width: 176px;  
+    height: auto;  
+  }
+
+ 
+  .nav {
+    margin-left: 44px;
+  }
+
+  .nav ul {
+    gap: 65px;
+  }
+
+  .contactsBlock {
+    margin-left: 229px;
+  }
+}
 
 @media (max-width: 1200px) {
-  
+  .header__logo {
+    margin-left: 76px;
+    width: 155px;
+    height: auto;
+  }
+
+  .nav {
+    margin-left: 38px;
+  }
+
+  .nav ul {
+    gap: 58px;
+  }
 
   .navLink {
     font-size: 13px; 
@@ -73,7 +106,33 @@ ul li {
 
   .contactsBlock {
     margin-left: 200px;
-    font-size: 13px;
+    font-size: 13px; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__logo {
+    margin-left: 65px;
+    width: 155px;  
+    height: auto;
+  }
+
+  .nav {
+    margin-left: 33px;
+  }
+
+  .nav ul {
+    gap: 49px;
+  }
+
+  .navLink {
+    font-size: 16px; 
+  }
+
+  .contactsBlock {
+    
+    margin-left: 140px; 
+    font-size: 16px;
   }
 }
 
