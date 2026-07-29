@@ -13,7 +13,7 @@
 .nav ul {
   display: flex;
   flex-direction: row;
-  gap:  4.79vw; 
+  gap:  69px; 
   list-style: none;
   margin: 0;
   padding: 0;
@@ -67,21 +67,27 @@ ul li {
 @media (max-width: 1366px) {
   .header__logo {
     margin-left: 86px;
-    width: 176px;  
-    height: auto;  
+    width: 176px;
+    height: auto;
   }
 
- 
   .nav {
     margin-left: 44px;
   }
 
   .nav ul {
     gap: 65px;
+    max-width: max-content;
+  }
+
+  .navLink {
+    font-size: 15px;
   }
 
   .contactsBlock {
-    margin-left: 229px;
+    
+    margin-left: 294px; 
+    font-size: 15px;
   }
 }
 
