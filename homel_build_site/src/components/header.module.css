@@ -65,28 +65,16 @@ ul li {
   display: none; 
 }
 @media (max-width: 1366px) {
-  .header__logo {
-    margin-left: 86px;
-    width: 176px;
-    height: auto;
-  }
-
-  .nav {
-    margin-left: 44px;
-  }
-
-  .nav ul {
-    gap: 65px;
-    max-width: max-content;
-  }
-
-  .navLink {
-    font-size: 15px;
-  }
+ 
+ 
+  .header__logo { margin-left: 86px; width: 176px; height: auto; }
+  .nav { margin-left: 44px; }
+  .nav ul { gap: 65px; max-width: max-content; }
+  .navLink { font-size: 15px; }
 
   .contactsBlock {
     
-    margin-left: 294px; 
+    margin-left: 229px; 
     font-size: 15px;
   }
 }
