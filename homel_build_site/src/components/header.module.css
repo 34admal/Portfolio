@@ -105,28 +105,47 @@ ul li {
 }
 
 @media (max-width: 1024px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    justify-content: space-between; 
+    width: 100%;
+  }
+
+  /* ЛЕВАЯ ЧАСТЬ: Логотип */
   .header__logo {
-    margin-left: 65px;
-    width: 155px;  
+    flex: none;
+    margin-left: 65px; 
+    width: 132px;
     height: auto;
   }
 
-  .nav {
-    margin-left: 33px;
-  }
-
-  .nav ul {
-    gap: 49px;
-  }
-
+ 
   .navLink {
-    font-size: 16px; 
+    display: none; 
+  }
+
+  /* ЦЕНТРАЛЬНАЯ ЧАСТЬ: Навигация с контактами */
+  .nav {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
   }
 
   .contactsBlock {
-    
-    margin-left: 140px; 
+    margin-left: 0;
     font-size: 16px;
+    white-space: nowrap;
+  }
+
+  /* ПРАВАЯ ЧАСТЬ: Кнопка бургера */
+  .burgerBtn {
+    flex: none;
+    display: flex;
+    margin-right: 65px; 
   }
 }
 
