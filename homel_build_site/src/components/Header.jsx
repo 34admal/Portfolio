@@ -25,7 +25,7 @@ const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
           </div>
         </ul>
       </nav>
-      <BurgerButton isOpen={isMenuOpen} onClick={toggleMenu} />
+      <span className={styles.burgerBtn}></span>
     </header>
   );
 }
