@@ -165,20 +165,23 @@ ul li {
     content: '';
     position: absolute;
     left: 0;
-    width: 100%; /* Растягиваются ровно на 21px от ширины спана */
+    width: 100%; 
     height: 2px;
     background-color: #ff7a00;
   }
 
-  /* Верхняя линия: поднимаем на 6px вверх относительно центра */
+ 
   .burgerBtn::before {
     top: -6px;
   }
 
-  /* Нижняя линия: опускаем на 6px вниз относительно центра */
+  
   .burgerBtn::after {
     top: 6px;
   }
+
+ 
+
 
 }
 
