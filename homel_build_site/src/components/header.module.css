@@ -13,7 +13,7 @@
 .nav ul {
   display: flex;
   flex-direction: row;
-  gap:  69px; 
+  gap:  49px; 
   list-style: none;
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-left: 310px;
+  margin-left: 241px;
   white-space: nowrap
 }
 
@@ -79,7 +79,7 @@ ul li {
 
   .contactsBlock {
     
-    margin-left: 229px; 
+    margin-left: 171px; 
     font-size: 15px;
   }
 }
@@ -110,12 +110,11 @@ ul li {
 }
 
 @media (max-width: 1024px) {
-  .header {
+    .header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: flex-start;
   }
 
   /* Левая часть: логотип по пропорции */
@@ -127,16 +126,20 @@ ul li {
   }
 
   
-  .navLink {
-    display: none; 
+   .navLink {
+    display: block;
+   }
+  /* Центральная часть:*/
+   .nav {
+    margin-left: 33px; 
   }
+  
 
-  /* Центральная часть:
-  .nav {
-    flex: none;
+    .nav ul {
     display: flex;
-    justify-content: center;
-    margin-left: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 49px; 
   }
 
   /* Блок контактов: 
@@ -147,9 +150,11 @@ ul li {
   }
 
   /* Правая часть:*/
+
+
   .burgerBtn {
     flex: none;
-    display: block;
+    display: none;
     position: relative; 
     
     width: 21px;  
