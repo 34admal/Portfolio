@@ -190,6 +190,32 @@ ul li {
 
 }
 
+@media (max-width: 1000px) {
+  
+  .burgerBtn {
+    display: block;
+  }
+
+   .header__logo {
+    margin-left: 63px; 
+    width: 129px; 
+    height: auto;
+  }
+   .nav {
+    margin: 0 auto;
+  }
+
+  .contactsBlock {
+    margin-left: 0;
+  }
+
+  
+  .navLink {
+    display: none;
+  }
+}
+
+
 @media (max-width: 768px) {
  
   .nav ul {
