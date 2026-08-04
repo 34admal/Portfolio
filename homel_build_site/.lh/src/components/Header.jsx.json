@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 41,
+            "activePatchIndex": 58,
             "patches": [
                 {
                     "date": 1779113061825,
@@ -172,6 +172,74 @@
                 {
                     "date": 1785083621149,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,10 @@\n import React from 'react';\r\n import styles from './header.module.css';\r\n import logo from './images/logo.png';\r\n const BurgerButton = ({ isOpen, onClick }) => (\r\n-  <button className={styles.burgerBtn} onClick={onClick}>\r\n-    <span className={styles.burgerLine}></span>\r\n-    <span className={styles.burgerLine}></span>\r\n-    <span className={styles.burgerLine}></span>\r\n-  </button>\r\n-); \r\n+  <button className={styles.burgerBtn} onClick={onClick} />\r\n+);; \r\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n"
+                },
+                {
+                    "date": 1785514496802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             <span className={styles.callback}>Заказать звонок</span>\r\n           </div>\r\n         </ul>\r\n       </nav>\r\n-      <BurgerButton isOpen={isMenuOpen} onClick={toggleMenu} />\r\n+      <span className={styles.burgerBtn}></span>\r\n     </header>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1785514525308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n import styles from './header.module.css';\r\n import logo from './images/logo.png';\r\n-const BurgerButton = ({ isOpen, onClick }) => (\r\n-  <button className={styles.burgerBtn} onClick={onClick} />\r\n+// const BurgerButton = ({ isOpen, onClick }) => (\r\n+//   <button className={styles.burgerBtn} onClick={onClick} />\r\n );; \r\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n"
+                },
+                {
+                    "date": 1785514546434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n import styles from './header.module.css';\r\n import logo from './images/logo.png';\r\n-// const BurgerButton = ({ isOpen, onClick }) => (\r\n-//   <button className={styles.burgerBtn} onClick={onClick} />\r\n+const BurgerButton = ({ isOpen, onClick }) => (\r\n+  <button className={styles.burgerBtn} onClick={onClick} />\r\n );; \r\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n"
+                },
+                {
+                    "date": 1785601058854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import React from 'react';\r\n+import styles from './header.module.css';\r\n+import logo from './images/logo.png';\r\n+const BurgerButton = ({ isOpen, onClick }) => (\r\n+  <button className={styles.burgerBtn} onClick={onClick} />\r\n+);; \r\n+\r\n+export function Header() {\r\n+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n+const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n+  return (\r\n+    <header className={styles.header}>\r\n+      <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n+      \r\n+      <nav className={styles.nav}>\r\n+        <ul>\r\n+          <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n+          <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n+          <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n+          <li className={styles.navLink}><a href=\"#contacts\">Контакты</a></li>\r\n+          \r\n+          <div className={styles.contactsBlock}>\r\n+            <span>+375 (25) 123-45-67</span>\r\n+            <span className={styles.callback}>Заказать звонок</span>\r\n+          </div>\r\n+        </ul>\r\n+      </nav>\r\n+      <span className={styles.burgerBtn}></span>\r\n+    </header>\r\n+  );\r\n+}\r\n+\r\n+export default Header;\r\n"
+                },
+                {
+                    "date": 1785601147313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,43 +24,10 @@\n             <span className={styles.callback}>Заказать звонок</span>\r\n           </div>\r\n         </ul>\r\n       </nav>\r\n-      <span className={styles.burgerBtn}></span>\r\n+      <span  className={styles.burgerBtn}></span>\r\n     </header>\r\n   );\r\n }\r\n \r\n export default Header;\r\n-import React from 'react';\r\n-import styles from './header.module.css';\r\n-import logo from './images/logo.png';\r\n-const BurgerButton = ({ isOpen, onClick }) => (\r\n-  <button className={styles.burgerBtn} onClick={onClick} />\r\n-);; \r\n-\r\n-export function Header() {\r\n-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n-const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n-  return (\r\n-    <header className={styles.header}>\r\n-      <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n-      \r\n-      <nav className={styles.nav}>\r\n-        <ul>\r\n-          <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n-          <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n-          <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n-          <li className={styles.navLink}><a href=\"#contacts\">Контакты</a></li>\r\n-          \r\n-          <div className={styles.contactsBlock}>\r\n-            <span>+375 (25) 123-45-67</span>\r\n-            <span className={styles.callback}>Заказать звонок</span>\r\n-          </div>\r\n-        </ul>\r\n-      </nav>\r\n-      <span className={styles.burgerBtn}></span>\r\n-    </header>\r\n-  );\r\n-}\r\n-\r\n-export default Header;\r\n"
+                },
+                {
+                    "date": 1785601323330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n             <span>+375 (25) 123-45-67</span>\r\n             <span className={styles.callback}>Заказать звонок</span>\r\n           </div>\r\n         </ul>\r\n-      </nav>\r\n-      <span  className={styles.burgerBtn}></span>\r\n+      <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>\r\n+      <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>\r\n     </header>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1785601414713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n );; \r\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n+  \r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n"
+                },
+                {
+                    "date": 1785601420315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n );; \r\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n-  \r\n+  console.log(\"Состояние меню open:\", isMenuOpen);\r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n"
+                },
+                {
+                    "date": 1785601433794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n );; \r\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n-  console.log(\"Состояние меню open:\", isMenuOpen);\r\n+  \r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n"
+                },
+                {
+                    "date": 1785601633867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n );; \r\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n-  \r\n+  console.log(\"Состояние меню open:\", isMenuOpen);\r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n"
+                },
+                {
+                    "date": 1785601640622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n );; \r\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n-  console.log(\"Состояние меню open:\", isMenuOpen);\r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n"
+                },
+                {
+                    "date": 1785601671992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             <span>+375 (25) 123-45-67</span>\r\n             <span className={styles.callback}>Заказать звонок</span>\r\n           </div>\r\n         </ul>\r\n-      <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>\r\n+      <nav >\r\n       <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>\r\n     </header>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1785601685580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n-      <nav className={styles.nav}>\r\n+      <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>\r\n         <ul>\r\n           <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n           <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n           <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n@@ -23,9 +23,9 @@\n             <span>+375 (25) 123-45-67</span>\r\n             <span className={styles.callback}>Заказать звонок</span>\r\n           </div>\r\n         </ul>\r\n-      <nav >\r\n+      </nav >\r\n       <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>\r\n     </header>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1785601727158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n-      <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>\r\n+      <nav className={styles.nav}>\r\n         <ul>\r\n           <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n           <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n           <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n"
+                },
+                {
+                    "date": 1785601860098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,27 +7,31 @@\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n-  return (\r\n+    return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n-      <nav className={styles.nav}>\r\n+      {/* Шаг 1: Правильный открывающий nav со стейтом */}\r\n+      <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>\r\n         <ul>\r\n           <li className={styles.navLink}><a href=\"#gallery\">Портфолио</a></li>\r\n           <li className={styles.navLink}><a href=\"#services\">Услуги</a></li>\r\n           <li className={styles.navLink}><a href=\"#prices\">Цены</a></li>\r\n           <li className={styles.navLink}><a href=\"#contacts\">Контакты</a></li>\r\n-          \r\n           <div className={styles.contactsBlock}>\r\n             <span>+375 (25) 123-45-67</span>\r\n             <span className={styles.callback}>Заказать звонок</span>\r\n           </div>\r\n         </ul>\r\n-      </nav >\r\n+      </nav> {/* Шаг 2: Четко закрываем навигацию */}\r\n+      \r\n+      {/* Наш рабочий оранжевый бургер-спан */}\r\n       <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>\r\n     </header>\r\n   );\r\n+\r\n+  );\r\n }\r\n \r\n export default Header;\r\n"
+                },
+                {
+                    "date": 1785601898808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n-    return (\r\n+      return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n       {/* Шаг 1: Правильный открывающий nav со стейтом */}\r\n@@ -29,9 +29,7 @@\n       {/* Наш рабочий оранжевый бургер-спан */}\r\n       <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>\r\n     </header>\r\n   );\r\n-\r\n-  );\r\n }\r\n \r\n export default Header;\r\n"
+                },
+                {
+                    "date": 1785602120243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n \r\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n const toggleMenu = () => setIsMenuOpen(!isMenuOpen);\r\n+\r\n       return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n"
                 }
             ],
             "date": 1779113061825,

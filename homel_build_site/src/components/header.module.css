@@ -201,9 +201,7 @@ ul li {
     width: 129px; 
     height: auto;
   }
-   .nav {
-    margin: 0 auto;
-  }
+   
 
   .contactsBlock {
     margin-left: 0;
@@ -211,8 +209,34 @@ ul li {
 
   
   .navLink {
-    display: none;
+   
   }
+
+   
+
+   .nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  .navLink {
+    display: block; /* Возвращаем ссылки на экран внутри выезжающей панели */
+  }
+
+  .burgerBtn {
+    position: absolute; /* Кнопка привязывается к координатам серого блока */
+    top: 30px; /* Аккуратный отступ сверху внутри панели */
+    right: 30px; /* Прижимаем её к правому верхнему углу выезжающей плашки */
+    cursor: pointer;
+    z-index: 1000; /* Кнопка всегда будет поверх серого фона */
+  }
+
+
+  .nav.open {
+    right: 0; 
+  }
+
 }
 
 
