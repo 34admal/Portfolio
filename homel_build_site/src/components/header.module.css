@@ -1,9 +1,9 @@
-.header { 
-  display: flex; 
-  flex-direction: row; 
-  align-items: center; 
-  color: #ffffff; 
-} 
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+}
 
 .nav {
   margin-left: 46px;
@@ -13,7 +13,7 @@
 .nav ul {
   display: flex;
   flex-direction: row;
-  gap:  49px; 
+  gap: 49px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -25,40 +25,38 @@
   flex-direction: column;
   align-items: flex-end;
   margin-left: 241px;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
-ul li { 
-  font-size: 16px; 
-  font-weight: 500; 
-  font-stretch: normal; 
-  font-style: normal; 
-  line-height: normal; 
-  letter-spacing: 0.8px; 
-  text-align: left; 
-  color: #ffffff; 
-} 
+ul li {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-align: left;
+  color: #ffffff;
+}
 
-.header__logo { 
-  margin-left: 91px; 
-  flex-shrink: 0; 
-} 
+.header__logo {
+  margin-left: 91px;
+  flex-shrink: 0;
+}
 
+.callback {
+  margin-top: 6px;
+  color: #ff7a00;
+}
 
+.navLink a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
 
-.callback { 
-  margin-top: 6px; 
-  color: #ff7a00; 
-} 
-
-.navLink a { 
-  color: inherit; 
-  text-decoration: none; 
-  display: inline-block; 
-} 
-
-.navLink a:hover { 
-  opacity: 0.8; 
+.navLink a:hover {
+  opacity: 0.8;
 }
 
 .burgerBtn {
@@ -67,19 +65,27 @@ ul li {
 
 /* RESPONS--------------------------------------------------- */
 .burgerBtn {
-  display: none; 
+  display: none;
 }
 @media (max-width: 1366px) {
- 
- 
-  .header__logo { margin-left: 86px; width: 176px; height: auto; }
-  .nav { margin-left: 44px; }
-  .nav ul { gap: 65px; max-width: max-content; }
-  .navLink { font-size: 15px; }
+  .header__logo {
+    margin-left: 86px;
+    width: 176px;
+    height: auto;
+  }
+  .nav {
+    margin-left: 44px;
+  }
+  .nav ul {
+    gap: 65px;
+    max-width: max-content;
+  }
+  .navLink {
+    font-size: 15px;
+  }
 
   .contactsBlock {
-    
-    margin-left: 171px; 
+    margin-left: 171px;
     font-size: 15px;
   }
 }
@@ -100,17 +106,17 @@ ul li {
   }
 
   .navLink {
-    font-size: 13px; 
+    font-size: 13px;
   }
 
   .contactsBlock {
     margin-left: 200px;
-    font-size: 13px; 
+    font-size: 13px;
   }
 }
 
 @media (max-width: 1024px) {
-    .header {
+  .header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -120,108 +126,92 @@ ul li {
   /* Левая часть: логотип по пропорции */
   .header__logo {
     flex: none;
-    margin-left: 65px; 
+    margin-left: 65px;
     width: 132px;
     height: auto;
   }
 
-  
-   .navLink {
+  .navLink {
     display: block;
-   }
-  /* Центральная часть:*/
-   .nav {
-    margin-left: 33px; 
   }
-  
+  /* Центральная часть:*/
+  .nav {
+    margin-left: 33px;
+  }
 
-    .nav ul {
+  .nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 49px; 
+    gap: 49px;
   }
 
-  /* Блок контактов: 
-  .contactsBlock {
-    margin-left: 0;
-    font-size: 11px; 
-    white-space: nowrap;
-  }
+
 
   /* Правая часть:*/
-
 
   .burgerBtn {
     flex: none;
     display: none;
-    position: relative; 
-    
-    width: 21px;  
-    height: 2px;  
+    position: relative;
+
+    width: 21px;
+    height: 2px;
     background-color: #ff7a00;
-    
+
     margin-right: 65px;
   }
 
- /* Общие стили для верхней и нижней линий */
+  /* Общие стили для верхней и нижней линий */
   .burgerBtn::before,
   .burgerBtn::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
-    width: 100%; 
+    width: 100%;
     height: 2px;
     background-color: #ff7a00;
   }
 
- 
   .burgerBtn::before {
     top: -6px;
   }
 
-  
   .burgerBtn::after {
     top: 6px;
   }
-
- 
-
-
 }
 
 @media (max-width: 1000px) {
-  
   .burgerBtn {
     display: block;
   }
 
-   .header__logo {
-    margin-left: 63px; 
-    width: 129px; 
+  .header__logo {
+    margin-left: 63px;
+    width: 129px;
     height: auto;
   }
-   
 
   .contactsBlock {
     margin-left: 0;
   }
 
-  
   .navLink {
-   
+    position: fixed;
+    width: 320px;
+    height: 60px; 
+    background-color: rgba(28, 29, 30, 1);
+    transform: translateX(
+      100vw
+    ) 
   }
 
-   
-
-   .nav ul {
+  .nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
-  }
-  .navLink {
-    display: block; /* Возвращаем ссылки на экран внутри выезжающей панели */
   }
 
   .burgerBtn {
@@ -232,43 +222,33 @@ ul li {
     z-index: 1000; /* Кнопка всегда будет поверх серого фона */
   }
 
-
   .nav.open {
-    right: 0; 
+    right: 0;
   }
-
 }
 
-
 @media (max-width: 768px) {
- 
   .nav ul {
     display: contents;
   }
 
-  
   .navLink {
     display: none;
   }
 
-  
   .contactsBlock {
     display: flex;
     margin-left: auto;
     margin-right: auto;
   }
-  
 
- 
-
-.header {
+  .header {
     justify-content: space-between;
   }
 
   .contactsBlock {
-  
     margin-left: 0;
-}
+  }
 }
 
 .header ~ * {
