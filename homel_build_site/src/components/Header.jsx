@@ -13,19 +13,20 @@ console.log("Состояние меню open:", isMenuOpen);
     <header className={styles.header}>
       <img src={logo} className={styles.header__logo} alt="SAFEHOUSE" />
       
-      {/* Шаг 1: Правильный открывающий nav со стейтом */}
-      <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
+     
         <ul>
-          <li className={styles.navLink}><a href="#gallery">Портфолио</a></li>
-          <li className={styles.navLink}><a href="#services">Услуги</a></li>
-          <li className={styles.navLink}><a href="#prices">Цены</a></li>
-          <li className={styles.navLink}><a href="#contacts">Контакты</a></li>
+        <div className={styles.navLinks}> 
+      <li><a href="#gallery">Портфолио</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#prices">Цены</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </div>
           <div className={styles.contactsBlock}>
             <span>+375 (25) 123-45-67</span>
             <span className={styles.callback}>Заказать звонок</span>
           </div>
         </ul>
-      </nav> {/* Шаг 2: Четко закрываем навигацию */}
+      
       
       {/* Наш рабочий оранжевый бургер-спан */}
       <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>
