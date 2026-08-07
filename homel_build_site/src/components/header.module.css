@@ -9,6 +9,18 @@
   gap: 69px;
 }
 
+ul {
+  margin-left: 46px; /* Твой исходный десктопный отступ от логотипа */
+  display: flex;
+  flex-direction: row; /* Намертво фиксируем элементы в одну десктопную линию */
+  align-items: center;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0
+}
+
+
 
 .navLinks a { 
   color: inherit; 
@@ -100,23 +112,29 @@ ul li {
     height: auto;
   }
 
-  .nav {
-    margin-left: 44px;
+   ul {
+    margin-left: 44px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
-  /* Перенесли gap на новую обёртку для 1366px */
+  
   .navLinks {
     display: flex;
-    gap: 65px; /* Твой зазор на 1366px */
+    gap: 65px; 
   }
 
-  /* Исправили селектор размера шрифта для ссылок */
-  .navLinks li {
+ 
+
+ 
+   .navLinks li {
     font-size: 15px;
   }
 
+  
   .contactsBlock {
-    margin-left: 171px;
+    margin-left: 248px; 
     font-size: 15px;
   }
 }
@@ -129,9 +147,7 @@ ul li {
     height: auto;
   }
 
-  .nav {
-    margin-left: 38px;
-  }
+  
 
   .nav ul {
     gap: 58px;
