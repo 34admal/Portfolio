@@ -10,39 +10,36 @@
 }
 
 ul {
-  margin-left: 46px; /* Твой исходный десктопный отступ от логотипа */
+  margin-left: 46px;
   display: flex;
-  flex-direction: row; /* Намертво фиксируем элементы в одну десктопную линию */
+  flex-direction: row;
   align-items: center;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0
+  padding: 0;
 }
 
-
-
-.navLinks a { 
-  color: inherit; 
-  text-decoration: none; 
-  display: inline-block; 
+.navLinks a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.navLinks li { 
-  font-size: 16px; 
-  font-weight: 500; 
-  font-stretch: normal; 
-  font-style: normal; 
-  line-height: normal; 
-  letter-spacing: 0.8px; 
-  text-align: left; 
-  color: #ffffff; 
-  list-style: none; 
+.navLinks li {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-align: left;
+  color: #ffffff;
+  list-style: none;
 }
 
-
-.navLinks a:hover { 
-  opacity: 0.8; 
+.navLinks a:hover {
+  opacity: 0.8;
 }
 
 .nav {
@@ -95,8 +92,6 @@ ul li {
   display: inline-block;
 }
 
-
-
 .burgerBtn {
   display: none;
 }
@@ -112,33 +107,27 @@ ul li {
     height: auto;
   }
 
-   ul {
-    margin-left: 44px; 
+  ul {
+    margin-left: 44px;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  
   .navLinks {
     display: flex;
-    gap: 65px; 
+    gap: 65px;
   }
 
- 
-
- 
-   .navLinks li {
+  .navLinks li {
     font-size: 15px;
   }
 
-  
   .contactsBlock {
-    margin-left: 248px; 
+    margin-left: 248px;
     font-size: 15px;
   }
 }
-
 
 @media (max-width: 1200px) {
   .header__logo {
@@ -146,8 +135,6 @@ ul li {
     width: 155px;
     height: auto;
   }
-
-  
 
   .nav ul {
     gap: 58px;
@@ -171,7 +158,7 @@ ul li {
     justify-content: flex-start;
   }
 
-  /* Левая часть: логотип по пропорции */
+  /* Левая часть: */
   .header__logo {
     flex: none;
     margin-left: 65px;
@@ -193,8 +180,6 @@ ul li {
     align-items: center;
     gap: 49px;
   }
-
-
 
   /* Правая часть:*/
 
@@ -245,30 +230,29 @@ ul li {
     margin-left: 0;
   }
 
- .navLinks {
+  .navLinks {
     position: fixed;
-    top: 86px;       
-    right: 0;        
+    top: 86px;
+    right: 0;
     width: 220px;
-    background-color: #1f1f1f; 
-    
+    background-color: #1f1f1f;
+
     display: flex;
     flex-direction: column;
     gap: 25px;
-    
-    /* Твоё решение: убираем общий паддинг и настраиваем стороны отдельно */
+
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 55px; /* Сдвигаем левую ось слов ближе к центру шторки */
+    padding-left: 55px;
     padding-right: 0;
   }
 
   .burgerBtn {
-    position: absolute; /* Кнопка привязывается к координатам серого блока */
-    top: 30px; /* Аккуратный отступ сверху внутри панели */
-    right: 30px; /* Прижимаем её к правому верхнему углу выезжающей плашки */
+    position: absolute;
+    top: 30px;
+    right: 30px;
     cursor: pointer;
-    z-index: 1000; /* Кнопка всегда будет поверх серого фона */
+    z-index: 1000;
   }
 
   .nav.open {
