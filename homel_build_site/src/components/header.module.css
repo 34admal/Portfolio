@@ -193,60 +193,19 @@ ul li {
 }
 
 @media (max-width: 1000px) {
-  .burgerBtn {
-    display: block;
-  }
-
-  .header__logo {
-    margin-left: 63px;
-    width: 129px;
-    height: auto;
-  }
-
-  .contactsBlock {
-display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 145px; 
-  }
-
-.navLinks {
-    position: fixed;
-    top: 86px;       
-    width: 220px;
-    background-color: #1f1f1f; 
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 55px; 
-    padding-right: 0;
-
-   
-    right: -100%; 
-    transition: right 0.5s ease-out; 
-  }
-
-  
-  .navLinks.open {
-    right: 0;
-  }
-
+  /* Твой рабочий оранжевый бургер-абсолют */
   .burgerBtn {
     display: block; 
     width: 21px;    
     height: 2px;    
-    background-color: #ff7a00;
-    
+    background-color: #ff7a00; 
     position: absolute;
     top: 30px;
-    right: 63px;
+    right: 63px; /* Твоё проверенное смещение левее */
     cursor: pointer;
     z-index: 1000;
   }
 
-  
   .burgerBtn::before, 
   .burgerBtn::after {
     content: "";
@@ -256,58 +215,102 @@ display: flex;
     height: 2px;
     background-color: #ff7a00;
   }
-
   .burgerBtn::before { top: -6px; }
   .burgerBtn::after { top: 6px; }
 
-  .nav.open {
+  /* Логотип */
+  .header__logo {
+    margin-left: 63px;
+    width: 129px;
+    height: auto;
+  }
+
+  /* Твоя идеальная математика баланса контактов, которая шикарно работала */
+  .contactsBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 145px; 
+  }
+
+  /* ВОЗВРАТ: Твоя компактная вертикальная шторка до пола */
+  .navLinks {
+    position: fixed;
+    top: 86px;       
+    background-color: #1f1f1f; 
+    display: flex;
+    flex-direction: column;
+    gap: 35px; 
+    
+    width: 220px; /* Вернули твою исходную компактную ширину */
+    height: 100vh; /* Оставили её во весь экран, чтобы не было обрубка */
+
+    padding-top: 70px;
+    padding-bottom: 40px;
+    padding-left: 55px; /* Вернули старый аккуратный паддинг под 220px */
+    padding-right: 0;
+
+    right: -100%; 
+    transition: right 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 10;
+  }
+
+  /* Выезд шторки */
+  .navLinks.open {
     right: 0;
   }
 
-   .navLinks::before {
+  /* Твой эстетичный оранжевый крестик в углу */
+  .navLinks::before {
     content: "✕"; 
     position: absolute;
-    
-   
     top: 4px;    
     left: 2px;   
     width: 20px;  
     height: 20px;
     font-size: 20px; 
-    
     font-weight: 900; 
     color: #ff5c00;  
     cursor: pointer;
-    
     display: flex;
     align-items: center;
     justify-content: center;
     line-height: 1;
   }
-
 }
 
+
+
 @media (max-width: 768px) {
-  .nav ul {
-    display: contents;
+  /* Оставляем базовый флекс хедера без неконтролируемых space-between */
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
-  .navLink {
-    display: none;
+  /* Компактное левое поле и уменьшенный логотип */
+  .header__logo {
+    margin-left: 35px; 
+    width: 100px;
+    height: auto;
   }
 
+  /* Наш бургер на зеркальной правой силовой линии */
+  .burgerBtn {
+    position: absolute;
+    top: 30px;
+    right: 35px; /* Зеркальный отступ от края экрана */
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  /* Блок контактов — чистая двухстрочная колонка, сдвинутая на визуальный центр */
   .contactsBlock {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .header {
-    justify-content: space-between;
-  }
-
-  .contactsBlock {
-    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 175px; /* Наш точный визуальный зазор под 768px */
   }
 }
 
