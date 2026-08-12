@@ -193,7 +193,7 @@ ul li {
 }
 
 @media (max-width: 1000px) {
-  /* Твой рабочий оранжевый бургер-абсолют */
+ 
   .burgerBtn {
     display: block; 
     width: 21px;    
@@ -201,7 +201,7 @@ ul li {
     background-color: #ff7a00; 
     position: absolute;
     top: 30px;
-    right: 63px; /* Твоё проверенное смещение левее */
+    right: 63px; 
     cursor: pointer;
     z-index: 1000;
   }
@@ -218,14 +218,14 @@ ul li {
   .burgerBtn::before { top: -6px; }
   .burgerBtn::after { top: 6px; }
 
-  /* Логотип */
+ 
   .header__logo {
     margin-left: 63px;
     width: 129px;
     height: auto;
   }
 
-  /* Твоя идеальная математика баланса контактов, которая шикарно работала */
+  
   .contactsBlock {
     display: flex;
     flex-direction: column;
@@ -233,7 +233,7 @@ ul li {
     margin-left: 145px; 
   }
 
-  /* ВОЗВРАТ: Твоя компактная вертикальная шторка до пола */
+
   .navLinks {
     position: fixed;
     top: 86px;       
@@ -242,12 +242,11 @@ ul li {
     flex-direction: column;
     gap: 35px; 
     
-    width: 220px; /* Вернули твою исходную компактную ширину */
-    height: 100vh; /* Оставили её во весь экран, чтобы не было обрубка */
-
+    width: 220px; 
+    height: 100vh;
     padding-top: 70px;
     padding-bottom: 40px;
-    padding-left: 55px; /* Вернули старый аккуратный паддинг под 220px */
+    padding-left: 55px;
     padding-right: 0;
 
     right: -100%; 
@@ -282,35 +281,92 @@ ul li {
 
 
 @media (max-width: 768px) {
-  /* Оставляем базовый флекс хедера без неконтролируемых space-between */
+ 
   .header {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  /* Компактное левое поле и уменьшенный логотип */
+  
   .header__logo {
     margin-left: 35px; 
     width: 100px;
     height: auto;
   }
 
-  /* Наш бургер на зеркальной правой силовой линии */
+  
   .burgerBtn {
     position: absolute;
     top: 30px;
-    right: 35px; /* Зеркальный отступ от края экрана */
+    right: 35px; 
     cursor: pointer;
     z-index: 1000;
   }
 
-  /* Блок контактов — чистая двухстрочная колонка, сдвинутая на визуальный центр */
+ 
   .contactsBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 175px; /* Наш точный визуальный зазор под 768px */
+    margin-left: 175px; 
+  }
+}
+
+@media (max-width: 480px) {
+
+  .header__logo {
+    display: block;
+    margin: 0 auto; 
+    width: 100px;
+    height: auto;
+  }
+
+  /* Бургер на месте */
+  .burgerBtn {
+    position: absolute;
+    top: 32px;
+    right: 20px; 
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  
+  .contactsBlock {
+    display: none; 
+  }
+
+
+  ul:has(.open) .contactsBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    position: fixed;
+    bottom: 60px; 
+    width: 220px; 
+    z-index: 11;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+
+    /* НАШИ НОВЫЕ СТРОЧКИ: Прячем контакты вправо и синхронизируем анимацию */
+    right: -100%; /* По умолчанию телефон спрятан за экраном */
+    transition: right 0.45s cubic-bezier(0.25, 1, 0.5, 1); /* Скорость один в один как у шторки */
+  }
+
+  /* 3. НАША НОВАЯ СВЯЗКА: Выдвигаем контакты на экран строго в момент открытия */
+  ul:has(.open) .contactsBlock {
+    right: 0;
+  }
+
+  /* Подкрашиваем кнопку звонка внутри шторки */
+  ul:has(.open) .contactsBlock .callback {
+    color: #ff5c00;
+    font-weight: 700;
+    text-decoration: underline;
   }
 }
 
