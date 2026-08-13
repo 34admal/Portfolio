@@ -254,12 +254,12 @@ ul li {
     z-index: 10;
   }
 
-  /* Выезд шторки */
+  
   .navLinks.open {
     right: 0;
   }
 
-  /* Твой эстетичный оранжевый крестик в углу */
+ 
   .navLinks::before {
     content: "✕"; 
     position: absolute;
@@ -314,60 +314,58 @@ ul li {
 }
 
 @media (max-width: 480px) {
+ 
+  .header { position: relative; justify-content: center; }
+  .header__logo { margin-left: 0; width: 110px; }
+  .burgerBtn { display: block; right: 20px; top: 30px; }
 
-  .header__logo {
-    display: block;
-    margin: 0 auto; 
-    width: 100px;
-    height: auto;
+ 
+  .navLinks {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    width: 220px;
+    height: 100vh;
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 50px;
+    padding-left: 45px;
+    box-sizing: border-box;
+    z-index: 10;
+    transition: right 0.45s cubic-bezier(0.25, 1, 0.5, 1);
   }
-
-  /* Бургер на месте */
-  .burgerBtn {
-    position: absolute;
-    top: 32px;
-    right: 20px; 
-    cursor: pointer;
-    z-index: 1000;
-  }
+  .navLinks li { display: block; }
 
   
   .contactsBlock {
-    display: none; 
-  }
-
-
-  ul:has(.open) .contactsBlock {
+    position: fixed;
+    right: -100%;
+    top: 380px; 
+    width: 220px;
+    margin-left: 0;
+    padding-left: 45px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    
-    position: fixed;
-    bottom: 60px; 
-    width: 220px; 
+    align-items: flex-start;
+    gap: 12px;
     z-index: 11;
-
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffffff;
-
-    /* НАШИ НОВЫЕ СТРОЧКИ: Прячем контакты вправо и синхронизируем анимацию */
-    right: -100%; /* По умолчанию телефон спрятан за экраном */
-    transition: right 0.45s cubic-bezier(0.25, 1, 0.5, 1); /* Скорость один в один как у шторки */
+    transition: right 0.45s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  /* 3. НАША НОВАЯ СВЯЗКА: Выдвигаем контакты на экран строго в момент открытия */
-  ul:has(.open) .contactsBlock {
+  
+  .navLinks[class*="open"] {
+    right: 0;
+  }
+  .navLinks[class*="open"] ~ .contactsBlock {
     right: 0;
   }
 
-  /* Подкрашиваем кнопку звонка внутри шторки */
-  ul:has(.open) .contactsBlock .callback {
-    color: #ff5c00;
-    font-weight: 700;
-    text-decoration: underline;
-  }
+  /* Цвета по ТЗ */
+  .contactsBlock span:first-child { color: #ffffff; }
+  .callback { color: #ff5c00; }
 }
 
 .header ~ * {
