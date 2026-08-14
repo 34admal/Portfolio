@@ -8,23 +8,23 @@ export function Header() {
   console.log("Состояние меню open:", isMenuOpen);
 
   const handleSidebarClick = (e) => {
-    // Вычисляем, куда пришёлся клик относительно левого края шторки
+    
     const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const clickY = e.clientY - rect.top;
 
-    // ИСПРАВЛЕНО: Вернули условие клика по координатам крестика
+    
     if (clickX <= 30 && clickY <= 30) {
       setIsMenuOpen(false);
     }
-  }; // ИСПРАВЛЕНО: Закрыли функцию клика здесь, освободив return хедера
+ 
 
   return (
     <header className={styles.header}>
       <img src={logo} className={styles.header__logo} alt="SAFEHOUSE" />
       
       <ul>
-        {/* Теперь див со ссылками корректно вызывает функцию проверки координат */}
+       
         <div 
           className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`} 
           onClick={handleSidebarClick}

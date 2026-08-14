@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 70,
+            "activePatchIndex": 73,
             "patches": [
                 {
                     "date": 1779113061825,
@@ -288,6 +288,18 @@
                 {
                     "date": 1786346928826,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,23 +5,31 @@\n export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n \r\n   console.log(\"Состояние меню open:\", isMenuOpen);\r\n-const handleSidebarClick = (e) => {\r\n-  // Вычисляем, куда пришёлся клик относительно левого края шторки\r\n-  const rect = e.currentTarget.getBoundingClientRect();\r\n-  const clickX = e.clientX - rect.left;\r\n-  const clickY = e.clientY - rect.top;\r\n+\r\n+  const handleSidebarClick = (e) => {\r\n+    // Вычисляем, куда пришёлся клик относительно левого края шторки\r\n+    const rect = e.currentTarget.getBoundingClientRect();\r\n+    const clickX = e.clientX - rect.left;\r\n+    const clickY = e.clientY - rect.top;\r\n+\r\n+    // ИСПРАВЛЕНО: Вернули условие клика по координатам крестика\r\n+    if (clickX <= 30 && clickY <= 30) {\r\n+      setIsMenuOpen(false);\r\n+    }\r\n+  }; // ИСПРАВЛЕНО: Закрыли функцию клика здесь, освободив return хедера\r\n+\r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n       <ul>\r\n-        {/* ОЖИВИЛИ: Теперь при клике на бургер див со ссылками получает класс open и выезжает */}\r\n+        {/* Теперь див со ссылками корректно вызывает функцию проверки координат */}\r\n         <div \r\n-  className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`}\r\n-  onClick={handleSidebarClick}\r\n->\r\n+          className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`} \r\n+          onClick={handleSidebarClick}\r\n+        >\r\n           <li><a href=\"#gallery\">Портфолио</a></li>\r\n           <li><a href=\"#services\">Услуги</a></li>\r\n           <li><a href=\"#prices\">Цены</a></li>\r\n           <li><a href=\"#contacts\">Контакты</a></li>\r\n@@ -32,12 +40,10 @@\n           <span className={styles.callback}>Заказать звонок</span>\r\n         </div>\r\n       </ul>\r\n \r\n-      \r\n       <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>\r\n     </header>\r\n-  )\r\n-  \r\n+  );\r\n+}\r\n \r\n-\r\n-\r\n+export default Header;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786717688502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n       <ul>\r\n-        {/* Теперь див со ссылками корректно вызывает функцию проверки координат */}\r\n+       \r\n         <div \r\n           className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`} \r\n           onClick={handleSidebarClick}\r\n         >\r\n"
+                },
+                {
+                    "date": 1786717694749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     // ИСПРАВЛЕНО: Вернули условие клика по координатам крестика\r\n     if (clickX <= 30 && clickY <= 30) {\r\n       setIsMenuOpen(false);\r\n     }\r\n-  }; // ИСПРАВЛЕНО: Закрыли функцию клика здесь, освободив return хедера\r\n+ \r\n \r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n"
+                },
+                {
+                    "date": 1786717704075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,14 +7,14 @@\n \r\n   console.log(\"Состояние меню open:\", isMenuOpen);\r\n \r\n   const handleSidebarClick = (e) => {\r\n-    // Вычисляем, куда пришёлся клик относительно левого края шторки\r\n+    \r\n     const rect = e.currentTarget.getBoundingClientRect();\r\n     const clickX = e.clientX - rect.left;\r\n     const clickY = e.clientY - rect.top;\r\n \r\n-    // ИСПРАВЛЕНО: Вернули условие клика по координатам крестика\r\n+    \r\n     if (clickX <= 30 && clickY <= 30) {\r\n       setIsMenuOpen(false);\r\n     }\r\n  \r\n"
                 }
             ],
             "date": 1779113061825,

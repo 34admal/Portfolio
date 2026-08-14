@@ -166,47 +166,41 @@ ul li {
     height: auto;
   }
 
- 
   ul {
-    margin-left: 33px; 
+    margin-left: 33px;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  
   .navLinks {
     display: flex;
-    gap: 49px; 
+    gap: 49px;
   }
 
- 
   .navLinks li {
     display: block;
   }
 
-  
   .burgerBtn {
-    
-    display: none; 
+    display: none;
   }
 }
 
 @media (max-width: 1000px) {
- 
   .burgerBtn {
-    display: block; 
-    width: 21px;    
-    height: 2px;    
-    background-color: #ff7a00; 
+    display: block;
+    width: 21px;
+    height: 2px;
+    background-color: #ff7a00;
     position: absolute;
     top: 30px;
-    right: 63px; 
+    right: 63px;
     cursor: pointer;
     z-index: 1000;
   }
 
-  .burgerBtn::before, 
+  .burgerBtn::before,
   .burgerBtn::after {
     content: "";
     position: absolute;
@@ -215,61 +209,60 @@ ul li {
     height: 2px;
     background-color: #ff7a00;
   }
-  .burgerBtn::before { top: -6px; }
-  .burgerBtn::after { top: 6px; }
+  .burgerBtn::before {
+    top: -6px;
+  }
+  .burgerBtn::after {
+    top: 6px;
+  }
 
- 
   .header__logo {
     margin-left: 63px;
     width: 129px;
     height: auto;
   }
 
-  
   .contactsBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 145px; 
+    margin-left: 145px;
   }
-
 
   .navLinks {
     position: fixed;
-    top: 86px;       
-    background-color: #1f1f1f; 
+    top: 86px;
+    background-color: #1f1f1f;
     display: flex;
     flex-direction: column;
-    gap: 35px; 
-    
-    width: 220px; 
+    gap: 35px;
+
+    width: 220px;
     height: 100vh;
     padding-top: 70px;
     padding-bottom: 40px;
     padding-left: 55px;
     padding-right: 0;
 
-    right: -100%; 
+    right: -100%;
     transition: right 0.45s cubic-bezier(0.25, 1, 0.5, 1);
     z-index: 10;
   }
 
-  
   .navLinks.open {
     right: 0;
   }
 
- 
   .navLinks::before {
-    content: "✕"; 
+    content: "✕";
     position: absolute;
-    top: 4px;    
-    left: 2px;   
-    width: 20px;  
+    top: 4px;
+    left: 2px;
+    width: 20px;
     height: 20px;
-    font-size: 20px; 
-    font-weight: 900; 
-    color: #ff5c00;  
+    font-size: 20px;
+    font-weight: 900;
+    color: #ff5c00;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -278,48 +271,50 @@ ul li {
   }
 }
 
-
-
 @media (max-width: 768px) {
- 
   .header {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  
   .header__logo {
-    margin-left: 35px; 
+    margin-left: 35px;
     width: 100px;
     height: auto;
   }
 
-  
   .burgerBtn {
     position: absolute;
     top: 30px;
-    right: 35px; 
+    right: 35px;
     cursor: pointer;
     z-index: 1000;
   }
 
- 
   .contactsBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 175px; 
+    margin-left: 175px;
   }
 }
 
 @media (max-width: 480px) {
- 
-  .header { position: relative; justify-content: center; }
-  .header__logo { margin-left: 0; width: 110px; }
-  .burgerBtn { display: block; right: 20px; top: 30px; }
+  .header {
+    position: relative;
+    justify-content: center;
+  }
+  .header__logo {
+    margin-left: 0;
+    width: 110px;
+  }
+  .burgerBtn {
+    display: block;
+    right: 20px;
+    top: 30px;
+  }
 
- 
   .navLinks {
     position: fixed;
     right: -100%;
@@ -336,13 +331,14 @@ ul li {
     z-index: 10;
     transition: right 0.45s cubic-bezier(0.25, 1, 0.5, 1);
   }
-  .navLinks li { display: block; }
+  .navLinks li {
+    display: block;
+  }
 
-  
   .contactsBlock {
     position: fixed;
     right: -100%;
-    top: 380px; 
+    top: 380px;
     width: 220px;
     margin-left: 0;
     padding-left: 45px;
@@ -355,7 +351,6 @@ ul li {
     transition: right 0.45s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  
   .navLinks[class*="open"] {
     right: 0;
   }
@@ -364,8 +359,12 @@ ul li {
   }
 
   /* Цвета по ТЗ */
-  .contactsBlock span:first-child { color: #ffffff; }
-  .callback { color: #ff5c00; }
+  .contactsBlock span:first-child {
+    color: #ffffff;
+  }
+  .callback {
+    color: #ff5c00;
+  }
 }
 
 .header ~ * {
