@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 73,
+            "activePatchIndex": 77,
             "patches": [
                 {
                     "date": 1779113061825,
@@ -300,6 +300,22 @@
                 {
                     "date": 1786717704075,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,14 +7,14 @@\n \r\n   console.log(\"Состояние меню open:\", isMenuOpen);\r\n \r\n   const handleSidebarClick = (e) => {\r\n-    // Вычисляем, куда пришёлся клик относительно левого края шторки\r\n+    \r\n     const rect = e.currentTarget.getBoundingClientRect();\r\n     const clickX = e.clientX - rect.left;\r\n     const clickY = e.clientY - rect.top;\r\n \r\n-    // ИСПРАВЛЕНО: Вернули условие клика по координатам крестика\r\n+    \r\n     if (clickX <= 30 && clickY <= 30) {\r\n       setIsMenuOpen(false);\r\n     }\r\n  \r\n"
+                },
+                {
+                    "date": 1786782539996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,5 +45,5 @@\n     </header>\r\n   );\r\n }\r\n \r\n-export default Header;\n\\ No newline at end of file\n+// export default Header;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786782552635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,5 +45,5 @@\n     </header>\r\n   );\r\n }\r\n \r\n-// export default Header;\n\\ No newline at end of file\n+export default Header;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786782575579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n import styles from './header.module.css';\r\n import logo from './images/logo.png';\r\n \r\n-export function Header() {\r\n+ function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n \r\n   console.log(\"Состояние меню open:\", isMenuOpen);\r\n \r\n"
+                },
+                {
+                    "date": 1786782690745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,31 +1,28 @@\n import React from 'react';\r\n import styles from './header.module.css';\r\n import logo from './images/logo.png';\r\n \r\n- function Header() {\r\n+export function Header() {\r\n   const [isMenuOpen, setIsMenuOpen] = React.useState(false);\r\n \r\n   console.log(\"Состояние меню open:\", isMenuOpen);\r\n \r\n   const handleSidebarClick = (e) => {\r\n-    \r\n     const rect = e.currentTarget.getBoundingClientRect();\r\n     const clickX = e.clientX - rect.left;\r\n     const clickY = e.clientY - rect.top;\r\n \r\n-    \r\n     if (clickX <= 30 && clickY <= 30) {\r\n       setIsMenuOpen(false);\r\n     }\r\n- \r\n+  }; // <-- ВОТ ЗДЕСЬ БЫЛА ОШИБКА, СКОБКА СТОЯЛА НЕ ТАМ ИЛИ ОТСУТСТВОВАЛА\r\n \r\n   return (\r\n     <header className={styles.header}>\r\n       <img src={logo} className={styles.header__logo} alt=\"SAFEHOUSE\" />\r\n       \r\n       <ul>\r\n-       \r\n         <div \r\n           className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`} \r\n           onClick={handleSidebarClick}\r\n         >\r\n@@ -45,5 +42,5 @@\n     </header>\r\n   );\r\n }\r\n \r\n-export default Header;\n\\ No newline at end of file\n+export default Header;\r\n"
                 }
             ],
             "date": 1779113061825,

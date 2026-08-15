@@ -8,23 +8,20 @@ export function Header() {
   console.log("Состояние меню open:", isMenuOpen);
 
   const handleSidebarClick = (e) => {
-    
     const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const clickY = e.clientY - rect.top;
 
-    
     if (clickX <= 30 && clickY <= 30) {
       setIsMenuOpen(false);
     }
- 
+  }; // <-- ВОТ ЗДЕСЬ БЫЛА ОШИБКА, СКОБКА СТОЯЛА НЕ ТАМ ИЛИ ОТСУТСТВОВАЛА
 
   return (
     <header className={styles.header}>
       <img src={logo} className={styles.header__logo} alt="SAFEHOUSE" />
       
       <ul>
-       
         <div 
           className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`} 
           onClick={handleSidebarClick}

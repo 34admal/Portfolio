@@ -158,3 +158,98 @@ display: flex;
 .prevArrow {
   left: 20px;
 }
+/* -------------------------RESPONSE-------------------- */
+
+
+@media (max-width: 1366px) {
+  .slogan_block {
+    margin: 72px 0 0 114px;
+    width: 503px;
+  }
+  .construction_repair_gomel {
+    font-size: 57px;
+    line-height: 66px;
+  }
+  .future_together {
+    font-size: 21px;
+    width: 304px;
+    margin-top: 69px;
+    margin-bottom: 81px;
+  }
+  .slider_container {
+    width: 624px;
+  }
+  .slider {
+    max-width: 100%;
+  }
+  .nextArrow { right: 19px; }
+  .prevArrow { left: 19px; }
+  [class*="sliderWrapper"] {
+    width: 607px;
+    height: 417px;
+    top: 28px;
+    bottom: 28px;
+    right: 106px;
+  }
+
+.button {
+    width: 284px;
+    height: 48px;
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .heroSection {
+    margin-bottom: 80px;
+  }
+  
+  
+  .slider_container {
+    width: 548px;
+  }
+  .slider {
+    max-width: 100%;
+  }
+  [class*="sliderWrapper"] {
+    width: 533px;
+    top: 25px;    
+    bottom: 25px; 
+    right: 93px;
+    height: auto; 
+  }
+  .arrow {
+    width: 24px;
+    height: 48px;
+    font-size: 20px;
+  }
+  .nextArrow { right: 17px; }
+  .prevArrow { left: 17px; }
+
+  
+  .slogan_block {
+    margin: 72px 0 0 100px;
+    width: 442px;
+  }
+  .construction_repair_gomel {
+    font-size: 50px;
+    line-height: 58px;
+  }
+  .future_together {
+    font-size: 18px;
+    width: 267px;
+    margin-top: 61px;
+    margin-bottom: 71px;
+  }
+  .button {
+    width: 250px;
+    height: 42px;
+    font-size: 13px;
+  }
+}
+
+
+.heroSection ~ * {
+  display: none !important;
+}

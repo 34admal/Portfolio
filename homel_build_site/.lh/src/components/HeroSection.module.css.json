@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 148,
+            "activePatchIndex": 174,
             "patches": [
                 {
                     "date": 1774977675426,
@@ -600,6 +600,110 @@
                 {
                     "date": 1784570800618,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n /* HeroSection.module.css */\r\n span {\r\n   color: #fff;\r\n }\r\n-.heroContainer { \r\n+.heroSection { \r\n   margin-bottom: 96px;\r\n }\r\n \r\n .slider_container {\r\n"
+                },
+                {
+                    "date": 1786784074749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,4 +157,5 @@\n \r\n .prevArrow {\r\n   left: 20px;\r\n }\r\n+-------------------------\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786784081671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,5 +157,5 @@\n \r\n .prevArrow {\r\n   left: 20px;\r\n }\r\n--------------------------\n\\ No newline at end of file\n+-------------------------RESPONCE\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786784088294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,5 +157,5 @@\n \r\n .prevArrow {\r\n   left: 20px;\r\n }\r\n--------------------------RESPONCE\n\\ No newline at end of file\n+-------------------------RESPONCE--------------------\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786784096635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,5 +157,11 @@\n \r\n .prevArrow {\r\n   left: 20px;\r\n }\r\n--------------------------RESPONCE--------------------\n\\ No newline at end of file\n+-------------------------RESPONCE--------------------\r\n+@media (max-width: 1366px) {\r\n+  /* Адаптируем самый правый элемент секции */\r\n+  .slider_container {\r\n+    width: 624px;\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786784196054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,9 +157,11 @@\n \r\n .prevArrow {\r\n   left: 20px;\r\n }\r\n--------------------------RESPONCE--------------------\r\n+/* -------------------------RESPONCE-------------------- */\r\n+\r\n+\r\n @media (max-width: 1366px) {\r\n   /* Адаптируем самый правый элемент секции */\r\n   .slider_container {\r\n     width: 624px;\r\n"
+                },
+                {
+                    "date": 1786784204075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,9 +157,9 @@\n \r\n .prevArrow {\r\n   left: 20px;\r\n }\r\n-/* -------------------------RESPONCE-------------------- */\r\n+/* -------------------------RESPONsE-------------------- */\r\n \r\n \r\n @media (max-width: 1366px) {\r\n   /* Адаптируем самый правый элемент секции */\r\n"
+                },
+                {
+                    "date": 1786784275247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,13 +157,15 @@\n \r\n .prevArrow {\r\n   left: 20px;\r\n }\r\n-/* -------------------------RESPONsE-------------------- */\r\n+/* -------------------------RESPONSE-------------------- */\r\n \r\n \r\n @media (max-width: 1366px) {\r\n   /* Адаптируем самый правый элемент секции */\r\n   .slider_container {\r\n     width: 624px;\r\n   }\r\n+\r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786808197103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,6 +166,9 @@\n   .slider_container {\r\n     width: 624px;\r\n   }\r\n \r\n-  \r\n-}\n\\ No newline at end of file\n+  .slider {\r\n+    max-width: 100%;\r\n+  }\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1786808231507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,4 +171,7 @@\n     max-width: 100%;\r\n   }\r\n }\r\n \r\n+.header ~ * {\r\n+  /* display: none !important; */\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786808259388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,7 +171,7 @@\n     max-width: 100%;\r\n   }\r\n }\r\n \r\n-.header ~ * {\r\n+.heroSection  ~ * {\r\n   /* display: none !important; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786808341912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,8 +169,11 @@\n \r\n   .slider {\r\n     max-width: 100%;\r\n   }\r\n+\r\n+\r\n+  \r\n }\r\n \r\n .heroSection  ~ * {\r\n   /* display: none !important; */\r\n"
+                },
+                {
+                    "date": 1786808525221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -170,11 +170,24 @@\n   .slider {\r\n     max-width: 100%;\r\n   }\r\n \r\n+ .slogan_block {\r\n+    margin: 72px 0 0 114px;\r\n+    width: 503px;\r\n+  }\r\n+  .construction_repair_gomel {\r\n+    font-size: 57px;\r\n+    line-height: 66px;\r\n+  }\r\n+  .future_together {\r\n+    font-size: 21px;\r\n+    width: 304px;\r\n+    margin-top: 69px;\r\n+    margin-bottom: 81px;\r\n+  }\r\n \r\n-  \r\n }\r\n \r\n-.heroSection  ~ * {\r\n-  /* display: none !important; */\r\n+:global(body) {\r\n+  overflow-x: hidden;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786808601543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,7 +187,4 @@\n   }\r\n \r\n }\r\n \r\n-:global(body) {\r\n-  overflow-x: hidden;\r\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786808651820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,4 +187,7 @@\n   }\r\n \r\n }\r\n \r\n+:global(body) {\r\n+  overflow-x: hidden;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786808812349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,7 +187,7 @@\n   }\r\n \r\n }\r\n \r\n-:global(body) {\r\n+:global(html) {\r\n   overflow-x: hidden;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786808961766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,7 +187,7 @@\n   }\r\n \r\n }\r\n \r\n-:global(html) {\r\n-  overflow-x: hidden;\r\n+.heroSection ~ * {\r\n+  display: none !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786809696304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -185,8 +185,10 @@\n     margin-top: 69px;\r\n     margin-bottom: 81px;\r\n   }\r\n \r\n+  \r\n+\r\n }\r\n \r\n .heroSection ~ * {\r\n   display: none !important;\r\n"
+                },
+                {
+                    "date": 1786810098371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -185,9 +185,16 @@\n     margin-top: 69px;\r\n     margin-bottom: 81px;\r\n   }\r\n \r\n-  \r\n+   [class*=\"sliderWrapper\"] {\r\n+    width: 607px;\r\n+    height: 417px;\r\n+    top: 28px;\r\n+    bottom: 28px;\r\n+    right: 106px;\r\n+    \r\n+  }\r\n \r\n }\r\n \r\n .heroSection ~ * {\r\n"
+                },
+                {
+                    "date": 1786810560579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,18 +161,9 @@\n /* -------------------------RESPONSE-------------------- */\r\n \r\n \r\n @media (max-width: 1366px) {\r\n-  /* Адаптируем самый правый элемент секции */\r\n-  .slider_container {\r\n-    width: 624px;\r\n-  }\r\n-\r\n-  .slider {\r\n-    max-width: 100%;\r\n-  }\r\n-\r\n- .slogan_block {\r\n+  .slogan_block {\r\n     margin: 72px 0 0 114px;\r\n     width: 503px;\r\n   }\r\n   .construction_repair_gomel {\r\n@@ -184,18 +175,23 @@\n     width: 304px;\r\n     margin-top: 69px;\r\n     margin-bottom: 81px;\r\n   }\r\n-\r\n-   [class*=\"sliderWrapper\"] {\r\n+  .slider_container {\r\n+    width: 624px;\r\n+  }\r\n+  .slider {\r\n+    max-width: 100%;\r\n+  }\r\n+  .nextArrow { right: 19px; }\r\n+  .prevArrow { left: 19px; }\r\n+  [class*=\"sliderWrapper\"] {\r\n     width: 607px;\r\n     height: 417px;\r\n     top: 28px;\r\n     bottom: 28px;\r\n     right: 106px;\r\n-    \r\n   }\r\n-\r\n }\r\n \r\n .heroSection ~ * {\r\n   display: none !important;\r\n"
+                },
+                {
+                    "date": 1786810863740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -190,8 +190,10 @@\n     top: 28px;\r\n     bottom: 28px;\r\n     right: 106px;\r\n   }\r\n+\r\n+  \r\n }\r\n \r\n .heroSection ~ * {\r\n   display: none !important;\r\n"
+                },
+                {
+                    "date": 1786811163040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -191,10 +191,17 @@\n     bottom: 28px;\r\n     right: 106px;\r\n   }\r\n \r\n-  \r\n+.button {\r\n+    width: 284px;\r\n+    height: 48px;\r\n+    font-size: 15px;\r\n+  }\r\n+\r\n }\r\n \r\n+\r\n+\r\n .heroSection ~ * {\r\n   display: none !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786811186074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -199,9 +199,57 @@\n   }\r\n \r\n }\r\n \r\n+@media (max-width: 1200px) {\r\n+  .heroSection {\r\n+    margin-bottom: 80px;\r\n+  }\r\n+  \r\n+  /* Слайдер и его обвязка */\r\n+  .slider_container {\r\n+    width: 548px;\r\n+  }\r\n+  .slider {\r\n+    max-width: 100%;\r\n+  }\r\n+  [class*=\"sliderWrapper\"] {\r\n+    width: 533px;\r\n+    height: 367px;\r\n+    top: 25px;\r\n+    bottom: 25px;\r\n+    right: 93px;\r\n+  }\r\n+  .arrow {\r\n+    width: 24px;\r\n+    height: 48px;\r\n+    font-size: 20px;\r\n+  }\r\n+  .nextArrow { right: 17px; }\r\n+  .prevArrow { left: 17px; }\r\n \r\n+  /* Текстовый блок и кнопка */\r\n+  .slogan_block {\r\n+    margin: 72px 0 0 100px;\r\n+    width: 442px;\r\n+  }\r\n+  .construction_repair_gomel {\r\n+    font-size: 50px;\r\n+    line-height: 58px;\r\n+  }\r\n+  .future_together {\r\n+    font-size: 18px;\r\n+    width: 267px;\r\n+    margin-top: 61px;\r\n+    margin-bottom: 71px;\r\n+  }\r\n+  .button {\r\n+    width: 250px;\r\n+    height: 42px;\r\n+    font-size: 13px;\r\n+  }\r\n+}\r\n \r\n+\r\n .heroSection ~ * {\r\n   display: none !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1786811698195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,12 +213,12 @@\n     max-width: 100%;\r\n   }\r\n   [class*=\"sliderWrapper\"] {\r\n     width: 533px;\r\n-    height: 367px;\r\n-    top: 25px;\r\n-    bottom: 25px;\r\n+    top: 25px;    /* Равномерный отступ сверху от края слайдера */\r\n+    bottom: 25px; /* Точно такой же равномерный отступ снизу */\r\n     right: 93px;\r\n+    height: auto; /* Принудительно отменяем десктопную жёсткую высоту */\r\n   }\r\n   .arrow {\r\n     width: 24px;\r\n     height: 48px;\r\n"
+                },
+                {
+                    "date": 1786812063950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -216,9 +216,9 @@\n     width: 533px;\r\n     top: 25px;    /* Равномерный отступ сверху от края слайдера */\r\n     bottom: 25px; /* Точно такой же равномерный отступ снизу */\r\n     right: 93px;\r\n-    height: auto; /* Принудительно отменяем десктопную жёсткую высоту */\r\n+    height: auto; \r\n   }\r\n   .arrow {\r\n     width: 24px;\r\n     height: 48px;\r\n"
+                },
+                {
+                    "date": 1786812072328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,10 +213,10 @@\n     max-width: 100%;\r\n   }\r\n   [class*=\"sliderWrapper\"] {\r\n     width: 533px;\r\n-    top: 25px;    /* Равномерный отступ сверху от края слайдера */\r\n-    bottom: 25px; /* Точно такой же равномерный отступ снизу */\r\n+    top: 25px;    \r\n+    bottom: 25px; \r\n     right: 93px;\r\n     height: auto; \r\n   }\r\n   .arrow {\r\n"
+                },
+                {
+                    "date": 1786812082659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -204,9 +204,9 @@\n   .heroSection {\r\n     margin-bottom: 80px;\r\n   }\r\n   \r\n-  /* Слайдер и его обвязка */\r\n+  \r\n   .slider_container {\r\n     width: 548px;\r\n   }\r\n   .slider {\r\n@@ -226,9 +226,9 @@\n   }\r\n   .nextArrow { right: 17px; }\r\n   .prevArrow { left: 17px; }\r\n \r\n-  /* Текстовый блок и кнопка */\r\n+  \r\n   .slogan_block {\r\n     margin: 72px 0 0 100px;\r\n     width: 442px;\r\n   }\r\n"
                 }
             ],
             "date": 1774977675426,
