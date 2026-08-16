@@ -249,6 +249,89 @@ display: flex;
   }
 }
 
+/* БРЕЙКПОИНТ 1024px (Коэффициент сжатия строго 0.711) */
+/* БРЕЙКПОИНТ 1024px (Коэффициент сжатия строго 0.711) */
+/* БРЕЙКПОИНТ 1024px (Коэффициент сжатия строго 0.711) */
+/* БРЕЙКПОИНТ 1024px (Коэффициент сжатия строго 0.711) */
+/* БРЕЙКПОИНТ 1024px (Коэффициент сжатия строго 0.711) */
+/* БРЕЙКПОИНТ 1024px (Идеальный баланс контура и целого кадра) */
+@media (max-width: 1024px) {
+  .heroSection {
+    margin-bottom: 68px;
+  }
+  
+  /* Текст слева адаптируется под пропорции экрана */
+  .slogan_block {
+    margin: 72px 0 0 85px; 
+    width: 378px;          
+  }
+  .construction_repair_gomel {
+    font-size: 43px;
+    line-height: 50px;
+  }
+  .future_together {
+    font-size: 16px;
+    width: 228px;
+    margin-top: 52px;
+    margin-bottom: 60px;
+  }
+  .button {
+    width: 213px;
+    height: 36px;
+    font-size: 11px;
+  }
+
+  /* СЛАЙДЕР: Внешний контейнер */
+    /* Слайдер и оранжевый каркас сжимаются синхронно */
+  .slider_container {
+    width: 468px; 
+  }
+  .slider {
+    max-width: 100%;
+  }
+
+  /* 1. ВОЗВРАЩАЕМ ЖЕСТКУЮ ВЫСОТУ КАРКАСА ДЛЯ БАЛАНСА ОБЪЕМА (520px * 0.711) */
+  .slider_container :global(.sliderFrameContainer) {
+    height: 370px; 
+    width: 100%;
+  }
+
+  /* 2. СОХРАНЯЕМ 3D-ВЫЛЕТ ПО ТЗ: картинка выезжает влево за рамку */
+  [class*="sliderWrapper"] {
+    position: absolute;
+    width: 455px;  /* 640px * 0.711 */
+    height: 313px; /* 440px * 0.711 — жестко держим, чтобы фото не резалось */
+    
+    top: 21px;     /* Пропорциональный верхний зазор для эффекта объема */
+    bottom: auto;  /* Отменяем растяжение, чтобы нижние линии совпали */
+    right: 80px;   /* Родной десктопный вылет влево за счет right: 112 * 0.711 */
+    left: auto;
+  }
+
+  /* Картинка заполняет фрейм без искажений */
+  .slider_container :global(.sliderImg) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Пропорциональные стрелочки */
+  .arrow {
+    width: 20px;
+    height: 41px;
+    font-size: 17px;
+  }
+  .nextArrow { right: 14px; }
+  .prevArrow { left: 14px; }
+}
+
+
+
+
+
+
+
+
 
 .heroSection ~ * {
   display: none !important;
