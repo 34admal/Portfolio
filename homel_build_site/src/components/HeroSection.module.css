@@ -320,8 +320,111 @@ display: flex;
 
 
 
+/* БРЕЙКПОИНТ 1000px (Переход в вертикальный поток планшета) */
 
+/* БРЕЙКПОИНТ 1000px (Физический сдвиг контейнера по направляющим линейки) */
+/* БРЕЙКПОИНТ 1000px (Синхронизация плоскостей и центрирование фото) */
+/* БРЕЙКПОИНТ 1000px (Финальная пиксельная симметрия «воздуха») */
+/* БРЕЙКПОИНТ 1000px (Отвоеванный воздух и чистая симметрия на русском) */
+/* БРЕЙКПОИНТ 1000px (Фикс горизонтального сдвига и вертикальной симметрии) */
+/* БРЕЙКПОИНТ 1000px */
+/* БРЕЙКПОИНТ 1000px (Отвоеванное пространство без флекс-пустоты) */
+@media (max-width: 1000px) {
+  .heroSection {
+    margin-bottom: 60px;
+  }
+  
+  .main_content_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    gap: 0;
+    padding-bottom: 86px;
+    box-sizing: border-box;
+  }
 
+  .slogan_block {
+    margin: 40px auto 0 auto; 
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .construction_repair_gomel {
+    font-size: 32px;
+    line-height: 38px;
+    text-wrap: balance; 
+  }
+  
+  .future_together {
+    font-size: 15px;
+    width: 100%;
+    max-width: 340px;
+    margin-top: 20px; 
+    margin-bottom: 0; 
+    text-align: center;
+  }
+
+  .slider_container {
+    width: 430px; 
+    margin: 40px auto 0 auto;
+    position: relative;
+  }
+
+  .heroSection .slider_container :global([class*="sliderFrameContainer"]) {
+    display: block;
+    width: 100%;
+    height: 295px; 
+    border: none; 
+    background: transparent; 
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .heroSection .slider_container :global([class*="sliderWrapper"]) {
+    position: relative; 
+    width: 430px; 
+    height: 295px; 
+    top: 0;     
+    bottom: auto;
+    right: auto; 
+    left: 0; 
+    margin: 0 auto;
+  }
+
+  .heroSection .slider_container :global([class*="sliderWindow"]),
+  .heroSection .slider_container :global([class*="slidesTrack"]),
+  .heroSection .slider_container :global([class*="slide"]) {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .button {
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 46px;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .arrow {
+    width: 20px;
+    height: 41px;
+    font-size: 17px;
+  }
+  .nextArrow { right: 14px; }
+  .prevArrow { left: 14px; }
+}
 
 
 
