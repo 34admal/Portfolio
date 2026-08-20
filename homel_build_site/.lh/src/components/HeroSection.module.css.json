@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 256,
+            "activePatchIndex": 258,
             "patches": [
                 {
                     "date": 1774977675426,
@@ -1032,6 +1032,14 @@
                 {
                     "date": 1787070895707,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -319,17 +319,9 @@\n }\r\n \r\n \r\n \r\n-/* БРЕЙКПОИНТ 1000px (Переход в вертикальный поток планшета) */\r\n \r\n-/* БРЕЙКПОИНТ 1000px (Физический сдвиг контейнера по направляющим линейки) */\r\n-/* БРЕЙКПОИНТ 1000px (Синхронизация плоскостей и центрирование фото) */\r\n-/* БРЕЙКПОИНТ 1000px (Финальная пиксельная симметрия «воздуха») */\r\n-/* БРЕЙКПОИНТ 1000px (Отвоеванный воздух и чистая симметрия на русском) */\r\n-/* БРЕЙКПОИНТ 1000px (Фикс горизонтального сдвига и вертикальной симметрии) */\r\n-/* БРЕЙКПОИНТ 1000px */\r\n-/* БРЕЙКПОИНТ 1000px (Отвоеванное пространство без флекс-пустоты) */\r\n @media (max-width: 1000px) {\r\n   .heroSection {\r\n     margin-bottom: 60px;\r\n   }\r\n"
+                },
+                {
+                    "date": 1787235455371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -426,7 +426,10 @@\n \r\n \r\n \r\n \r\n+\r\n+\r\n+\r\n .heroSection ~ * {\r\n   display: none !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1787235891940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -418,18 +418,115 @@\n   .prevArrow { left: 14px; }\r\n }\r\n \r\n \r\n+@media (max-width: 768px) {\r\n+  .heroSection {\r\n+    margin-bottom: 50px;\r\n+  }\r\n \r\n+  .main_content_block {\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    align-items: center;\r\n+    justify-content: flex-start;\r\n+    width: 100%;\r\n+    position: relative;\r\n+    gap: 0;\r\n+    padding-bottom: 79px; \r\n+    box-sizing: border-box;\r\n+  }\r\n \r\n+  .slogan_block {\r\n+    margin: 35px auto 0 auto;\r\n+    width: 100%;\r\n+    max-width: 400px;\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    align-items: center;\r\n+    text-align: center;\r\n+  }\r\n \r\n+  .construction_repair_gomel {\r\n+    font-size: 28px;\r\n+    line-height: 34px;\r\n+    text-wrap: balance;\r\n+  }\r\n \r\n+  .future_together {\r\n+    font-size: 14px;\r\n+    width: 100%;\r\n+    max-width: 280px;\r\n+    margin-top: 15px;\r\n+    margin-bottom: 0;\r\n+    text-align: center;\r\n+  }\r\n \r\n+  .slider_container {\r\n+    width: 305px;\r\n+    margin: 35px auto 0 auto; \r\n+    position: relative;\r\n+  }\r\n \r\n+  .heroSection .slider_container :global([class*=\"sliderFrameContainer\"]) {\r\n+    display: block;\r\n+    width: 100%;\r\n+    height: 210px; \r\n+    border: none; \r\n+    background: transparent; \r\n+    position: relative;\r\n+    margin: 0 auto;\r\n+  }\r\n \r\n+  .heroSection .slider_container :global([class*=\"sliderWrapper\"]) {\r\n+    position: relative; \r\n+    width: 305px; \r\n+    height: 210px; \r\n+    top: 0;     \r\n+    bottom: auto;\r\n+    right: auto; \r\n+    left: 0; \r\n+    margin: 0 auto;\r\n+  }\r\n \r\n+  .heroSection .slider_container :global([class*=\"sliderWindow\"]),\r\n+  .heroSection .slider_container :global([class*=\"slidesTrack\"]),\r\n+  .heroSection .slider_container :global([class*=\"slide\"]) {\r\n+    width: 100%;\r\n+    max-width: 100%;\r\n+    height: 100%;\r\n+  }\r\n \r\n+  .button {\r\n+    position: absolute;\r\n+    bottom: 0;\r\n+    left: 50%;\r\n+    transform: translateX(-50%);\r\n+    width: 240px;\r\n+    height: 44px; \r\n+    font-size: 13px;\r\n+    margin: 0;\r\n+  }\r\n \r\n+  .arrow {\r\n+    width: 16px;\r\n+    height: 32px;\r\n+    font-size: 14px;\r\n+  }\r\n+  .nextArrow { right: 10px; }\r\n+  .prevArrow { left: 10px; }\r\n+}\r\n \r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n .heroSection ~ * {\r\n   display: none !important;\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1774977675426,
