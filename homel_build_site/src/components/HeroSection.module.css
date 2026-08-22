@@ -626,6 +626,6 @@ display: flex;
 
 
 
-.heroSection ~ * {
+/* .heroSection ~ * {
   display: none !important;
-}
+} */
