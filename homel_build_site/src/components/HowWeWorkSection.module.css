@@ -176,80 +176,208 @@ p {
 
 
 @media (max-width: 1366px) {
-  
-  .how_we_work {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden; 
-  }
-
   .section_header {
-    padding-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+    padding-top: 56px;
   }
-  
-  
-  .section_title {
-    margin: 0 100px 0 100px;
-    font-size: 28px;
-  }
-  
-  .orangeLine {
-    width: 150px;
-  }
-  
   .section_header > .orangeLine:first-child {
-    margin-left: 0; 
+    margin-left: 114px;
+  }
+  .section_title {
+    margin: 0 259px 0 228px;
+  }
+  .orangeLine {
+    width: 192px;
   }
 
-  
   .headingNumber {
-    font-size: 52px;
-    line-height: 62px;
+    font-size: 57px;
+    line-height: 69px;
   }
-  .stepDescription {
-    font-size: 16px;
+  
+  .how_we_work .stepDescription {
+    font-size: 17px;
   }
 
   .stepGroupTop {
-    margin-top: 35px;
-    padding-right: 40px; 
+    margin-top: 43px;
   }
-
- 
-  .block01, .block02 {
-    margin-left: 120px; 
+  .block01 {
+    margin-left: 209px;
   }
-
+  
   .block01 .stepDescription {
-    width: 320px;
-    margin: 9px 0 40px 12px;
+    width: 354px;
+    margin: 9px 0 51px 12px;
+  }
+  .block02 {
+    margin-left: 209px;
+  }
+  .block02 .stepDescription {
+    margin: 24px 0 8px;
+  }
+  .block03 .stepDescription {
+    width: 280px;
+    margin: 13px 0 14px 26px;
+  }
+  .block04 .stepDescription {
+    width: 291px;
+    margin: 8px 0 0 16px;
+  }
+  .block05 .stepDescription {
+    width: 310px;
+    margin: 9px 0 9px 23px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section_header {
+    padding-top: 49px;
+  }
+  .section_header > .orangeLine:first-child {
+    margin-left: 100px;
+  }
+  .section_title {
+    margin: 0 228px 0 200px;
+    font-size: 25px;
+  }
+  .orangeLine {
+    width: 169px;
   }
 
+  .headingNumber {
+    font-size: 50px;
+    line-height: 61px;
+  }
+  
+  .how_we_work .stepDescription {
+    font-size: 15px;
+  }
+
+  .stepGroupTop {
+    margin-top: 38px;
+  }
+  .block01 {
+    margin-left: 184px;
+  }
+  
+  .block01 .stepDescription {
+    width: 311px;
+    margin: 8px 0 45px 11px;
+  }
+  .block02 {
+    margin-left: 184px;
+  }
   .block02 .stepDescription {
-    margin: 20px 0 8px;
+    margin: 21px 0 7px;
+  }
+  .block03 .stepDescription {
+    width: 246px;
+    margin: 12px 0 12px 23px;
+  }
+  .block04 .stepDescription {
+    width: 256px;
+    margin: 7px 0 0 14px;
+  }
+  .block05 .stepDescription {
+    width: 290px;
+    margin: 16px 0 8px 20px;
+  }
+}
+
+
+/* БРЕЙКПОИНТ 1200px (Синхронизация шрифтов и 2 строки для 05 шага) */
+@media (max-width: 1200px) {
+  .section_header { padding-top: 49px; }
+  .section_header > .orangeLine:first-child { margin-left: 100px; }
+  .section_title { margin: 0 228px 0 200px; font-size: 25px; }
+  .orangeLine { width: 169px; }
+
+  .headingNumber { font-size: 50px; line-height: 61px; }
+  
+  /* ЕДИНЫЙ ШРИФТ ДЛЯ ВСЕХ ОПИСАНИЙ 01-05 */
+  .stepDescription { font-size: 15px !important; }
+
+  .stepGroupTop { margin-top: 38px; }
+  .block01 { margin-left: 184px; }
+  
+  .block01 .stepDescription { width: 311px; margin: 8px 0 45px 11px; }
+  .block02 { margin-left: 184px; }
+  .block02 .stepDescription { margin: 21px 0 7px; }
+  .block03 .stepDescription { width: 246px; margin: 12px 0 12px 23px; }
+  .block04 .stepDescription { width: 256px; margin: 7px 0 0 14px; }
+  
+  /* Идеальные две строки без уменьшения шрифта */
+  .block05 .stepDescription { width: 290px; margin: 16px 0 8px 20px; }
+}
+
+
+/* БРЕЙКПОИНТ 1200px */
+@media (max-width: 1200px) {
+  .section_header {
+    padding-top: 49px;
+  }
+  .section_header > .orangeLine:first-child {
+    margin-left: 100px;
+  }
+  .section_title {
+    margin: 0 228px 0 200px;
+    font-size: 25px;
+  }
+  .orangeLine {
+    width: 169px;
+  }
+
+  .headingNumber {
+    font-size: 50px;
+    line-height: 61px;
+  }
+  .stepDescription {
+    font-size: 15px;
+  }
+
+  .stepGroupTop {
+    margin-top: 38px;
+  }
+
+  .block01 {
+    margin-left: 184px;
+  }
+  .block01 .stepDescription {
+    width: 311px;
+    margin: 8px 0 45px 11px;
+    font-size: 15px;
+  }
+
+  .block02 {
+    margin-left: 184px;
+  }
+  .block02 .stepDescription {
+    margin: 21px 0 7px;
+    font-size: 15px;
   }
 
   .block03 .stepDescription {
-    width: 260px;
-    margin: 14px 0 15px 20px;
+    width: 246px;
+    margin: 12px 0 12px 23px;
+    font-size: 15px;
   }
 
   .block04 .stepDescription {
-    width: 270px;
-    margin: 8px 0 0 15px;
+    width: 256px;
+    margin: 7px 0 0 14px;
+    font-size: 15px;
   }
 
-  .block05 {
-    margin: 30px auto;
-  }
-  .block05 .stepDescription {
-    width: 260px;
-    margin: 15px 0 10px 20px;
+    .block05 .stepDescription {
+    width: 290px; /* Расширяем коробку, чтобы вернуть текст в две строки */
+    margin: 16px 0 8px 20px;
+    font-size: 15px;
   }
 }
+
+
+
+
 
 .how_we_work ~ * {
   display: none !important;
