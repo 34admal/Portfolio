@@ -1,4 +1,3 @@
-
 /* img {
   margin-top: 14.63px;
 } */
@@ -12,7 +11,6 @@ p {
 .header__number {
   margin-left: 320px;
 }
-
 
 .how_we_work {
   display: flex;
@@ -45,9 +43,8 @@ p {
 }
 
 .stepGroupTop {
-      margin-top: 45px;
+  margin-top: 45px;
   display: flex;
- 
 }
 
 .block01 {
@@ -75,11 +72,9 @@ p {
 }
 .block02 {
   display: flex;
-    justify-content: flex-start;
+  justify-content: flex-start;
   flex: 1;
   margin-left: 221px;
-
-  
 }
 .block04 {
   display: flex;
@@ -118,7 +113,7 @@ p {
 .block04 .stepDescription {
   display: inline-block;
   width: 307px;
-  
+
   margin: 8px 0 0 17px;
   word-break: break-word;
   font-family: Montserrat;
@@ -137,7 +132,7 @@ p {
 
   justify-content: center;
   margin-top: 38px;
-    margin-bottom: 50px;
+  margin-bottom: 50px;
   margin: 0 auto;
 }
 .block05 .stepDescription {
@@ -174,7 +169,6 @@ p {
 
 /* ------------------------RESPONCE---------------------------  */
 
-
 @media (max-width: 1366px) {
   .section_header {
     padding-top: 56px;
@@ -193,7 +187,7 @@ p {
     font-size: 57px;
     line-height: 69px;
   }
-  
+
   .how_we_work .stepDescription {
     font-size: 17px;
   }
@@ -204,7 +198,7 @@ p {
   .block01 {
     margin-left: 209px;
   }
-  
+
   .block01 .stepDescription {
     width: 354px;
     margin: 9px 0 51px 12px;
@@ -228,88 +222,6 @@ p {
     margin: 9px 0 9px 23px;
   }
 }
-
-@media (max-width: 1200px) {
-  .section_header {
-    padding-top: 49px;
-  }
-  .section_header > .orangeLine:first-child {
-    margin-left: 100px;
-  }
-  .section_title {
-    margin: 0 228px 0 200px;
-    font-size: 25px;
-  }
-  .orangeLine {
-    width: 169px;
-  }
-
-  .headingNumber {
-    font-size: 50px;
-    line-height: 61px;
-  }
-  
-  .how_we_work .stepDescription {
-    font-size: 15px;
-  }
-
-  .stepGroupTop {
-    margin-top: 38px;
-  }
-  .block01 {
-    margin-left: 184px;
-  }
-  
-  .block01 .stepDescription {
-    width: 311px;
-    margin: 8px 0 45px 11px;
-  }
-  .block02 {
-    margin-left: 184px;
-  }
-  .block02 .stepDescription {
-    margin: 21px 0 7px;
-  }
-  .block03 .stepDescription {
-    width: 246px;
-    margin: 12px 0 12px 23px;
-  }
-  .block04 .stepDescription {
-    width: 256px;
-    margin: 7px 0 0 14px;
-  }
-  .block05 .stepDescription {
-    width: 290px;
-    margin: 16px 0 8px 20px;
-  }
-}
-
-
-/* БРЕЙКПОИНТ 1200px (Синхронизация шрифтов и 2 строки для 05 шага) */
-@media (max-width: 1200px) {
-  .section_header { padding-top: 49px; }
-  .section_header > .orangeLine:first-child { margin-left: 100px; }
-  .section_title { margin: 0 228px 0 200px; font-size: 25px; }
-  .orangeLine { width: 169px; }
-
-  .headingNumber { font-size: 50px; line-height: 61px; }
-  
-  /* ЕДИНЫЙ ШРИФТ ДЛЯ ВСЕХ ОПИСАНИЙ 01-05 */
-  .stepDescription { font-size: 15px !important; }
-
-  .stepGroupTop { margin-top: 38px; }
-  .block01 { margin-left: 184px; }
-  
-  .block01 .stepDescription { width: 311px; margin: 8px 0 45px 11px; }
-  .block02 { margin-left: 184px; }
-  .block02 .stepDescription { margin: 21px 0 7px; }
-  .block03 .stepDescription { width: 246px; margin: 12px 0 12px 23px; }
-  .block04 .stepDescription { width: 256px; margin: 7px 0 0 14px; }
-  
-  /* Идеальные две строки без уменьшения шрифта */
-  .block05 .stepDescription { width: 290px; margin: 16px 0 8px 20px; }
-}
-
 
 /* БРЕЙКПОИНТ 1200px */
 @media (max-width: 1200px) {
@@ -368,18 +280,74 @@ p {
     font-size: 15px;
   }
 
-    .block05 .stepDescription {
-    width: 290px; /* Расширяем коробку, чтобы вернуть текст в две строки */
+  .block05 .stepDescription {
+    width: 290px;
     margin: 16px 0 8px 20px;
     font-size: 15px;
   }
 }
+/* --1024------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .section_header {
+    padding-top: 42px;
+  }
+  .section_header > .orangeLine:first-child {
+    margin-left: 85px;
+  }
+  .section_title {
+    margin: 0 194px 0 170px;
+    font-size: 21px;
+  }
+  .orangeLine {
+    width: 144px;
+  }
 
+  .headingNumber {
+    font-size: 42px;
+    line-height: 52px;
+  }
 
+  .how_we_work .stepDescription {
+    font-size: 13px;
+  }
 
+  .stepGroupTop {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+  }
 
+  .block01 {
+    margin-left: 157px;
+  }
+  .block01 .stepDescription {
+    width: 265px;
+    margin: 6px 0 38px 9px;
+  }
+
+  .block02 {
+    margin-left: 157px;
+  }
+  .block02 .stepDescription {
+    margin: 18px 0 6px;
+  }
+
+  .block03 .stepDescription {
+    width: 210px;
+    margin: 10px 0 11px 19px;
+  }
+
+  .block04 .stepDescription {
+    width: 218px;
+    margin: 6px 0 0 12px;
+  }
+
+  .block05 .stepDescription {
+    width: 240px;
+    margin: 14px 0 7px 17px;
+  }
+}
 
 .how_we_work ~ * {
   display: none !important;
 }
-
