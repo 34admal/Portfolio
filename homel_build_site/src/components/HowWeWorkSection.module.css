@@ -223,7 +223,7 @@ p {
   }
 }
 
-/* БРЕЙКПОИНТ 1200px */
+
 @media (max-width: 1200px) {
   .section_header {
     padding-top: 49px;
