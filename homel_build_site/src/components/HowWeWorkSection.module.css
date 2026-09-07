@@ -288,6 +288,19 @@ p {
 }
 /* --1024------------------------------------------------------- */
 @media (max-width: 1024px) {
+  /* ЖЕСТКО УЖИМАЕМ КОНТЕЙНЕР И КАРТИНКУ ФОНА */
+  .how_we_work {
+    flex-wrap: nowrap;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    
+    /* Уменьшаем фоновый рисунок до физических 1024px ширины экрана */
+    background-size: 1024px auto;
+    background-position: center top;
+  }
+
   .section_header {
     padding-top: 42px;
   }
@@ -306,7 +319,6 @@ p {
     font-size: 42px;
     line-height: 52px;
   }
-
   .how_we_work .stepDescription {
     font-size: 13px;
   }
@@ -315,10 +327,12 @@ p {
     margin-top: 32px;
     display: flex;
     flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .block01 {
-    margin-left: 157px;
+    margin-left: 120px; 
   }
   .block01 .stepDescription {
     width: 265px;
@@ -326,7 +340,7 @@ p {
   }
 
   .block02 {
-    margin-left: 157px;
+    margin-left: 120px;
   }
   .block02 .stepDescription {
     margin: 18px 0 6px;
@@ -347,6 +361,7 @@ p {
     margin: 14px 0 7px 17px;
   }
 }
+
 
 .how_we_work ~ * {
   display: none !important;
