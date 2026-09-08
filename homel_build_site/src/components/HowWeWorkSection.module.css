@@ -288,7 +288,7 @@ p {
 }
 /* --1024------------------------------------------------------- */
 @media (max-width: 1024px) {
-  /* ЖЕСТКО УЖИМАЕМ КОНТЕЙНЕР И КАРТИНКУ ФОНА */
+  
   .how_we_work {
     flex-wrap: nowrap;
     width: 100vw;
@@ -296,7 +296,7 @@ p {
     overflow-x: hidden;
     box-sizing: border-box;
     
-    /* Уменьшаем фоновый рисунок до физических 1024px ширины экрана */
+    
     background-size: 1024px auto;
     background-position: center top;
   }
@@ -361,6 +361,101 @@ p {
     margin: 14px 0 7px 17px;
   }
 }
+
+
+@media (max-width: 768px) {
+  .how_we_work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .stepGroupTop {
+    display: contents;
+  }
+
+  .section_header {
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    order: 1; 
+  }
+  .section_header > .orangeLine:first-child {
+    margin-left: 0;
+  }
+  .section_title {
+    margin: 0 25px;
+    font-size: 18px;
+  }
+  .orangeLine {
+    width: 60px;
+    height: 2px;
+  }
+
+ 
+  .block01 { order: 2; margin-top: 25px; }
+  .block02 { order: 3; margin-top: 20px; }
+  .block03 { order: 4; margin-top: 20px; }
+  .block04 { order: 5; margin-top: 20px; }
+  .block05 { order: 6; margin-top: 20px; padding-bottom: 40px; }
+
+
+  .stepBlock, .block01, .block02, .block03, .block04, .block05 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+
+  
+  .headingNumber {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 12px 0 0;
+    flex-shrink: 0;
+  }
+  
+ 
+  .how_we_work .stepDescription {
+    font-size: 13px;
+    width: 100%;
+    max-width: 230px;
+    margin: 3px 0 0 0;
+    text-align: left;
+  }
+
+  
+  .block01 .stepDescription,
+  .block02 .stepDescription,
+  .block03 .stepDescription,
+  .block04 .stepDescription,
+  .block05 .stepDescription {
+    width: 100%;
+    max-width: 230px;
+    margin: 5px 0 0 0;
+  }
+}
+
+
+
+
 
 
 .how_we_work ~ * {
