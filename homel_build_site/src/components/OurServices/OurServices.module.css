@@ -241,7 +241,113 @@
   left: 11.7px; 
   z-index: 5;
   
-  /* СТРОГО ДОБАВЛЯЕМ ЭТИ ДВЕ СТРОКИ: */
-  image-rendering: -webkit-optimize-contrast; /* Отключает замыливание и смешивание цветов */
+ 
+  image-rendering: -webkit-optimize-contrast; 
   transform: translateZ(0); 
 }
+
+/* ==========================================================================
+   АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1366px ==== */
+@media (max-width: 1366px) {
+  .services .services__title {
+    font-size: 28.5px;
+    transform: translateX(35.6px);
+  }
+
+  .services .services__line {
+    width: 284.6px;
+    height: 2.8px;
+    margin-top: 16.6px;
+    transform: translateX(35.6px);
+  }
+
+  .services .services__board {
+    margin-top: 68.3px;
+    gap: 28.5px;
+  }
+
+  .services .services__tabs {
+    width: 366.2px;
+  }
+
+  .services .tabCard {
+    width: 366.2px;
+    height: 167.9px;
+    font-size: 17.1px;
+  }
+
+  .services .tabCard:nth-child(1) {
+    margin-bottom: 14.2px;
+  }
+
+  .services .tabCard:nth-child(2) {
+    margin-bottom: 13.3px;
+  }
+
+  .services .tabCard:nth-child(3) {
+    margin-bottom: 15.2px;
+  }
+
+  .services .services__contentBox {
+    width: 559.7px;
+    height: 714.3px;
+    padding-top: 40.8px;
+    padding-bottom: 37.9px;
+    box-shadow: inset 0 0 0 3.8px #f17d11;
+  }
+
+  .services .infoTitle {
+    width: 430.7px;
+    font-size: 22.8px;
+    line-height: 27.5px;
+    letter-spacing: 1.1px;
+  }
+
+  .services .infoList {
+    max-width: 430.7px;
+    height: 513.2px;
+    margin-top: 45.5px;
+  }
+
+  .services .infoItem {
+    font-size: 17.1px;
+    line-height: 20.9px;
+    letter-spacing: 0.9px;
+    margin-bottom: 14.2px;
+  }
+
+  .services .tabIcon {
+    left: 11.1px;
+  }
+
+  
+  .services .tabCard:nth-child(1) .tabIcon {
+    width: 20.9px;
+    height: 20.9px;
+    bottom: 11.3px;
+  }
+
+  .services .tabCard:nth-child(2) .tabIcon {
+    width: 20.9px;
+    height: 20.9px;
+    bottom: 14.3px;
+  }
+
+  .services .tabCard:nth-child(3) .tabIcon {
+    width: 21.5px;
+    height: 33.4px;
+    bottom: 13.9px;
+  }
+
+  .services .tabCard:nth-child(4) .tabIcon {
+    left: 11.2px;
+    width: 21.0px;
+    height: 31.4px;
+    bottom: 15.3px;
+  }
+}
+
+:global(#services) ~ * {
+  display: none !important;
+}
+

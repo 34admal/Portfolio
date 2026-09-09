@@ -548,6 +548,6 @@ p {
 
 
 
-.how_we_work ~ * {
+/* .how_we_work ~ * {
   display: none !important;
-}
+} */
