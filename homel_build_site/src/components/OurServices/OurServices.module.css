@@ -73,7 +73,7 @@
   width: 386px;  
   height: 177px; 
   box-sizing: border-box;
-  /* border: 4px solid rgba(241, 125, 17, 1); */
+  
  
   
   display: flex;
@@ -89,12 +89,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; /* Чтобы внутри можно было делать эффекты */
+  position: relative;
 }
 
-/* 1. Картинка для первой плашки — Отделочные работы */
+
 .tabCard:nth-child(1) {
-  /* Темное наложение + твоя локальная картинка */
+  
   background-image:  
                     url('./image_OurServices/otdelka.png');
 }
@@ -233,7 +233,7 @@
   bottom: 16.1px;
 }
 .tabCard.active {
-  color: #f17d11; /* Тот самый макетный оранжевый цвет */
+  color: #f17d11; 
 }
 
 .tabIcon {
@@ -347,7 +347,106 @@
   }
 }
 
-:global(#services) ~ * {
-  display: none !important;
+
+@media (max-width: 1200px) {
+  .services {
+    width: 100%;
+    padding-top: 83.3px;
+    padding-bottom: 83.3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services .services__title {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    align-self: center;
+    transform: translateX(0);
+  }
+
+  .services .services__line {
+    width: 250px;
+    height: 2.5px;
+    margin-top: 14.6px;
+    align-self: center;
+    transform: translateX(0);
+  }
+
+  .services .services__board {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: flex-start;
+    margin-top: 60px;
+    gap: 25px;
+    width: 100%;         
+    max-width: 1200px;
+    box-sizing: border-box;
+  }
+
+  .services .services__tabs {
+    width: 321.6px;
+    flex-shrink: 0;
+  }
+
+  .services .tabCard {
+    width: 321.6px;
+    height: 147.5px;
+    font-size: 15px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .services .tabCard:nth-child(1) { margin-bottom: 12.5px; }
+  .services .tabCard:nth-child(2) { margin-bottom: 11.7px; }
+  .services .tabCard:nth-child(3) { margin-bottom: 13.3px; }
+
+  .services .services__contentBox {
+    width: 491.6px;
+    height: 627.5px;
+    padding-top: 35.8px;
+    padding-bottom: 33.3px;
+    box-shadow: inset 0 0 0 3.3px #f17d11;
+    background-size: contain;
+    background-position: right bottom;
+    flex-shrink: 0;
+  }
+
+  .services .infoTitle {
+    width: 378.3px;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 1px;
+  }
+
+  .services .infoList {
+    max-width: 378.3px;
+    height: 450.8px;
+    margin-top: 40px;
+  }
+
+  .services .infoItem {
+    font-size: 15px;
+    line-height: 18.3px;
+    letter-spacing: 0.8px;
+    margin-bottom: 12.5px;
+  }
+
+  .services .tabIcon {
+    left: 9.7px;
+  }
+
+  
+  .services .tabCard:nth-child(1) .tabIcon { width: 18.3px; height: 18.3px; bottom: 9.9px; }
+  .services .tabCard:nth-child(2) .tabIcon { width: 18.3px; height: 18.3px; bottom: 12.6px; }
+  .services .tabCard:nth-child(3) .tabIcon { width: 18.9px; height: 29.3px; bottom: 12.2px; }
+  .services .tabCard:nth-child(4) .tabIcon { left: 9.8px; width: 18.4px; height: 27.6px; bottom: 13.4px; }
 }
+
+/* :global(body) {
+  overflow-x: hidden;
+} */
 
