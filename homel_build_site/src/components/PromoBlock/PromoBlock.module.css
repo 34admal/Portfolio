@@ -47,3 +47,40 @@
  
   margin-top: 51px;
 }
+
+
+/* =============1366px============================================== */
+
+@media (max-width: 1366px) {
+  .promo {
+    width: 100%;
+    padding-left: 113px;
+    padding-right: 117px;
+    box-sizing: border-box;
+  }
+
+  .promo .promo__container {
+    width: 100%;
+    max-width: 1134px;
+    box-sizing: border-box;
+  }
+
+  .promo .promo__text {
+    font-size: 18px; 
+    line-height: 23px;
+    letter-spacing: 0.9px;
+  }
+
+  .promo .promo__accent {
+    font-size: 24px; 
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    margin-top: 40px;
+  }
+}
+
+
+
+:global([class*="PromoBlock_promo"]) ~ * {
+  display: none !important;
+}

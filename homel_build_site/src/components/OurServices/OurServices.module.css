@@ -873,7 +873,5 @@
   }
 }
 
-:global(#services) ~ * {
-  display: none;
-}
+
 
