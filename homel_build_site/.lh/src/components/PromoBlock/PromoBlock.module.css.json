@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 34,
+            "activePatchIndex": 40,
             "patches": [
                 {
                     "date": 1780409462184,
@@ -144,6 +144,30 @@
                 {
                     "date": 1789201827776,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n     box-sizing: border-box;\r\n   }\r\n \r\n   .promo .promo__text {\r\n-    font-size: 18px; /* Уменьшили до аккуратного читаемого размера */\r\n+    font-size: 18px; \r\n     line-height: 23px;\r\n     letter-spacing: 0.9px;\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1789202226014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,7 +80,9 @@\n }\r\n \r\n \r\n \r\n+\r\n+\r\n :global([class*=\"PromoBlock_promo\"]) ~ * {\r\n   display: none !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1789202240357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,11 +78,43 @@\n     margin-top: 40px;\r\n   }\r\n }\r\n \r\n+/* ==========================================================================\r\n+   АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1200px ==== */\r\n+@media (max-width: 1200px) {\r\n+  .services {\r\n+    display: none;\r\n+  }\r\n+  .promo {\r\n+    width: 100%;\r\n+    padding-left: 99px;\r\n+    padding-right: 103px;\r\n+    box-sizing: border-box;\r\n+  }\r\n \r\n+  .promo .promo__container {\r\n+    width: 100%;\r\n+    max-width: 996px;\r\n+    box-sizing: border-box;\r\n+  }\r\n \r\n+  .promo .promo__text {\r\n+    font-size: 16px;\r\n+    line-height: 21px;\r\n+    letter-spacing: 0.9px;\r\n+  }\r\n \r\n+  .promo .promo__accent {\r\n+    font-size: 22px;\r\n+    line-height: 28px;\r\n+    letter-spacing: 1.2px;\r\n+    margin-top: 38px;\r\n+  }\r\n+}\r\n \r\n+\r\n+\r\n+\r\n :global([class*=\"PromoBlock_promo\"]) ~ * {\r\n   display: none !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1789202247618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,10 +78,9 @@\n     margin-top: 40px;\r\n   }\r\n }\r\n \r\n-/* ==========================================================================\r\n-   АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1200px ==== */\r\n+/* =========1200px ==== */\r\n @media (max-width: 1200px) {\r\n   .services {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1789202254118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,9 +78,9 @@\n     margin-top: 40px;\r\n   }\r\n }\r\n \r\n-/* =========1200px ==== */\r\n+/* =========1200px =========== */\r\n @media (max-width: 1200px) {\r\n   .services {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1789202260711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,9 +78,9 @@\n     margin-top: 40px;\r\n   }\r\n }\r\n \r\n-/* =========1200px =========== */\r\n+/* =======================1200px ================== */\r\n @media (max-width: 1200px) {\r\n   .services {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1789202674527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,13 +78,10 @@\n     margin-top: 40px;\r\n   }\r\n }\r\n \r\n-/* =======================1200px ================== */\r\n+/* =====================================1200px ================== */\r\n @media (max-width: 1200px) {\r\n-  .services {\r\n-    display: none;\r\n-  }\r\n   .promo {\r\n     width: 100%;\r\n     padding-left: 99px;\r\n     padding-right: 103px;\r\n"
                 }
             ],
             "date": 1780409462184,
