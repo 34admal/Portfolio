@@ -3,27 +3,25 @@
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  
 
   padding-left: 120px;
   padding-right: 124.17px;
 }
 
 .promo__container {
-  width: 100%;              
-  max-width: 1196px;       
-  
+  width: 100%;
+  max-width: 1196px;
+
   box-sizing: border-box;
-  
+
   display: flex;
   flex-direction: column;
-  align-items: center;     
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .promo__text {
-  
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
@@ -33,21 +31,19 @@
 }
 
 .promo__accent {
-  display: block;          
+  display: block;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 37px;
-  letter-spacing: 1.5px; 
+  letter-spacing: 1.5px;
   color: rgba(255, 122, 0, 1);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(255, 122, 0, 1);
-  text-align: center;      
-  
- 
+  text-align: center;
+
   margin-top: 51px;
 }
-
 
 /* =============1366px============================================== */
 
@@ -66,13 +62,13 @@
   }
 
   .promo .promo__text {
-    font-size: 18px; 
+    font-size: 18px;
     line-height: 23px;
     letter-spacing: 0.9px;
   }
 
   .promo .promo__accent {
-    font-size: 24px; 
+    font-size: 24px;
     line-height: 30px;
     letter-spacing: 1.2px;
     margin-top: 40px;
@@ -108,9 +104,126 @@
   }
 }
 
+/* =======================1024px========================================== */
+@media (max-width: 1024px) {
+  .promo {
+    width: 100%;
+    padding-left: 85.3px;
+    padding-right: 88.3px;
+    box-sizing: border-box;
+  }
 
+  .promo .promo__container {
+    width: 100%;
+    max-width: 850px;
+    box-sizing: border-box;
+  }
 
+  .promo .promo__text {
+    font-size: 15.5px;
+    line-height: 19.2px;
+    letter-spacing: 0.8px;
+  }
 
-:global([class*="PromoBlock_promo"]) ~ * {
-  display: none !important;
+  .promo .promo__accent {
+    font-size: 21px;
+    line-height: 26.3px;
+    letter-spacing: 1.1px;
+    margin-top: 36.2px;
+  }
 }
+
+/*==========================1000px================================================ */
+@media (max-width: 1000px) {
+  .promo {
+    width: 100%;
+    padding-left: 83.3px;
+    padding-right: 86.2px;
+    box-sizing: border-box;
+  }
+
+  .promo .promo__container {
+    width: 100%;
+    max-width: 830px;
+    box-sizing: border-box;
+  }
+
+  .promo .promo__text {
+    font-size: 15px;
+    line-height: 18.7px;
+    letter-spacing: 0.7px;
+  }
+
+  .promo .promo__accent {
+    font-size: 20.5px;
+    line-height: 25.6px;
+    letter-spacing: 1px;
+    margin-top: 35.4px;
+  }
+}
+
+/* =========768===================== */
+@media (max-width: 768px) {
+  .promo {
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 66.2px;
+    box-sizing: border-box;
+  }
+
+  .promo .promo__container {
+    width: 100%;
+    max-width: 637px;
+    box-sizing: border-box;
+  }
+
+  .promo .promo__text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.7px;
+  }
+
+  .promo .promo__accent {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    margin-top: 27.2px;
+  }
+}
+
+/* =================480===================================== */
+
+@media (max-width: 480px) {
+  .promo {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+
+  .promo .promo__container {
+    width: 290px;
+    max-width: 290px;
+    box-sizing: border-box;
+  }
+
+  .promo .promo__text {
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  .promo .promo__accent {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    margin-top: 20px;
+  }
+}
+
+/* :global([class*="PromoBlock_promo"]) ~ * {
+  display: none !important;
+} */
