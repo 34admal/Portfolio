@@ -1,7 +1,7 @@
 
 .feedback {
   width: 100%;
- width: 100%;
+
   box-sizing: border-box;
   margin-top: 110px;
   display: flex;
@@ -30,3 +30,63 @@
    flex-shrink: 0;      
   align-self: flex-end;
 }
+
+/* =====================1366px============================================ */
+@media (max-width: 1366px) {
+  .feedback {
+    margin-top: 104.3px;
+  }
+
+  .feedback .feedback__container {
+    max-width: 1366px;
+    height: 572.2px;
+  }
+
+  .feedback .people {
+    margin-left: 41.7px;
+  }
+}
+
+/* ======1200px=========================================== */
+@media (max-width: 1200px) {
+  .feedback {
+    margin-top: 91.6px;
+    width: 100%;
+  }
+
+  .feedback .feedback__container {
+    max-width: 1200px;
+    width: 100%;
+    height: 502.7px;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding: 0 40px;
+    overflow: hidden; /* Железно отсекаем внутренние вылеты элементов формы */
+  }
+
+  /* Пропорционально сжимаем обертку формы на коэффициент K = 0.8333 */
+  .feedback .feedback__container > div:first-child,
+  .feedback .feedback__container > form {
+    transform: scale(0.8333);
+    transform-origin: center center;
+    /* Компенсируем масштабирование, чтобы пустые пиксели не раздували контейнер */
+    margin: 0 -30px 10px -30px; 
+    align-self: center;
+    flex-shrink: 0;
+  }
+
+  .feedback .people {
+    max-height: 480px;
+    width: auto;
+    margin-left: 10px;
+    align-self: flex-end;
+    flex-shrink: 0;
+  }
+}
+
+
+

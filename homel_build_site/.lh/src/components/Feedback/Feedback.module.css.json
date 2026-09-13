@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 44,
+            "activePatchIndex": 69,
             "patches": [
                 {
                     "date": 1780489727071,
@@ -184,6 +184,106 @@
                 {
                     "date": 1780990161060,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+\r\n+.feedback {\r\n+  width: 100%;\r\n+ width: 100%;\r\n+  box-sizing: border-box;\r\n+  margin-top: 110px;\r\n+  display: flex;\r\n+  justify-content: center;\r\n+}\r\n+\r\n+\r\n+.feedback__container {\r\n+  width: 100%;\r\n+  max-width: 1440px;        \r\n+  height: 603.3px; \r\n+  box-sizing: border-box;\r\n+  \r\n+  background-image: url('./images/feedback-bg.png');\r\n+  background-size: cover;\r\n+  background-position: center;\r\n+  background-repeat: no-repeat;\r\n+  \r\n+  display: flex;\r\n+  align-items: flex-start; \r\n+  overflow: visible;      \r\n+}\r\n+\r\n+.people {\r\n+  margin-left: 44px;\r\n+   flex-shrink: 0;      \r\n+  align-self: flex-end;\r\n+}\r\n"
+                },
+                {
+                    "date": 1789305058524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,94 +30,4 @@\n    flex-shrink: 0;      \r\n   align-self: flex-end;\r\n }\r\n \r\n-.feedback {\r\n-  width: 100%;\r\n- width: 100%;\r\n-  box-sizing: border-box;\r\n-  margin-top: 110px; /* Увеличили отступ, чтобы между кепкой и текстом получились те самые чистые 43px */\r\n-  display: flex;\r\n-  justify-content: center;\r\n-}\r\n-\r\n-\r\n-.feedback__container {\r\n-  width: 100%;\r\n-  max-width: 1440px;        \r\n-  height: 603.3px; \r\n-  box-sizing: border-box;\r\n-  \r\n-  background-image: url('./images/feedback-bg.png');\r\n-  background-size: cover;\r\n-  background-position: center;\r\n-  background-repeat: no-repeat;\r\n-  \r\n-  display: flex;\r\n-  align-items: flex-start; \r\n-  overflow: visible;      \r\n-}\r\n-\r\n-.people {\r\n-  margin-left: 44px;\r\n-   flex-shrink: 0;      \r\n-  align-self: flex-end;\r\n-}\r\n-\r\n-.feedback {\r\n-  width: 100%;\r\n-  box-sizing: border-box;\r\n-  margin-top: 43px;\r\n-  display: flex;\r\n-  justify-content: center;\r\n-}\r\n-\r\n-\r\n-.feedback__container {\r\n-  width: 100%;\r\n-  max-width: 1440px;        \r\n-  height: 603.3px; \r\n-  box-sizing: border-box;\r\n-  \r\n-  background-image: url('./images/feedback-bg.png');\r\n-  background-size: cover;\r\n-  background-position: center;\r\n-  background-repeat: no-repeat;\r\n-  \r\n-  display: flex;\r\n-  align-items: flex-start; \r\n-  overflow: visible;      \r\n-}\r\n-\r\n-.people {\r\n-  margin-left: 44px;\r\n-  \r\n-}\r\n-\r\n-.feedback {\r\n-  width: 100%;\r\n-  box-sizing: border-box;\r\n-  margin-top: 43px;\r\n-  display: flex;\r\n-  justify-content: center;\r\n-}\r\n-\r\n-\r\n-.feedback__container {\r\n-  width: 100%;\r\n-  max-width: 1440px;        \r\n-  height: 603.3px; \r\n-  box-sizing: border-box;\r\n-  \r\n-  background-image: url('./images/feedback-bg.png');\r\n-  background-size: cover;\r\n-  background-position: center;\r\n-  background-repeat: no-repeat;\r\n-  \r\n-  display: flex;\r\n-  align-items: flex-start; \r\n-  overflow: visible;       торчать наружу */\r\n-}\r\n-\r\n-.people {\r\n-  margin-left: 44px;\r\n-}\r\n"
+                },
+                {
+                    "date": 1789305065228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,4 +30,38 @@\n    flex-shrink: 0;      \r\n   align-self: flex-end;\r\n }\r\n \r\n+/* ==========================================================================\r\n+   АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1366px (Коэффициент K = 0.9486)\r\n+   ========================================================================== */\r\n+@media (max-width: 1366px) {\r\n+  .feedback {\r\n+    margin-top: 104.3px;\r\n+  }\r\n+\r\n+  .feedback .feedback__container {\r\n+    max-width: 1366px;\r\n+    height: 572.2px;\r\n+  }\r\n+\r\n+  .feedback .people {\r\n+    margin-left: 41.7px;\r\n+  }\r\n+}\r\n+/* ==========================================================================\r\n+   АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1366px (Коэффициент K = 0.9486)\r\n+   ========================================================================== */\r\n+@media (max-width: 1366px) {\r\n+  .feedback {\r\n+    margin-top: 104.3px;\r\n+  }\r\n+\r\n+  .feedback .feedback__container {\r\n+    max-width: 1366px;\r\n+    height: 572.2px;\r\n+  }\r\n+\r\n+  .feedback .people {\r\n+    margin-left: 41.7px;\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1789305079451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,4 +64,6 @@\n   .feedback .people {\r\n     margin-left: 41.7px;\r\n   }\r\n }\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1789305100878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,9 @@\n   .feedback .people {\r\n     margin-left: 41.7px;\r\n   }\r\n }\r\n-/* ==========================================================================\r\n-   АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1366px (Коэффициент K = 0.9486)\r\n+/* ======1366px (Коэффициент K = 0.9486)\r\n    ========================================================================== */\r\n @media (max-width: 1366px) {\r\n   .feedback {\r\n     margin-top: 104.3px;\r\n"
+                },
+                {
+                    "date": 1789305106949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,9 @@\n   .feedback .people {\r\n     margin-left: 41.7px;\r\n   }\r\n }\r\n-/* ======1366px (Коэффициент K = 0.9486)\r\n-   ========================================================================== */\r\n+/* ======1366px============================================ */\r\n @media (max-width: 1366px) {\r\n   .feedback {\r\n     margin-top: 104.3px;\r\n   }\r\n"
+                },
+                {
+                    "date": 1789305187121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,4 +64,6 @@\n   }\r\n }\r\n \r\n \r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1789305474911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,7 +63,9 @@\n     margin-left: 41.7px;\r\n   }\r\n }\r\n \r\n+:global(body) {\r\n+  overflow-x: hidden;\r\n+}\r\n \r\n \r\n-\r\n"
+                },
+                {
+                    "date": 1789305563272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n     margin-left: 41.7px;\r\n   }\r\n }\r\n \r\n-:global(body) {\r\n+/* :global(body) {\r\n   overflow-x: hidden;\r\n-}\r\n+} */\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1789305599380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,24 +47,10 @@\n   .feedback .people {\r\n     margin-left: 41.7px;\r\n   }\r\n }\r\n-/* ======1366px============================================ */\r\n-@media (max-width: 1366px) {\r\n-  .feedback {\r\n-    margin-top: 104.3px;\r\n-  }\r\n \r\n-  .feedback .feedback__container {\r\n-    max-width: 1366px;\r\n-    height: 572.2px;\r\n-  }\r\n \r\n-  .feedback .people {\r\n-    margin-left: 41.7px;\r\n-  }\r\n-}\r\n-\r\n /* :global(body) {\r\n   overflow-x: hidden;\r\n } */\r\n \r\n"
+                },
+                {
+                    "date": 1789305612660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,9 @@\n   align-self: flex-end;\r\n }\r\n \r\n /* ==========================================================================\r\n-   АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1366px (Коэффициент K = 0.9486)\r\n-   ========================================================================== */\r\n+   АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1366px============================================ */\r\n @media (max-width: 1366px) {\r\n   .feedback {\r\n     margin-top: 104.3px;\r\n   }\r\n@@ -49,9 +48,9 @@\n   }\r\n }\r\n \r\n \r\n-/* :global(body) {\r\n+:global(body) {\r\n   overflow-x: hidden;\r\n-} */\r\n+}\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1789305618331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,9 @@\n    flex-shrink: 0;      \r\n   align-self: flex-end;\r\n }\r\n \r\n-/* ==========================================================================\r\n-   АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1366px============================================ */\r\n+/* =====1366px============================================ */\r\n @media (max-width: 1366px) {\r\n   .feedback {\r\n     margin-top: 104.3px;\r\n   }\r\n"
+                },
+                {
+                    "date": 1789305647459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n .feedback {\r\n   width: 100%;\r\n- width: 100%;\r\n+\r\n   box-sizing: border-box;\r\n   margin-top: 110px;\r\n   display: flex;\r\n   justify-content: center;\r\n@@ -30,9 +30,9 @@\n    flex-shrink: 0;      \r\n   align-self: flex-end;\r\n }\r\n \r\n-/* =====1366px============================================ */\r\n+/* =====================1366px============================================ */\r\n @media (max-width: 1366px) {\r\n   .feedback {\r\n     margin-top: 104.3px;\r\n   }\r\n"
+                },
+                {
+                    "date": 1789306026399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,10 @@\n   }\r\n }\r\n \r\n \r\n+\r\n+\r\n :global(body) {\r\n   overflow-x: hidden;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1789306040856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,11 +46,28 @@\n     margin-left: 41.7px;\r\n   }\r\n }\r\n \r\n+/* ======1200px (Коэффициент K = 0.8333)\r\n+   ========================================================================== */\r\n+@media (max-width: 1200px) {\r\n+  .feedback {\r\n+    margin-top: 91.6px;\r\n+    width: 100%;\r\n+  }\r\n \r\n+  .feedback .feedback__container {\r\n+    max-width: 1200px;\r\n+    width: 100%;\r\n+    height: 502.7px;\r\n+  }\r\n \r\n+  .feedback .people {\r\n+    margin-left: 36.6px;\r\n+  }\r\n+}\r\n \r\n+\r\n :global(body) {\r\n   overflow-x: hidden;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1789306046553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,9 @@\n     margin-left: 41.7px;\r\n   }\r\n }\r\n \r\n-/* ======1200px (Коэффициент K = 0.8333)\r\n-   ========================================================================== */\r\n+/* ======1200px============================================================= */\r\n @media (max-width: 1200px) {\r\n   .feedback {\r\n     margin-top: 91.6px;\r\n     width: 100%;\r\n"
+                },
+                {
+                    "date": 1789306211606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n     margin-left: 41.7px;\r\n   }\r\n }\r\n \r\n-/* ======1200px============================================================= */\r\n+/* ======1200px=========================================== */\r\n @media (max-width: 1200px) {\r\n   .feedback {\r\n     margin-top: 91.6px;\r\n     width: 100%;\r\n@@ -57,12 +57,23 @@\n   .feedback .feedback__container {\r\n     max-width: 1200px;\r\n     width: 100%;\r\n     height: 502.7px;\r\n+    /* Центрируем содержимое по вертикали, чтобы форма не падала вниз */\r\n+    align-items: center; \r\n   }\r\n \r\n+  /* Находим дочерний компонент формы внутри контейнера и подтягиваем его вверх, если есть маргины */\r\n+  .feedback .feedback__container > form,\r\n+  .feedback .feedback__container > div:first-child {\r\n+    margin-top: 0;\r\n+    align-self: center;\r\n+  }\r\n+\r\n   .feedback .people {\r\n     margin-left: 36.6px;\r\n+    /* Оставляем людей прижатыми к нижнему краю кирпичной стены */\r\n+    align-self: flex-end; \r\n   }\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1789306334315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,23 +57,22 @@\n   .feedback .feedback__container {\r\n     max-width: 1200px;\r\n     width: 100%;\r\n     height: 502.7px;\r\n-    /* Центрируем содержимое по вертикали, чтобы форма не падала вниз */\r\n-    align-items: center; \r\n+    align-items: flex-start; /* Возвращаем базовое выравнивание, чтобы не ломать людей */\r\n   }\r\n \r\n-  /* Находим дочерний компонент формы внутри контейнера и подтягиваем его вверх, если есть маргины */\r\n-  .feedback .feedback__container > form,\r\n-  .feedback .feedback__container > div:first-child {\r\n-    margin-top: 0;\r\n-    align-self: center;\r\n+  /* Точечно пересчитываем и поджимаем контейнер самой формы, чтобы она влезла в 502px */\r\n+  .feedback .feedback__container > div:first-child,\r\n+  .feedback .feedback__container > form {\r\n+    transform: scale(0.8333); /* Пропорционально сжимаем саму форму под брейкпоинт */\r\n+    transform-origin: top left; /* Фиксируем точку сжатия в левом верхнем углу */\r\n+    margin-top: 20px; /* Аккуратный отступ от верхнего края кирпичей */\r\n   }\r\n \r\n   .feedback .people {\r\n     margin-left: 36.6px;\r\n-    /* Оставляем людей прижатыми к нижнему краю кирпичной стены */\r\n-    align-self: flex-end; \r\n+    align-self: flex-end; /* Возвращаем строителей строго к нижней границе стены */\r\n   }\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1789306489916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,22 +57,26 @@\n   .feedback .feedback__container {\r\n     max-width: 1200px;\r\n     width: 100%;\r\n     height: 502.7px;\r\n-    align-items: flex-start; /* Возвращаем базовое выравнивание, чтобы не ломать людей */\r\n+    align-items: flex-start;\r\n   }\r\n \r\n-  /* Точечно пересчитываем и поджимаем контейнер самой формы, чтобы она влезла в 502px */\r\n+  /* Масштабируем дочерний блок формы строго под коэффициент K */\r\n   .feedback .feedback__container > div:first-child,\r\n   .feedback .feedback__container > form {\r\n-    transform: scale(0.8333); /* Пропорционально сжимаем саму форму под брейкпоинт */\r\n-    transform-origin: top left; /* Фиксируем точку сжатия в левом верхнем углу */\r\n-    margin-top: 20px; /* Аккуратный отступ от верхнего края кирпичей */\r\n+    transform: scale(0.8333);\r\n+    transform-origin: top left;\r\n+    margin-top: 25px;\r\n+    margin-left: 25px; /* Слегка отодвигаем от левого края экрана */\r\n   }\r\n \r\n   .feedback .people {\r\n     margin-left: 36.6px;\r\n-    align-self: flex-end; /* Возвращаем строителей строго к нижней границе стены */\r\n+    align-self: flex-end;\r\n+    /* Жестко задаем пропорциональную высоту людям, чтобы они не вылезали наверх */\r\n+    height: 502.7px; \r\n+    width: auto; /* Ширина подстроится автоматически без искажения пропорций */\r\n   }\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1789306682279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,30 +57,34 @@\n   .feedback .feedback__container {\r\n     max-width: 1200px;\r\n     width: 100%;\r\n     height: 502.7px;\r\n-    align-items: flex-start;\r\n+    background-size: 100% 100%; /* Жестко сжимаем фоновый кирпич по пропорции */\r\n+    display: flex;\r\n+    flex-direction: row;\r\n+    justify-content: center; /* Центрируем форму и людей на экране */\r\n+    align-items: flex-end;   /* Прижимаем всё к нижнему краю кирпичной стены */\r\n+    box-sizing: border-box;\r\n+    padding: 0 40px;         /* Добавляем безопасные боковые отступы */\r\n   }\r\n \r\n-  /* Масштабируем дочерний блок формы строго под коэффициент K */\r\n+  /* Вместо трансформ — пропорционально поджимаем ширину обертки формы */\r\n   .feedback .feedback__container > div:first-child,\r\n   .feedback .feedback__container > form {\r\n-    transform: scale(0.8333);\r\n-    transform-origin: top left;\r\n-    margin-top: 25px;\r\n-    margin-left: 25px; /* Слегка отодвигаем от левого края экрана */\r\n+    max-width: 400px; /* Подбираем оптимальную ширину формы для 1200px */\r\n+    width: 100%;\r\n+    margin-bottom: 25px; /* Аккуратный отступ формы от пола */\r\n+    align-self: center;  /* Форму держим по центру вертикали */\r\n   }\r\n \r\n   .feedback .people {\r\n-    margin-left: 36.6px;\r\n-    align-self: flex-end;\r\n-    /* Жестко задаем пропорциональную высоту людям, чтобы они не вылезали наверх */\r\n-    height: 502.7px; \r\n-    width: auto; /* Ширина подстроится автоматически без искажения пропорций */\r\n+    max-height: 480px;  /* Ограничиваем чистую высоту строителей, чтобы они не лезли вверх */\r\n+    width: auto;        /* Пропорции ширины выстроятся автоматически */\r\n+    margin-left: 20px;  /* Уменьшаем зазор между формой и людьми */\r\n+    align-self: flex-end; /* Сажаем строителей строго на нижний край */\r\n   }\r\n }\r\n \r\n-\r\n :global(body) {\r\n   overflow-x: hidden;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1789308134450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,34 +57,39 @@\n   .feedback .feedback__container {\r\n     max-width: 1200px;\r\n     width: 100%;\r\n     height: 502.7px;\r\n-    background-size: 100% 100%; /* Жестко сжимаем фоновый кирпич по пропорции */\r\n+    background-size: 100% 100%;\r\n     display: flex;\r\n     flex-direction: row;\r\n-    justify-content: center; /* Центрируем форму и людей на экране */\r\n-    align-items: flex-end;   /* Прижимаем всё к нижнему краю кирпичной стены */\r\n+    justify-content: center;\r\n+    align-items: flex-end;\r\n     box-sizing: border-box;\r\n-    padding: 0 40px;         /* Добавляем безопасные боковые отступы */\r\n+    padding: 0 40px;\r\n+    overflow: hidden; /* Железно отсекаем внутренние вылеты элементов формы */\r\n   }\r\n \r\n-  /* Вместо трансформ — пропорционально поджимаем ширину обертки формы */\r\n+  /* Пропорционально сжимаем обертку формы на коэффициент K = 0.8333 */\r\n   .feedback .feedback__container > div:first-child,\r\n   .feedback .feedback__container > form {\r\n-    max-width: 400px; /* Подбираем оптимальную ширину формы для 1200px */\r\n-    width: 100%;\r\n-    margin-bottom: 25px; /* Аккуратный отступ формы от пола */\r\n-    align-self: center;  /* Форму держим по центру вертикали */\r\n+    transform: scale(0.8333);\r\n+    transform-origin: center center;\r\n+    /* Компенсируем масштабирование, чтобы пустые пиксели не раздували контейнер */\r\n+    margin: 0 -30px 10px -30px; \r\n+    align-self: center;\r\n+    flex-shrink: 0;\r\n   }\r\n \r\n   .feedback .people {\r\n-    max-height: 480px;  /* Ограничиваем чистую высоту строителей, чтобы они не лезли вверх */\r\n-    width: auto;        /* Пропорции ширины выстроятся автоматически */\r\n-    margin-left: 20px;  /* Уменьшаем зазор между формой и людьми */\r\n-    align-self: flex-end; /* Сажаем строителей строго на нижний край */\r\n+    max-height: 480px;\r\n+    width: auto;\r\n+    margin-left: 10px;\r\n+    align-self: flex-end;\r\n+    flex-shrink: 0;\r\n   }\r\n }\r\n \r\n+\r\n :global(body) {\r\n   overflow-x: hidden;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1789308325566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n     margin-left: 10px;\r\n     align-self: flex-end;\r\n     flex-shrink: 0;\r\n   }\r\n-}\r\n+};\r\n \r\n \r\n :global(body) {\r\n   overflow-x: hidden;\r\n"
+                },
+                {
+                    "date": 1789308443266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,8 +89,7 @@\n };\r\n \r\n \r\n :global(body) {\r\n-  overflow-x: hidden;\r\n+  overflow-x: hidden !important;\r\n }\r\n \r\n-\r\n"
+                },
+                {
+                    "date": 1789308489376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n     margin-left: 10px;\r\n     align-self: flex-end;\r\n     flex-shrink: 0;\r\n   }\r\n-};\r\n+}\r\n \r\n \r\n :global(body) {\r\n   overflow-x: hidden !important;\r\n"
+                },
+                {
+                    "date": 1789308538214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,8 +88,11 @@\n   }\r\n }\r\n \r\n \r\n-:global(body) {\r\n+:global(html),\r\n+:global(body),\r\n+:global(#root),\r\n+:global(main) {\r\n   overflow-x: hidden !important;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1789308634910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,11 +88,5 @@\n   }\r\n }\r\n \r\n \r\n-:global(html),\r\n-:global(body),\r\n-:global(#root),\r\n-:global(main) {\r\n-  overflow-x: hidden !important;\r\n-}\r\n \r\n"
                 }
             ],
             "date": 1780489727071,
