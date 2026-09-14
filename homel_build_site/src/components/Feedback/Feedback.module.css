@@ -1,4 +1,3 @@
-
 .feedback {
   width: 100%;
 
@@ -8,26 +7,25 @@
   justify-content: center;
 }
 
-
 .feedback__container {
   width: 100%;
-  max-width: 1440px;        
-  height: 603.3px; 
+  max-width: 1440px;
+  height: 603.3px;
   box-sizing: border-box;
-  
-  background-image: url('./images/feedback-bg.png');
+
+  background-image: url("./images/feedback-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   display: flex;
-  align-items: flex-start; 
-  overflow: visible;      
+  align-items: flex-start;
+  overflow: visible;
 }
 
 .people {
   margin-left: 44px;
-   flex-shrink: 0;      
+  flex-shrink: 0;
   align-self: flex-end;
 }
 
@@ -68,13 +66,12 @@
     overflow: hidden;
   }
 
-  
   .feedback .feedback__container > div:first-child,
   .feedback .feedback__container > form {
     transform: scale(0.8333);
     transform-origin: center center;
-    
-    margin: 0 -30px 10px -30px; 
+
+    margin: 0 -30px 10px -30px;
     align-self: center;
     flex-shrink: 0;
   }
@@ -108,18 +105,16 @@
     overflow: hidden;
   }
 
- 
   .feedback .feedback__container > div:first-child,
   .feedback .feedback__container > form {
     transform: scale(0.7111);
     transform-origin: center center;
-   
-    margin: 0 -50px 5px -50px; 
+
+    margin: 0 -50px 5px -50px;
     align-self: center;
     flex-shrink: 0;
   }
 
-  
   .feedback .people {
     max-height: 410px;
     width: auto;
@@ -149,18 +144,16 @@
     overflow: hidden;
   }
 
-  
   .feedback .feedback__container > div:first-child,
   .feedback .feedback__container > form {
     transform: scale(0.6944);
     transform-origin: center center;
-   
-    margin: 0 -55px 5px -55px; 
+
+    margin: 0 -55px 5px -55px;
     align-self: center;
     flex-shrink: 0;
   }
 
-  
   .feedback .people {
     max-height: 398px;
     width: auto;
@@ -170,12 +163,132 @@
   }
 }
 
-:global(html),
+@media (max-width: 768px) {
+  .feedback {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .feedback .feedback__container {
+    max-width: 100%;
+    width: 100%;
+    height: auto; 
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 40px 20px 0 20px; 
+  }
+
+  
+  .feedback .feedback__container > div:first-child,
+  .feedback .feedback__container > form {
+    transform: none;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 0 30px 0; 
+    align-self: center;
+  }
+
+  .feedback .people {
+    max-height: 350px;
+    width: auto;
+    margin-left: 0;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  :global(#root) .feedback {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  :global(#root) .feedback .feedback__container {
+    width: 310px;
+    max-width: 100%;
+    height: auto;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px 15px;
+  }
+
+  :global(#root) .feedback .feedback__container :global(form) {
+    margin-left: 0;
+    margin-top: 0;
+    width: 280px;
+    height: auto;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  :global(#root)
+    .feedback
+    .feedback__container
+    :global(form)
+    > span:first-of-type {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  :global(#root)
+    .feedback
+    .feedback__container
+    :global(form)
+    :global(input:not([type="checkbox"])),
+  :global(#root) .feedback .feedback__container :global(form) :global(textarea),
+  :global(#root) .feedback .feedback__container :global(form) :global(button),
+  :global(#root)
+    .feedback
+    .feedback__container
+    :global(form)
+    > span[class*="line"] {
+    width: 230px;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  :global(#root)
+    .feedback
+    .feedback__container
+    :global(form)
+    :global(textarea) {
+    height: 110px;
+  }
+
+  :global(#root)
+    .feedback
+    .feedback__container
+    :global(form)
+    > span:nth-of-type(3) {
+    margin-left: 25px;
+    align-self: flex-start;
+  }
+
+  :global(#root) .feedback .feedback__container :global(form) :global(label) {
+    margin-left: 0;
+    margin-top: 15px;
+    width: 230px;
+  }
+
+  :global(#root) .feedback .people {
+    display: none;
+  }
+}
+
+/* :global(html),
 :global(body),
 :global(#root),
 :global(main) {
   overflow-x: hidden !important;
-}
-
-
-
+} */
