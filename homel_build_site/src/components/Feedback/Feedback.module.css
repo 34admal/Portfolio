@@ -164,41 +164,54 @@
 }
 
 @media (max-width: 768px) {
-  .feedback {
-    margin-top: 60px;
+  :global(#root) .feedback {
+    margin-top: 58.6px;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .feedback .feedback__container {
-    max-width: 100%;
+  :global(#root) .feedback .feedback__container {
+    max-width: 768px;
     width: 100%;
-    height: auto; 
-    background-size: cover; 
+    height: 321.7px; 
+    background-size: 100% 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center; 
+    flex-direction: row;
     justify-content: flex-start;
+    align-items: center; 
     box-sizing: border-box;
-    padding: 40px 20px 0 20px; 
+    padding: 0 40px;
+    overflow: hidden;
   }
 
   
-  .feedback .feedback__container > div:first-child,
-  .feedback .feedback__container > form {
-    transform: none;
-    max-width: 450px;
-    width: 100%;
-    margin: 0 0 30px 0; 
-    align-self: center;
+  :global(#root) .feedback .feedback__container > div:first-child,
+  :global(#root) .feedback .feedback__container > form {
+    transform: scale(0.5333);
+    transform-origin: left center;
+    width: 390px;
+    max-width: 390px;
+   
+    margin-right: -180px; 
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-shrink: 0;
   }
 
-  .feedback .people {
-    max-height: 350px;
+  
+  :global(#root) .feedback .people {
+    height: 321.7px; 
     width: auto;
     margin-left: 0;
-    align-self: center;
+    align-self: flex-end; 
+    flex-shrink: 0;
   }
 }
+
+
+
 
 @media (max-width: 480px) {
   :global(#root) .feedback {
@@ -209,82 +222,37 @@
   }
 
   :global(#root) .feedback .feedback__container {
-    width: 310px;
-    max-width: 100%;
-    height: auto;
-    background-size: 100% 100%;
+    width: 290px;
+    max-width: 290px;
+    height: 380px; 
+    background: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    padding: 30px 15px;
+    padding: 0;
+    overflow: hidden;
   }
 
-  :global(#root) .feedback .feedback__container :global(form) {
+  
+  :global(#root) .feedback .feedback__container > div:first-child,
+  :global(#root) .feedback .feedback__container > form {
+    transform: scale(0.65);
+    transform-origin: center center;
+    width: 390px;
+    max-width: 390px;
+    margin-top: -30px; 
     margin-left: 0;
-    margin-top: 0;
-    width: 280px;
-    height: auto;
-    padding-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-  }
-
-  :global(#root)
-    .feedback
-    .feedback__container
-    :global(form)
-    > span:first-of-type {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  :global(#root)
-    .feedback
-    .feedback__container
-    :global(form)
-    :global(input:not([type="checkbox"])),
-  :global(#root) .feedback .feedback__container :global(form) :global(textarea),
-  :global(#root) .feedback .feedback__container :global(form) :global(button),
-  :global(#root)
-    .feedback
-    .feedback__container
-    :global(form)
-    > span[class*="line"] {
-    width: 230px;
-    margin-left: 0;
-    box-sizing: border-box;
-  }
-
-  :global(#root)
-    .feedback
-    .feedback__container
-    :global(form)
-    :global(textarea) {
-    height: 110px;
-  }
-
-  :global(#root)
-    .feedback
-    .feedback__container
-    :global(form)
-    > span:nth-of-type(3) {
-    margin-left: 25px;
-    align-self: flex-start;
-  }
-
-  :global(#root) .feedback .feedback__container :global(form) :global(label) {
-    margin-left: 0;
-    margin-top: 15px;
-    width: 230px;
+    margin-right: 0;
+    margin-bottom: 0;
+    flex-shrink: 0;
   }
 
   :global(#root) .feedback .people {
     display: none;
   }
 }
+
 
 /* :global(html),
 :global(body),
