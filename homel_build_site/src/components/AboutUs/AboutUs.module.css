@@ -287,9 +287,157 @@ width: 320px;
   }
 }
 
+/* ==========1024px========================== */
+@media (max-width: 1024px) {
+  .about {
+    margin-top: 91px;
+  }
 
-/* :global(html),
+  .about .about__container {
+    max-width: 1024px;
+    height: 375.4px;
+  }
+
+  .about .leftContent {
+    margin-top: 24.8px;
+  }
+
+  .about .title {
+    font-size: 45px;
+    line-height: 55px;
+    margin-left: 84px;
+  }
+
+  .about .item {
+    width: 347px;
+    margin-left: 84px;
+  }
+
+  .about .line {
+    width: 347px;
+  }
+
+  .about .text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .about .itemText1 { margin-top: 34.1px; margin-bottom: 7.8px; }
+  .about .title + .item { margin-top: 34.1px; }
+  .about .item2 { margin-top: 14.2px; }
+  .about .text2 { margin-bottom: 4.9px; }
+  .about .item3 { margin-top: 14.2px; }
+  .about .text3 { margin-bottom: 7.1px; }
+  .about .item4 { margin-top: 14.9px; }
+  .about .text4 { margin-bottom: 7.8px; }
+  .about .item5 { margin-top: 17px; }
+  .about .text5 { margin-bottom: 7.8px; }
+
+  
+  .about .rightContent {
+    width: 227.5px;
+    height: 227.5px;
+    margin-top: 66.1px;
+    margin-left: 160px;
+  }
+
+  .about .circleTop {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 25.6px;
+  }
+
+  .about .circleNumber {
+    font-size: 64px;
+    line-height: 78px;
+    margin-top: 27px;
+  }
+
+  .about .circleBottom {
+    font-size: 13px;
+    line-height: 16px;
+    width: 159.2px;
+    margin-bottom: 38.4px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .about {
+    margin-top: 88.8px;
+  }
+
+  .about .about__container {
+    max-width: 1000px;
+    height: 366.6px;
+  }
+
+  .about .leftContent {
+    margin-top: 24.3px;
+  }
+
+  .about .title {
+    font-size: 43.5px;
+    line-height: 53px;
+    margin-left: 82px;
+  }
+
+  .about .item {
+    width: 338px;
+    margin-left: 82px;
+  }
+
+  .about .line {
+    width: 338px;
+  }
+
+  .about .text {
+    font-size: 13.5px;
+    line-height: 17px;
+  }
+
+  .about .itemText1 { margin-top: 33.3px; margin-bottom: 7.6px; }
+  .about .title + .item { margin-top: 33.3px; }
+  .about .item2 { margin-top: 13.8px; }
+  .about .text2 { margin-bottom: 4.8px; }
+  .about .item3 { margin-top: 13.8px; }
+  .about .text3 { margin-bottom: 6.9px; }
+  .about .item4 { margin-top: 14.5px; }
+  .about .text4 { margin-bottom: 7.6px; }
+  .about .item5 { margin-top: 16.6px; }
+  .about .text5 { margin-bottom: 7.6px; }
+
+  
+  .about .rightContent {
+    width: 222px;
+    height: 222px;
+    margin-top: 64.5px;
+    margin-left: 156px;
+  }
+
+  .about .circleTop {
+    font-size: 12.5px;
+    line-height: 15.2px;
+    margin-top: 25px;
+  }
+
+  .about .circleNumber {
+    font-size: 62px;
+    line-height: 75px;
+    margin-top: 26.3px;
+  }
+
+  .about .circleBottom {
+    font-size: 12.5px;
+    line-height: 15.2px;
+    width: 155.5px;
+    margin-bottom: 37.5px;
+  }
+}
+
+
+:global(html),
 :global(body),
 :global(#root) {
   overflow-x: hidden !important;
-} */
+}
