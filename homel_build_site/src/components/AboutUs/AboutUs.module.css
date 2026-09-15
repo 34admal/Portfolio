@@ -435,6 +435,115 @@ width: 320px;
   }
 }
 
+@media (max-width: 768px) {
+  .about {
+    margin-top: 68.2px;
+    width: 100%;
+  }
+
+  .about .about__container {
+    max-width: 768px;
+    width: 100%;
+    height: 281.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+
+  .about .leftContent {
+    margin-top: 18.6px;
+  }
+
+  .about .title {
+    font-size: 37.3px;
+    line-height: 45.3px;
+    margin-left: 63.4px;
+  }
+
+  .about .item {
+    width: 260.2px;
+    margin-left: 63.4px;
+  }
+
+  .about .line {
+    width: 260.2px;
+  }
+
+  .about .text {
+    font-size: 10.6px;
+    line-height: 12.8px;
+  }
+
+  .about .itemText1 { 
+    margin-top: 25.6px; 
+    margin-bottom: 5.8px; 
+  }
+  
+  .about .title + .item { 
+    margin-top: 25.6px; 
+  }
+  
+  .about .item2 { 
+    margin-top: 10.6px; 
+  }
+  
+  .about .text2 { 
+    margin-bottom: 3.7px; 
+  }
+  
+  .about .item3 { 
+    margin-top: 10.6px; 
+  }
+  
+  .about .text3 { 
+    margin-bottom: 5.3px; 
+  }
+  
+  .about .item4 { 
+    margin-top: 11.2px; 
+  }
+  
+  .about .text4 { 
+    margin-bottom: 5.8px; 
+  }
+  
+  .about .item5 { 
+    margin-top: 12.8px; 
+  }
+  
+  .about .text5 { 
+    margin-bottom: 5.8px; 
+  }
+
+  .about .rightContent {
+    width: 170.6px;
+    height: 170.6px;
+    margin-top: 49.6px;
+    margin-left: 120px;
+    box-sizing: border-box;
+  }
+
+  .about .circleTop {
+    font-size: 9.6px;
+    line-height: 11.7px;
+    margin-top: 19.2px;
+  }
+
+  .about .circleNumber {
+    font-size: 53.3px;
+    line-height: 65px;
+    margin-top: 20.2px;
+  }
+
+  .about .circleBottom {
+    font-size: 9.6px;
+    line-height: 11.7px;
+    width: 119.4px;
+    margin-bottom: 28.8px;
+  }
+}
+
 
 :global(html),
 :global(body),
