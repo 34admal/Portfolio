@@ -638,8 +638,8 @@ width: 320px;
 
 
 
-:global(html),
+/* :global(html),
 :global(body),
 :global(#root) {
   overflow-x: hidden !important;
-}
+} */

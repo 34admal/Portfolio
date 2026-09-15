@@ -17,7 +17,7 @@ function GalleryModal({ isOpen, title, onClose }) {
   const [thumbTop, setThumbTop] = useState(0);
   const isDragging = useRef(false);
 
-  // Блокировка прокрутки страницы сзади
+  
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -115,7 +115,7 @@ function GalleryModal({ isOpen, title, onClose }) {
                 />
               ))
             ) : (
-              /* Сетка 3х3 для проверки скролла в пустых категориях */
+              
               <>
                 <div className={styles.modalPhotoPlaceholder} />
                 <div className={styles.modalPhotoPlaceholder} />
@@ -130,7 +130,7 @@ function GalleryModal({ isOpen, title, onClose }) {
             )}
           </div>
           
-          {/* Рельсы заперты строго внутри scrollContainer и никуда не уплывают */}
+          
           <div className={styles.customScrollTrack} ref={trackRef}>
             <div 
               className={styles.customScrollThumb}

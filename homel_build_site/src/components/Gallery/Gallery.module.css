@@ -1,4 +1,3 @@
-
 .section {
   margin-top: 83px;
 }
@@ -47,12 +46,11 @@
   height: 384px;
 }
 
-
 .masonryBlock {
   position: relative;
-  width: 386px; 
+  width: 386px;
   height: 384px;
-  margin-left: 20px; 
+  margin-left: 20px;
 }
 
 .finishingBlock {
@@ -81,7 +79,7 @@
   width: 360px;
   height: 70px;
   background-color: rgba(0, 0, 0, 0.5);
-  
+
   z-index: 3;
 }
 
@@ -90,8 +88,8 @@
   position: absolute;
   top: 0;
   left: 0;
- 
-  z-index: 2; 
+
+  z-index: 2;
 }
 
 .overlayMasonry {
@@ -101,10 +99,9 @@
   width: 360px;
   height: 68px;
   background-color: rgba(0, 0, 0, 0.5);
-  
+
   z-index: 3;
 }
-
 
 .overlayFinishing {
   position: absolute;
@@ -116,10 +113,9 @@
   z-index: 3;
 }
 
-
 .categoryTitle {
   position: absolute;
-  top: 316px; 
+  top: 316px;
   bottom: auto;
   left: 0;
   width: 360px;
@@ -132,16 +128,14 @@
   z-index: 4;
 }
 
-
 .titleMasonry {
   position: absolute;
-  top: 316px; 
+  top: 316px;
   left: 0;
   width: 360px;
   text-align: center;
   z-index: 4;
 }
-
 
 .finishingBlock .categoryTitle {
   bottom: auto;
@@ -161,7 +155,6 @@
   z-index: 1;
 }
 
-
 .contourFinishing {
   display: block;
   position: absolute;
@@ -179,8 +172,8 @@
   position: relative;
   width: 387px;
   height: 384px;
-  margin-top: 72px; 
-  margin-left: 119px; 
+  margin-top: 72px;
+  margin-left: 119px;
 }
 
 .contourRoofing {
@@ -195,7 +188,6 @@
   border-radius: 10px;
   z-index: 1;
 }
-
 
 .plumbingBlock {
   position: relative;
@@ -233,15 +225,13 @@
   z-index: 4;
 }
 
-
 .electricityBlock {
   position: relative;
   width: 386px;
   height: 384px;
   margin-top: 72px;
-  margin-left: 21px; 
+  margin-left: 21px;
 }
-
 
 .contourElectricity {
   display: block;
@@ -256,18 +246,131 @@
   z-index: 1;
 }
 
-.tileBlock { cursor: pointer; }
-.masonryBlock { cursor: pointer; }
-.finishingBlock { cursor: pointer; }
-.roofingBlock { cursor: pointer; }
-.plumbingBlock { cursor: pointer; }
-.electricityBlock { cursor: pointer; }
+.tileBlock {
+  cursor: pointer;
+}
+.masonryBlock {
+  cursor: pointer;
+}
+.finishingBlock {
+  cursor: pointer;
+}
+.roofingBlock {
+  cursor: pointer;
+}
+.plumbingBlock {
+  cursor: pointer;
+}
+.electricityBlock {
+  cursor: pointer;
+}
 
 
+/* ============= (1366px  1200)=============================== */
+@media (max-width: 1366px) {
+  .modalOverlay .modalWindow { width: 986.5px; padding: 30.3px; }
+  .modalOverlay .modalTitle { font-size: 26.5px; line-height: 30.3px; margin-bottom: 30.3px; }
+  .modalOverlay .photoGrid { gap: 37.9px; padding-right: 60.7px; }
+  .modalOverlay .modalPhoto, .modalOverlay .modalPhotoPlaceholder { width: calc((100% - (37.9px * 2)) / 3); }
+  .modalOverlay .customScrollTrack { top: 91px; right: 34.1px; bottom: 30.3px; }
+}
 
+@media (max-width: 1200px) {
+  :global(#root) .section {
+    margin-top: 69.1px;
+  }
 
+  :global(#root) .section .headerRow { 
+    padding-left: 99.1px; 
+    padding-right: 99.1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  :global(#root) .section .line { 
+    width: 100%;
+    max-width: 169.1px; 
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  
+  :global(#root) .section .lineLeft {
+    margin-right: 40px;
+  }
+  
+  :global(#root) .section .lineRight {
+    margin-left: 40px;
+  }
+  
+  :global(#root) .section .title { 
+    font-size: 25px; 
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: inline-block;
+  }
 
+  :global(#root) .section .content {
+    margin-top: 82.4px;
+  }
+  
+  :global(#root) .section .tileBlock,
+  :global(#root) .section .roofingBlock {
+    margin-left: 99.1px;
+  }
+  
+  :global(#root) .section .masonryBlock,
+  :global(#root) .section .plumbingBlock {
+    margin-left: 16.6px;
+  }
+  
+  :global(#root) .section .finishingBlock,
+  :global(#root) .section .electricityBlock {
+    margin-left: 17.5px;
+  }
+  
+  :global(#root) .section .roofingBlock,
+  :global(#root) .section .plumbingBlock,
+  :global(#root) .section .electricityBlock {
+    margin-top: 60px;
+  }
 
+  :global(#root) .section .tileBlock,
+  :global(#root) .section .masonryBlock,
+  :global(#root) .section .finishingBlock,
+  :global(#root) .section .roofingBlock,
+  :global(#root) .section .plumbingBlock,
+  :global(#root) .section .electricityBlock {
+    width: 322.4px;
+    height: 320px;
+  }
 
+  :global(#root) .section .contour,
+  :global(#root) .section .contourMasonry,
+  :global(#root) .section .contourFinishing,
+  :global(#root) .section .contourRoofing,
+  :global(#root) .section .contourPlumbing,
+  :global(#root) .section .contourElectricity {
+    top: 28.3px;
+    left: 30.8px;
+    width: 291.6px;
+    height: 291.6px;
+  }
 
+  :global(#root) .section .overlay,
+  :global(#root) .section .overlayMasonry,
+  :global(#root) .section .overlayFinishing {
+    top: 241.6px;
+    width: 300px;
+    height: 58.3px;
+  }
 
+  :global(#root) .section .categoryTitle,
+  :global(#root) .section .titleMasonry {
+    top: 263.3px;
+    width: 300px;
+    font-size: 20px;
+  }
+}
