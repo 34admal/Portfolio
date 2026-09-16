@@ -1,4 +1,3 @@
-
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -13,7 +12,6 @@
   align-items: center;
 }
 
-
 .modalWindow {
   position: relative;
   background: #121212;
@@ -26,7 +24,6 @@
   flex-direction: column;
   overflow: hidden; 
 }
-
 
 .closeButton {
   position: absolute;
@@ -44,7 +41,6 @@
   z-index: 10;
 }
 
-/* Линии кастомного крестика */
 .closeLine {
   position: relative;
   width: 20px;
@@ -70,7 +66,6 @@
   transform: rotate(135deg);
 }
 
-
 .modalTitle {
   display: block;
   font-size: 28px;
@@ -84,7 +79,6 @@
 .scrollContainer {
   width: 100%;
   overflow-y: auto;   
-  
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -95,7 +89,6 @@
   height: 0;
 }
 
-/* Трехколоночная адаптивная сетка фотографий */
 .photoGrid {
   display: flex;
   flex-wrap: wrap;
@@ -104,14 +97,12 @@
   padding-right: 64px; 
 }
 
-
 .modalPhoto {
   width: calc((100% - (40px * 2)) / 3);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 12px;
 }
-
 
 .customScrollTrack {
   position: absolute;
@@ -127,7 +118,6 @@
   justify-content: center;
 }
 
-
 .customScrollThumb {
   position: absolute;
   width: 15px;
@@ -139,19 +129,18 @@
   transition: background-color 0.2s ease;
 }
 
-
 .customScrollThumb:hover {
   background-color: #f0f0f0;
 }
 
-/* Стильный архитектурный скелетон для пустых категорий */
 .modalPhotoPlaceholder {
-  width: calc((100% - (40px * 2)) / 3); /* Наша жесткая трехколоночная сетка */
-  aspect-ratio: 1 / 1;                  /* Идеальный квадрат */
-  border: 1px dashed rgba(255, 255, 255, 0.15); /* Деликатный пунктир */
-  border-radius: 12px;                  /* Скругление как у живых фото */
-  background: rgba(255, 255, 255, 0.01); /* Легчайшая подложка */
+  width: calc((100% - (40px * 2)) / 3);
+  aspect-ratio: 1 / 1;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.01);
 }
+
 
 
 

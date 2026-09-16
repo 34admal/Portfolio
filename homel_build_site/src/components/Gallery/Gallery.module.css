@@ -267,24 +267,114 @@
 
 /* ============= (1366px  1200)=============================== */
 @media (max-width: 1366px) {
-  .modalOverlay .modalWindow {
+  :global(#root) .section {
+    margin-top: 78.7px;
+    width: 100%;
+  }
+  :global(#root) .section .headerRow {
+    padding-left: 112.8px;
+  }
+  :global(#root) .section .line {
+    width: 192.5px;
+  }
+  :global(#root) .section .lineLeft {
+    margin-right: 255.1px;
+  }
+  :global(#root) .section .lineRight {
+    margin-left: 254.2px;
+  }
+  :global(#root) .section .title {
+    font-size: 28.4px;
+    white-space: nowrap;
+  }
+  :global(#root) .section .content {
+    margin-top: 93.9px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  :global(#root) .section .tileBlock {
+    margin-left: 112.8px;
+  }
+  :global(#root) .section .masonryBlock {
+    margin-left: 18.9px;
+  }
+  :global(#root) .section .finishingBlock {
+    margin-left: 19.9px;
+  }
+  :global(#root) .section .roofingBlock {
+    margin-left: 112.8px;
+    margin-top: 68.3px;
+  }
+  :global(#root) .section .plumbingBlock {
+    margin-left: 18.9px;
+    margin-top: 68.3px;
+  }
+  :global(#root) .section .electricityBlock {
+    margin-left: 19.9px;
+    margin-top: 68.3px;
+  }
+
+  :global(#root) .section .tileBlock, 
+  :global(#root) .section .masonryBlock, 
+  :global(#root) .section .finishingBlock,
+  :global(#root) .section .roofingBlock, 
+  :global(#root) .section .plumbingBlock, 
+  :global(#root) .section .electricityBlock {
+    width: 367px;
+    height: 364.2px;
+  }
+
+  :global(#root) .section .contour,
+  :global(#root) .section .contourMasonry,
+  :global(#root) .section .contourFinishing,
+  :global(#root) .section .contourRoofing,
+  :global(#root) .section .contourPlumbing,
+  :global(#root) .section .contourElectricity {
+    top: 32.2px;
+    left: 35.1px;
+    width: 332px;
+    height: 332px;
+  }
+
+  :global(#root) .section .photo {
+    width: 341.5px;
+    height: auto;
+  }
+
+  :global(#root) .section .overlay,
+  :global(#root) .section .overlayMasonry,
+  :global(#root) .section .overlayFinishing {
+    top: 275.1px;
+    width: 341.5px;
+    height: 66.4px;
+  }
+
+  :global(#root) .section .categoryTitle,
+  :global(#root) .section .titleMasonry {
+    top: 299.7px;
+    width: 341.5px;
+    font-size: 22.7px;
+  }
+
+  :global(#root) :global([class*="modalWindow"]) {
     width: 986.5px;
     padding: 30.3px;
   }
-  .modalOverlay .modalTitle {
+  :global(#root) :global([class*="modalTitle"]) {
     font-size: 26.5px;
     line-height: 30.3px;
     margin-bottom: 30.3px;
   }
-  .modalOverlay .photoGrid {
+  :global(#root) :global([class*="photoGrid"]) {
     gap: 37.9px;
     padding-right: 60.7px;
   }
-  .modalOverlay .modalPhoto,
-  .modalOverlay .modalPhotoPlaceholder {
+  :global(#root) :global([class*="modalPhoto"]), 
+  :global(#root) :global([class*="modalPhotoPlaceholder"]) {
     width: calc((100% - (37.9px * 2)) / 3);
   }
-  .modalOverlay .customScrollTrack {
+  :global(#root) :global([class*="customScrollTrack"]) {
     top: 91px;
     right: 34.1px;
     bottom: 30.3px;
@@ -294,70 +384,60 @@
 @media (max-width: 1200px) {
   :global(#root) .section {
     margin-top: 69.1px;
+    width: 100%;
   }
-
   :global(#root) .section .headerRow {
     padding-left: 99.1px;
-    padding-right: 99.1px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
   }
-
   :global(#root) .section .line {
-    width: 100%;
-    max-width: 169.1px;
-    flex-grow: 1;
-    flex-shrink: 1;
+    width: 169.1px;
+    height: 3px;
+    background-color: #ff7a00;
+    display: block;
   }
-
   :global(#root) .section .lineLeft {
-    margin-right: 40px;
+    margin-right: 224.1px;
   }
-
   :global(#root) .section .lineRight {
-    margin-left: 40px;
+    margin-left: 172.5px;
   }
-
   :global(#root) .section .title {
     font-size: 25px;
     white-space: nowrap;
-    flex-shrink: 0;
-    display: inline-block;
   }
-
   :global(#root) .section .content {
     margin-top: 82.4px;
+    margin-bottom: 25px;
+    width: 100%;
   }
 
-  :global(#root) .section .tileBlock,
-  :global(#root) .section .roofingBlock {
+  :global(#root) .section .tileBlock {
     margin-left: 99.1px;
   }
-
-  :global(#root) .section .masonryBlock,
-  :global(#root) .section .plumbingBlock {
+  :global(#root) .section .masonryBlock {
     margin-left: 16.6px;
   }
-
-  :global(#root) .section .finishingBlock,
-  :global(#root) .section .electricityBlock {
+  :global(#root) .section .finishingBlock {
     margin-left: 17.5px;
   }
-
-  :global(#root) .section .roofingBlock,
-  :global(#root) .section .plumbingBlock,
+  :global(#root) .section .roofingBlock {
+    margin-left: 99.1px;
+    margin-top: 60px;
+  }
+  :global(#root) .section .plumbingBlock {
+    margin-left: 16.6px;
+    margin-top: 60px;
+  }
   :global(#root) .section .electricityBlock {
+    margin-left: 17.5px;
     margin-top: 60px;
   }
 
-  :global(#root) .section .tileBlock,
-  :global(#root) .section .masonryBlock,
+  :global(#root) .section .tileBlock, 
+  :global(#root) .section .masonryBlock, 
   :global(#root) .section .finishingBlock,
-  :global(#root) .section .roofingBlock,
-  :global(#root) .section .plumbingBlock,
+  :global(#root) .section .roofingBlock, 
+  :global(#root) .section .plumbingBlock, 
   :global(#root) .section .electricityBlock {
     width: 322.4px;
     height: 320px;
@@ -375,6 +455,11 @@
     height: 291.6px;
   }
 
+  :global(#root) .section .photo {
+    width: 300px;
+    height: auto;
+  }
+
   :global(#root) .section .overlay,
   :global(#root) .section .overlayMasonry,
   :global(#root) .section .overlayFinishing {
@@ -389,75 +474,89 @@
     width: 300px;
     font-size: 20px;
   }
+
+  :global(#root) :global([class*="modalWindow"]) {
+    width: 866.6px;
+    padding: 26.6px;
+  }
+  :global(#root) :global([class*="modalTitle"]) {
+    font-size: 21px;
+    line-height: 26.6px;
+    margin-bottom: 26.6px;
+  }
+  :global(#root) :global([class*="photoGrid"]) {
+    gap: 33.3px;
+    padding-right: 53.3px;
+  }
+  :global(#root) :global([class*="modalPhoto"]), 
+  :global(#root) :global([class*="modalPhotoPlaceholder"]) {
+    width: calc((100% - (33.3px * 2)) / 3);
+  }
+  :global(#root) :global([class*="customScrollTrack"]) {
+    top: 80px;
+    right: 30px;
+    bottom: 26.6px;
+  }
 }
+
 
 @media (max-width: 1024px) {
   :global(#root) .section {
     margin-top: 59px;
+    width: 100%;
   }
-
   :global(#root) .section .headerRow {
     padding-left: 84.6px;
-    padding-right: 84.6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
   }
-
   :global(#root) .section .line {
-    width: 100%;
-    max-width: 144.3px;
-    flex-grow: 1;
-    flex-shrink: 1;
+    width: 144.3px;
+    height: 3px;
+    background-color: #ff7a00;
+    display: block;
   }
-
   :global(#root) .section .lineLeft {
-    margin-right: 25px;
+    margin-right: 191.2px;
   }
-
   :global(#root) .section .lineRight {
-    margin-left: 25px;
+    margin-left: 147.1px;
   }
-
   :global(#root) .section .title {
-    font-size: 21px;
+    font-size: 21.3px;
     white-space: nowrap;
-    flex-shrink: 0;
-    display: inline-block;
   }
-
   :global(#root) .section .content {
     margin-top: 70.4px;
+    margin-bottom: 22px;
+    width: 100%;
   }
 
-  :global(#root) .section .tileBlock,
-  :global(#root) .section .roofingBlock {
+  :global(#root) .section .tileBlock {
     margin-left: 84.6px;
   }
-
-  :global(#root) .section .masonryBlock,
-  :global(#root) .section .plumbingBlock {
+  :global(#root) .section .masonryBlock {
     margin-left: 14.2px;
   }
-
-  :global(#root) .section .finishingBlock,
-  :global(#root) .section .electricityBlock {
-    margin-left: 15px;
+  :global(#root) .section .finishingBlock {
+    margin-left: 14.9px;
   }
-
-  :global(#root) .section .roofingBlock,
-  :global(#root) .section .plumbingBlock,
+  :global(#root) .section .roofingBlock {
+    margin-left: 84.6px;
+    margin-top: 51.2px;
+  }
+  :global(#root) .section .plumbingBlock {
+    margin-left: 14.2px;
+    margin-top: 51.2px;
+  }
   :global(#root) .section .electricityBlock {
+    margin-left: 14.9px;
     margin-top: 51.2px;
   }
 
-  :global(#root) .section .tileBlock,
-  :global(#root) .section .masonryBlock,
+  :global(#root) .section .tileBlock, 
+  :global(#root) .section .masonryBlock, 
   :global(#root) .section .finishingBlock,
-  :global(#root) .section .roofingBlock,
-  :global(#root) .section .plumbingBlock,
+  :global(#root) .section .roofingBlock, 
+  :global(#root) .section .plumbingBlock, 
   :global(#root) .section .electricityBlock {
     width: 275.2px;
     height: 273px;
@@ -475,6 +574,11 @@
     height: 248.8px;
   }
 
+  :global(#root) .section .photo {
+    width: 256px;
+    height: auto;
+  }
+
   :global(#root) .section .overlay,
   :global(#root) .section .overlayMasonry,
   :global(#root) .section .overlayFinishing {
@@ -489,33 +593,368 @@
     width: 256px;
     font-size: 17px;
   }
+
+  :global(#root) :global([class*="modalWindow"]) {
+    width: 739.5px;
+    padding: 22.7px;
+  }
+  :global(#root) :global([class*="modalTitle"]) {
+    font-size: 20px;
+    line-height: 22.7px;
+    margin-bottom: 22.7px;
+  }
+  :global(#root) :global([class*="photoGrid"]) {
+    gap: 28.4px;
+    padding-right: 45.5px;
+  }
+  :global(#root) :global([class*="modalPhoto"]), 
+  :global(#root) :global([class*="modalPhotoPlaceholder"]) {
+    width: calc((100% - (28.4px * 2)) / 3);
+  }
+  :global(#root) :global([class*="customScrollTrack"]) {
+    top: 68.2px;
+    right: 25.6px;
+    bottom: 22.7px;
+  }
 }
 
+
 @media (max-width: 1000px) {
-  .modalOverlay .modalWindow {
+  :global(#root) .section {
+    margin-top: 57.6px;
+    width: 100%;
+  }
+  :global(#root) .section .headerRow {
+    padding-left: 82.6px;
+  }
+  :global(#root) .section .line {
+    width: 141px;
+    height: 3px;
+    background-color: #ff7a00;
+    display: block;
+  }
+  :global(#root) .section .lineLeft {
+    margin-right: 186.7px;
+  }
+  :global(#root) .section .lineRight {
+    margin-left: 143.7px;
+  }
+  :global(#root) .section .title {
+    font-size: 20.8px;
+    white-space: nowrap;
+  }
+  :global(#root) .section .content {
+    margin-top: 68.7px;
+    margin-bottom: 21px;
+    width: 100%;
+  }
+
+  :global(#root) .section .tileBlock {
+    margin-left: 82.6px;
+  }
+  :global(#root) .section .masonryBlock {
+    margin-left: 13.8px;
+  }
+  :global(#root) .section .finishingBlock {
+    margin-left: 14.5px;
+  }
+  :global(#root) .section .roofingBlock {
+    margin-left: 82.6px;
+    margin-top: 50px;
+  }
+  :global(#root) .section .plumbingBlock {
+    margin-left: 13.8px;
+    margin-top: 50px;
+  }
+  :global(#root) .section .electricityBlock {
+    margin-left: 14.5px;
+    margin-top: 50px;
+  }
+
+  :global(#root) .section .tileBlock, 
+  :global(#root) .section .masonryBlock, 
+  :global(#root) .section .finishingBlock,
+  :global(#root) .section .roofingBlock, 
+  :global(#root) .section .plumbingBlock, 
+  :global(#root) .section .electricityBlock {
+    width: 268.7px;
+    height: 266.6px;
+  }
+
+  :global(#root) .section .contour,
+  :global(#root) .section .contourMasonry,
+  :global(#root) .section .contourFinishing,
+  :global(#root) .section .contourRoofing,
+  :global(#root) .section .contourPlumbing,
+  :global(#root) .section .contourElectricity {
+    top: 23.6px;
+    left: 25.7px;
+    width: 243px;
+    height: 243px;
+  }
+
+  :global(#root) .section .photo {
+    width: 250px;
+    height: auto;
+  }
+
+  :global(#root) .section .overlay,
+  :global(#root) .section .overlayMasonry,
+  :global(#root) .section .overlayFinishing {
+    top: 201.3px;
+    width: 250px;
+    height: 48.6px;
+  }
+
+  :global(#root) .section .categoryTitle,
+  :global(#root) .section .titleMasonry {
+    top: 219.4px;
+    width: 250px;
+    font-size: 16.6px;
+  }
+
+  :global(#root) :global([class*="modalWindow"]) {
     width: 722.1px;
     padding: 22.2px;
   }
-
-  .modalOverlay .modalTitle {
+  :global(#root) :global([class*="modalTitle"]) {
     font-size: 19.5px;
     line-height: 22.2px;
     margin-bottom: 22.2px;
   }
-
-  .modalOverlay .photoGrid {
+  :global(#root) :global([class*="photoGrid"]) {
     gap: 27.7px;
     padding-right: 44.4px;
   }
-
-  .modalOverlay .modalPhoto,
-  .modalOverlay .modalPhotoPlaceholder {
+  :global(#root) :global([class*="modalPhoto"]), 
+  :global(#root) :global([class*="modalPhotoPlaceholder"]) {
     width: calc((100% - (27.7px * 2)) / 3);
   }
-
-  .modalOverlay .customScrollTrack {
+  :global(#root) :global([class*="customScrollTrack"]) {
     top: 66.6px;
     right: 25px;
     bottom: 22.2px;
   }
 }
+
+@media (max-width: 768px) {
+  :global(#root) .section {
+    margin-top: 44.2px;
+    width: 100%;
+  }
+  :global(#root) .section .headerRow {
+    padding-left: 63.4px;
+  }
+  :global(#root) .section .line {
+    width: 108.2px;
+    height: 3px;
+    background-color: #ff7a00;
+    display: block;
+  }
+  :global(#root) .section .lineLeft {
+    margin-right: 143.4px;
+  }
+  :global(#root) .section .lineRight {
+    margin-left: 110.3px;
+  }
+  :global(#root) .section .title {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  :global(#root) .section .content {
+    margin-top: 52.8px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  :global(#root) .section .tileBlock {
+    margin-left: 63.4px;
+  }
+  :global(#root) .section .masonryBlock {
+    margin-left: 10.6px;
+  }
+  :global(#root) .section .finishingBlock {
+    margin-left: 11.2px;
+  }
+  :global(#root) .section .roofingBlock {
+    margin-left: 63.4px;
+    margin-top: 38.4px;
+  }
+  :global(#root) .section .plumbingBlock {
+    margin-left: 10.6px;
+    margin-top: 38.4px;
+  }
+  :global(#root) .section .electricityBlock {
+    margin-left: 11.2px;
+    margin-top: 38.4px;
+  }
+
+  :global(#root) .section .tileBlock, 
+  :global(#root) .section .masonryBlock, 
+  :global(#root) .section .finishingBlock,
+  :global(#root) .section .roofingBlock, 
+  :global(#root) .section .plumbingBlock, 
+  :global(#root) .section .electricityBlock {
+    width: 206.3px;
+    height: 204.7px;
+  }
+
+  :global(#root) .section .contour,
+  :global(#root) .section .contourMasonry,
+  :global(#root) .section .contourFinishing,
+  :global(#root) .section .contourRoofing,
+  :global(#root) .section .contourPlumbing,
+  :global(#root) .section .contourElectricity {
+    top: 18.1px;
+    left: 19.7px;
+    width: 186.6px;
+    height: 186.6px;
+  }
+
+  :global(#root) .section .photo {
+    width: 192px;
+    height: auto;
+  }
+
+  :global(#root) .section .overlay,
+  :global(#root) .section .overlayMasonry,
+  :global(#root) .section .overlayFinishing {
+    top: 154.6px;
+    width: 192px;
+    height: 37.3px;
+  }
+
+  :global(#root) .section .categoryTitle,
+  :global(#root) .section .titleMasonry {
+    top: 168.5px;
+    width: 192px;
+    font-size: 12.8px;
+  }
+
+  :global(#root) :global([class*="modalWindow"]) {
+    width: 90%;
+    max-height: 85vh;
+    padding: 20px;
+  }
+  :global(#root) :global([class*="modalTitle"]) {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  :global(#root) :global([class*="photoGrid"]) {
+    gap: 20px;
+    padding-right: 35px;
+  }
+  :global(#root) :global([class*="modalPhoto"]), 
+  :global(#root) :global([class*="modalPhotoPlaceholder"]) {
+    width: calc((100% - 20px) / 2);
+  }
+  :global(#root) :global([class*="customScrollTrack"]) {
+    top: 60px;
+    right: 15px;
+    bottom: 20px;
+    width: 10px;
+  }
+  :global(#root) :global([class*="customScrollThumb"]) {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  :global(#root) .section {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  :global(#root) .section .headerRow { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+  
+  :global(#root) .section .line { 
+    display: none;
+  }
+  
+  :global(#root) .section .title { 
+    font-size: 22px; 
+    line-height: 28px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  :global(#root) .section .content {
+    margin-top: 30px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  
+  :global(#root) .section .tileBlock,
+  :global(#root) .section .masonryBlock,
+  :global(#root) .section .finishingBlock,
+  :global(#root) .section .roofingBlock,
+  :global(#root) .section .plumbingBlock,
+  :global(#root) .section .electricityBlock {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
+    position: relative;
+    width: 250px;
+    height: 248px;
+  }
+
+  :global(#root) .section .electricityBlock {
+    margin-bottom: 0;
+  }
+
+  :global(#root) .section .contour,
+  :global(#root) .section .contourMasonry,
+  :global(#root) .section .contourFinishing,
+  :global(#root) .section .contourRoofing,
+  :global(#root) .section .contourPlumbing,
+  :global(#root) .section .contourElectricity {
+    top: 22px;
+    left: 24px;
+    width: 226px;
+    height: 226px;
+  }
+
+  :global(#root) .section .photo {
+    width: 232px;
+    height: auto;
+  }
+
+  :global(#root) .section .overlay,
+  :global(#root) .section .overlayMasonry,
+  :global(#root) .section .overlayFinishing {
+    top: 187px;
+    width: 232px;
+    height: 45px;
+  }
+
+  :global(#root) .section .categoryTitle,
+  :global(#root) .section .titleMasonry {
+    top: 200px;
+    width: 232px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+}
+
+
+
+
+
+
