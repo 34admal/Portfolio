@@ -443,7 +443,7 @@
   :global(#root) .headerCell {
     font-size: 11.3px;
     line-height: 14.2px;
-    padding: 6px 0; /* Переносим паддинг в ячейки шапки */
+    padding: 6px 0; 
   }
   :global(#root) .cellText {
     padding-left: 20px;
@@ -456,9 +456,9 @@
   :global(#root) .tableRow:last-child {
     height: auto;
     min-height: 22px;
-    padding: 0; /* Очищаем паддинг со строки */
+    padding: 0;
   }
-  /* Фикс разрывов: даем паддинги ячейкам, чтобы они тянули бордеры за собой */
+  
   :global(#root) .nameCell,
   :global(#root) .unitCell,
   :global(#root) .priceCell {
@@ -659,3 +659,177 @@
     border-radius: 6px;
   }
 }
+
+
+@media (max-width: 480px) {
+  :global(#root) [class*="section"] {
+    margin-top: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  :global(#root) .title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  :global(#root) .mainWrapper {
+    width: 100%;
+    max-width: 335px; 
+    margin: 25px auto 0 auto;
+    background-color: transparent;
+  }
+
+  :global(#root) .tabContainer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px; 
+    border-bottom: none;
+    background-color: transparent;
+  }
+
+  
+  :global(#root) .tabItem {
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  :global(#root) .tabItem:first-child,
+  :global(#root) .tabItem:last-child {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  
+  :global(#root) .tabItem.active {
+    color: #ffffff;
+    background-color: rgba(61, 61, 61, 1);
+    border: 2px solid #ff7a00;
+    box-shadow: 0 4px 12px rgba(255, 122, 0, 0.15);
+    font-weight: 600;
+  }
+
+  :global(#root) .tabItem.active::before,
+  :global(#root) .tabItem.active::after {
+    display: none;
+  }
+
+  :global(#root) .mainWrapper::after {
+    display: none;
+  }
+
+  :global(#root) .tableHeader {
+    display: none;
+  }
+
+  
+  :global(#root) .tableBody {
+    margin-top: 20px;
+    border: 3px solid #ff7a00;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: rgba(61, 61, 61, 1);
+    padding: 8px 4px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  :global(#root) .tableRow,
+  :global(#root) .tableRow:last-child {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 14px 12px;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  :global(#root) .tableRow:last-child {
+    border-bottom: none;
+  }
+
+  :global(#root) .nameCell {
+    width: 100%;
+    border-right: none;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  :global(#root) .rowCellText {
+    padding-left: 0;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #ffffff;
+  }
+
+  :global(#root) .unitCell,
+  :global(#root) .priceCell {
+    display: inline-flex;
+    align-items: center;
+    border-right: none;
+    font-size: 12px;
+  }
+
+  
+  :global(#root) .unitCell {
+    color: rgba(255, 255, 255, 0.4);
+    float: left;
+  }
+
+  :global(#root) .unitCell::before {
+    content: 'Ед: ';
+    color: rgba(255, 255, 255, 0.25);
+  }
+
+  :global(#root) .priceCell {
+    color: #ff7a00;
+    font-weight: 600;
+    float: right;
+  }
+
+  :global(#root) .priceCell::before {
+    content: 'от ';
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 400;
+    margin-right: 2px;
+  }
+
+  :global(#root) .btnWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 25px;
+  }
+
+  :global(#root) .downloadBtn {
+    width: 100%;
+    max-width: 260px;
+    height: 44px;
+    font-size: 13px;
+    font-weight: 500;
+    border-width: 2px;
+    border-radius: 8px;
+  }
+}
+
+
+
+
+
