@@ -230,4 +230,341 @@
   background-color: #ff7a00;
   color: #1c1d1e;
 }
+/* ================1366================== */
+@media (max-width: 1366px) {
+  :global(#root) [class*="section"] {
+    margin-top: 109px;
+  }
+  :global(#root) .title {
+    font-size: 28.4px;
+    line-height: 35px;
+  }
+  :global(#root) .mainWrapper {
+    width: 945px;
+    margin-top: 65.4px;
+  }
+  :global(#root) .tabContainer {
+    height: 54px;
+    border-bottom: 4px solid rgba(255, 122, 0, 1);
+  }
+  :global(#root) .tabItem {
+    font-size: 19px;
+    border-top: 4px solid rgba(49, 49, 49, 1);
+    border-right: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem:first-child {
+    border-left: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem:last-child {
+    border-right: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem.active {
+    border-top: 4px solid rgba(255, 122, 0, 1);
+    background-color: rgba(61, 61, 61, 1);
+    box-shadow: 0 4px 0 rgba(61, 61, 61, 1);
+    z-index: 3;
+  }
+  :global(#root) .tabItem.active::before {
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    border-left: 4px solid rgba(255, 122, 0, 1);
+    border-right: 4px solid rgba(255, 122, 0, 1);
+  }
+  :global(#root) .tabItem.active::after {
+    display: none;
+  }
+  :global(#root) .mainWrapper::after {
+    top: 54px;
+    border: 4px solid rgba(255, 122, 0, 1);
+    border-top: none;
+  }
+  :global(#root) .tableHeader {
+    height: 52px;
+    margin-top: 23.7px;
+  }
+  :global(#root) .headerCell {
+    font-size: 15.2px;
+    line-height: 19px;
+  }
+  :global(#root) .cellText {
+    padding-left: 57px;
+  }
+  :global(#root) .rowCellText {
+    padding-left: 38px;
+  }
+  :global(#root) .tableRow,
+  :global(#root) .tableRow:last-child {
+    height: 29.4px;
+  }
+  :global(#root) .btnWrapper {
+    padding-right: 211px;
+    margin-top: 38px;
+  }
+  :global(#root) .downloadBtn {
+    height: 48.4px;
+    padding: 0 30.3px;
+    font-size: 13.3px;
+  }
+}
 
+@media (max-width: 1200px) {
+  :global(#root) [class*="section"] {
+    margin-top: 95.8px;
+  }
+  :global(#root) .title {
+    font-size: 25px;
+    line-height: 30.8px;
+  }
+  :global(#root) .mainWrapper {
+    width: 830px;
+    margin-top: 57.5px;
+  }
+  :global(#root) .tabContainer {
+    height: 47.5px;
+    border-bottom: 4px solid rgba(255, 122, 0, 1);
+  }
+  :global(#root) .tabItem {
+    font-size: 16.6px;
+    border-top: 4px solid rgba(49, 49, 49, 1);
+    border-right: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem:first-child {
+    border-left: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem:last-child {
+    border-right: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem.active {
+    border-top: 4px solid rgba(255, 122, 0, 1);
+    background-color: rgba(61, 61, 61, 1);
+    box-shadow: 0 4px 0 rgba(61, 61, 61, 1);
+    z-index: 3;
+  }
+  :global(#root) .tabItem.active::before {
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    border-left: 4px solid rgba(255, 122, 0, 1);
+    border-right: 4px solid rgba(255, 122, 0, 1);
+  }
+  :global(#root) .tabItem.active::after {
+    display: none;
+  }
+  :global(#root) .mainWrapper::after {
+    top: 47.5px;
+    border: 4px solid rgba(255, 122, 0, 1);
+    border-top: none;
+  }
+  :global(#root) .tableHeader {
+    height: 45.8px;
+    margin-top: 20.8px;
+  }
+  :global(#root) .headerCell {
+    font-size: 13.3px;
+    line-height: 16.6px;
+  }
+  :global(#root) .cellText {
+    padding-left: 50px;
+  }
+  :global(#root) .rowCellText {
+    padding-left: 33.3px;
+  }
+  :global(#root) .tableRow,
+  :global(#root) .tableRow:last-child {
+    height: 25.8px;
+  }
+  :global(#root) .btnWrapper {
+    padding-right: 185px;
+    margin-top: 33.3px;
+  }
+  :global(#root) .downloadBtn {
+    height: 42.5px;
+    padding: 0 26.6px;
+    font-size: 11.6px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :global(#root) [class*="section"] {
+    margin-top: 81.7px;
+  }
+  :global(#root) .title {
+    font-size: 21.3px;
+    line-height: 26.3px;
+  }
+  :global(#root) .mainWrapper {
+    width: 708.2px;
+    margin-top: 49px;
+  }
+  :global(#root) .tabContainer {
+    height: 40.5px;
+    border-bottom: 4px solid rgba(255, 122, 0, 1);
+  }
+  :global(#root) .tabItem {
+    font-size: 14.2px;
+    border-top: 4px solid rgba(49, 49, 49, 1);
+    border-right: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem:first-child {
+    border-left: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem:last-child {
+    border-right: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem.active {
+    border-top: 4px solid rgba(255, 122, 0, 1);
+    background-color: rgba(61, 61, 61, 1);
+    box-shadow: 0 6px 0 rgba(61, 61, 61, 1);
+    z-index: 3;
+  }
+  :global(#root) .tabItem.active::before {
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    border-left: 4px solid rgba(255, 122, 0, 1);
+    border-right: 4px solid rgba(255, 122, 0, 1);
+  }
+  :global(#root) .tabItem.active::after {
+    display: none;
+  }
+  :global(#root) .mainWrapper::after {
+    top: 40.5px;
+    border: 4px solid rgba(255, 122, 0, 1);
+    border-top: none;
+  }
+  :global(#root) .tableHeader {
+    height: auto;
+    min-height: 39.1px;
+    margin-top: 17.7px;
+    padding: 4px 0;
+  }
+  :global(#root) .headerCell {
+    font-size: 11.3px;
+    line-height: 14.2px;
+  }
+  :global(#root) .cellText {
+    padding-left: 20px;
+  }
+  :global(#root) .rowCellText {
+    padding-left: 20px;
+  }
+  
+ 
+  :global(#root) .tableRow,
+  :global(#root) .tableRow:last-child {
+    height: auto;
+    min-height: 22px;
+    padding: 4px 0;
+  }
+  :global(#root) .nameCell,
+  :global(#root) .unitCell,
+  :global(#root) .priceCell {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  :global(#root) .btnWrapper {
+    padding-right: 157.8px;
+    margin-top: 28.4px;
+  }
+  :global(#root) .downloadBtn {
+    height: 36.2px;
+    padding: 0 22.7px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  :global(#root) [class*="section"] {
+    margin-top: 79.8px;
+  }
+  :global(#root) .title {
+    font-size: 20.8px;
+    line-height: 25.7px;
+  }
+  :global(#root) .mainWrapper {
+    width: 692px;
+    margin-top: 47.9px;
+  }
+  :global(#root) .tabContainer {
+    height: 40px;
+    border-bottom: 4px solid rgba(255, 122, 0, 1);
+  }
+  :global(#root) .tabItem {
+    font-size: 13.9px;
+    border-top: 4px solid rgba(49, 49, 49, 1);
+    border-right: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem:first-child {
+    border-left: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem:last-child {
+    border-right: 4px solid rgba(49, 49, 49, 1);
+  }
+  :global(#root) .tabItem.active {
+    border-top: 4px solid rgba(255, 122, 0, 1);
+    background-color: rgba(61, 61, 61, 1);
+    box-shadow: 0 6px 0 rgba(61, 61, 61, 1);
+    z-index: 3;
+  }
+  :global(#root) .tabItem.active::before {
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    border-left: 4px solid rgba(255, 122, 0, 1);
+    border-right: 4px solid rgba(255, 122, 0, 1);
+  }
+  :global(#root) .tabItem.active::after {
+    display: none;
+  }
+  :global(#root) .mainWrapper::after {
+    top: 40px;
+    border: 4px solid rgba(255, 122, 0, 1);
+    border-top: none;
+  }
+  :global(#root) .tableHeader {
+    height: auto;
+    min-height: 38.2px;
+    margin-top: 17.3px;
+    padding: 4px 0;
+  }
+  :global(#root) .headerCell {
+    font-size: 11.1px;
+    line-height: 13.9px;
+  }
+  :global(#root) .cellText {
+    padding-left: 20px;
+  }
+  :global(#root) .rowCellText {
+    padding-left: 20px;
+  }
+  
+  
+  :global(#root) .tableRow,
+  :global(#root) .tableRow:last-child {
+    height: auto;
+    min-height: 21.5px;
+    padding: 4px 0;
+  }
+  :global(#root) .nameCell,
+  :global(#root) .unitCell,
+  :global(#root) .priceCell {
+    font-size: 11.5px;
+    line-height: 14px;
+  }
+
+  :global(#root) .btnWrapper {
+    padding-right: 154px;
+    margin-top: 27.7px;
+  }
+  :global(#root) .downloadBtn {
+    height: 35.4px;
+    padding: 0 22.2px;
+    font-size: 10px;
+  }
+}
