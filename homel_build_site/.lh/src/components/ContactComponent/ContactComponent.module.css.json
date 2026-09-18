@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 55,
+            "activePatchIndex": 65,
             "patches": [
                 {
                     "date": 1784301660932,
@@ -228,6 +228,46 @@
                 {
                     "date": 1789743791737,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -465,4 +465,155 @@\n   }\r\n }\r\n \r\n \r\n+@media (max-width: 480px) {\r\n+  :global(#root) .wrapper {\r\n+    margin-top: 25px;\r\n+    width: 100%;\r\n+    padding: 0 10px;\r\n+    box-sizing: border-box;\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    align-items: center;\r\n+  }\r\n+  \r\n+  :global(#root) .title {\r\n+    font-size: 15px;\r\n+    line-height: 19px;\r\n+    text-align: center;\r\n+    white-space: normal;\r\n+    padding: 0 5px;\r\n+  }\r\n+  \r\n+  /* Прыбіраем цяжкую цагляную сцяну на мабільных для чысціні інтэрфейсу */\r\n+  :global(#root) .contentBlock {\r\n+    margin-top: 20px;\r\n+    width: 100%;\r\n+    max-width: 320px;\r\n+    height: auto;\r\n+    padding: 0; \r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    align-items: center;\r\n+    box-sizing: border-box;\r\n+    background-image: none; /* Выдаляем фон */\r\n+    background-color: transparent;\r\n+  }\r\n+  \r\n+  :global(#root) .workersColumn {\r\n+    margin-left: 0;\r\n+    margin-bottom: 20px;\r\n+    justify-content: center;\r\n+    width: 100%;\r\n+  }\r\n+  \r\n+  :global(#root) .workersImg {\r\n+    display: block;\r\n+    width: 100%;\r\n+    max-width: 240px;\r\n+    height: auto;\r\n+  }\r\n+  \r\n+  :global(#root) .formColumn {\r\n+    width: 100%;\r\n+    display: flex;\r\n+    justify-content: center;\r\n+  }\r\n+\r\n+  /* Ідэальная мабільная форма на 300px */\r\n+  :global(#root) :global([class*=\"ContactForm_form\"]) {\r\n+    margin-top: 0;\r\n+    margin-left: 0;\r\n+    width: 300px;\r\n+    height: auto;\r\n+    padding: 20px 15px;\r\n+    align-items: stretch;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_title\"]) {\r\n+    padding-top: 0;\r\n+    padding-left: 0;\r\n+    font-size: 16px;\r\n+    line-height: 20px;\r\n+    text-align: center;\r\n+    margin-bottom: 15px;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_label\"]) {\r\n+    margin-left: 0;\r\n+    margin-top: 15px;\r\n+    font-size: 11px;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_input\"]) {\r\n+    width: 100%;\r\n+    font-size: 13px;\r\n+    padding: 4px 0;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_line\"]) {\r\n+    width: 100%;\r\n+    margin-left: 0;\r\n+    margin-top: 2px;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_label_name\"]),\r\n+  :global(#root) :global([class*=\"ContactForm_label_phone\"]) {\r\n+    margin-top: 12px;\r\n+    margin-left: 0;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_label_text\"]) {\r\n+    margin-top: 15px;\r\n+    margin-left: 0;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_textarea\"]) {\r\n+    width: 100%;\r\n+    height: 90px;\r\n+    margin-top: 6px;\r\n+    margin-left: 0;\r\n+    padding: 8px 10px;\r\n+    font-size: 13px;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_submitBtn\"]) {\r\n+    width: 100%;\r\n+    height: 44px;\r\n+    margin-top: 20px;\r\n+    margin-left: 0;\r\n+    font-size: 14px;\r\n+    border-radius: 8px;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_checkboxContainer\"]) {\r\n+    margin-top: 15px;\r\n+    margin-left: 0;\r\n+    align-items: flex-start;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_checkboxCustom\"]) {\r\n+    width: 16px;\r\n+    height: 16px;\r\n+    margin-right: 8px;\r\n+    margin-top: 1px;\r\n+  }\r\n+  \r\n+  :global(#root) :global([class*=\"ContactForm_checkboxText\"]) {\r\n+    font-size: 10px;\r\n+    line-height: 13px;\r\n+  }\r\n+}\r\n+\r\n+/* ІЗАЛЯЦЫЯ: Блякуем бакавы скролл ад ніжніх блокаў і хаваем крывы футар для адладкі */\r\n+:global(html),\r\n+:global(body),\r\n+:global(#root) {\r\n+  overflow-x: hidden;\r\n+}\r\n+\r\n+:global(footer),\r\n+:global(#footer) {\r\n+  display: none !important;\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1789744059544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -604,9 +604,9 @@\n     line-height: 13px;\r\n   }\r\n }\r\n \r\n-/* ІЗАЛЯЦЫЯ: Блякуем бакавы скролл ад ніжніх блокаў і хаваем крывы футар для адладкі */\r\n+\r\n :global(html),\r\n :global(body),\r\n :global(#root) {\r\n   overflow-x: hidden;\r\n"
+                },
+                {
+                    "date": 1789744074721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -519,9 +519,9 @@\n     display: flex;\r\n     justify-content: center;\r\n   }\r\n \r\n-  /* Ідэальная мабільная форма на 300px */\r\n+ \r\n   :global(#root) :global([class*=\"ContactForm_form\"]) {\r\n     margin-top: 0;\r\n     margin-left: 0;\r\n     width: 300px;\r\n"
+                },
+                {
+                    "date": 1789744083971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -484,9 +484,9 @@\n     white-space: normal;\r\n     padding: 0 5px;\r\n   }\r\n   \r\n-  /* Прыбіраем цяжкую цагляную сцяну на мабільных для чысціні інтэрфейсу */\r\n+ \r\n   :global(#root) .contentBlock {\r\n     margin-top: 20px;\r\n     width: 100%;\r\n     max-width: 320px;\r\n@@ -495,9 +495,9 @@\n     display: flex;\r\n     flex-direction: column;\r\n     align-items: center;\r\n     box-sizing: border-box;\r\n-    background-image: none; /* Выдаляем фон */\r\n+    background-image: none; \r\n     background-color: transparent;\r\n   }\r\n   \r\n   :global(#root) .workersColumn {\r\n"
+                },
+                {
+                    "date": 1789744097018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -399,9 +399,9 @@\n     width: 361.6px;\r\n     height: auto;\r\n   }\r\n \r\n-  /* Форма зваротнай сувязі на 768px */\r\n+  \r\n   :global(#root) :global([class*=\"ContactForm_form\"]) {\r\n     margin-top: 37.9px;\r\n     margin-left: 8px;\r\n     width: 208px;\r\n"
+                },
+                {
+                    "date": 1789744105119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -318,9 +318,9 @@\n     width: 470.8px;\r\n     height: auto;\r\n   }\r\n \r\n-  /* Форма зваротнай сувязі на 1000px */\r\n+ \r\n   :global(#root) :global([class*=\"ContactForm_form\"]) {\r\n     margin-top: 49.3px;\r\n     margin-left: 10.4px;\r\n     width: 270.8px;\r\n"
+                },
+                {
+                    "date": 1789744114798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -237,9 +237,9 @@\n     width: 482.1px;\r\n     height: auto;\r\n   }\r\n \r\n-  /* Форма обратной связи на 1024px */\r\n+  \r\n   :global(#root) :global([class*=\"ContactForm_form\"]) {\r\n     margin-top: 50.5px;\r\n     margin-left: 10.7px;\r\n     width: 277.3px;\r\n"
+                },
+                {
+                    "date": 1789744123093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -156,9 +156,9 @@\n     width: 565px;\r\n     height: auto;\r\n   }\r\n \r\n-  /* Форма обратной связи на 1200px */\r\n+\r\n   :global(#root) :global([class*=\"ContactForm_form\"]) {\r\n     margin-top: 59.2px;\r\n     margin-left: 12.5px;\r\n     width: 325px;\r\n"
+                },
+                {
+                    "date": 1789744129329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n     width: 643.1px;\r\n     height: auto;\r\n   }\r\n \r\n-  /* Форма обратной связи */\r\n+ \r\n   :global(#root) :global([class*=\"ContactForm_form\"]) {\r\n     margin-top: 67.3px;\r\n     margin-left: 14.2px;\r\n     width: 370px;\r\n"
+                },
+                {
+                    "date": 1789744136611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,11 +45,11 @@\n   box-sizing: border-box;\r\n   \r\n     position: relative;\r\n }\r\n-/* ===============1366==================== */\r\n \r\n \r\n+\r\n @media (max-width: 1366px) {\r\n   :global(#root) .wrapper {\r\n     margin-top: 53.1px;\r\n     width: 100%;\r\n"
+                },
+                {
+                    "date": 1789745007806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -605,15 +605,5 @@\n   }\r\n }\r\n \r\n \r\n-:global(html),\r\n-:global(body),\r\n-:global(#root) {\r\n-  overflow-x: hidden;\r\n-}\r\n \r\n-:global(footer),\r\n-:global(#footer) {\r\n-  display: none !important;\r\n-}\r\n-\r\n"
                 }
             ],
             "date": 1784301660932,

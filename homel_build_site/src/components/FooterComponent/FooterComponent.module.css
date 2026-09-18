@@ -99,3 +99,334 @@
   margin-top: 19px;   
   margin-right: 134px; 
 }
+
+@media (max-width: 1366px) {
+  :global(#root) .footer {
+    display: flex;
+    height: 159.3px;
+    width: 100%;
+  }
+  :global(#root) .columnLeft,
+  :global(#root) .columnRight {
+    font-size: 15.2px;
+    line-height: 19px;
+  }
+  :global(#root) .columnCenter {
+    font-size: 19px;
+    line-height: 22.8px;
+    margin-bottom: 15.2px;
+  }
+  :global(#root) .phoneRow,
+  :global(#root) .emailRow {
+    margin-left: 114.8px;
+  }
+  :global(#root) .phoneRow {
+    margin-top: 37px;
+  }
+  :global(#root) .phoneNumber,
+  :global(#root) .emailText {
+    font-size: 15.2px;
+    line-height: 19px;
+    margin-left: 27.5px;
+  }
+  :global(#root) .phoneNumber {
+    margin-top: 9.5px;
+  }
+  :global(#root) .emailRow {
+    margin-top: 12.3px;
+  }
+  :global(#root) .emailText {
+    margin-top: 13.3px;
+  }
+  :global(#root) .owner {
+    margin-top: 28.4px;
+    margin-right: 175.5px;
+  }
+  :global(#root) .unp {
+    margin-top: 18px;
+    margin-right: 121.4px;
+  }
+  :global(#root) .address {
+    margin-top: 18px;
+    margin-right: 127.1px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :global(#root) .footer {
+    display: flex;
+    height: 140px;
+    width: 100%;
+  }
+  :global(#root) .columnLeft,
+  :global(#root) .columnRight {
+    font-size: 13.3px;
+    line-height: 16.6px;
+  }
+  :global(#root) .columnCenter {
+    font-size: 16.6px;
+    line-height: 20px;
+    margin-bottom: 13.3px;
+  }
+  :global(#root) .phoneRow,
+  :global(#root) .emailRow {
+    margin-left: 100.8px;
+  }
+  :global(#root) .phoneRow {
+    margin-top: 32.5px;
+  }
+  :global(#root) .phoneNumber,
+  :global(#root) .emailText {
+    font-size: 13.3px;
+    line-height: 16.6px;
+    margin-left: 24.1px;
+  }
+  :global(#root) .phoneNumber {
+    margin-top: 8.3px;
+  }
+  :global(#root) .emailRow {
+    margin-top: 10.8px;
+  }
+  :global(#root) .emailText {
+    margin-top: 11.6px;
+  }
+  :global(#root) .owner {
+    margin-top: 25px;
+    margin-right: 154.1px;
+  }
+  :global(#root) .unp {
+    margin-top: 15.8px;
+    margin-right: 106.6px;
+  }
+  :global(#root) .address {
+    margin-top: 15.8px;
+    margin-right: 111.6px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :global(#root) .footer {
+    display: flex;
+    height: 119.4px;
+    width: 100%;
+  }
+  :global(#root) .columnLeft,
+  :global(#root) .columnRight {
+    font-size: 11.3px;
+    line-height: 14.2px;
+  }
+  :global(#root) .columnCenter {
+    font-size: 14.2px;
+    line-height: 17px;
+    margin-bottom: 11.3px;
+  }
+  :global(#root) .phoneRow,
+  :global(#root) .emailRow {
+    margin-left: 86px;
+  }
+  :global(#root) .phoneRow {
+    margin-top: 27.7px;
+  }
+  :global(#root) .phoneNumber,
+  :global(#root) .emailText {
+    font-size: 11.3px;
+    line-height: 14.2px;
+    margin-left: 20.6px;
+  }
+  :global(#root) .phoneNumber {
+    margin-top: 7.1px;
+  }
+  :global(#root) .emailRow {
+    margin-top: 9.2px;
+  }
+  :global(#root) .emailText {
+    margin-top: 9.9px;
+  }
+  :global(#root) .owner {
+    margin-top: 21.3px;
+    margin-right: 131.5px;
+  }
+  :global(#root) .unp {
+    margin-top: 13.5px;
+    margin-right: 91px;
+  }
+  :global(#root) .address {
+    margin-top: 13.5px;
+    margin-right: 95.2px;
+  }
+}
+
+@media (max-width: 1000px) {
+  :global(#root) .footer {
+    display: flex;
+    height: 116.6px;
+    width: 100%;
+  }
+  :global(#root) .columnLeft,
+  :global(#root) .columnRight {
+    font-size: 11.1px;
+    line-height: 13.9px;
+  }
+  :global(#root) .columnCenter {
+    font-size: 13.9px;
+    line-height: 16.6px;
+    margin-bottom: 11.1px;
+  }
+  :global(#root) .phoneRow,
+  :global(#root) .emailRow {
+    margin-left: 84px;
+  }
+  :global(#root) .phoneRow {
+    margin-top: 27px;
+  }
+  :global(#root) .phoneNumber,
+  :global(#root) .emailText {
+    font-size: 11.1px;
+    line-height: 13.9px;
+    margin-left: 20.1px;
+  }
+  :global(#root) .phoneNumber {
+    margin-top: 6.9px;
+  }
+  :global(#root) .emailRow {
+    margin-top: 9px;
+  }
+  :global(#root) .emailText {
+    margin-top: 9.7px;
+  }
+  :global(#root) .owner {
+    margin-top: 20.8px;
+    margin-right: 128.4px;
+  }
+  :global(#root) .unp {
+    margin-top: 13.2px;
+    margin-right: 88.8px;
+  }
+  :global(#root) .address {
+    margin-top: 13.2px;
+    margin-right: 93px;
+  }
+}
+
+@media (max-width: 768px) {
+  :global(#root) .footer {
+    display: flex;
+    height: 89.6px;
+    width: 100%;
+  }
+  :global(#root) .columnLeft,
+  :global(#root) .columnRight {
+    font-size: 8.5px;
+    line-height: 10.6px;
+  }
+  :global(#root) .columnCenter {
+    font-size: 10.6px;
+    line-height: 12.8px;
+    margin-bottom: 8.5px;
+  }
+  :global(#root) .phoneRow,
+  :global(#root) .emailRow {
+    margin-left: 64.5px;
+  }
+  :global(#root) .phoneRow {
+    margin-top: 20.8px;
+  }
+  :global(#root) .phoneNumber,
+  :global(#root) .emailText {
+    font-size: 8.5px;
+    line-height: 10.6px;
+    margin-left: 15.4px;
+  }
+  :global(#root) .phoneNumber {
+    margin-top: 5.3px;
+  }
+  :global(#root) .emailRow {
+    margin-top: 6.9px;
+  }
+  :global(#root) .emailText {
+    margin-top: 7.4px;
+  }
+  :global(#root) .owner {
+    margin-top: 16px;
+    margin-right: 98.6px;
+  }
+  :global(#root) .unp {
+    margin-top: 10.1px;
+    margin-right: 68.2px;
+  }
+  :global(#root) .address {
+    margin-top: 10.1px;
+    margin-right: 71.4px;
+  }
+}
+
+@media (max-width: 480px) {
+  :global(#root) .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+  }
+
+  :global(#root) .columnLeft,
+  :global(#root) .columnCenter,
+  :global(#root) .columnRight {
+    width: 100%;
+    flex: none;
+    align-items: center;
+    text-align: center;
+  }
+
+ 
+  :global(#root) .columnLeft {
+    margin-bottom: 25px;
+  }
+  :global(#root) .phoneRow,
+  :global(#root) .emailRow {
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  :global(#root) .phoneRow {
+    margin-top: 0;
+  }
+  :global(#root) .emailRow {
+    margin-top: 15px;
+  }
+  :global(#root) .phoneNumber,
+  :global(#root) .emailText {
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+
+ 
+  :global(#root) .columnRight {
+    margin-bottom: 30px;
+    font-size: 13px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  :global(#root) .owner {
+    margin-top: 0;
+    margin-right: 0;
+  }
+  :global(#root) .unp,
+  :global(#root) .address {
+    margin-top: 8px;
+    margin-right: 0;
+  }
+
+  
+  :global(#root) .columnCenter {
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.4);
+    order: 3;
+  }
+}
