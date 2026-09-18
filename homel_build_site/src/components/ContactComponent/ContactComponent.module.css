@@ -46,3 +46,172 @@
   
     position: relative;
 }
+/* ===============1366==================== */
+
+
+@media (max-width: 1366px) {
+  :global(#root) .wrapper {
+    margin-top: 53.1px;
+    width: 100%;
+  }
+  :global(#root) .title {
+    font-size: 28.4px;
+    line-height: 35px;
+  }
+  :global(#root) .contentBlock {
+    margin-top: 60.7px;
+    width: 100%;
+    height: 643.8px;
+  }
+  
+  :global(#root) .workersColumn {
+    margin-left: 155.5px;
+  }
+  
+  
+  :global(#root) .workersImg {
+    display: block;
+    width: 643.1px;
+    height: auto;
+  }
+
+  /* Форма обратной связи */
+  :global(#root) :global([class*="ContactForm_form"]) {
+    margin-top: 67.3px;
+    margin-left: 14.2px;
+    width: 370px;
+    height: 444.7px;
+  }
+  :global(#root) :global([class*="ContactForm_title"]) {
+    padding-top: 23px;
+    padding-left: 47.4px;
+    font-size: 20.8px;
+    line-height: 25.6px;
+  }
+  :global(#root) :global([class*="ContactForm_label"]) {
+    margin-left: 47.4px;
+    margin-top: 22px;
+    font-size: 13.3px;
+  }
+  :global(#root) :global([class*="ContactForm_line"]) {
+    width: 270.3px;
+    margin-left: 48.4px;
+    margin-top: 2.9px;
+  }
+  :global(#root) :global([class*="ContactForm_label_name"]) {
+    margin-top: 22px;
+    margin-left: 47.4px;
+  }
+  :global(#root) :global([class*="ContactForm_label_phone"]) {
+    margin-top: 17.3px;
+    margin-left: 47.4px;
+  }
+  :global(#root) :global([class*="ContactForm_label_text"]) {
+    margin-top: 16.3px;
+    margin-left: 48.4px;
+  }
+  :global(#root) :global([class*="ContactForm_textarea"]) {
+    width: 270.3px;
+    height: 139px;
+    margin-top: 15.8px;
+    margin-left: 48.4px;
+    padding: 9.5px 13.3px;
+  }
+  :global(#root) :global([class*="ContactForm_submitBtn"]) {
+    width: 270.3px;
+    height: 47.9px;
+    margin-top: 24px;
+    margin-left: 48.4px;
+    font-size: 15.2px;
+  }
+  :global(#root) :global([class*="ContactForm_checkboxContainer"]) {
+    margin-top: 15.3px;
+    margin-left: 48.4px;
+  }
+  :global(#root) :global([class*="ContactForm_checkboxCustom"]) {
+    width: 15.2px;
+    height: 15.3px;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  :global(#root) .wrapper {
+    margin-top: 46.7px;
+  }
+  :global(#root) .title {
+    font-size: 25px;
+    line-height: 30.8px;
+  }
+  :global(#root) .contentBlock {
+    margin-top: 53.3px;
+    width: 100%;
+    height: 566.6px;
+  }
+  :global(#root) .workersColumn {
+    margin-left: 136.7px;
+  }
+  :global(#root) .workersImg {
+    display: block;
+    width: 565px;
+    height: auto;
+  }
+
+  /* Форма обратной связи на 1200px */
+  :global(#root) :global([class*="ContactForm_form"]) {
+    margin-top: 59.2px;
+    margin-left: 12.5px;
+    width: 325px;
+    height: 390.7px;
+  }
+  :global(#root) :global([class*="ContactForm_title"]) {
+    padding-top: 20.2px;
+    padding-left: 41.7px;
+    font-size: 18.3px;
+    line-height: 22.5px;
+  }
+  :global(#root) :global([class*="ContactForm_label"]) {
+    margin-left: 41.7px;
+    margin-top: 19.4px;
+    font-size: 11.7px;
+  }
+  :global(#root) :global([class*="ContactForm_line"]) {
+    width: 237.5px;
+    margin-left: 42.5px;
+    margin-top: 2.6px;
+  }
+  :global(#root) :global([class*="ContactForm_label_name"]) {
+    margin-top: 19.4px;
+    margin-left: 41.7px;
+  }
+  :global(#root) :global([class*="ContactForm_label_phone"]) {
+    margin-top: 15.2px;
+    margin-left: 41.7px;
+  }
+  :global(#root) :global([class*="ContactForm_label_text"]) {
+    margin-top: 14.3px;
+    margin-left: 42.5px;
+  }
+  :global(#root) :global([class*="ContactForm_textarea"]) {
+    width: 237.5px;
+    height: 122.1px;
+    margin-top: 13.9px;
+    margin-left: 42.5px;
+    padding: 8.3px 11.7px;
+  }
+  :global(#root) :global([class*="ContactForm_submitBtn"]) {
+    width: 237.5px;
+    height: 42.1px;
+    margin-top: 21.1px;
+    margin-left: 42.5px;
+    font-size: 13.3px;
+  }
+  :global(#root) :global([class*="ContactForm_checkboxContainer"]) {
+    margin-top: 13.4px;
+    margin-left: 42.5px;
+  }
+  :global(#root) :global([class*="ContactForm_checkboxCustom"]) {
+    width: 13.3px;
+    height: 13.5px;
+  }
+}
