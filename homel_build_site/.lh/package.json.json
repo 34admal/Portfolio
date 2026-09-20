@@ -1,0 +1,34 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1789840929644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1789840992367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n {\r\n   \"name\": \"homel_build_site\",\r\n   \"version\": \"0.1.0\",\r\n   \"private\": true,\r\n-  \r\n+  \"homepage\": \"https://github.io\",\r\n+\r\n   \"dependencies\": {\r\n     \"@testing-library/dom\": \"^10.4.1\",\r\n     \"@testing-library/jest-dom\": \"^6.9.1\",\r\n     \"@testing-library/react\": \"^16.3.2\",\r\n"
+                },
+                {
+                    "date": 1789841641706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n   \"version\": \"0.1.0\",\r\n   \"private\": true,\r\n   \"homepage\": \"https://github.io\",\r\n \r\n+\r\n   \"dependencies\": {\r\n     \"@testing-library/dom\": \"^10.4.1\",\r\n     \"@testing-library/jest-dom\": \"^6.9.1\",\r\n     \"@testing-library/react\": \"^16.3.2\",\r\n"
+                },
+                {
+                    "date": 1789841665124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n {\r\n   \"name\": \"homel_build_site\",\r\n   \"version\": \"0.1.0\",\r\n   \"private\": true,\r\n-  \"homepage\": \"https://github.io\",\r\n+  \"homepage\": \"https://34admal.github.io/Portfolio/\",\r\n \r\n \r\n   \"dependencies\": {\r\n     \"@testing-library/dom\": \"^10.4.1\",\r\n"
+                },
+                {
+                    "date": 1789841681714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n   \"version\": \"0.1.0\",\r\n   \"private\": true,\r\n   \"homepage\": \"https://34admal.github.io/Portfolio/\",\r\n \r\n-\r\n   \"dependencies\": {\r\n     \"@testing-library/dom\": \"^10.4.1\",\r\n     \"@testing-library/jest-dom\": \"^6.9.1\",\r\n     \"@testing-library/react\": \"^16.3.2\",\r\n"
+                }
+            ],
+            "date": 1789840929644,
+            "name": "Commit-0",
+            "content": "{\r\n  \"name\": \"homel_build_site\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \r\n  \"dependencies\": {\r\n    \"@testing-library/dom\": \"^10.4.1\",\r\n    \"@testing-library/jest-dom\": \"^6.9.1\",\r\n    \"@testing-library/react\": \"^16.3.2\",\r\n    \"@testing-library/user-event\": \"^13.5.0\",\r\n    \"react\": \"^19.2.4\",\r\n    \"react-dom\": \"^19.2.4\",\r\n    \"react-router-dom\": \"^7.13.0\",\r\n    \"react-scripts\": \"5.0.1\",\r\n    \"web-vitals\": \"^2.1.4\"\r\n  },\r\n  \"scripts\": {\r\n    \"start\": \"react-scripts start\",\r\n    \"build\": \"react-scripts build\",\r\n    \"test\": \"react-scripts test\",\r\n    \"eject\": \"react-scripts eject\"\r\n  },\r\n  \"eslintConfig\": {\r\n    \"extends\": [\r\n      \"react-app\",\r\n      \"react-app/jest\"\r\n    ]\r\n  },\r\n  \"browserslist\": {\r\n    \"production\": [\r\n      \">0.2%\",\r\n      \"not dead\",\r\n      \"not op_mini all\"\r\n    ],\r\n    \"development\": [\r\n      \"last 1 chrome version\",\r\n      \"last 1 firefox version\",\r\n      \"last 1 safari version\"\r\n    ]\r\n  }\r\n}\r\n"
+        }
+    ]
+}

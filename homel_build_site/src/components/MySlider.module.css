@@ -1,28 +1,26 @@
 
 .sliderFrameContainer {
   position: relative;
- 
   height: 520px; 
-  
   border-top: 10px solid #ff7a00;
   border-bottom: 10px solid #ff7a00;
   border-left: 10px solid #ff7a00;
   border-right: none; 
-  
   box-sizing: border-box;
+ 
 }
-
 
 .sliderWrapper {
   position: absolute;
   top: 30px; 
   bottom: 30px;
   right: 112px; 
-  
   width: 640px; 
   height: 440px; 
   z-index: 10;
+ 
 }
+
 
 
 .sliderWindow {
@@ -98,4 +96,17 @@
 
 .activeDot {
   background: #ff7a00;
+}
+
+
+/* Изолированный брейкпоинт строго для больших мониторов без единого !important */
+@media (min-width: 1441px) {
+  :global(#root) .sliderFrameContainer {
+    width: 780px;
+  }
+  
+  :global(#root) .sliderWrapper {
+    left: -22px;
+    right: auto;
+  }
 }

@@ -1,11 +1,23 @@
-/* img {
-  margin-top: 14.63px;
-} */
-p {
-  color: #fff;
+
+.stepDescription {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-align: left;
+  color: #fff; 
 }
+
 .section_header {
   padding-top: 59px;
+  display: flex;
+  align-items: center;
+ 
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header__number {
@@ -18,9 +30,14 @@ p {
   flex-wrap: wrap;
   background-image: url("./images/backGroundImage.png");
   background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100%;
 }
+
 .overlay {
   background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
 }
 
 .headingNumber {
@@ -32,19 +49,14 @@ p {
   color: rgba(255, 122, 0, 0.5);
   margin: 0 13px 0 0;
 }
-.stepDescription {
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 0.9px;
-  text-align: left;
-}
 
 .stepGroupTop {
   margin-top: 45px;
   display: flex;
+  
+  max-width: 1440px;
+  width: 100%;
+  margin: 45px auto 0 auto;
 }
 
 .block01 {
@@ -56,7 +68,6 @@ p {
   width: 373px;
   margin: 9px 0 54px 13px;
   font-family: Montserrat;
-
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -79,7 +90,6 @@ p {
 .block04 {
   display: flex;
   flex: 1;
-
   align-items: flex-start;
 }
 .block02 .stepDescription {
@@ -97,7 +107,6 @@ p {
   display: inline-block;
   width: 295px;
   word-break: break-word;
-
   margin: 14px 0 15px 27px;
   font-family: Montserrat;
   font-size: 18px;
@@ -113,7 +122,6 @@ p {
 .block04 .stepDescription {
   display: inline-block;
   width: 307px;
-
   margin: 8px 0 0 17px;
   word-break: break-word;
   font-family: Montserrat;
@@ -129,11 +137,13 @@ p {
 
 .block05 {
   display: flex;
-
   justify-content: center;
   margin-top: 38px;
   margin-bottom: 50px;
-  margin: 0 auto;
+ 
+  max-width: 1440px;
+  width: 100%;
+  margin: 38px auto 50px auto;
 }
 .block05 .stepDescription {
   display: inline-block;
@@ -161,13 +171,15 @@ p {
   margin: 0 273px 0 240px;
   font-size: 30px;
   font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
 }
 
 .section_header > .orangeLine:first-child {
   margin-left: 120px;
 }
 
-/* ------------------------RESPONCE---------------------------  */
+/* ------------------------RESPONSIVE---------------------------  */
 
 @media (max-width: 1366px) {
   .section_header {
@@ -182,23 +194,19 @@ p {
   .orangeLine {
     width: 192px;
   }
-
   .headingNumber {
     font-size: 57px;
     line-height: 69px;
   }
-
-  .how_we_work .stepDescription {
+  .stepDescription {
     font-size: 17px;
   }
-
   .stepGroupTop {
     margin-top: 43px;
   }
   .block01 {
     margin-left: 209px;
   }
-
   .block01 .stepDescription {
     width: 354px;
     margin: 9px 0 51px 12px;
@@ -223,7 +231,6 @@ p {
   }
 }
 
-
 @media (max-width: 1200px) {
   .section_header {
     padding-top: 49px;
@@ -238,7 +245,6 @@ p {
   .orangeLine {
     width: 169px;
   }
-
   .headingNumber {
     font-size: 50px;
     line-height: 61px;
@@ -246,11 +252,9 @@ p {
   .stepDescription {
     font-size: 15px;
   }
-
   .stepGroupTop {
     margin-top: 38px;
   }
-
   .block01 {
     margin-left: 184px;
   }
@@ -259,7 +263,6 @@ p {
     margin: 8px 0 45px 11px;
     font-size: 15px;
   }
-
   .block02 {
     margin-left: 184px;
   }
@@ -267,28 +270,24 @@ p {
     margin: 21px 0 7px;
     font-size: 15px;
   }
-
   .block03 .stepDescription {
     width: 246px;
     margin: 12px 0 12px 23px;
     font-size: 15px;
   }
-
   .block04 .stepDescription {
     width: 256px;
     margin: 7px 0 0 14px;
     font-size: 15px;
   }
-
   .block05 .stepDescription {
     width: 290px;
     margin: 16px 0 8px 20px;
     font-size: 15px;
   }
 }
-/* --1024------------------------------------------------------- */
+
 @media (max-width: 1024px) {
-  
   .how_we_work {
     flex-wrap: nowrap;
     width: 100vw;
@@ -296,11 +295,13 @@ p {
     overflow-x: hidden;
     box-sizing: border-box;
     
-    
-    background-size: 1024px auto;
-    background-position: center top;
+   
+    background-size: cover;
+    background-position: center center;
   }
+  
 
+}
   .section_header {
     padding-top: 42px;
   }
@@ -314,15 +315,13 @@ p {
   .orangeLine {
     width: 144px;
   }
-
   .headingNumber {
     font-size: 42px;
     line-height: 52px;
   }
-  .how_we_work .stepDescription {
+  .stepDescription {
     font-size: 13px;
   }
-
   .stepGroupTop {
     margin-top: 32px;
     display: flex;
@@ -330,7 +329,6 @@ p {
     width: 100%;
     box-sizing: border-box;
   }
-
   .block01 {
     margin-left: 120px; 
   }
@@ -338,29 +336,24 @@ p {
     width: 265px;
     margin: 6px 0 38px 9px;
   }
-
   .block02 {
     margin-left: 120px;
   }
   .block02 .stepDescription {
     margin: 18px 0 6px;
   }
-
   .block03 .stepDescription {
     width: 210px;
     margin: 10px 0 11px 19px;
   }
-
   .block04 .stepDescription {
     width: 218px;
     margin: 6px 0 0 12px;
   }
-
   .block05 .stepDescription {
     width: 240px;
     margin: 14px 0 7px 17px;
   }
-}
 
 
 @media (max-width: 768px) {
@@ -372,18 +365,15 @@ p {
     width: 100%;
     max-width: 100%;
   }
-
   .overlay {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-
   .stepGroupTop {
     display: contents;
   }
-
   .section_header {
     padding-top: 35px;
     display: flex;
@@ -403,14 +393,11 @@ p {
     width: 60px;
     height: 2px;
   }
-
- 
   .block01 { order: 2; margin-top: 25px; }
   .block02 { order: 3; margin-top: 20px; }
   .block03 { order: 4; margin-top: 20px; }
   .block04 { order: 5; margin-top: 20px; }
   .block05 { order: 6; margin-top: 20px; padding-bottom: 40px; }
-
 
   .stepBlock, .block01, .block02, .block03, .block04, .block05 {
     display: flex;
@@ -423,33 +410,23 @@ p {
     box-sizing: border-box;
     padding: 0 15px;
   }
-
-  
   .headingNumber {
     font-size: 28px;
     line-height: 34px;
     margin: 0 12px 0 0;
     flex-shrink: 0;
   }
-  
- 
-  .how_we_work .stepDescription {
-    font-size: 13px;
-    width: 100%;
-    max-width: 230px;
-    margin: 3px 0 0 0;
-    text-align: left;
-  }
-
-  
+  .stepDescription,
   .block01 .stepDescription,
   .block02 .stepDescription,
   .block03 .stepDescription,
   .block04 .stepDescription,
   .block05 .stepDescription {
+    font-size: 13px;
     width: 100%;
     max-width: 230px;
     margin: 5px 0 0 0;
+    text-align: left;
   }
 }
 
@@ -461,93 +438,17 @@ p {
     justify-content: flex-start;
     width: 100%;
     max-width: 100%;
+    background-image: none; 
+    background-color: #121212;
   }
-
   .overlay {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: transparent;
   }
-
-  .stepGroupTop {
-    display: contents;
-  }
-
   .section_header {
     padding-top: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    order: 1;
-  }
-  .section_header > .orangeLine:first-child {
-    margin-left: 0;
-  }
-  .section_title {
-    margin: 0 15px;
-    font-size: 22px;
-  }
-  .orangeLine {
-    width: 40px;
-    height: 2px;
-  }
-
-  
-  .block01 { order: 2; margin-top: 40px; }
-  .block02 { order: 3; margin-top: 35px; }
-  .block03 { order: 4; margin-top: 35px; }
-  .block04 { order: 5; margin-top: 35px; }
-  .block05 { order: 6; margin-top: 35px; padding-bottom: 45px; }
-
-  .stepBlock, .block01, .block02, .block03, .block04, .block05 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 0 5px;
-  }
-
-  .headingNumber {
-    font-size: 24px;
-    line-height: 30px;
-    margin: 0 18px 0 0; 
-    flex-shrink: 0;
-  }
-  
-  .how_we_work .stepDescription {
-    font-size: 12px;
-    line-height: 16px; 
-    width: 100%;
-    max-width: 210px;
-    margin: 5px 0 0 0;
-    text-align: left;
-  }
-
-  .block01 .stepDescription,
-  .block02 .stepDescription,
-  .block03 .stepDescription,
-  .block04 .stepDescription,
-  .block05 .stepDescription {
-    width: 100%;
-    max-width: 210px;
-    margin: 5px 0 0 0;
   }
 }
-
-
-
-
-
-
-
-
-
-/* .how_we_work ~ * {
-  display: none !important;
-} */

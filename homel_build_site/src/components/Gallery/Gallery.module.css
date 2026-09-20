@@ -1,3 +1,22 @@
+.headerRow {
+  display: flex;
+  align-items: baseline;
+  padding-left: 119px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1440px;
+  margin: 99px auto 0 auto; 
+}
+
+
 .section {
   margin-top: 83px;
 }
@@ -212,7 +231,7 @@
 
 .categoryTitle {
   position: absolute;
-  top: 316px; /* Вместо bottom: 20px */
+  top: 316px;
   bottom: auto;
   left: 0;
   width: 360px;
@@ -265,7 +284,7 @@
   cursor: pointer;
 }
 
-/* ============= (1366px  1200)=============================== */
+
 @media (max-width: 1366px) {
   :global(#root) .section {
     margin-top: 78.7px;

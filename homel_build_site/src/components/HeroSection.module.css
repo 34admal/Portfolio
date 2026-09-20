@@ -1,45 +1,40 @@
-/* HeroSection.module.css */
-span {
-  color: #fff;
-}
+
+
+
 .heroSection { 
   margin-bottom: 96px;
+  width: 100%;
 }
 
-.slider_container {
-  max-width: 640px;
-}
 .slogan_block {
-display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 72px 0 0 120px;
-    width: 531px;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 72px 0 0 120px;
+  width: 531px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  align-self: flex-start;
 }
 
 .construction_repair_gomel {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 60px;
   line-height: 70px;
   font-weight: bold;
   color: #ffffff;
   margin: 0;
 }
+
 .button {
-   width: 300px;
+  width: 300px;
   height: 51px;
-  
   background-color: #1c1d1e; 
   border: 3px solid #ff7a00; 
   border-radius: 10px;       
-  
   display: flex;
   justify-content: center;
   align-items: center;
-  
   font-family: 'Montserrat', sans-serif;
   font-size: 16px; 
   font-weight: 500; 
@@ -51,39 +46,41 @@ display: flex;
 
 .button:hover {
   background-color: #ff7a00;
-  color: #1c1d1e ; 
+  color: #1c1d1e; 
 }
 
 .future_together {
   display: block; 
-  
   font-family: 'Montserrat', sans-serif;
   font-size: 22px;
   font-weight: 400;
   line-height: normal;
   color: #ffffff;
-  
   width: 321px;
   height: auto;
-  
-  
   margin-top: 73px;
   margin-bottom: 85px;
   margin-left: 0;  
   margin-right: 0;
-  
- 
   text-align: left;
 }
+
+
 .main_content_block {
- margin: 6px auto 0 auto; 
-  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px; 
+  width: 100%;
+  margin: 6px auto 0 auto;
   position: relative;
   box-sizing: border-box;
 }
 
 .slider_container {
- width: 658px;
+  width: 658px;
+  max-width: 640px;
 }
 
 .slider {
@@ -124,16 +121,6 @@ display: flex;
   background-color: white;
 }
 
-.main_content_block {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-
-
 .arrow {
   position: absolute;
   top: 50%;
@@ -158,7 +145,7 @@ display: flex;
 .prevArrow {
   left: 20px;
 }
-/* -------------------------RESPONSE-------------------- */
+
 
 
 @media (max-width: 1366px) {
@@ -191,21 +178,17 @@ display: flex;
     bottom: 28px;
     right: 106px;
   }
-
-.button {
+  .button {
     width: 284px;
     height: 48px;
     font-size: 15px;
   }
-
 }
 
 @media (max-width: 1200px) {
   .heroSection {
     margin-bottom: 80px;
   }
-  
-  
   .slider_container {
     width: 548px;
   }
@@ -226,8 +209,6 @@ display: flex;
   }
   .nextArrow { right: 17px; }
   .prevArrow { left: 17px; }
-
-  
   .slogan_block {
     margin: 72px 0 0 100px;
     width: 442px;
@@ -249,18 +230,14 @@ display: flex;
   }
 }
 
-
 @media (max-width: 1024px) {
   .heroSection {
     margin-bottom: 68px;
   }
-  
-  
   .main_content_block {
     justify-content: flex-start;
     gap: 40px; 
   }
-
   .slogan_block {
     margin: 72px 0 0 55px; 
     width: 440px;          
@@ -280,35 +257,25 @@ display: flex;
     height: 36px;
     font-size: 11px;
   }
-
- 
   .slider_container {
     width: 468px; 
   }
   .slider {
     max-width: 100%;
   }
-
-  
   .slider_container :global([class*="sliderFrameContainer"]) {
     height: 376px; 
     width: 100%;
   }
-
- 
   .slider_container :global([class*="sliderWrapper"]) {
     position: absolute;
     width: 430px;  
     height: 295px; 
     top: 40px;     
     bottom: auto;
-    
-    
     right: 95px;  
     left: auto;
   }
-
-  
   .arrow {
     width: 20px;
     height: 41px;
@@ -318,14 +285,10 @@ display: flex;
   .prevArrow { left: 14px; }
 }
 
-
-
-
 @media (max-width: 1000px) {
   .heroSection {
     margin-bottom: 60px;
   }
-  
   .main_content_block {
     display: flex;
     flex-direction: column;
@@ -337,7 +300,6 @@ display: flex;
     padding-bottom: 86px;
     box-sizing: border-box;
   }
-
   .slogan_block {
     margin: 40px auto 0 auto; 
     width: 100%;
@@ -347,13 +309,11 @@ display: flex;
     align-items: center; 
     text-align: center; 
   }
-
   .construction_repair_gomel {
     font-size: 32px;
     line-height: 38px;
     text-wrap: balance; 
   }
-  
   .future_together {
     font-size: 15px;
     width: 100%;
@@ -362,13 +322,11 @@ display: flex;
     margin-bottom: 0; 
     text-align: center;
   }
-
   .slider_container {
     width: 430px; 
     margin: 40px auto 0 auto;
     position: relative;
   }
-
   .heroSection .slider_container :global([class*="sliderFrameContainer"]) {
     display: block;
     width: 100%;
@@ -378,7 +336,6 @@ display: flex;
     position: relative;
     margin: 0 auto;
   }
-
   .heroSection .slider_container :global([class*="sliderWrapper"]) {
     position: relative; 
     width: 430px; 
@@ -389,7 +346,6 @@ display: flex;
     left: 0; 
     margin: 0 auto;
   }
-
   .heroSection .slider_container :global([class*="sliderWindow"]),
   .heroSection .slider_container :global([class*="slidesTrack"]),
   .heroSection .slider_container :global([class*="slide"]) {
@@ -397,7 +353,6 @@ display: flex;
     max-width: 100%;
     height: 100%;
   }
-
   .button {
     position: absolute;
     bottom: 0; 
@@ -408,7 +363,6 @@ display: flex;
     font-size: 14px;
     margin: 0;
   }
-
   .arrow {
     width: 20px;
     height: 41px;
@@ -418,12 +372,10 @@ display: flex;
   .prevArrow { left: 14px; }
 }
 
-
 @media (max-width: 768px) {
   .heroSection {
     margin-bottom: 50px;
   }
-
   .main_content_block {
     display: flex;
     flex-direction: column;
@@ -435,7 +387,6 @@ display: flex;
     padding-bottom: 79px; 
     box-sizing: border-box;
   }
-
   .slogan_block {
     margin: 35px auto 0 auto;
     width: 100%;
@@ -445,13 +396,11 @@ display: flex;
     align-items: center;
     text-align: center;
   }
-
   .construction_repair_gomel {
     font-size: 28px;
     line-height: 34px;
     text-wrap: balance;
   }
-
   .future_together {
     font-size: 14px;
     width: 100%;
@@ -460,13 +409,11 @@ display: flex;
     margin-bottom: 0;
     text-align: center;
   }
-
   .slider_container {
     width: 305px;
     margin: 35px auto 0 auto; 
     position: relative;
   }
-
   .heroSection .slider_container :global([class*="sliderFrameContainer"]) {
     display: block;
     width: 100%;
@@ -476,156 +423,4 @@ display: flex;
     position: relative;
     margin: 0 auto;
   }
-
-  .heroSection .slider_container :global([class*="sliderWrapper"]) {
-    position: relative; 
-    width: 305px; 
-    height: 210px; 
-    top: 0;     
-    bottom: auto;
-    right: auto; 
-    left: 0; 
-    margin: 0 auto;
-  }
-
-  .heroSection .slider_container :global([class*="sliderWindow"]),
-  .heroSection .slider_container :global([class*="slidesTrack"]),
-  .heroSection .slider_container :global([class*="slide"]) {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
-
-  .button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 240px;
-    height: 44px; 
-    font-size: 13px;
-    margin: 0;
-  }
-
-  .arrow {
-    width: 16px;
-    height: 32px;
-    font-size: 14px;
-  }
-  .nextArrow { right: 10px; }
-  .prevArrow { left: 10px; }
 }
-
-@media (max-width: 480px) {
-  .heroSection {
-    margin-bottom: 40px;
-  }
-
-  .main_content_block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    position: relative;
-    gap: 0;
-   
-    padding-bottom: 70px; 
-    box-sizing: border-box;
-  }
-
-  .slogan_block {
-    margin: 30px auto 0 auto;
-    width: 290px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .construction_repair_gomel {
-    font-size: 24px;
-    line-height: 30px;
-    text-wrap: balance;
-  }
-
-  .future_together {
-    font-size: 13px;
-    width: 240px;
-    margin-top: 12px;
-    margin-bottom: 0;
-    text-align: center;
-  }
-
-  .slider_container {
-    width: 280px;
-    margin: 30px auto 0 auto;
-    position: relative;
-  }
-
-  .heroSection .slider_container :global([class*="sliderFrameContainer"]) {
-    display: block;
-    width: 100%;
-    height: 192px;
-    border: none; 
-    background: transparent; 
-    position: relative;
-    margin: 0 auto;
-  }
-
-  .heroSection .slider_container :global([class*="sliderWrapper"]) {
-    position: relative; 
-    width: 280px; 
-    height: 192px; 
-    top: 0;     
-    bottom: auto;
-    right: auto; 
-    left: 0; 
-    margin: 0 auto;
-  }
-
-  .heroSection .slider_container :global([class*="sliderWindow"]),
-  .heroSection .slider_container :global([class*="slidesTrack"]),
-  .heroSection .slider_container :global([class*="slide"]) {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
-
-  
-  .button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px; 
-    height: 40px; 
-    font-size: 11px; 
-    margin: 0;
-  }
-
-  .arrow {
-    width: 14px;
-    height: 28px;
-    font-size: 12px;
-  }
-  .nextArrow { right: 8px; }
-  .prevArrow { left: 8px; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .heroSection ~ * {
-  display: none !important;
-} */
