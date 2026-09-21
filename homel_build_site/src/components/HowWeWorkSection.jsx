@@ -6,6 +6,7 @@ function HowWeWorkSection() {
   return (
     <section className={styles.how_we_work}>
       <div className={styles.overlay}>
+        <div className={styles.innerContainer}>
         <div className={styles.section_header}>
           <span className={styles.orangeLine}></span>
           <span className={styles.section_title}>КАК МЫ РАБОТАЕМ</span>
@@ -55,6 +56,8 @@ function HowWeWorkSection() {
           </div>
         </div>
       </div>
+      </div>
+     
     </section>
   );
 }
