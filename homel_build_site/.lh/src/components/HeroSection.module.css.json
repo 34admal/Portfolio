@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 274,
+            "activePatchIndex": 281,
             "patches": [
                 {
                     "date": 1774977675426,
@@ -1104,6 +1104,34 @@
                 {
                     "date": 1789913531232,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -145,10 +145,10 @@\n .prevArrow {\r\n   left: 20px;\r\n }\r\n \r\n-/* -------------------------RESPONSE-------------------- */\r\n \r\n+\r\n @media (max-width: 1366px) {\r\n   .slogan_block {\r\n     margin: 72px 0 0 114px;\r\n     width: 503px;\r\n"
+                },
+                {
+                    "date": 1790091599455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n .heroSection { \r\n   margin-bottom: 96px;\r\n-  width: 100%;\r\n+  /* width: 100%; */\r\n }\r\n \r\n .slogan_block {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1790092331851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n .heroSection { \r\n   margin-bottom: 96px;\r\n-  /* width: 100%; */\r\n+  \r\n }\r\n \r\n .slogan_block {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1790092458798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -423,4 +423,6 @@\n     position: relative;\r\n     margin: 0 auto;\r\n   }\r\n }\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1790092467018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -424,5 +424,14 @@\n     margin: 0 auto;\r\n   }\r\n }\r\n \r\n-\r\n+@media (min-width: 1441px) {\r\n+  :global(#root) .main_content_block {\r\n+    /* Флекс-контейнер занимает экран, но сдвигает всю вашу цепочку элементов по центру */\r\n+    justify-content: center; \r\n+    \r\n+  \r\n+    margin-top: 6px; \r\n+    margin-bottom: 0;\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1790093018909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -427,9 +427,9 @@\n \r\n @media (min-width: 1441px) {\r\n   :global(#root) .main_content_block {\r\n     /* Флекс-контейнер занимает экран, но сдвигает всю вашу цепочку элементов по центру */\r\n-    justify-content: center; \r\n+    margin: 0 auto; \r\n     \r\n   \r\n     margin-top: 6px; \r\n     margin-bottom: 0;\r\n"
+                },
+                {
+                    "date": 1790095205519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -426,9 +426,9 @@\n }\r\n \r\n @media (min-width: 1441px) {\r\n   :global(#root) .main_content_block {\r\n-    /* Флекс-контейнер занимает экран, но сдвигает всю вашу цепочку элементов по центру */\r\n+   wi\r\n     margin: 0 auto; \r\n     \r\n   \r\n     margin-top: 6px; \r\n"
+                },
+                {
+                    "date": 1790095212674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -426,9 +426,9 @@\n }\r\n \r\n @media (min-width: 1441px) {\r\n   :global(#root) .main_content_block {\r\n-   wi\r\n+   width: 1440p;\r\n     margin: 0 auto; \r\n     \r\n   \r\n     margin-top: 6px; \r\n"
                 }
             ],
             "date": 1774977675426,

@@ -3,7 +3,7 @@
 
 .heroSection { 
   margin-bottom: 96px;
-  width: 100%;
+  
 }
 
 .slogan_block {
@@ -422,5 +422,16 @@
     background: transparent; 
     position: relative;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 1441px) {
+  :global(#root) .main_content_block {
+   width: 1440px;
+    margin: 0 auto; 
+    
+  
+    margin-top: 6px; 
+    margin-bottom: 0;
   }
 }
