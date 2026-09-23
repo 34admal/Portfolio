@@ -1,36 +1,30 @@
-
 .sliderFrameContainer {
   position: relative;
-  height: 520px; 
+  height: 520px;
   border-top: 10px solid #ff7a00;
   border-bottom: 10px solid #ff7a00;
   border-left: 10px solid #ff7a00;
-  border-right: none; 
+  border-right: none;
   box-sizing: border-box;
- 
 }
 
 .sliderWrapper {
   position: absolute;
-  top: 30px; 
+  top: 30px;
   bottom: 30px;
-  right: 112px; 
-  width: 640px; 
-  height: 440px; 
+  right: 112px;
+  width: 640px;
+  height: 440px;
   z-index: 10;
- 
 }
-
-
 
 .sliderWindow {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden; 
+  overflow: hidden;
   z-index: 2;
 }
-
 
 .slidesTrack {
   display: flex;
@@ -43,7 +37,6 @@
   cursor: grabbing;
 }
 
-
 .slide {
   min-width: 100%;
   width: 100%;
@@ -51,15 +44,13 @@
   flex-shrink: 0;
 }
 
-
 .sliderImg {
   width: 100%;
   height: 100%;
-  display: block; 
+  display: block;
   object-fit: cover;
   user-select: none;
 }
-
 
 .arrowPrevWrapper,
 .arrowNextWrapper {
@@ -69,13 +60,16 @@
   z-index: 10;
 }
 
-.arrowPrevWrapper { left: 20px; }
-.arrowNextWrapper { right: 20px; }
-
+.arrowPrevWrapper {
+  left: 20px;
+}
+.arrowNextWrapper {
+  right: 20px;
+}
 
 .dotsContainer {
   position: absolute;
-  bottom: 25px; 
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -87,7 +81,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4); 
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: background 0.3s ease;
   margin: 0 6px;
@@ -97,17 +91,3 @@
 .activeDot {
   background: #ff7a00;
 }
-
-
-
-@media (min-width: 1441px) {
-  :global(#root) .sliderFrameContainer {
-    width: 752px;;
-  }
-  
-  :global(#root) .sliderWrapper {
-    /* ИСПРАВЛЕНИЕ: Вместо -22px даем положительный сдвиг от левого края, 
-       который удержит слайдер поверх левой линии, но точно дотянет его правый край до телефона хедера */
-    left: -28px; /* Подберите эту цифру (например, 20px, 28px, 32px), пока правый край не встанет идеально по оси телефона */
-    right: auto;
-  }}
