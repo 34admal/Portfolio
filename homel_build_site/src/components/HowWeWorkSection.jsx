@@ -1,7 +1,6 @@
 //HowWeWorkSection.jsx
 import styles from "./HowWeWorkSection.module.css";
 
-
 function HowWeWorkSection() {
   return (
     <section className={styles.how_we_work}>
