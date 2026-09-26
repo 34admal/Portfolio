@@ -320,13 +320,13 @@
   }
 }
 
-/* ==================== БРЕЙКПОИНТ 1024px ==================== */
+
 @media (max-width: 1024px) {
-  /* Твои родные стили для how_we_work и stepGroupTop остаются без изменений */
+
 
   .section_header {
     padding-top: 41.9px;
-    white-space: nowrap; /* 🎯 ЗАПРЕЩАЕМ ПЕРЕНОС СТРОК: элементы обязаны стоять в один ряд */
+    white-space: nowrap;
   }
 
   .section_header > .orangeLine:first-child {
@@ -334,45 +334,45 @@
   }
 
   .section_title {
-    margin: 0 194.1px 0 170.7px; /* 273px и 240px * 0.7111 */
-    font-size: 21.3px; /* 30px * 0.7111 */
+    margin: 0 194.1px 0 170.7px;
+    font-size: 21.3px; 
   }
 
   .orangeLine {
-    width: 144.4px; /* 203px * 0.7111 */
+    width: 144.4px;
   }
 }
 
-/* ==================== БРЕЙКПОИНТ 1000px ==================== */
+
 @media (max-width: 1000px) {
-  /* Твой родной код отключения фонов и хронологии шагов (order) остается */
+ 
 
   .section_header {
     padding-top: 41px;
-    white-space: nowrap; /* 🎯 ЗАПРЕЩАЕМ ПЕРЕНОС СТРОК и здесь */
+    white-space: nowrap;
   }
 
   .section_header > .orangeLine:first-child {
-    margin-left: 83.3px; /* 120px * 0.6944 */
+    margin-left: 83.3px; 
   }
 
   .section_title {
-    margin: 0 189.5px 0 166.6px; /* 273px и 240px * 0.6944 */
-    font-size: 20.8px; /* 30px * 0.6944 */
+    margin: 0 189.5px 0 166.6px;
+    font-size: 20.8px;
   }
 
   .orangeLine {
-    width: 141px; /* 203px * 0.6944 */
+    width: 141px; 
   }
 }
 
 @media (max-width: 768px) {
-  /* 🎯 Вот теперь браузер на разрешении 768px гарантированно применит этот блок! */
+ 
   .how_we_work {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: none; /* Чистый сброс без !important */
+    background-image: none; 
     background-color: #0a0a0a;
   }
 
@@ -381,14 +381,14 @@
   }
 
   .innerContainer {
-    display: contents; /* Растворяем иннер, чтобы работал мобильный каскад */
+    display: contents; 
   }
 
   .stepGroupTop {
-    display: contents; /* Разрушаем флекс-ряды, чтобы пустить шаги в один столбец */
+    display: contents; 
   }
 
-  /* Хронологическая сортировка шагов строго по твоей логике (01 -> 05) */
+
   .section_header { order: 1; }
   .block01         { order: 2; margin-top: 25px; }
   .block02         { order: 3; margin-top: 20px; }
