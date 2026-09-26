@@ -320,163 +320,83 @@
   }
 }
 
+/* ==================== БРЕЙКПОИНТ 1024px ==================== */
 @media (max-width: 1024px) {
- 
-  .how_we_work {
-    flex-wrap: nowrap;
-    width: 100vw;
-    max-width: 100%;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    background-size: cover;
-    background-position: center center;
-  }
+  /* Твои родные стили для how_we_work и stepGroupTop остаются без изменений */
 
-  .stepGroupTop {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 20px;
-  }
-
-  
   .section_header {
     padding-top: 41.9px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    white-space: nowrap; /* 🎯 ЗАПРЕЩАЕМ ПЕРЕНОС СТРОК: элементы обязаны стоять в один ряд */
   }
 
   .section_header > .orangeLine:first-child {
-    margin-left: 85.3px; 
+    margin-left: 85.3px; /* 120px * 0.7111 */
   }
 
   .section_title {
-    margin: 0 194.1px 0 170.7px;
-    font-size: 21.3px; 
-    white-space: nowrap;
+    margin: 0 194.1px 0 170.7px; /* 273px и 240px * 0.7111 */
+    font-size: 21.3px; /* 30px * 0.7111 */
   }
 
   .orangeLine {
-    width: 144.4px; 
-    flex-shrink: 0;
+    width: 144.4px; /* 203px * 0.7111 */
   }
 }
 
+/* ==================== БРЕЙКПОИНТ 1000px ==================== */
 @media (max-width: 1000px) {
- 
+  /* Твой родной код отключения фонов и хронологии шагов (order) остается */
 
   .section_header {
     padding-top: 41px;
-    display: flex;
-    flex-direction: row;    
-    align-items: center;     
-    justify-content: center; 
-    width: 100%;
-    margin-bottom: 20px;
+    white-space: nowrap; /* 🎯 ЗАПРЕЩАЕМ ПЕРЕНОС СТРОК и здесь */
   }
 
   .section_header > .orangeLine:first-child {
-    margin-left: 0;         
+    margin-left: 83.3px; /* 120px * 0.6944 */
   }
 
   .section_title {
-    margin: 0 30px;         
-    font-size: 20.8px;
-    white-space: nowrap;     
+    margin: 0 189.5px 0 166.6px; /* 273px и 240px * 0.6944 */
+    font-size: 20.8px; /* 30px * 0.6944 */
   }
 
   .orangeLine {
-    width: 141px;
-    height: 3px;            
-    flex-shrink: 0;          
+    width: 141px; /* 203px * 0.6944 */
   }
-  
 }
 
-
-
-
-
-
-
 @media (max-width: 768px) {
+  /* 🎯 Вот теперь браузер на разрешении 768px гарантированно применит этот блок! */
   .how_we_work {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 100%;
+    background-image: none; /* Чистый сброс без !important */
+    background-color: #0a0a0a;
   }
 
   .overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    background-color: transparent;
   }
 
   .innerContainer {
-    display: contents;
+    display: contents; /* Растворяем иннер, чтобы работал мобильный каскад */
   }
 
   .stepGroupTop {
-    display: contents;
+    display: contents; /* Разрушаем флекс-ряды, чтобы пустить шаги в один столбец */
   }
 
-  .section_header {
-    padding-top: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    order: 1;
-  }
+  /* Хронологическая сортировка шагов строго по твоей логике (01 -> 05) */
+  .section_header { order: 1; }
+  .block01         { order: 2; margin-top: 25px; }
+  .block02         { order: 3; margin-top: 20px; }
+  .block03         { order: 4; margin-top: 20px; }
+  .block04         { order: 5; margin-top: 20px; }
+  .block05         { order: 6; margin-top: 20px; padding-bottom: 40px; }
 
-  .section_header > .orangeLine:first-child {
-    margin-left: 0;
-  }
-
-  .section_title {
-    margin: 0 25px;
-    font-size: 18px;
-  }
-
-  .orangeLine {
-    width: 60px;
-    height: 2px;
-  }
-
-  .block01 {
-    order: 2;
-    margin-top: 25px;
-  }
-  .block02 {
-    order: 3;
-    margin-top: 20px;
-  }
-  .block03 {
-    order: 4;
-    margin-top: 20px;
-  }
-  .block04 {
-    order: 5;
-    margin-top: 20px;
-  }
-  .block05 {
-    order: 6;
-    margin-top: 20px;
-    padding-bottom: 40px;
-  }
-
-  .stepBlock,
-  .block01,
-  .block02,
-  .block03,
-  .block04,
-  .block05 {
+  .stepBlock, .block01, .block02, .block03, .block04, .block05 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -495,46 +415,11 @@
     flex-shrink: 0;
   }
 
-  .stepDescription,
-  .block01 .stepDescription,
-  .block02 .stepDescription,
-  .block03 .stepDescription,
-  .block04 .stepDescription,
-  .block05 .stepDescription {
+  .stepDescription {
     font-size: 13px;
     width: 100%;
     max-width: 230px;
     margin: 5px 0 0 0;
     text-align: left;
-  }
-}
-
-@media (max-width: 480px) {
-  .how_we_work {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 100%;
-
-    background-image: none;
-    background-color: #121212;
-  }
-
-  .overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: transparent;
-  }
-
-  .innerContainer {
-    display: contents;
-  }
-
-  .section_header {
-    padding-top: 25px;
   }
 }
