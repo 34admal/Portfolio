@@ -1,5 +1,5 @@
 //HowWeWorkSection.jsx
-import styles from "./HowWeWorkSection.module.css";
+import styles from "./HowWeWorkSection1.module.css";
 
 function HowWeWorkSection() {
   return (
