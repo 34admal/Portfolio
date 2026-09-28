@@ -309,6 +309,8 @@
     justify-content: flex-start;
     width: 100%;
     max-width: 100%;
+    background-image: none;
+    background-color: #0a0a0a;
   }
 
   .overlay {
@@ -316,6 +318,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: transparent;
   }
 
   .innerContainer {
@@ -328,6 +331,7 @@
 
   .section_header {
     padding-top: 35px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -341,47 +345,67 @@
   }
 
   .section_title {
-    margin: 0 25px;
-    font-size: 18px;
+    margin: 0 20px; 
+    font-size: 16px;
     white-space: nowrap;
+    display: inline-block;
+    line-height: 1;
   }
 
   .orangeLine {
-    width: 60px;
-    height: 2px;
+    width: 108.2px;
+    height: 3px;
+    display: inline-block;
     flex-shrink: 0;
   }
 
-  .block01 { order: 2; margin-top: 25px; margin-left: 0; }
-  .block02 { order: 3; margin-top: 20px; margin-left: 0; }
-  .block03 { order: 4; margin-top: 20px; margin-left: 0; }
-  .block04 { order: 5; margin-top: 20px; margin-left: 0; }
-  .block05 { order: 6; margin-top: 20px; padding-bottom: 40px; margin-left: 0; margin-right: 0; }
+  .block01 { order: 2; }
+  .block02 { order: 3; }
+  .block03 { order: 4; }
+  .block04 { order: 5; }
+  .block05 { order: 6; padding-bottom: 50px; }
 
-  .stepBlock {
+  .stepBlock,
+  .block01,
+  .block02,
+  .block03,
+  .block04,
+  .block05 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+    max-width: 380px;         
+    margin: 0 auto 30px auto; 
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 0 10px;
   }
 
   .headingNumber {
-    font-size: 28px;
-    line-height: 34px;
-    margin: 0 12px 0 0;
+    font-size: 40px;
+    line-height: 1;           
+    margin: 0 20px 0 0;       
     flex-shrink: 0;
-  }
-
-  .stepDescription {
-    font-size: 13px;
-    width: 100%;
-    max-width: 230px;
-    margin: 5px 0 0 0;
+    width: 50px;
     text-align: left;
   }
+
+  .stepDescription,
+  .block01 .stepDescription,
+  .block02 .stepDescription,
+  .block03 .stepDescription,
+  .block04 .stepDescription,
+  .block05 .stepDescription {
+    font-size: 15px;
+    width: 100%;
+    max-width: 310px;
+    margin: 5px 0 0 0;
+    text-align: left;
+    line-height: 1.4;
+  }
 }
+
+
+
+

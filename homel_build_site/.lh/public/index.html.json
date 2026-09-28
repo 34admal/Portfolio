@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1789831378363,
@@ -16,6 +16,18 @@
                 {
                     "date": 1789832573565,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,12 @@\n   <link rel=\"icon\" href=\"%PUBLIC_URL%/favicon.ico\" sizes=\"any\" />\n   <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"%PUBLIC_URL%/favicon-32x32.png\" />\n   <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"%PUBLIC_URL%/favicon-16x16.png\" />\n   \n-  <!-- Иконка для смартфонов Apple (iPhone, iPad) -->\n+  \n   <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"%PUBLIC_URL%/apple-touch-icon.png\" />\n   \n-  <!-- Манифест для Android-устройств -->\n+  \n   <link rel=\"manifest\" href=\"%PUBLIC_URL%/site.webmanifest\" />\n \n   <title>SafeHouse — Строительные услуги</title>\n </head>\n"
+                },
+                {
+                    "date": 1790607102864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!DOCTYPE html>\n-<html lang=\"en\">\n+<html lang=\"\">\n  <head>\n   <meta charset=\"utf-8\" />\n   \n   <link rel=\"icon\" href=\"%PUBLIC_URL%/favicon.ico\" sizes=\"any\" />\n"
+                },
+                {
+                    "date": 1790607157544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <!DOCTYPE html>\n-<html lang=\"\">\n+<html lang=\"ru\">\n  <head>\n+  \n   <meta charset=\"utf-8\" />\n   \n   <link rel=\"icon\" href=\"%PUBLIC_URL%/favicon.ico\" sizes=\"any\" />\n   <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"%PUBLIC_URL%/favicon-32x32.png\" />\n"
+                },
+                {
+                    "date": 1790607173018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <!DOCTYPE html>\n <html lang=\"ru\">\n  <head>\n-  \n+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n   <meta charset=\"utf-8\" />\n   \n   <link rel=\"icon\" href=\"%PUBLIC_URL%/favicon.ico\" sizes=\"any\" />\n   <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"%PUBLIC_URL%/favicon-32x32.png\" />\n"
                 }
             ],
             "date": 1789831378363,
