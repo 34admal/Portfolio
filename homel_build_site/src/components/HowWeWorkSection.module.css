@@ -272,34 +272,126 @@
 
 @media (max-width: 1024px) {
   .how_we_work {
-    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-image: none;
+    background-color: #0a0a0a;
+  }
+
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: transparent;
   }
 
   .stepGroupTop {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 40px;
     width: 100%;
+    box-sizing: border-box;
   }
+
 
   .section_header {
     padding-top: 41.9px;
+    padding-left: 85.3px;
     white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    height: auto;
   }
 
   .section_header > .orangeLine:first-child {
-    margin-left: 85.3px;
+    margin-left: 0;
   }
 
+  
   .section_title {
-    margin: 0 194.1px 0 170.7px;
+    margin: 0 25px;
     font-size: 21.3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
   }
 
   .orangeLine {
     width: 144.4px;
+    height: 3px;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .block01, .block02 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 340px;
+    margin-left: 157.1px;
+    box-sizing: border-box;
+  }
+
+  .block03, .block04 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 340px;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  .block05 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin: 30px auto 40px auto;
+  }
+
+  .headingNumber {
+    font-size: 45px;
+    line-height: 1;
+    margin: 0 15px 0 0;
+    flex-shrink: 0;
+    width: 55px;
+    text-align: left;
+  }
+
+  .stepDescription,
+  .block01 .stepDescription,
+  .block02 .stepDescription,
+  .block03 .stepDescription,
+  .block04 .stepDescription,
+  .block05 .stepDescription {
+    font-size: 14px;
+    line-height: 1.4;
+    width: 100%;
+    max-width: 270px;
+    margin: 4px 0 0 0;
+    text-align: left;
   }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
   .how_we_work {
@@ -405,6 +497,13 @@
     line-height: 1.4;
   }
 }
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 
 
 
