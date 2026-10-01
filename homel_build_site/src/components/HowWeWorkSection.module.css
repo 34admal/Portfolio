@@ -515,6 +515,114 @@
   }
 }
 
+@media (max-width: 480px) {
+  .how_we_work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    background-image: none;
+    background-color: #0a0a0a;
+  }
+
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .innerContainer {
+    display: contents;
+  }
+
+  .stepGroupTop {
+    display: contents;
+  }
+
+  .how_we_work .section_header {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    order: 1;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .section_header > .orangeLine:first-child {
+    margin-left: 0;
+  }
+
+  .section_title {
+    margin: 0; 
+    font-size: 15px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .orangeLine {
+    display: none;
+  }
+
+  .block01 { order: 2; }
+  .block02 { order: 3; }
+  .block03 { order: 4; }
+  .block04 { order: 5; }
+  .block05 { order: 6; padding-bottom: 40px; }
+
+  .stepBlock,
+  .block01,
+  .block02,
+  .block03,
+  .block04,
+  .block05 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 280px;         
+    margin: 0 auto 20px auto; 
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .headingNumber {
+    font-size: 32px;
+    line-height: 1;           
+    margin: 0 15px 0 0;       
+    flex-shrink: 0;
+    width: 40px;
+    text-align: left;
+  }
+
+  .stepDescription,
+  .block01 .stepDescription,
+  .block02 .stepDescription,
+  .block03 .stepDescription,
+  .block04 .stepDescription,
+  .block05 .stepDescription {
+    font-size: 13px;
+    width: 100%;
+    max-width: 225px;
+    margin: 0;
+    text-align: left;
+    line-height: 1.3;
+  }
+}
+
+
+
 /* :global(#root) > *:not(.how_we_work) {
   display: none !important;
 } */
