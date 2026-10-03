@@ -26,7 +26,7 @@
   align-self: flex-end;
 }
 
-/* =====================1366px============================================ */
+/* =====================1366px========== */
 @media (max-width: 1366px) {
   .feedback {
     margin-top: 104.3px;
@@ -42,7 +42,7 @@
   }
 }
 
-/* ======1200px=========================================== */
+/* ======1200px======= */
 @media (max-width: 1200px) {
   .feedback {
     margin-top: 91.6px;
@@ -185,10 +185,6 @@
   }
 }
 
-
-
-
-
 @media (max-width: 480px) {
   :global(#root) .feedback {
     margin-top: 40px;
@@ -200,7 +196,7 @@
   :global(#root) .feedback .feedback__container {
     width: 290px;
     max-width: 290px;
-    height: 380px; 
+    height: 380px;
     background: none;
     display: flex;
     flex-direction: column;
@@ -210,14 +206,13 @@
     overflow: hidden;
   }
 
-  
   :global(#root) .feedback .feedback__container > div:first-child,
   :global(#root) .feedback .feedback__container > form {
     transform: scale(0.65);
     transform-origin: center center;
     width: 390px;
     max-width: 390px;
-    margin-top: -30px; 
+    margin-top: -30px;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
@@ -228,7 +223,6 @@
     display: none;
   }
 }
-
 
 /* :global(html),
 :global(body),
