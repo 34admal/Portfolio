@@ -176,6 +176,7 @@
   align-items: center;
   justify-content: flex-start;
   border-right: 1px solid rgba(255, 255, 255, 1);
+  color: #FFFFFF;
   box-sizing: border-box;
 }
 
@@ -232,39 +233,39 @@
 }
 /* ================1366================== */
 @media (max-width: 1366px) {
-  :global(#root) .priceSection {
+  .priceSection {
     margin-top: 109px;
   }
-  :global(#root) .title {
+  .title {
     font-size: 28.4px;
     line-height: 35px;
   }
-  :global(#root) .mainWrapper {
+  .mainWrapper {
     width: 945px;
     margin-top: 65.4px;
   }
-  :global(#root) .tabContainer {
+  .tabContainer {
     height: 54px;
     border-bottom: 4px solid rgba(255, 122, 0, 1);
   }
-  :global(#root) .tabItem {
+  .tabItem {
     font-size: 19px;
     border-top: 4px solid rgba(49, 49, 49, 1);
     border-right: 4px solid rgba(49, 49, 49, 1);
   }
-  :global(#root) .tabItem:first-child {
+  .tabItem:first-child {
     border-left: 4px solid rgba(49, 49, 49, 1);
   }
-  :global(#root) .tabItem:last-child {
+  .tabItem:last-child {
     border-right: 4px solid rgba(49, 49, 49, 1);
   }
-  :global(#root) .tabItem.active {
+  .tabItem.active {
     border-top: 4px solid rgba(255, 122, 0, 1);
     background-color: rgba(61, 61, 61, 1);
     box-shadow: 0 4px 0 rgba(61, 61, 61, 1);
     z-index: 3;
   }
-  :global(#root) .tabItem.active::before {
+  .tabItem.active::before {
     top: -4px;
     bottom: -4px;
     left: -4px;
@@ -272,77 +273,78 @@
     border-left: 4px solid rgba(255, 122, 0, 1);
     border-right: 4px solid rgba(255, 122, 0, 1);
   }
-  :global(#root) .tabItem.active::after {
+  .tabItem.active::after {
     display: none;
   }
-  :global(#root) .mainWrapper::after {
+  .mainWrapper::after {
     top: 54px;
     border: 4px solid rgba(255, 122, 0, 1);
     border-top: none;
   }
-  :global(#root) .tableHeader {
+  .tableHeader {
     height: 52px;
     margin-top: 23.7px;
   }
-  :global(#root) .headerCell {
+  .headerCell {
     font-size: 15.2px;
     line-height: 19px;
   }
-  :global(#root) .cellText {
+  .cellText {
     padding-left: 57px;
   }
-  :global(#root) .rowCellText {
+  .rowCellText {
     padding-left: 38px;
   }
-  :global(#root) .tableRow,
-  :global(#root) .tableRow:last-child {
+  .tableRow,
+  .tableRow:last-child {
     height: 29.4px;
   }
-  :global(#root) .btnWrapper {
+  .btnWrapper {
     padding-right: 211px;
     margin-top: 38px;
   }
-  :global(#root) .downloadBtn {
+  .downloadBtn {
     height: 48.4px;
     padding: 0 30.3px;
     font-size: 13.3px;
   }
 }
 
+/* ================1200================== */
 @media (max-width: 1200px) {
-  :global(#root) .priceSection {
+  .priceSection {
     margin-top: 95.8px;
   }
-  :global(#root) .title {
+  .title {
     font-size: 25px;
     line-height: 30.8px;
   }
-  :global(#root) .mainWrapper {
+  .mainWrapper {
     width: 830px;
     margin-top: 57.5px;
   }
-  :global(#root) .tabContainer {
+  .tabContainer {
     height: 47.5px;
     border-bottom: 4px solid rgba(255, 122, 0, 1);
   }
-  :global(#root) .tabItem {
+  .tabItem {
     font-size: 16.6px;
     border-top: 4px solid rgba(49, 49, 49, 1);
     border-right: 4px solid rgba(49, 49, 49, 1);
   }
-  :global(#root) .tabItem:first-child {
+  .tabItem:first-child {
     border-left: 4px solid rgba(49, 49, 49, 1);
   }
-  :global(#root) .tabItem:last-child {
+  .tabItem:last-child {
     border-right: 4px solid rgba(49, 49, 49, 1);
   }
-  :global(#root) .tabItem.active {
+  .tabItem.active {
     border-top: 4px solid rgba(255, 122, 0, 1);
     background-color: rgba(61, 61, 61, 1);
     box-shadow: 0 4px 0 rgba(61, 61, 61, 1);
     z-index: 3;
   }
-  :global(#root) .tabItem.active::before {
+  .tabItem.active::before {
     top: -4px;
     bottom: -4px;
     left: -4px;
@@ -350,49 +352,269 @@
     border-left: 4px solid rgba(255, 122, 0, 1);
     border-right: 4px solid rgba(255, 122, 0, 1);
   }
-  :global(#root) .tabItem.active::after {
+  .tabItem.active::after {
     display: none;
   }
-  :global(#root) .mainWrapper::after {
+  .mainWrapper::after {
     top: 47.5px;
     border: 4px solid rgba(255, 122, 0, 1);
     border-top: none;
   }
-  :global(#root) .tableHeader {
+  .tableHeader {
     height: 45.8px;
     margin-top: 20.8px;
   }
-  :global(#root) .headerCell {
+  .headerCell {
     font-size: 13.3px;
     line-height: 16.6px;
   }
-  :global(#root) .cellText {
+  .cellText {
     padding-left: 50px;
   }
-  :global(#root) .rowCellText {
+  .rowCellText {
     padding-left: 33.3px;
   }
-  :global(#root) .tableRow,
-  :global(#root) .tableRow:last-child {
+  .tableRow,
+  .tableRow:last-child {
     height: 25.8px;
   }
-  :global(#root) .btnWrapper {
+  .btnWrapper {
     padding-right: 185px;
     margin-top: 33.3px;
   }
-  :global(#root) .downloadBtn {
+  .downloadBtn {
     height: 42.5px;
     padding: 0 26.6px;
     font-size: 11.6px;
   }
 }
 
+/* ================1024================== */
 @media (max-width: 1024px) {
-  :global(#root) .priceSection {
+  .priceSection {
     margin-top: 81.7px;
   }
-  :global(#root) .title {
+  .title {
     font-size: 21.3px;
     line-height: 26.3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .priceSection {
+    margin-top: 61.3px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .mainWrapper {
+    width: 100%;
+    max-width: 540px;
+    margin: 37px auto 0 auto;
+    box-sizing: border-box;
+    padding: 0; 
+  }
+
+  .tabContainer {
+    height: 36px;
+  }
+
+  .tabItem {
+    font-size: 12px;
+  }
+
+ 
+  .mainWrapper::after {
+    top: 36px;
+    border: 4px solid rgba(255, 122, 0, 1);
+    border-top: none;
+  }
+
+  .tableHeader {
+    height: 40px;
+    margin-top: 15px;
+  }
+
+  .headerCell {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .cellText {
+    padding-left: 20px;
+  }
+
+  .rowCellText {
+    padding-left: 15px;
+  }
+
+  
+  .tableRow,
+  .tableRow:last-child {
+    height: auto;
+    min-height: 35px;
+    align-items: stretch;
+  }
+
+  .nameCell,
+  .unitCell,
+  .priceCell {
+    font-size: 11px;
+  }
+
+  .btnWrapper {
+    padding-right: 0;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .downloadBtn {
+    height: 34px;
+    padding: 0 20px;
+    font-size: 11px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .priceSection {
+    margin-top: 50px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+
+  .mainWrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 25px auto 0 auto;
+    background-color: transparent;
+    border: none;
+  }
+
+  .mainWrapper::after {
+    display: none;
+  }
+
+  
+  .tabContainer {
+    flex-wrap: wrap;
+    height: auto;
+    border-bottom: none;
+    gap: 8px;
+    background-color: transparent;
+  }
+
+  .tabItem {
+    flex: none;
+    width: calc(50% - 4px); 
+    height: 40px;
+    font-size: 14px;
+    border: 2px solid rgba(49, 49, 49, 1);
+    border-radius: 6px;
+    background-color: rgba(61, 61, 61, 1);
+  }
+
+  .tabItem:first-child,
+  .tabItem:last-child {
+    border-left: 2px solid rgba(49, 49, 49, 1);
+    border-right: 2px solid rgba(49, 49, 49, 1);
+  }
+
+  .tabItem.active {
+    border-color: rgba(255, 122, 0, 1);
+    background-color: rgba(61, 61, 61, 1);
+  }
+
+  .tabItem.active::before,
+  .tabItem.active::after {
+    display: none;
+  }
+
+ 
+  .tableHeader {
+    display: none;
+  }
+
+  .tableBody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+ 
+  .tableRow {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    background-color: rgba(61, 61, 61, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    gap: 10px;
+  }
+
+  .tableRow:last-child {
+    height: auto;
+  }
+
+ 
+  .nameCell {
+    width: 100%;
+    border-right: none;
+    font-weight: 600;
+  }
+
+  .rowCellText {
+    padding-left: 0;
+    line-height: 1.3;
+  }
+
+
+  .unitCell,
+  .priceCell {
+    width: auto;
+    border-right: none;
+    font-size: 13px;
+  }
+
+ 
+  .unitCell::before {
+    content: 'Ед. изм.: ';
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .priceCell::before {
+    content: 'Цена от: ';
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .priceCell {
+    color: #ff7a00;
+    font-weight: 700;
+    margin-left: auto; 
+  }
+
+  .btnWrapper {
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 30px;
+  }
+
+  .downloadBtn {
+    width: calc(100% - 20px);
+    height: 48px;
+    font-size: 14px;
   }
 }
