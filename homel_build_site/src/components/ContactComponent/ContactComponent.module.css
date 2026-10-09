@@ -1,6 +1,7 @@
 .wrapper {
   box-sizing: border-box;
   margin-top: 56px;
+  width: 100%;
 }
 
 .title {
@@ -18,7 +19,15 @@
 .contentBlock {
   box-sizing: border-box;
   margin-top: 64px;
-  width: 1440px;
+  
+ 
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  
   height: 680px;
   background-image: url("images/bg-brick-wall.png");
   background-repeat: no-repeat;
@@ -26,12 +35,22 @@
   background-size: cover;
 
   display: flex;
+  justify-content: center; 
 }
 
+
 .workersColumn {
-  margin-left: 164px;
+  width: auto;
+  margin-left: calc(164px - (100vw - 1440px) / 2); 
   display: flex;
   align-items: flex-end;
+}
+
+
+@media (max-width: 1440px) {
+  .workersColumn {
+    margin-left: 164px;
+  }
 }
 
 .workersImg {
@@ -43,8 +62,8 @@
 .formColumn {
   flex-grow: 1;
   box-sizing: border-box;
-  
-    position: relative;
+  position: relative;
+  max-width: 500px; 
 }
 
 
