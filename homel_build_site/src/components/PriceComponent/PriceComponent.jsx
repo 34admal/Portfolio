@@ -31,7 +31,7 @@ export const PriceComponent = () => {
           <span className={styles.headerCell}>Цена от, руб</span>
         </div>
 
-        {/* Список строк таблицы на основе активного таба */}
+        
         <div className={styles.tableBody}>
           {priceData[activeTab].map((row) => (
             <div key={row.id} className={styles.tableRow}>

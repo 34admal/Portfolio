@@ -205,10 +205,11 @@
 
 .btnWrapper {
   width: 100%;
+  max-width: 996px; 
+  margin: 40px auto 0 auto;
   display: flex;
   justify-content: flex-end;
-  padding-right: 222px;
-  margin-top: 40px;
+  padding-right: 0; 
   box-sizing: border-box;
 }
 
@@ -394,9 +395,90 @@
   .priceSection {
     margin-top: 81.7px;
   }
+
   .title {
     font-size: 21.3px;
     line-height: 26.3px;
+  }
+
+  .mainWrapper {
+    width: 708px;
+    margin-top: 49.3px;
+    height: auto;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+  }
+
+  .mainWrapper::after {
+    top: 40.5px;
+    bottom: 0;
+    height: auto;
+  }
+
+  .tabContainer {
+    height: 40.5px;
+  }
+
+  .tabItem {
+    font-size: 14.2px;
+  }
+
+  .tableHeader {
+    height: 39px;
+    margin-top: 17.7px;
+  }
+
+  .headerCell {
+    font-size: 11.3px;
+    line-height: 14.2px;
+  }
+
+  .cellText {
+    padding-left: 42.6px;
+  }
+
+  .rowCellText {
+    padding-left: 28.4px;
+  }
+
+  .tableRow,
+  .tableRow:last-child {
+    height: auto;
+    min-height: 22px;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    box-sizing: border-box;
+  }
+
+  .nameCell,
+  .unitCell,
+  .priceCell {
+    display: flex;
+    align-items: center;
+    font-size: 11.3px;
+    box-sizing: border-box;
+  }
+
+  .unitCell,
+  .priceCell {
+    justify-content: center;
+  }
+
+  .rowCell {
+    font-size: 11.3px;
+  }
+
+  .btnWrapper {
+    padding-right: 157px;
+    margin-top: 28.4px;
+  }
+
+  .downloadBtn {
+    height: 36.2px;
+    padding: 0 22.7px;
+    font-size: 10px;
   }
 }
 
@@ -412,16 +494,15 @@
 
   .mainWrapper {
     width: 100%;
-    max-width: 600px; /* Оптимальная ширина для читаемости на планшете */
+    max-width: 600px;
     margin: 37px auto 0 auto;
     background-color: rgba(61, 61, 61, 1);
     box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Легкая внешняя рамка вместо оранжевой */
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
     padding: 0;
   }
 
-  /* Полностью отключаем десктопную абсолютную оранжевую рамку, чтобы углы не разваливались */
   .mainWrapper::after {
     display: none;
   }
@@ -455,13 +536,17 @@
     margin-top: 15px;
     background-color: rgba(49, 49, 49, 1);
     border: none;
-    border-bottom: 2px solid rgba(255, 122, 0, 1); /* Оранжевый акцент под шапкой */
+    border-bottom: 2px solid rgba(255, 122, 0, 1);
   }
 
   .headerCell {
     font-size: 12px;
     font-weight: 700;
-    border-right: none !important; /* Намертво убираем вертикальные линии в шапке */
+  }
+
+  .headerCell:nth-child(1),
+  .headerCell:nth-child(2) {
+    border-right-color: rgba(49, 49, 49, 1);
   }
 
   .cellText {
@@ -473,7 +558,6 @@
     padding-right: 10px;
   }
 
-  /* Строка таблицы: тянется по высоте текста, снизу легкий разделитель */
   .tableRow,
   .tableRow:last-child {
     height: auto;
@@ -482,19 +566,22 @@
     align-items: center;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая горизонтальная линия */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .tableRow:last-child {
-    border-bottom: none; /* У последней строки убираем нижнюю линию */
+    border-bottom: none;
   }
 
-  /* Намертво стираем вертикальные линии в ячейках строк */
   .nameCell,
   .unitCell,
   .priceCell {
-    border-right: none !important; 
     font-size: 12px;
+  }
+
+  .tableRow > .nameCell,
+  .tableRow > .unitCell {
+    border-right-color: rgba(61, 61, 61, 1);
   }
 
   .unitCell,
@@ -505,7 +592,7 @@
 
   .priceCell {
     font-weight: 600;
-    color: #ff7a00; /* Выделяем цену цветом, так как линий больше нет */
+    color: #ff7a00;
   }
 
   .btnWrapper {
@@ -522,6 +609,8 @@
     min-width: 200px;
   }
 }
+
+
 
 
 

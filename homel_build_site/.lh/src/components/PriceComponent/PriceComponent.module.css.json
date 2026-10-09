@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 245,
+            "activePatchIndex": 265,
             "patches": [
                 {
                     "date": 1783246435133,
@@ -988,6 +988,86 @@
                 {
                     "date": 1791446358484,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -411,74 +411,116 @@\n   }\r\n \r\n   .mainWrapper {\r\n     width: 100%;\r\n-    max-width: 540px;\r\n+    max-width: 600px; /* Оптимальная ширина для читаемости на планшете */\r\n     margin: 37px auto 0 auto;\r\n+    background-color: rgba(61, 61, 61, 1);\r\n     box-sizing: border-box;\r\n-    padding: 0; \r\n+    border: 1px solid rgba(255, 255, 255, 0.2); /* Легкая внешняя рамка вместо оранжевой */\r\n+    border-radius: 6px;\r\n+    padding: 0;\r\n   }\r\n \r\n+  /* Полностью отключаем десктопную абсолютную оранжевую рамку, чтобы углы не разваливались */\r\n+  .mainWrapper::after {\r\n+    display: none;\r\n+  }\r\n+\r\n   .tabContainer {\r\n-    height: 36px;\r\n+    height: 38px;\r\n+    border-bottom: 2px solid rgba(255, 122, 0, 1);\r\n   }\r\n \r\n   .tabItem {\r\n-    font-size: 12px;\r\n+    font-size: 13px;\r\n+    border-top: none;\r\n+    border-right: 1px solid rgba(49, 49, 49, 0.5);\r\n   }\r\n \r\n- \r\n-  .mainWrapper::after {\r\n-    top: 36px;\r\n-    border: 4px solid rgba(255, 122, 0, 1);\r\n+  .tabItem:first-child { border-left: none; }\r\n+  .tabItem:last-child { border-right: none; }\r\n+\r\n+  .tabItem.active {\r\n     border-top: none;\r\n+    background-color: rgba(49, 49, 49, 1);\r\n   }\r\n \r\n+  .tabItem.active::before,\r\n+  .tabItem.active::after {\r\n+    display: none;\r\n+  }\r\n+\r\n   .tableHeader {\r\n     height: 40px;\r\n     margin-top: 15px;\r\n+    background-color: rgba(49, 49, 49, 1);\r\n+    border: none;\r\n+    border-bottom: 2px solid rgba(255, 122, 0, 1); /* Оранжевый акцент под шапкой */\r\n   }\r\n \r\n   .headerCell {\r\n-    font-size: 11px;\r\n-    line-height: 13px;\r\n+    font-size: 12px;\r\n+    font-weight: 700;\r\n+    border-right: none !important; /* Намертво убираем вертикальные линии в шапке */\r\n   }\r\n \r\n   .cellText {\r\n     padding-left: 20px;\r\n   }\r\n \r\n   .rowCellText {\r\n-    padding-left: 15px;\r\n+    padding-left: 20px;\r\n+    padding-right: 10px;\r\n   }\r\n \r\n-  \r\n+  /* Строка таблицы: тянется по высоте текста, снизу легкий разделитель */\r\n   .tableRow,\r\n   .tableRow:last-child {\r\n     height: auto;\r\n-    min-height: 35px;\r\n-    align-items: stretch;\r\n+    min-height: 38px;\r\n+    padding: 8px 0;\r\n+    align-items: center;\r\n+    border-left: none;\r\n+    border-right: none;\r\n+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая горизонтальная линия */\r\n   }\r\n \r\n+  .tableRow:last-child {\r\n+    border-bottom: none; /* У последней строки убираем нижнюю линию */\r\n+  }\r\n+\r\n+  /* Намертво стираем вертикальные линии в ячейках строк */\r\n   .nameCell,\r\n   .unitCell,\r\n   .priceCell {\r\n-    font-size: 11px;\r\n+    border-right: none !important; \r\n+    font-size: 12px;\r\n   }\r\n \r\n+  .unitCell,\r\n+  .priceCell {\r\n+    justify-content: center;\r\n+    text-align: center;\r\n+  }\r\n+\r\n+  .priceCell {\r\n+    font-weight: 600;\r\n+    color: #ff7a00; /* Выделяем цену цветом, так как линий больше нет */\r\n+  }\r\n+\r\n   .btnWrapper {\r\n     padding-right: 0;\r\n     justify-content: center;\r\n     margin-top: 25px;\r\n   }\r\n \r\n   .downloadBtn {\r\n-    height: 34px;\r\n-    padding: 0 20px;\r\n-    font-size: 11px;\r\n-    width: 100%;\r\n-    max-width: 280px;\r\n-    text-align: center;\r\n+    height: 38px;\r\n+    padding: 0 25px;\r\n+    font-size: 12px;\r\n+    width: auto;\r\n+    min-width: 200px;\r\n   }\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1791535764918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -508,11 +508,15 @@\n     color: #ff7a00; /* Выделяем цену цветом, так как линий больше нет */\r\n   }\r\n \r\n   .btnWrapper {\r\n-    padding-right: 0;\r\n-    justify-content: center;\r\n-    margin-top: 25px;\r\n+   width: 100%;\r\n+  max-width: 996px; /* 🎯 Зажимаем контейнер в ширину таблицы */\r\n+  margin: 40px auto 0 auto; /* 🎯 Центрируем блок по оси таблицы */\r\n+  display: flex;\r\n+  justify-content: flex-end;\r\n+  padding-right: 0; /* 🎯 Обнуляем жесткий десктопный паддинг */\r\n+  box-sizing: border-box;\r\n   }\r\n \r\n   .downloadBtn {\r\n     height: 38px;\r\n"
+                },
+                {
+                    "date": 1791535835956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -508,15 +508,11 @@\n     color: #ff7a00; /* Выделяем цену цветом, так как линий больше нет */\r\n   }\r\n \r\n   .btnWrapper {\r\n-   width: 100%;\r\n-  max-width: 996px; /* 🎯 Зажимаем контейнер в ширину таблицы */\r\n-  margin: 40px auto 0 auto; /* 🎯 Центрируем блок по оси таблицы */\r\n-  display: flex;\r\n-  justify-content: flex-end;\r\n-  padding-right: 0; /* 🎯 Обнуляем жесткий десктопный паддинг */\r\n-  box-sizing: border-box;\r\n+    padding-right: 0;\r\n+    justify-content: center;\r\n+    margin-top: 25px;\r\n   }\r\n \r\n   .downloadBtn {\r\n     height: 38px;\r\n"
+                },
+                {
+                    "date": 1791535851487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -488,9 +488,9 @@\n   .tableRow:last-child {\r\n     border-bottom: none; /* У последней строки убираем нижнюю линию */\r\n   }\r\n \r\n-  /* Намертво стираем вертикальные линии в ячейках строк */\r\n+ \r\n   .nameCell,\r\n   .unitCell,\r\n   .priceCell {\r\n     border-right: none !important; \r\n"
+                },
+                {
+                    "date": 1791535856971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -485,9 +485,9 @@\n     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая горизонтальная линия */\r\n   }\r\n \r\n   .tableRow:last-child {\r\n-    border-bottom: none; /* У последней строки убираем нижнюю линию */\r\n+    border-bottom: none; \r\n   }\r\n \r\n  \r\n   .nameCell,\r\n"
+                },
+                {
+                    "date": 1791535867699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -472,18 +472,18 @@\n     padding-left: 20px;\r\n     padding-right: 10px;\r\n   }\r\n \r\n-  /* Строка таблицы: тянется по высоте текста, снизу легкий разделитель */\r\n+ \r\n   .tableRow,\r\n   .tableRow:last-child {\r\n     height: auto;\r\n     min-height: 38px;\r\n     padding: 8px 0;\r\n     align-items: center;\r\n     border-left: none;\r\n     border-right: none;\r\n-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая горизонтальная линия */\r\n+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); \r\n   }\r\n \r\n   .tableRow:last-child {\r\n     border-bottom: none; \r\n"
+                },
+                {
+                    "date": 1791535877923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -460,9 +460,9 @@\n \r\n   .headerCell {\r\n     font-size: 12px;\r\n     font-weight: 700;\r\n-    border-right: none !important; /* Намертво убираем вертикальные линии в шапке */\r\n+    border-right: none \r\n   }\r\n \r\n   .cellText {\r\n     padding-left: 20px;\r\n"
+                },
+                {
+                    "date": 1791535883144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -454,9 +454,9 @@\n     height: 40px;\r\n     margin-top: 15px;\r\n     background-color: rgba(49, 49, 49, 1);\r\n     border: none;\r\n-    border-bottom: 2px solid rgba(255, 122, 0, 1); /* Оранжевый акцент под шапкой */\r\n+    border-bottom: 2px solid rgba(255, 122, 0, 1);\r\n   }\r\n \r\n   .headerCell {\r\n     font-size: 12px;\r\n"
+                },
+                {
+                    "date": 1791535888886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -420,9 +420,9 @@\n     border-radius: 6px;\r\n     padding: 0;\r\n   }\r\n \r\n-  /* Полностью отключаем десктопную абсолютную оранжевую рамку, чтобы углы не разваливались */\r\n+ \r\n   .mainWrapper::after {\r\n     display: none;\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1791535898121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -411,13 +411,13 @@\n   }\r\n \r\n   .mainWrapper {\r\n     width: 100%;\r\n-    max-width: 600px; /* Оптимальная ширина для читаемости на планшете */\r\n+    max-width: 600px;\r\n     margin: 37px auto 0 auto;\r\n     background-color: rgba(61, 61, 61, 1);\r\n     box-sizing: border-box;\r\n-    border: 1px solid rgba(255, 255, 255, 0.2); /* Легкая внешняя рамка вместо оранжевой */\r\n+    border: 1px solid rgba(255, 255, 255, 0.2); \r\n     border-radius: 6px;\r\n     padding: 0;\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1791535951086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -203,14 +203,9 @@\n   height: 31px;\r\n }\r\n \r\n .btnWrapper {\r\n-  width: 100%;\r\n-  display: flex;\r\n-  justify-content: flex-end;\r\n-  padding-right: 222px;\r\n-  margin-top: 40px;\r\n-  box-sizing: border-box;\r\n+\r\n }\r\n \r\n .downloadBtn {\r\n   display: inline-flex;\r\n"
+                },
+                {
+                    "date": 1791535977828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -203,9 +203,15 @@\n   height: 31px;\r\n }\r\n \r\n .btnWrapper {\r\n-\r\n+  width: 100%;\r\n+  max-width: 996px; /* 🎯 Зажимаем контейнер в ширину таблицы */\r\n+  margin: 40px auto 0 auto; /* 🎯 Центрируем блок по оси таблицы */\r\n+  display: flex;\r\n+  justify-content: flex-end;\r\n+  padding-right: 0; /* 🎯 Обнуляем жесткий десктопный паддинг */\r\n+  box-sizing: border-box;\r\n }\r\n \r\n .downloadBtn {\r\n   display: inline-flex;\r\n"
+                },
+                {
+                    "date": 1791535999854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -204,9 +204,9 @@\n }\r\n \r\n .btnWrapper {\r\n   width: 100%;\r\n-  max-width: 996px; /* 🎯 Зажимаем контейнер в ширину таблицы */\r\n+  max-width: 996px; \r\n   margin: 40px auto 0 auto; /* 🎯 Центрируем блок по оси таблицы */\r\n   display: flex;\r\n   justify-content: flex-end;\r\n   padding-right: 0; /* 🎯 Обнуляем жесткий десктопный паддинг */\r\n"
+                },
+                {
+                    "date": 1791536008283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -205,12 +205,12 @@\n \r\n .btnWrapper {\r\n   width: 100%;\r\n   max-width: 996px; \r\n-  margin: 40px auto 0 auto; /* 🎯 Центрируем блок по оси таблицы */\r\n+  margin: 40px auto 0 auto;\r\n   display: flex;\r\n   justify-content: flex-end;\r\n-  padding-right: 0; /* 🎯 Обнуляем жесткий десктопный паддинг */\r\n+  padding-right: 0; \r\n   box-sizing: border-box;\r\n }\r\n \r\n .downloadBtn {\r\n"
+                },
+                {
+                    "date": 1791536038347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -505,9 +505,9 @@\n   }\r\n \r\n   .priceCell {\r\n     font-weight: 600;\r\n-    color: #ff7a00; /* Выделяем цену цветом, так как линий больше нет */\r\n+    color: #ff7a00; */\r\n   }\r\n \r\n   .btnWrapper {\r\n     padding-right: 0;\r\n"
+                },
+                {
+                    "date": 1791536064389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -493,9 +493,9 @@\n  \r\n   .nameCell,\r\n   .unitCell,\r\n   .priceCell {\r\n-    border-right: none !important; \r\n+    border-right: none \r\n     font-size: 12px;\r\n   }\r\n \r\n   .unitCell,\r\n@@ -505,9 +505,9 @@\n   }\r\n \r\n   .priceCell {\r\n     font-weight: 600;\r\n-    color: #ff7a00; */\r\n+    color: #ff7a00; \r\n   }\r\n \r\n   .btnWrapper {\r\n     padding-right: 0;\r\n"
+                },
+                {
+                    "date": 1791536069893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -493,9 +493,9 @@\n  \r\n   .nameCell,\r\n   .unitCell,\r\n   .priceCell {\r\n-    border-right: none \r\n+    border-right: none ;\r\n     font-size: 12px;\r\n   }\r\n \r\n   .unitCell,\r\n"
+                },
+                {
+                    "date": 1791537701592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -394,12 +394,93 @@\n @media (max-width: 1024px) {\r\n   .priceSection {\r\n     margin-top: 81.7px;\r\n   }\r\n+\r\n   .title {\r\n     font-size: 21.3px;\r\n     line-height: 26.3px;\r\n   }\r\n+\r\n+  .mainWrapper {\r\n+    width: 708px;\r\n+    margin-top: 49.3px;\r\n+    height: auto;\r\n+    padding-bottom: 15px;\r\n+    box-sizing: border-box;\r\n+  }\r\n+\r\n+  .mainWrapper::after {\r\n+    top: 40.5px;\r\n+    bottom: 0;\r\n+    height: auto;\r\n+  }\r\n+\r\n+  .tabContainer {\r\n+    height: 40.5px;\r\n+  }\r\n+\r\n+  .tabItem {\r\n+    font-size: 14.2px;\r\n+  }\r\n+\r\n+  .tableHeader {\r\n+    height: 39px;\r\n+    margin-top: 17.7px;\r\n+  }\r\n+\r\n+  .headerCell {\r\n+    font-size: 11.3px;\r\n+    line-height: 14.2px;\r\n+  }\r\n+\r\n+  .cellText {\r\n+    padding-left: 42.6px;\r\n+  }\r\n+\r\n+  .rowCellText {\r\n+    padding-left: 28.4px;\r\n+  }\r\n+\r\n+  .tableRow,\r\n+  .tableRow:last-child {\r\n+    height: auto;\r\n+    min-height: 22px;\r\n+    padding: 6px 0;\r\n+    display: flex;\r\n+    flex-direction: row;\r\n+    align-items: stretch;\r\n+    box-sizing: border-box;\r\n+  }\r\n+\r\n+  .nameCell,\r\n+  .unitCell,\r\n+  .priceCell {\r\n+    display: flex;\r\n+    align-items: center;\r\n+    font-size: 11.3px;\r\n+    box-sizing: border-box;\r\n+  }\r\n+\r\n+  .unitCell,\r\n+  .priceCell {\r\n+    justify-content: center;\r\n+  }\r\n+\r\n+  .rowCell {\r\n+    font-size: 11.3px;\r\n+  }\r\n+\r\n+  .btnWrapper {\r\n+    padding-right: 157px;\r\n+    margin-top: 28.4px;\r\n+  }\r\n+\r\n+  .downloadBtn {\r\n+    height: 36.2px;\r\n+    padding: 0 22.7px;\r\n+    font-size: 10px;\r\n+  }\r\n }\r\n \r\n @media (max-width: 768px) {\r\n   .priceSection {\r\n"
+                },
+                {
+                    "date": 1791538513708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -497,14 +497,13 @@\n     max-width: 600px;\r\n     margin: 37px auto 0 auto;\r\n     background-color: rgba(61, 61, 61, 1);\r\n     box-sizing: border-box;\r\n-    border: 1px solid rgba(255, 255, 255, 0.2); \r\n+    border: 1px solid rgba(255, 255, 255, 0.2);\r\n     border-radius: 6px;\r\n     padding: 0;\r\n   }\r\n \r\n- \r\n   .mainWrapper::after {\r\n     display: none;\r\n   }\r\n \r\n@@ -542,9 +541,9 @@\n \r\n   .headerCell {\r\n     font-size: 12px;\r\n     font-weight: 700;\r\n-    border-right: none \r\n+    border-right: none;\r\n   }\r\n \r\n   .cellText {\r\n     padding-left: 20px;\r\n@@ -554,29 +553,27 @@\n     padding-left: 20px;\r\n     padding-right: 10px;\r\n   }\r\n \r\n- \r\n   .tableRow,\r\n   .tableRow:last-child {\r\n     height: auto;\r\n     min-height: 38px;\r\n     padding: 8px 0;\r\n     align-items: center;\r\n     border-left: none;\r\n     border-right: none;\r\n-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); \r\n+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);\r\n   }\r\n \r\n   .tableRow:last-child {\r\n-    border-bottom: none; \r\n+    border-bottom: none;\r\n   }\r\n \r\n- \r\n-  .nameCell,\r\n-  .unitCell,\r\n-  .priceCell {\r\n-    border-right: none ;\r\n+  .tableRow > .nameCell,\r\n+  .tableRow > .unitCell,\r\n+  .tableRow > .priceCell {\r\n+    border-right: none;\r\n     font-size: 12px;\r\n   }\r\n \r\n   .unitCell,\r\n@@ -586,9 +583,9 @@\n   }\r\n \r\n   .priceCell {\r\n     font-weight: 600;\r\n-    color: #ff7a00; \r\n+    color: #ff7a00;\r\n   }\r\n \r\n   .btnWrapper {\r\n     padding-right: 0;\r\n"
+                },
+                {
+                    "date": 1791539059560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -541,9 +541,9 @@\n \r\n   .headerCell {\r\n     font-size: 12px;\r\n     font-weight: 700;\r\n-    border-right: none;\r\n+    border-right-color: rgba(49, 49, 49, 1);\r\n   }\r\n \r\n   .cellText {\r\n     padding-left: 20px;\r\n@@ -571,9 +571,9 @@\n \r\n   .tableRow > .nameCell,\r\n   .tableRow > .unitCell,\r\n   .tableRow > .priceCell {\r\n-    border-right: none;\r\n+    border-right-color: rgba(61, 61, 61, 1);\r\n     font-size: 12px;\r\n   }\r\n \r\n   .unitCell,\r\n@@ -603,8 +603,9 @@\n }\r\n \r\n \r\n \r\n+\r\n @media (max-width: 480px) {\r\n   .priceSection {\r\n     margin-top: 50px;\r\n   }\r\n"
+                },
+                {
+                    "date": 1791539486998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -541,8 +541,12 @@\n \r\n   .headerCell {\r\n     font-size: 12px;\r\n     font-weight: 700;\r\n+  }\r\n+\r\n+  .headerCell:nth-child(1),\r\n+  .headerCell:nth-child(2) {\r\n     border-right-color: rgba(49, 49, 49, 1);\r\n   }\r\n \r\n   .cellText {\r\n@@ -568,13 +572,17 @@\n   .tableRow:last-child {\r\n     border-bottom: none;\r\n   }\r\n \r\n+  .nameCell,\r\n+  .unitCell,\r\n+  .priceCell {\r\n+    font-size: 12px;\r\n+  }\r\n+\r\n   .tableRow > .nameCell,\r\n-  .tableRow > .unitCell,\r\n-  .tableRow > .priceCell {\r\n+  .tableRow > .unitCell {\r\n     border-right-color: rgba(61, 61, 61, 1);\r\n-    font-size: 12px;\r\n   }\r\n \r\n   .unitCell,\r\n   .priceCell {\r\n@@ -604,8 +612,9 @@\n \r\n \r\n \r\n \r\n+\r\n @media (max-width: 480px) {\r\n   .priceSection {\r\n     margin-top: 50px;\r\n   }\r\n"
                 }
             ],
             "date": 1783246435133,
