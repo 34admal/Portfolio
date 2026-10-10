@@ -69,424 +69,447 @@
 
 
 @media (max-width: 1366px) {
-  :global(#root) .wrapper {
+  .wrapper {
     margin-top: 53.1px;
     width: 100%;
   }
-  :global(#root) .title {
+
+  .title {
     font-size: 28.4px;
     line-height: 35px;
   }
-  :global(#root) .contentBlock {
+
+  .contentBlock {
     margin-top: 60.7px;
     width: 100%;
     height: 643.8px;
   }
   
-  :global(#root) .workersColumn {
+  .workersColumn {
     margin-left: 155.5px;
   }
   
-  
-  :global(#root) .workersImg {
+  .workersImg {
     display: block;
     width: 643.1px;
     height: auto;
   }
 
- 
-  :global(#root) :global([class*="ContactForm_form"]) {
-    margin-top: 67.3px;
-    margin-left: 14.2px;
-    width: 370px;
-    height: 444.7px;
-  }
-  :global(#root) :global([class*="ContactForm_title"]) {
-    padding-top: 23px;
-    padding-left: 47.4px;
-    font-size: 20.8px;
-    line-height: 25.6px;
-  }
-  :global(#root) :global([class*="ContactForm_label"]) {
-    margin-left: 47.4px;
-    margin-top: 22px;
-    font-size: 13.3px;
-  }
-  :global(#root) :global([class*="ContactForm_line"]) {
-    width: 270.3px;
-    margin-left: 48.4px;
-    margin-top: 2.9px;
-  }
-  :global(#root) :global([class*="ContactForm_label_name"]) {
-    margin-top: 22px;
-    margin-left: 47.4px;
-  }
-  :global(#root) :global([class*="ContactForm_label_phone"]) {
-    margin-top: 17.3px;
-    margin-left: 47.4px;
-  }
-  :global(#root) :global([class*="ContactForm_label_text"]) {
-    margin-top: 16.3px;
-    margin-left: 48.4px;
-  }
-  :global(#root) :global([class*="ContactForm_textarea"]) {
-    width: 270.3px;
-    height: 139px;
-    margin-top: 15.8px;
-    margin-left: 48.4px;
-    padding: 9.5px 13.3px;
-  }
-  :global(#root) :global([class*="ContactForm_submitBtn"]) {
-    width: 270.3px;
-    height: 47.9px;
-    margin-top: 24px;
-    margin-left: 48.4px;
-    font-size: 15.2px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxContainer"]) {
-    margin-top: 15.3px;
-    margin-left: 48.4px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxCustom"]) {
-    width: 15.2px;
-    height: 15.3px;
+  
+  .formColumn :global {
+    [class*="ContactForm_form"] {
+      margin-top: 67.3px;
+      margin-left: 14.2px;
+      width: 370px;
+      height: 444.7px;
+    }
+    [class*="ContactForm_title"] {
+      padding-top: 23px;
+      padding-left: 47.4px;
+      font-size: 20.8px;
+      line-height: 25.6px;
+    }
+    [class*="ContactForm_label"] {
+      margin-left: 47.4px;
+      margin-top: 22px;
+      font-size: 13.3px;
+    }
+    [class*="ContactForm_line"] {
+      width: 270.3px;
+      margin-left: 48.4px;
+      margin-top: 2.9px;
+    }
+    [class*="ContactForm_label_name"] {
+      margin-top: 22px;
+      margin-left: 47.4px;
+    }
+    [class*="ContactForm_label_phone"] {
+      margin-top: 17.3px;
+      margin-left: 47.4px;
+    }
+    [class*="ContactForm_label_text"] {
+      margin-top: 16.3px;
+      margin-left: 48.4px;
+    }
+    [class*="ContactForm_textarea"] {
+      width: 270.3px;
+      height: 139px;
+      margin-top: 15.8px;
+      margin-left: 48.4px;
+      padding: 9.5px 13.3px;
+    }
+    [class*="ContactForm_submitBtn"] {
+      width: 270.3px;
+      height: 47.9px;
+      margin-top: 24px;
+      margin-left: 48.4px;
+      font-size: 15.2px;
+    }
+    [class*="ContactForm_checkboxContainer"] {
+      margin-top: 15.3px;
+      margin-left: 48.4px;
+    }
+    [class*="ContactForm_checkboxCustom"] {
+      width: 15.2px;
+      height: 15.3px;
+    }
   }
 }
 
 
 @media (max-width: 1200px) {
-  :global(#root) .wrapper {
+  .wrapper {
     margin-top: 46.7px;
   }
-  :global(#root) .title {
+  
+  .title {
     font-size: 25px;
     line-height: 30.8px;
   }
-  :global(#root) .contentBlock {
+  
+  .contentBlock {
     margin-top: 53.3px;
     width: 100%;
     height: 566.6px;
   }
-  :global(#root) .workersColumn {
+  
+  .workersColumn {
     margin-left: 136.7px;
   }
-  :global(#root) .workersImg {
+  
+  .workersImg {
     display: block;
     width: 565px;
     height: auto;
   }
 
-
-  :global(#root) :global([class*="ContactForm_form"]) {
-    margin-top: 59.2px;
-    margin-left: 12.5px;
-    width: 325px;
-    height: 390.7px;
-  }
-  :global(#root) :global([class*="ContactForm_title"]) {
-    padding-top: 20.2px;
-    padding-left: 41.7px;
-    font-size: 18.3px;
-    line-height: 22.5px;
-  }
-  :global(#root) :global([class*="ContactForm_label"]) {
-    margin-left: 41.7px;
-    margin-top: 19.4px;
-    font-size: 11.7px;
-  }
-  :global(#root) :global([class*="ContactForm_line"]) {
-    width: 237.5px;
-    margin-left: 42.5px;
-    margin-top: 2.6px;
-  }
-  :global(#root) :global([class*="ContactForm_label_name"]) {
-    margin-top: 19.4px;
-    margin-left: 41.7px;
-  }
-  :global(#root) :global([class*="ContactForm_label_phone"]) {
-    margin-top: 15.2px;
-    margin-left: 41.7px;
-  }
-  :global(#root) :global([class*="ContactForm_label_text"]) {
-    margin-top: 14.3px;
-    margin-left: 42.5px;
-  }
-  :global(#root) :global([class*="ContactForm_textarea"]) {
-    width: 237.5px;
-    height: 122.1px;
-    margin-top: 13.9px;
-    margin-left: 42.5px;
-    padding: 8.3px 11.7px;
-  }
-  :global(#root) :global([class*="ContactForm_submitBtn"]) {
-    width: 237.5px;
-    height: 42.1px;
-    margin-top: 21.1px;
-    margin-left: 42.5px;
-    font-size: 13.3px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxContainer"]) {
-    margin-top: 13.4px;
-    margin-left: 42.5px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxCustom"]) {
-    width: 13.3px;
-    height: 13.5px;
+ 
+  .formColumn :global {
+    [class*="ContactForm_form"] {
+      margin-top: 59.2px;
+      margin-left: 12.5px;
+      width: 325px;
+      height: 390.7px;
+    }
+    [class*="ContactForm_title"] {
+      padding-top: 20.2px;
+      padding-left: 41.7px;
+      font-size: 18.3px;
+      line-height: 22.5px;
+    }
+    [class*="ContactForm_label"] {
+      margin-left: 41.7px;
+      margin-top: 19.4px;
+      font-size: 11.7px;
+    }
+    [class*="ContactForm_line"] {
+      width: 237.5px;
+      margin-left: 42.5px;
+      margin-top: 2.6px;
+    }
+    [class*="ContactForm_label_name"] {
+      margin-top: 19.4px;
+      margin-left: 41.7px;
+    }
+    [class*="ContactForm_label_phone"] {
+      margin-top: 15.2px;
+      margin-left: 41.7px;
+    }
+    [class*="ContactForm_label_text"] {
+      margin-top: 14.3px;
+      margin-left: 42.5px;
+    }
+    [class*="ContactForm_textarea"] {
+      width: 237.5px;
+      height: 122.1px;
+      margin-top: 13.9px;
+      margin-left: 42.5px;
+      padding: 8.3px 11.7px;
+    }
+    [class*="ContactForm_submitBtn"] {
+      width: 237.5px;
+      height: 42.1px;
+      margin-top: 21.1px;
+      margin-left: 42.5px;
+      font-size: 13.3px;
+    }
+    [class*="ContactForm_checkboxContainer"] {
+      margin-top: 13.4px;
+      margin-left: 42.5px;
+    }
+    [class*="ContactForm_checkboxCustom"] {
+      width: 13.3px;
+      height: 13.5px;
+    }
   }
 }
 
+/* ================1024================== */
 @media (max-width: 1024px) {
-  :global(#root) .wrapper {
+  .wrapper {
     margin-top: 39.8px;
   }
-  :global(#root) .title {
+  .title {
     font-size: 21.3px;
     line-height: 26.3px;
   }
-  :global(#root) .contentBlock {
+  .contentBlock {
     margin-top: 45.5px;
     width: 100%;
     height: 483.6px;
   }
-  :global(#root) .workersColumn {
+  .workersColumn {
     margin-left: 116.6px;
   }
-  :global(#root) .workersImg {
+  .workersImg {
     display: block;
     width: 482.1px;
     height: auto;
   }
 
-  
-  :global(#root) :global([class*="ContactForm_form"]) {
-    margin-top: 50.5px;
-    margin-left: 10.7px;
-    width: 277.3px;
-    height: 333.4px;
-  }
-  :global(#root) :global([class*="ContactForm_title"]) {
-    padding-top: 17.2px;
-    padding-left: 35.6px;
-    font-size: 15.6px;
-    line-height: 19.2px;
-  }
-  :global(#root) :global([class*="ContactForm_label"]) {
-    margin-left: 35.6px;
-    margin-top: 16.5px;
-    font-size: 10px;
-  }
-  :global(#root) :global([class*="ContactForm_line"]) {
-    width: 202.7px;
-    margin-left: 36.3px;
-    margin-top: 2.2px;
-  }
-  :global(#root) :global([class*="ContactForm_label_name"]) {
-    margin-top: 16.5px;
-    margin-left: 35.6px;
-  }
-  :global(#root) :global([class*="ContactForm_label_phone"]) {
-    margin-top: 12.9px;
-    margin-left: 35.6px;
-  }
-  :global(#root) :global([class*="ContactForm_label_text"]) {
-    margin-top: 12.2px;
-    margin-left: 36.3px;
-  }
-  :global(#root) :global([class*="ContactForm_textarea"]) {
-    width: 202.7px;
-    height: 104.2px;
-    margin-top: 11.9px;
-    margin-left: 36.3px;
-    padding: 7.1px 10px;
-  }
-  :global(#root) :global([class*="ContactForm_submitBtn"]) {
-    width: 202.7px;
-    height: 35.9px;
-    margin-top: 18px;
-    margin-left: 36.3px;
-    font-size: 11.4px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxContainer"]) {
-    margin-top: 11.5px;
-    margin-left: 36.3px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxCustom"]) {
-    width: 11.4px;
-    height: 11.5px;
+ 
+  .formColumn :global {
+    [class*="ContactForm_form"] {
+      margin-top: 50.5px;
+      margin-left: 10.7px;
+      width: 277.3px;
+      height: 333.4px;
+    }
+    [class*="ContactForm_title"] {
+      padding-top: 17.2px;
+      padding-left: 35.6px;
+      font-size: 15.6px;
+      line-height: 19.2px;
+    }
+    [class*="ContactForm_label"] {
+      margin-left: 35.6px;
+      margin-top: 16.5px;
+      font-size: 10px;
+    }
+    [class*="ContactForm_line"] {
+      width: 202.7px;
+      margin-left: 36.3px;
+      margin-top: 2.2px;
+    }
+    [class*="ContactForm_label_name"] {
+      margin-top: 16.5px;
+      margin-left: 35.6px;
+    }
+    [class*="ContactForm_label_phone"] {
+      margin-top: 12.9px;
+      margin-left: 35.6px;
+    }
+    [class*="ContactForm_label_text"] {
+      margin-top: 12.2px;
+      margin-left: 36.3px;
+    }
+    [class*="ContactForm_textarea"] {
+      width: 202.7px;
+      height: 104.2px;
+      margin-top: 11.9px;
+      margin-left: 36.3px;
+      padding: 7.1px 10px;
+    }
+    [class*="ContactForm_submitBtn"] {
+      width: 202.7px;
+      height: 35.9px;
+      margin-top: 18px;
+      margin-left: 36.3px;
+      font-size: 11.4px;
+    }
+    [class*="ContactForm_checkboxContainer"] {
+      margin-top: 11.5px;
+      margin-left: 36.3px;
+    }
+    [class*="ContactForm_checkboxCustom"] {
+      width: 11.4px;
+      height: 11.5px;
+    }
   }
 }
 
+/* ================1000================== */
 @media (max-width: 1000px) {
-  :global(#root) .wrapper {
+  .wrapper {
     margin-top: 38.9px;
   }
-  :global(#root) .title {
+  .title {
     font-size: 20.8px;
     line-height: 25.7px;
   }
-  :global(#root) .contentBlock {
+  .contentBlock {
     margin-top: 44.4px;
     width: 100%;
     height: 472.2px;
   }
-  :global(#root) .workersColumn {
+  .workersColumn {
     margin-left: 113.9px;
   }
-  :global(#root) .workersImg {
+  .workersImg {
     display: block;
     width: 470.8px;
     height: auto;
   }
 
  
-  :global(#root) :global([class*="ContactForm_form"]) {
-    margin-top: 49.3px;
-    margin-left: 10.4px;
-    width: 270.8px;
-    height: 325.5px;
-  }
-  :global(#root) :global([class*="ContactForm_title"]) {
-    padding-top: 16.8px;
-    padding-left: 34.7px;
-    font-size: 15.3px;
-    line-height: 18.7px;
-  }
-  :global(#root) :global([class*="ContactForm_label"]) {
-    margin-left: 34.7px;
-    margin-top: 16.1px;
-    font-size: 10px;
-  }
-  :global(#root) :global([class*="ContactForm_line"]) {
-    width: 197.9px;
-    margin-left: 35.4px;
-    margin-top: 2.1px;
-  }
-  :global(#root) :global([class*="ContactForm_label_name"]) {
-    margin-top: 16.1px;
-    margin-left: 34.7px;
-  }
-  :global(#root) :global([class*="ContactForm_label_phone"]) {
-    margin-top: 12.6px;
-    margin-left: 34.7px;
-  }
-  :global(#root) :global([class*="ContactForm_label_text"]) {
-    margin-top: 11.9px;
-    margin-left: 35.4px;
-  }
-  :global(#root) :global([class*="ContactForm_textarea"]) {
-    width: 197.9px;
-    height: 101.7px;
-    margin-top: 11.6px;
-    margin-left: 35.4px;
-    padding: 6.9px 10px;
-  }
-  :global(#root) :global([class*="ContactForm_submitBtn"]) {
-    width: 197.9px;
-    height: 35.1px;
-    margin-top: 17.5px;
-    margin-left: 35.4px;
-    font-size: 11.1px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxContainer"]) {
-    margin-top: 11.2px;
-    margin-left: 35.4px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxCustom"]) {
-    width: 11.1px;
-    height: 11.2px;
+  .formColumn :global {
+    [class*="ContactForm_form"] {
+      margin-top: 49.3px;
+      margin-left: 10.4px;
+      width: 270.8px;
+      height: 325.5px;
+    }
+    [class*="ContactForm_title"] {
+      padding-top: 16.8px;
+      padding-left: 34.7px;
+      font-size: 15.3px;
+      line-height: 18.7px;
+    }
+    [class*="ContactForm_label"] {
+      margin-left: 34.7px;
+      margin-top: 16.1px;
+      font-size: 10px;
+    }
+    [class*="ContactForm_line"] {
+      width: 197.9px;
+      margin-left: 35.4px;
+      margin-top: 2.1px;
+    }
+    [class*="ContactForm_label_name"] {
+      margin-top: 16.1px;
+      margin-left: 34.7px;
+    }
+    [class*="ContactForm_label_phone"] {
+      margin-top: 12.6px;
+      margin-left: 34.7px;
+    }
+    [class*="ContactForm_label_text"] {
+      margin-top: 11.9px;
+      margin-left: 35.4px;
+    }
+    [class*="ContactForm_textarea"] {
+      width: 197.9px;
+      height: 101.7px;
+      margin-top: 11.6px;
+      margin-left: 35.4px;
+      padding: 6.9px 10px;
+    }
+    [class*="ContactForm_submitBtn"] {
+      width: 197.9px;
+      height: 35.1px;
+      margin-top: 17.5px;
+      margin-left: 35.4px;
+      font-size: 11.1px;
+    }
+    [class*="ContactForm_checkboxContainer"] {
+      margin-top: 11.2px;
+      margin-left: 35.4px;
+    }
+    [class*="ContactForm_checkboxCustom"] {
+      width: 11.1px;
+      height: 11.2px;
+    }
   }
 }
 
+
 @media (max-width: 768px) {
-  :global(#root) .wrapper {
+  .wrapper {
     margin-top: 29.9px;
   }
-  :global(#root) .title {
+  
+  .title {
     font-size: 16px;
     line-height: 19.7px;
   }
-  :global(#root) .contentBlock {
+  
+  .contentBlock {
     margin-top: 34.1px;
     width: 100%;
     height: 362.7px;
   }
-  :global(#root) .workersColumn {
+  
+  .workersColumn {
     margin-left: 87.5px;
   }
-  :global(#root) .workersImg {
+  
+  .workersImg {
     display: block;
     width: 361.6px;
     height: auto;
   }
 
   
-  :global(#root) :global([class*="ContactForm_form"]) {
-    margin-top: 37.9px;
-    margin-left: 8px;
-    width: 208px;
-    height: 250px;
-  }
-  :global(#root) :global([class*="ContactForm_title"]) {
-    padding-top: 12.9px;
-    padding-left: 26.6px;
-    font-size: 11.7px;
-    line-height: 14.4px;
-  }
-  :global(#root) :global([class*="ContactForm_label"]) {
-    margin-left: 26.6px;
-    margin-top: 12.4px;
-    font-size: 9px;
-  }
-  :global(#root) :global([class*="ContactForm_line"]) {
-    width: 152px;
-    margin-left: 27.2px;
-    margin-top: 1.6px;
-  }
-  :global(#root) :global([class*="ContactForm_label_name"]) {
-    margin-top: 12.4px;
-    margin-left: 26.6px;
-  }
-  :global(#root) :global([class*="ContactForm_label_phone"]) {
-    margin-top: 9.7px;
-    margin-left: 26.6px;
-  }
-  :global(#root) :global([class*="ContactForm_label_text"]) {
-    margin-top: 9.2px;
-    margin-left: 27.2px;
-  }
-  :global(#root) :global([class*="ContactForm_textarea"]) {
-    width: 152px;
-    height: 78.1px;
-    margin-top: 8.9px;
-    margin-left: 27.2px;
-    padding: 5.3px 7.5px;
-    font-size: 10px;
-  }
-  :global(#root) :global([class*="ContactForm_submitBtn"]) {
-    width: 152px;
-    height: 27px;
-    margin-top: 13.5px;
-    margin-left: 27.2px;
-    font-size: 9px;
-    letter-spacing: 0.4px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxContainer"]) {
-    margin-top: 8.6px;
-    margin-left: 27.2px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxCustom"]) {
-    width: 9px;
-    height: 9px;
-  }
-  :global(#root) :global([class*="ContactForm_checkboxText"]) {
-    font-size: 8px;
-    line-height: 10px;
+  .formColumn :global {
+    [class*="ContactForm_form"] {
+      margin-top: 37.9px;
+      margin-left: 8px;
+      width: 208px;
+      height: 250px;
+    }
+    [class*="ContactForm_title"] {
+      padding-top: 12.9px;
+      padding-left: 26.6px;
+      font-size: 11.7px;
+      line-height: 14.4px;
+    }
+    [class*="ContactForm_label"] {
+      margin-left: 26.6px;
+      margin-top: 12.4px;
+      font-size: 9px;
+    }
+    [class*="ContactForm_line"] {
+      width: 152px;
+      margin-left: 27.2px;
+      margin-top: 1.6px;
+    }
+    [class*="ContactForm_label_name"] {
+      margin-top: 12.4px;
+      margin-left: 26.6px;
+    }
+    [class*="ContactForm_label_phone"] {
+      margin-top: 9.7px;
+      margin-left: 26.6px;
+    }
+    [class*="ContactForm_label_text"] {
+      margin-top: 9.2px;
+      margin-left: 27.2px;
+    }
+    [class*="ContactForm_textarea"] {
+      width: 152px;
+      height: 78.1px;
+      margin-top: 8.9px;
+      margin-left: 27.2px;
+      padding: 5.3px 7.5px;
+      font-size: 10px;
+    }
+    [class*="ContactForm_submitBtn"] {
+      width: 152px;
+      height: 27px;
+      margin-top: 13.5px;
+      margin-left: 27.2px;
+      font-size: 9px;
+      letter-spacing: 0.4px;
+    }
+    [class*="ContactForm_checkboxContainer"] {
+      margin-top: 8.6px;
+      margin-left: 27.2px;
+    }
+    [class*="ContactForm_checkboxCustom"] {
+      width: 9px;
+      height: 9px;
+    }
+    [class*="ContactForm_checkboxText"] {
+      font-size: 8px;
+      line-height: 10px;
+    }
   }
 }
 
 
+
 @media (max-width: 480px) {
-  :global(#root) .wrapper {
+  .wrapper {
     margin-top: 25px;
     width: 100%;
     padding: 0 10px;
@@ -496,7 +519,7 @@
     align-items: center;
   }
   
-  :global(#root) .title {
+  .title {
     font-size: 15px;
     line-height: 19px;
     text-align: center;
@@ -504,8 +527,8 @@
     padding: 0 5px;
   }
   
- 
-  :global(#root) .contentBlock {
+  
+  .contentBlock {
     margin-top: 20px;
     width: 100%;
     max-width: 320px;
@@ -517,110 +540,104 @@
     box-sizing: border-box;
     background-image: none; 
     background-color: transparent;
-  }
-  
-  :global(#root) .workersColumn {
+    position: static;
+    left: auto;
+    right: auto;
     margin-left: 0;
-    margin-bottom: 20px;
-    justify-content: center;
-    width: 100%;
+    margin-right: 0;
   }
   
-  :global(#root) .workersImg {
-    display: block;
-    width: 100%;
-    max-width: 240px;
-    height: auto;
+  .workersColumn {
+    display: none;
   }
   
-  :global(#root) .formColumn {
+  .workersImg {
+    display: none;
+  }
+  
+  .formColumn {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
   }
 
- 
-  :global(#root) :global([class*="ContactForm_form"]) {
-    margin-top: 0;
-    margin-left: 0;
+  .formColumn :global([class*="ContactForm_form"]) {
+    margin: 0 auto;
     width: 300px;
     height: auto;
     padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
     align-items: stretch;
+    box-sizing: border-box;
   }
-  
-  :global(#root) :global([class*="ContactForm_title"]) {
-    padding-top: 0;
-    padding-left: 0;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  :global(#root) :global([class*="ContactForm_label"]) {
-    margin-left: 0;
-    margin-top: 15px;
-    font-size: 11px;
-  }
-  
-  :global(#root) :global([class*="ContactForm_input"]) {
-    width: 100%;
-    font-size: 13px;
-    padding: 4px 0;
-  }
-  
-  :global(#root) :global([class*="ContactForm_line"]) {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 2px;
-  }
-  
-  :global(#root) :global([class*="ContactForm_label_name"]),
-  :global(#root) :global([class*="ContactForm_label_phone"]) {
-    margin-top: 12px;
-    margin-left: 0;
-  }
-  
-  :global(#root) :global([class*="ContactForm_label_text"]) {
-    margin-top: 15px;
-    margin-left: 0;
-  }
-  
-  :global(#root) :global([class*="ContactForm_textarea"]) {
-    width: 100%;
-    height: 90px;
-    margin-top: 6px;
-    margin-left: 0;
-    padding: 8px 10px;
-    font-size: 13px;
-  }
-  
-  :global(#root) :global([class*="ContactForm_submitBtn"]) {
-    width: 100%;
-    height: 44px;
-    margin-top: 20px;
-    margin-left: 0;
-    font-size: 14px;
-    border-radius: 8px;
-  }
-  
-  :global(#root) :global([class*="ContactForm_checkboxContainer"]) {
-    margin-top: 15px;
-    margin-left: 0;
-    align-items: flex-start;
-  }
-  
-  :global(#root) :global([class*="ContactForm_checkboxCustom"]) {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    margin-top: 1px;
-  }
-  
-  :global(#root) :global([class*="ContactForm_checkboxText"]) {
-    font-size: 10px;
-    line-height: 13px;
+
+  .formColumn :global {
+    [class*="ContactForm_title"] {
+      padding-top: 0;
+      padding-left: 0;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    [class*="ContactForm_label"] {
+      margin-left: 0;
+      margin-top: 15px;
+      font-size: 11px;
+    }
+    [class*="ContactForm_input"] {
+      width: 100%;
+      font-size: 13px;
+      padding: 4px 0;
+    }
+    [class*="ContactForm_line"] {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 2px;
+    }
+    [class*="ContactForm_label_name"],
+    [class*="ContactForm_label_phone"] {
+      margin-top: 12px;
+      margin-left: 0;
+    }
+    [class*="ContactForm_label_text"] {
+      margin-top: 15px;
+      margin-left: 0;
+    }
+    [class*="ContactForm_textarea"] {
+      width: 100%;
+      height: 90px;
+      margin-top: 6px;
+      margin-left: 0;
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+    [class*="ContactForm_submitBtn"] {
+      width: 100%;
+      height: 44px;
+      margin-top: 20px;
+      margin-left: 0;
+      font-size: 14px;
+      border-radius: 8px;
+    }
+    [class*="ContactForm_checkboxContainer"] {
+      margin-top: 15px;
+      margin-left: 0;
+      align-items: flex-start;
+    }
+    [class*="ContactForm_checkboxCustom"] {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      margin-top: 1px;
+    }
+    [class*="ContactForm_checkboxText"] {
+      font-size: 10px;
+      line-height: 13px;
+    }
   }
 }
 
