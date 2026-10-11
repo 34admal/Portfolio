@@ -2,6 +2,11 @@
   box-sizing: border-box;
   margin-top: 56px;
   width: 100%;
+ 
+  background-image: url("images/bg-brick-wall.png");
+  background-repeat: no-repeat;
+  background-position: center 101px;
+  background-size: cover;
 }
 
 .title {
@@ -19,31 +24,29 @@
 .contentBlock {
   box-sizing: border-box;
   margin-top: 64px;
-  
- 
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  
+  width: 1440px;
   height: 680px;
-  background-image: url("images/bg-brick-wall.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
   display: flex;
-  justify-content: center; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
 .workersColumn {
-  width: auto;
-  margin-left: calc(164px - (100vw - 1440px) / 2); 
+  margin-left: 164px;
   display: flex;
   align-items: flex-end;
+}
+
+.workersImg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.formColumn {
+  flex-grow: 1;
+  box-sizing: border-box;
+  position: relative;
 }
 
 
@@ -509,6 +512,7 @@
 
 
 @media (max-width: 480px) {
+ 
   .wrapper {
     margin-top: 25px;
     width: 100%;
@@ -517,6 +521,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: none;
+    background-color: transparent;
   }
   
   .title {
@@ -526,7 +532,6 @@
     white-space: normal;
     padding: 0 5px;
   }
-  
   
   .contentBlock {
     margin-top: 20px;
@@ -538,8 +543,6 @@
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    background-image: none; 
-    background-color: transparent;
     position: static;
     left: auto;
     right: auto;
@@ -563,18 +566,18 @@
     padding: 0;
   }
 
-  .formColumn :global([class*="ContactForm_form"]) {
-    margin: 0 auto;
-    width: 300px;
-    height: auto;
-    padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    box-sizing: border-box;
-  }
-
+  
   .formColumn :global {
+    [class*="ContactForm_form"] {
+      margin: 0 auto;
+      width: 300px;
+      height: auto;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      box-sizing: border-box;
+    }
     [class*="ContactForm_title"] {
       padding-top: 0;
       padding-left: 0;
@@ -640,6 +643,3 @@
     }
   }
 }
-
-
-
