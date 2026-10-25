@@ -419,37 +419,68 @@
 @media (max-width: 768px) {
   .wrapper {
     margin-top: 29.9px;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: none;
+    background-color: transparent;
   }
   
   .title {
     font-size: 16px;
     line-height: 19.7px;
+    text-align: center;
   }
   
+  /* 🎯 ЧИСТЫЙ ФЛЕКСПОТОК: Точно такая же логика, как в feedback__container */
   .contentBlock {
     margin-top: 34.1px;
     width: 100%;
-    height: 362.7px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center; /* Центрируем всю группу элементов на странице */
+    gap: 20px;               /* Фиксированный зазор между людьми и формой */
+    box-sizing: border-box;
+    padding: 0 15px;
+    background-image: none;
+    background-color: transparent;
   }
   
+  /* Колонки стоят в один ряд без хаотичных отступов */
   .workersColumn {
-    margin-left: 87.5px;
+    margin-left: 0;
+    width: 100%;
+    max-width: 340px;        /* Твоя рабочая пропорция людей */
+    height: auto;
+    display: flex;
+    align-items: flex-end;
   }
   
   .workersImg {
     display: block;
-    width: 361.6px;
+    width: 100%;
     height: auto;
   }
 
-  
+  .formColumn {
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  /* Твоя оригинальная компактная форма возвращается в свой чистый вид */
+  .formColumn :global([class*="ContactForm_form"]) {
+    margin-top: 0;
+    margin-left: 0;
+    width: 208px;
+    height: 250px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
   .formColumn :global {
-    [class*="ContactForm_form"] {
-      margin-top: 37.9px;
-      margin-left: 8px;
-      width: 208px;
-      height: 250px;
-    }
     [class*="ContactForm_title"] {
       padding-top: 12.9px;
       padding-left: 26.6px;
@@ -495,7 +526,7 @@
       letter-spacing: 0.4px;
     }
     [class*="ContactForm_checkboxContainer"] {
-      margin-top: 8.6px;
+      margin-top: 8px;
       margin-left: 27.2px;
     }
     [class*="ContactForm_checkboxCustom"] {
@@ -508,6 +539,12 @@
     }
   }
 }
+
+
+
+
+
+
 
 
 

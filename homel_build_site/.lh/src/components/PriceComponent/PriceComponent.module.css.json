@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 284,
+            "activePatchIndex": 285,
             "patches": [
                 {
                     "date": 1783246435133,
@@ -1144,6 +1144,10 @@
                 {
                     "date": 1791909006891,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -681,18 +681,18 @@\n \r\n   .tabItem:first-child { margin-left: 0; }\r\n   .tabItem:last-child { margin-right: 0; }\r\n \r\n-  /* Усиливаем селектор, чтобы перебить десктопный каскад цвета и рамок */\r\n-  .tabContainer .tabItem.active {\r\n-    border-color: rgba(255, 255, 255, 0.2);\r\n+  /* 🎯 ПРОСТАЯ СМЕНА ЦВЕТА: активный таб просто меняет фон и убирает лишние рамки */\r\n+  .tabItem.active {\r\n     background-color: rgba(74, 74, 74, 1);\r\n-    font-weight: 600;\r\n+    border: 1px solid rgba(255, 255, 255, 0.2);\r\n+    outline: none;\r\n+    box-shadow: none;\r\n   }\r\n \r\n-  /* Намертво уничтожаем десктопные внутренние и внешние рамки-обводки */\r\n-  .tabContainer .tabItem.active::before,\r\n-  .tabContainer .tabItem.active::after {\r\n+  .tabItem.active::before,\r\n+  .tabItem.active::after {\r\n     display: none;\r\n   }\r\n \r\n   .tableHeader {\r\n@@ -792,5 +792,5 @@\n     background-color: #1c1d1e;\r\n     color: #FFFFFF;\r\n     text-decoration: none;\r\n   }\r\n-}\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1791911214683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -681,9 +681,9 @@\n \r\n   .tabItem:first-child { margin-left: 0; }\r\n   .tabItem:last-child { margin-right: 0; }\r\n \r\n-  /* 🎯 ПРОСТАЯ СМЕНА ЦВЕТА: активный таб просто меняет фон и убирает лишние рамки */\r\n+ \r\n   .tabItem.active {\r\n     background-color: rgba(74, 74, 74, 1);\r\n     border: 1px solid rgba(255, 255, 255, 0.2);\r\n     outline: none;\r\n"
                 }
             ],
             "date": 1783246435133,

@@ -15,14 +15,18 @@ export function Header() {
     if (clickX <= 30 && clickY <= 30) {
       setIsMenuOpen(false);
     }
-  }; // <-- ВОТ ЗДЕСЬ БЫЛА ОШИБКА, СКОБКА СТОЯЛА НЕ ТАМ ИЛИ ОТСУТСТВОВАЛА
+  };
 
   return (
     <header className={styles.header}>
-      <img src={logo} className={styles.header__logo} alt="SAFEHOUSE" />
-      
-      <ul>
-        <div 
+      {/* Грид-контейнер, зажатый в макро-сетку 1200px */}
+      <div className={styles.headerContainer}>
+        
+        {/* Колонка 1 / 3 */}
+        <img src={logo} className={styles.header__logo} alt="SAFEHOUSE" />
+        
+        {/* Колонка 3 / 9 */}
+        <ul 
           className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`} 
           onClick={handleSidebarClick}
         >
@@ -30,15 +34,18 @@ export function Header() {
           <li><a href="#services">Услуги</a></li>
           <li><a href="#prices">Цены</a></li>
           <li><a href="#contacts">Контакты</a></li>
-        </div>
+        </ul>
 
+        {/* Колонка 11 / 13 */}
         <div className={styles.contactsBlock}>
           <span>+375 (25) 123-45-67</span>
           <span className={styles.callback}>Заказать звонок</span>
         </div>
-      </ul>
 
-      <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>
+        {/* Кнопка бургера (вне сетки, позиционируется абсолютно при адаптиве) */}
+        <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>
+
+      </div>
     </header>
   );
 }

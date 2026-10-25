@@ -682,7 +682,7 @@
   .tabItem:first-child { margin-left: 0; }
   .tabItem:last-child { margin-right: 0; }
 
-  /* 🎯 ПРОСТАЯ СМЕНА ЦВЕТА: активный таб просто меняет фон и убирает лишние рамки */
+ 
   .tabItem.active {
     background-color: rgba(74, 74, 74, 1);
     border: 1px solid rgba(255, 255, 255, 0.2);
