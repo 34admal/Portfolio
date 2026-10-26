@@ -19,13 +19,13 @@ export function Header() {
 
   return (
     <header className={styles.header}>
-      {/* Грид-контейнер, зажатый в макро-сетку 1200px */}
+    
       <div className={styles.headerContainer}>
         
         {/* Колонка 1 / 3 */}
         <img src={logo} className={styles.header__logo} alt="SAFEHOUSE" />
         
-        {/* Колонка 3 / 9 */}
+       
         <ul 
           className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`} 
           onClick={handleSidebarClick}
@@ -36,13 +36,13 @@ export function Header() {
           <li><a href="#contacts">Контакты</a></li>
         </ul>
 
-        {/* Колонка 11 / 13 */}
+        
         <div className={styles.contactsBlock}>
           <span>+375 (25) 123-45-67</span>
           <span className={styles.callback}>Заказать звонок</span>
         </div>
 
-        {/* Кнопка бургера (вне сетки, позиционируется абсолютно при адаптиве) */}
+       
         <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerBtn}></span>
 
       </div>
