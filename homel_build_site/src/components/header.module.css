@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 .headerContainer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -21,12 +20,10 @@
   position: relative;
 }
 
-
 .header__logo {
   grid-column: 1 / 3;
   flex-shrink: 0;
 }
-
 
 .navLinks {
   grid-column: 3 / 9;
@@ -58,7 +55,6 @@
   opacity: 0.8;
 }
 
-
 .contactsBlock {
   grid-column: 11 / 13;
   justify-self: end;
@@ -79,8 +75,6 @@
 }
 
 
-
-
 @media (max-width: 1000px) {
   .headerContainer {
    
@@ -98,7 +92,6 @@
     max-width: 180px; 
     width: 100%;
   }
-
   
   .burgerBtn {
     display: block;
