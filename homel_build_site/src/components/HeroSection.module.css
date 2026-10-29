@@ -1,4 +1,4 @@
-
+/* 
 
 
 .heroSection { 
@@ -147,7 +147,418 @@
 
 .prevArrow {
   left: 20px;
+} */
+
+.heroSection { 
+  margin-bottom: 96px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto; 
 }
+
+/* Переводим главный контейнер на макро-сетку */
+.main_content_block {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  
+  max-width: 1200px; /* Твой контейнер макро-сетки */
+  width: 100%;
+  margin: 6px auto 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+/* Левый блок встает в свои 6 колонок без диких маргинов */
+.slogan_block {
+  grid-column: 1 / 7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 531px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  align-self: flex-start;
+  margin-top: 72px; /* Оставляем только верхний отступ */
+}
+
+.construction_repair_gomel {
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.button {
+  width: 300px;
+  height: 51px;
+  background-color: #1c1d1e; 
+  border: 3px solid #ff7a00; 
+  border-radius: 10px;       
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px; 
+  font-weight: 500; 
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #ff7a00;
+  color: #1c1d1e; 
+}
+
+.future_together {
+  display: block; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  color: #ffffff;
+  width: 321px;
+  height: auto;
+  margin-top: 73px;
+  margin-bottom: 85px;
+  margin-left: 0;  
+  margin-right: 0;
+  text-align: left;
+}
+
+/* Правый блок со слайдером встает в свои 6 колонок */
+.slider_container {
+  grid-column: 7 / 13;
+  width: 100%; /* Убираем 658px, берем ширину грид-колонок */
+  max-width: 640px;
+  box-sizing: border-box;
+}
+  
+
+
+
+/* Если рамка у тебя была прописана внутри обертки слайдера, 
+   мы можем аккуратно сдвинуть внутренний wrapper влево ровно на величину gap (20px) */
+.slider_container :global([class*="sliderWrapper"]) {
+  /* Твои оригинальные стили (top, bottom, right из медиазапросов оставляем), 
+     но для десктопа добавляем безопасный сдвиг влево: */
+  transform: translateX(-20px); 
+}
+
+.slider {
+  width: 100%; 
+  position: relative;
+}
+
+.slideImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.slick-dots li.slick-active button {
+  background-color: white;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  width: 28.7px;
+  height: 57.5px;
+  border: solid 1px #ff7a00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #ff7a00;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nextArrow {
+  right: 20px;
+}
+
+.prevArrow {
+  left: 20px;
+}
+
+/* ТВОИ ОРИГИНАЛЬНЫЕ МЕДИА-ЗАПРОСЫ ОДИН В ОДИН БЕЗ ИЗМЕНЕНИЙ СВОЙСТВЭЛЕМЕНТОВ */
+
+@media (max-width: 1366px) {
+  .slogan_block {
+    margin: 72px 0 0 114px;
+    width: 503px;
+  }
+  .construction_repair_gomel {
+    font-size: 57px;
+    line-height: 66px;
+  }
+  .future_together {
+    font-size: 21px;
+    width: 304px;
+    margin-top: 69px;
+    margin-bottom: 81px;
+  }
+  .slider_container {
+    width: 624px;
+  }
+  .slider {
+    max-width: 100%;
+  }
+  .nextArrow { right: 19px; }
+  .prevArrow { left: 19px; }
+  [class*="sliderWrapper"] {
+    width: 607px;
+    height: 417px;
+    top: 28px;
+    bottom: 28px;
+    right: 106px;
+  }
+  .button {
+    width: 284px;
+    height: 48px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .heroSection {
+    margin-bottom: 80px;
+  }
+  .slider_container {
+    width: 548px;
+  }
+  .slider {
+    max-width: 100%;
+  }
+  [class*="sliderWrapper"] {
+    width: 533px;
+    top: 25px;    
+    bottom: 25px; 
+    right: 93px;
+    height: auto; 
+  }
+  .arrow {
+    width: 24px;
+    height: 48px;
+    font-size: 20px;
+  }
+  .nextArrow { right: 17px; }
+  .prevArrow { left: 17px; }
+  .slogan_block {
+    margin: 72px 0 0 100px;
+    width: 442px;
+  }
+  .construction_repair_gomel {
+    font-size: 50px;
+    line-height: 58px;
+  }
+  .future_together {
+    font-size: 18px;
+    width: 267px;
+    margin-top: 61px;
+    margin-bottom: 71px;
+  }
+  .button {
+    width: 250px;
+    height: 42px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    margin-bottom: 68px;
+  }
+  .main_content_block {
+    justify-content: flex-start;
+    gap: 40px; 
+  }
+  .slogan_block {
+    margin: 72px 0 0 55px; 
+    width: 440px;          
+  }
+  .construction_repair_gomel {
+    font-size: 43px;
+    line-height: 50px;
+  }
+  .future_together {
+    font-size: 16px;
+    width: 228px;
+    margin-top: 52px;
+    margin-bottom: 60px;
+  }
+  .button {
+    width: 213px;
+    height: 36px;
+    font-size: 11px;
+  }
+  .slider_container {
+    width: 468px; 
+  }
+  .slider {
+    max-width: 100%;
+  }
+  .slider_container :global([class*="sliderFrameContainer"]) {
+    height: 376px; 
+    width: 100%;
+  }
+  .slider_container :global([class*="sliderWrapper"]) {
+    position: absolute;
+    width: 430px;  
+    height: 295px; 
+    top: 40px;     
+    bottom: auto;
+    right: 95px;  
+    left: auto;
+  }
+  .arrow {
+    width: 20px;
+    height: 41px;
+    font-size: 17px;
+  }
+  .nextArrow { right: 14px; }
+  .prevArrow { left: 14px; }
+}
+
+@media (max-width: 1000px) {
+  .heroSection {
+    margin-bottom: 60px;
+  }
+  .main_content_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    gap: 0;
+    padding-bottom: 86px;
+    box-sizing: border-box;
+  }
+  .slogan_block {
+    margin: 40px auto 0 auto; 
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+  }
+  .construction_repair_gomel {
+    font-size: 32px;
+    line-height: 38px;
+    text-wrap: balance; 
+  }
+  .future_together {
+    font-size: 15px;
+    width: 100%;
+    max-width: 340px;
+    margin-top: 20px; 
+    margin-bottom: 0; 
+    text-align: center;
+  }
+  .slider_container {
+    width: 430px; 
+    margin: 40px auto 0 auto;
+    position: relative;
+  }
+  .heroSection .slider_container :global([class*="sliderFrameContainer"]) {
+    display: block;
+    width: 100%;
+    height: 295px; 
+    border: none; 
+    background: transparent; 
+    position: relative;
+    margin: 0 auto;
+  }
+  .heroSection .slider_container :global([class*="sliderWrapper"]) {
+    position: relative; 
+    width: 430px; 
+    height: 295px; 
+    top: 0;     
+    bottom: auto;
+    right: auto; 
+    left: 0; 
+    margin: 0 auto;
+  }
+  .button {
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 46px;
+    font-size: 14px;
+    margin: 0;
+  }
+  .arrow {
+    width: 20px;
+    height: 41px;
+    font-size: 17px;
+  }
+  .nextArrow { right: 14px; }
+  .prevArrow { left: 14px; }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    margin-bottom: 50px;
+  }
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  width: 28.7px;
+  height: 57.5px;
+  border: solid 1px #ff7a00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #ff7a00;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nextArrow { right: 20px; }
+.prevArrow { left: 20px; }
+
 
 
 

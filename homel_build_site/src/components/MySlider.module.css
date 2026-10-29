@@ -9,12 +9,10 @@
 }
 
 .sliderWrapper {
-  position: absolute;
+  /* position: absolute; */
   top: 30px;
   bottom: 30px;
-  right: 112px;
-  width: 640px;
-  height: 440px;
+    height: 440px;
   z-index: 10;
 }
 
