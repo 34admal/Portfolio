@@ -15,3 +15,8 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  min-width: 320px;
+}
+
