@@ -1,14 +1,20 @@
 .services {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  max-width: 1440px;
+  margin: 40px auto 0 auto;
+  padding: 0 120px;
   box-sizing: border-box;
-  margin-top: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
 }
 
 .services__title {
-  align-self: center;
+  grid-column: 1 / -1;
+  justify-self: center;
   text-align: center;
+
   font-family: "Montserrat";
   font-size: 30px;
   font-weight: 400;
@@ -16,69 +22,50 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
   color: #fff;
-  transform: translateX(37.5px);
 }
 
 .services__line {
-  align-self: center;
+  grid-column: 1 / -1;
+  justify-self: center;
+
   width: 300px;
   height: 3px;
   background-color: #ff7a00;
   margin-top: 17.5px;
-  transform: translateX(37.5px);
 }
 
 .services__board {
-  align-self: center;
-  box-sizing: border-box;
-   background-color: transparent; 
-  display: flex;
-  flex-direction: row;
+  grid-column: 2 / 12;
   margin-top: 72px;
-  gap: 30px; 
+  box-sizing: border-box;
+  background-color: transparent;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 20px;
+  align-items: start;
 }
 
 .services__tabs {
-  display: flex;
-  flex-direction: column;
-  width: 386px; 
-  flex-shrink: 0; 
+  grid-column: 1 / 5;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 15px;
 }
-
-
-.tabCard:nth-child(1) {
-  margin-bottom: 15px;
-}
-
-.tabCard:nth-child(2) {
-  margin-bottom: 14px;
-}
-
-.tabCard:nth-child(3) {
-  margin-bottom: 16px;
-}
-
-
-.tabCard:nth-child(4) {
-  margin-bottom: 0;
-}
-
 
 .tabCard {
-  width: 386px;  
-  height: 177px; 
+  width: 100%;
+  height: 177px;
   box-sizing: border-box;
-  
- 
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  
-  
+
   font-size: 18px;
   font-weight: 500;
   color: #ffffff;
@@ -89,15 +76,12 @@
   position: relative;
 }
 
-
 .tabCard:nth-child(1) {
-  
-  background-image:  
-                    url('./image_OurServices/otdelka.png');
+  background-image: url('./image_OurServices/otdelka.png');
 }
 
 .tabCard:nth-child(2) {
-  background-image: url('./image_OurServices/build_house.png')
+  background-image: url('./image_OurServices/build_house.png');
 }
 
 .tabCard:nth-child(3) {
@@ -108,86 +92,73 @@
   background-image: url('./image_OurServices/plumbing.png');
 }
 
+.tabCard.active {
+  color: #f17d11;
+}
+
 .services__contentBox {
-  width: 590px;            
-  height: 753px;            
+  grid-column: 5 / 11;
+  width: 100%;
+  height: 753px;
   box-sizing: border-box;
-  flex-shrink: 0;
   box-shadow: inset 0 0 0 4px #f17d11;
-  
+
   background-image: url('./image_OurServices/plumbing-bg.png');
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
-  
+
   display: flex;
-  flex-direction: column;   
-  align-items: center;      
-  
-  padding-top: 43px;        
-  padding-bottom: 40px;     
-  overflow: hidden;         
-}
-
-
-.infoList {
-  max-width: 454px;     
-  width: 100%;          
-  height: 541px;         
-  list-style: none; 
-  padding: 0;
-  
- 
-  margin: 0 auto;         
-  
-  overflow-y: auto;       
-  display: flex;       
   flex-direction: column;
-  align-items: center;      
+  align-items: center;
+
+  padding-top: 43px;
+  padding-bottom: 40px;
+  overflow: hidden;
 }
 
 .infoTitle {
-  display: block;          
-  width: 454px;            
-  text-align: center;      
+  display: block;
+  width: 100%;
+  max-width: 454px;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;   
-  font-weight: 400;        
-  line-height: 29px;       
-  letter-spacing: 1.2px;   
-  color: rgba(241, 125, 17, 1); 
-  
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 1.2px;
+  color: rgba(241, 125, 17, 1);
+
   margin: 0 auto;
+}
+
+.infoList {
+  width: 100%;
+  max-width: 454px;
+  height: 541px;
+  list-style: none;
+  padding: 0;
+
+  margin: 48px auto 0 auto;
+
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .infoItem {
   width: 100%;
-  
-  font-size: 18px; 
+
+  font-size: 18px;
   font-weight: normal;
   color: #ffffff;
-  line-height: 22px;    
-  letter-spacing: 0.9px; 
-  
-  text-align: left;       
-  margin-bottom: 15px;  
-  padding: 0;
-}
+  line-height: 22px;
+  letter-spacing: 0.9px;
 
-.infoList {
- width: 100%;
-  max-width: 454px;     
-  height: 541px;        
-  list-style: none; 
+  text-align: left;
+  margin-bottom: 15px;
   padding: 0;
-  
- 
-  margin: 48px auto 0 auto; 
-  
-  overflow-y: auto;     
-  display: flex;       
-  flex-direction: column;
-  align-items: flex-start; 
 }
 
 .infoItem:last-child {
@@ -196,9 +167,11 @@
 
 .tabIcon {
   position: absolute;
-  left: 11.7px; 
+  left: 11.7px;
   z-index: 5;
-  border: none; 
+  border: none;
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
 }
 
 /* 1. Отделочные работы */
@@ -224,24 +197,12 @@
 
 /* 4. Сантехника */
 .tabCard:nth-child(4) .tabIcon {
-  left: 11.8px; 
+  left: 11.8px;
   width: 22.1px;
   height: 33.1px;
   bottom: 16.1px;
 }
-.tabCard.active {
-  color: #f17d11; 
-}
 
-.tabIcon {
-  position: absolute;
-  left: 11.7px; 
-  z-index: 5;
-  
- 
-  image-rendering: -webkit-optimize-contrast; 
-  transform: translateZ(0); 
-}
 
 /* ==========================================================================
    АДАПТИВНЫЙ СЛОЙ ДЛЯ БРЕЙКПОИНТА 1366px ==== */
