@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 67,
+            "activePatchIndex": 68,
             "patches": [
                 {
                     "date": 1780499459322,
@@ -276,6 +276,10 @@
                 {
                     "date": 1784395738281,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -140,9 +140,9 @@\n   font-style: normal;\r\n   font-weight: 400; /* Regular */\r\n   font-size: 10px;\r\n   line-height: 12px;\r\n-  letter-spacing: 5%; /* Из макета 5% */\r\n+  letter-spacing: 5%; \r\n   color: #ffffff;\r\n   text-align: left;\r\n }\r\n \r\n@@ -162,9 +162,9 @@\n   background: transparent;\r\n   box-sizing: border-box;\r\n   margin-right: 5px; \r\n   display: inline-block;\r\n-  flex-shrink: 0; */\r\n+  flex-shrink: 0; \r\n }\r\n \r\n .checkboxHidden {\r\n   opacity: 0;\r\n"
+                },
+                {
+                    "date": 1795287887362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   align-items: flex-start;\r\n   box-sizing: border-box;\r\n   margin-top: 54px;\r\n \r\n-  margin-left: 222px;\r\n+\r\n   width: 390px;\r\n   height: 468.8px;\r\n \r\n   border-radius: 15px;\r\n@@ -137,9 +137,9 @@\n \r\n .checkboxText {\r\n   font-family: \"Montserrat\", sans-serif;\r\n   font-style: normal;\r\n-  font-weight: 400; /* Regular */\r\n+  font-weight: 400; \r\n   font-size: 10px;\r\n   line-height: 12px;\r\n   letter-spacing: 5%; \r\n   color: #ffffff;\r\n"
                 }
             ],
             "date": 1780499459322,

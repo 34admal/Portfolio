@@ -14,170 +14,97 @@
   width: 100%;
   max-width: 1440px;
   height: 603.3px;
+  padding-inline: 120px;
   box-sizing: border-box;
-  display: flex;
-  align-items: flex-start;
+
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: 100%;
+  column-gap: 20px;
+  align-items: start;
   overflow: visible;
 }
 
+.feedback__container > form {
+  grid-column: 2 / 6;
+  margin-top: 54px;
+  margin-bottom: 54px;
+}
+
 .people {
-  margin-left: 44px;
-  flex-shrink: 0;
-  align-self: flex-end;
+  grid-column: 6 / 13;
+  margin-left: 24px;
+  justify-self: start;
+  align-self: end;
+  width: auto;
+  height: auto;
+  max-width: none;
+  display: block;
 }
 
-/* =====================1366px========== */
-@media (max-width: 1366px) {
+
+/* ==========================================================================
+   УЗКИЕ ДЕСКТОПЫ И НОУТБУКИ (1380px – 901px)
+   ========================================================================== */
+/* @media (max-width: 1380px) {
   .feedback {
-    margin-top: 104.3px;
-  }
-
-  .feedback .feedback__container {
-    max-width: 1366px;
-    height: 572.2px;
-  }
-
-  .feedback .people {
-    margin-left: 41.7px;
-  }
-}
-
-/* ======1200px======= */
-@media (max-width: 1200px) {
-  .feedback {
-    margin-top: 91.6px;
-    width: 100%;
-  }
-
-  .feedback .feedback__container {
-    max-width: 1200px;
-    width: 100%;
-    height: 502.7px;
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    box-sizing: border-box;
-    padding: 0 40px;
-    overflow: hidden;
-  }
-
-  .feedback .feedback__container > div:first-child,
-  .feedback .feedback__container > form {
-    transform: scale(0.8333);
-    transform-origin: center center;
-
-    margin: 0 -30px 10px -30px;
-    align-self: center;
-    flex-shrink: 0;
-  }
-
-  .feedback .people {
-    max-height: 480px;
-    width: auto;
-    margin-left: 10px;
-    align-self: flex-end;
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 1024px) {
-  .feedback {
-    margin-top: 78.2px;
-    width: 100%;
-  }
-
-  .feedback .feedback__container {
-    max-width: 1024px;
-    width: 100%;
-    height: 429px;
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    box-sizing: border-box;
-    padding: 0 30px;
-    overflow: hidden;
-  }
-
-  .feedback .feedback__container > div:first-child,
-  .feedback .feedback__container > form {
-    transform: scale(0.7111);
-    transform-origin: center center;
-
-    margin: 0 -50px 5px -50px;
-    align-self: center;
-    flex-shrink: 0;
-  }
-
-  .feedback .people {
-    max-height: 410px;
-    width: auto;
-    margin-left: 10px;
-    align-self: flex-end;
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 1000px) {
-  .feedback {
-    margin-top: 76.3px;
-    width: 100%;
-  }
-
-  .feedback .feedback__container {
-    max-width: 1000px;
-    width: 100%;
-    height: 418.9px;
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    box-sizing: border-box;
-    padding: 0 25px;
-    overflow: hidden;
-  }
-
-  .feedback .feedback__container > div:first-child,
-  .feedback .feedback__container > form {
-    transform: scale(0.6944);
-    transform-origin: center center;
-
-    margin: 0 -55px 5px -55px;
-    align-self: center;
-    flex-shrink: 0;
-  }
-
-  .feedback .people {
-    max-height: 398px;
-    width: auto;
-    margin-left: 8px;
-    align-self: flex-end;
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .feedback {
-    background-image: none;
-    background-color: #0a0a0a;
-    margin-top: 58.6px;
+    margin-top: 80px;
   }
 
   .feedback__container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: auto;
-    padding: 30px 15px;
+    height: 580px;
+    padding-inline: 40px;
+    grid-template-columns: 390px minmax(0, 1fr);
+    column-gap: 30px;
+  }
+
+  .feedback__container > form {
+    grid-column: 1 / 2;
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .people {
+    grid-column: 2 / 3;
     margin-left: 0;
-    margin-top: 30px;
+    justify-self: start;
+    align-self: end;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+}
+
+/* ==========================================================================
+   ПЛАНШЕТНЫЙ АДАПТИВ (900px и ниже)
+   ========================================================================== 
+@media (max-width: 900px) {
+  .feedback {
+    background-image: none;
+    background-color: #0a0a0a;
+    margin-top: 56px;
+  }
+
+  .feedback__container {
+    height: auto;
+    padding: 36px 20px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    row-gap: 30px;
+  }
+
+  .feedback__container > form {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .people {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    justify-self: center;
     align-self: center;
     width: 100%;
     max-width: 340px;
@@ -185,48 +112,18 @@
   }
 }
 
-@media (max-width: 480px) {
-  :global(#root) .feedback {
+
+@media (max-width: 540px) {
+  .feedback {
     margin-top: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
-  :global(#root) .feedback .feedback__container {
-    width: 290px;
-    max-width: 290px;
-    height: 380px;
-    background: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0;
-    overflow: hidden;
+  .feedback__container {
+    padding: 24px 16px 40px 16px;
+    row-gap: 0;
   }
 
-  :global(#root) .feedback .feedback__container > div:first-child,
-  :global(#root) .feedback .feedback__container > form {
-    transform: scale(0.65);
-    transform-origin: center center;
-    width: 390px;
-    max-width: 390px;
-    margin-top: -30px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    flex-shrink: 0;
-  }
-
-  :global(#root) .feedback .people {
+  .people {
     display: none;
   }
-}
-
-/* :global(html),
-:global(body),
-:global(#root),
-:global(main) {
-  overflow-x: hidden !important;
 } */
