@@ -1,7 +1,7 @@
 .feedback {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 110px;
+  margin-top: clamp(60px, 7.64vw, 110px);
   display: flex;
   justify-content: center;
   background-image: url("./images/feedback-bg.png");
@@ -14,7 +14,7 @@
   width: 100%;
   max-width: 1440px;
   height: 603.3px;
-  padding-inline: 120px;
+  padding-inline: clamp(32px, 8.33vw, 120px);
   box-sizing: border-box;
 
   display: grid;
@@ -43,42 +43,30 @@
 }
 
 
-/* ==========================================================================
-   УЗКИЕ ДЕСКТОПЫ И НОУТБУКИ (1380px – 901px)
-   ========================================================================== */
-/* @media (max-width: 1380px) {
-  .feedback {
-    margin-top: 80px;
-  }
-
+@media (max-width: 1439px) {
   .feedback__container {
-    height: 580px;
-    padding-inline: 40px;
-    grid-template-columns: 390px minmax(0, 1fr);
-    column-gap: 30px;
+    height: clamp(500px, 43vw, 603.3px);
   }
 
   .feedback__container > form {
-    grid-column: 1 / 2;
+    grid-column: 1 / 6;
     align-self: center;
     margin-top: 0;
     margin-bottom: 0;
   }
 
   .people {
-    grid-column: 2 / 3;
+    grid-column: 6 / 13;
     margin-left: 0;
-    justify-self: start;
+    justify-self: end;
     align-self: end;
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
   }
 }
 
-/* ==========================================================================
-   ПЛАНШЕТНЫЙ АДАПТИВ (900px и ниже)
-   ========================================================================== 
+
 @media (max-width: 900px) {
   .feedback {
     background-image: none;
@@ -97,6 +85,7 @@
 
   .feedback__container > form {
     grid-column: 1 / -1;
+    max-width: 440px;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -123,7 +112,12 @@
     row-gap: 0;
   }
 
+  .feedback__container > form {
+    max-width: 100%;
+  }
+
   .people {
     display: none;
   }
-} */
+}
+
