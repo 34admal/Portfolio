@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 79,
+            "activePatchIndex": 80,
             "patches": [
                 {
                     "date": 1782288188647,
@@ -324,6 +324,10 @@
                 {
                     "date": 1789550188508,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n         </button>\r\n         \r\n         <span className={styles.modalTitle}>{title || \"КРОВЛЯ\"}</span>\r\n         \r\n-        {/* Контейнер, который скроллится колесиком */}\r\n+        \r\n         <div \r\n           className={styles.scrollContainer} \r\n           ref={scrollContainerRef}\r\n           onScroll={handleScroll}\r\n"
+                },
+                {
+                    "date": 1795620477338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,17 @@\n   const [thumbTop, setThumbTop] = useState(0);\r\n   const isDragging = useRef(false);\r\n \r\n   // Блокировка прокрутки страницы сзади\r\n-  useEffect(() => {\r\n+    useEffect(() => {\r\n     if (isOpen) {\r\n+      document.documentElement.style.overflow = \"hidden\";\r\n       document.body.style.overflow = \"hidden\";\r\n       setThumbTop(0);\r\n       if (scrollContainerRef.current) scrollContainerRef.current.scrollTop = 0;\r\n     }\r\n     return () => {\r\n+      document.documentElement.style.overflow = \"\";\r\n       document.body.style.overflow = \"\";\r\n     };\r\n   }, [isOpen]);\r\n \r\n"
                 }
             ],
             "date": 1782288188647,

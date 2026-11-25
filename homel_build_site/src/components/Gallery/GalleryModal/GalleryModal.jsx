@@ -18,13 +18,15 @@ function GalleryModal({ isOpen, title, onClose }) {
   const isDragging = useRef(false);
 
   // Блокировка прокрутки страницы сзади
-  useEffect(() => {
+    useEffect(() => {
     if (isOpen) {
+      document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
       setThumbTop(0);
       if (scrollContainerRef.current) scrollContainerRef.current.scrollTop = 0;
     }
     return () => {
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
     };
   }, [isOpen]);
