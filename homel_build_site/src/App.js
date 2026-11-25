@@ -24,7 +24,7 @@ function App() {
     <>
      
         <Header />
-        <HeroSection />
+        {/* <HeroSection /> */}
         <HowWeWorkSection />
         <OurServices />
         <PromoBlock />

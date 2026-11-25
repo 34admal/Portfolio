@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overscroll-behavior: contain;
 }
 
 .modalWindow {
@@ -20,9 +21,10 @@
   padding: 32px;
   width: 1040px;
   max-height: 80vh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .closeButton {
@@ -78,7 +80,10 @@
 
 .scrollContainer {
   width: 100%;
-  overflow-y: auto;   
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -90,31 +95,33 @@
 }
 
 .photoGrid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 40px;
   width: 100%;
-  padding-right: 64px; 
+  padding-right: 64px;
+  box-sizing: border-box;
 }
 
 .modalPhoto {
-  width: calc((100% - (40px * 2)) / 3);
+  width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 12px;
+  display: block;
 }
 
 .customScrollTrack {
   position: absolute;
-  top: 96px;           
-  right: 36px;        
-  bottom: 32px;        
-  width: 15px;         
+  top: 96px;
+  right: 36px;
+  bottom: 32px;
+  width: 15px;
   background: transparent;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 5;
-  display: flex;       
+  display: flex;
   justify-content: center;
 }
 
@@ -134,12 +141,14 @@
 }
 
 .modalPhotoPlaceholder {
-  width: calc((100% - (40px * 2)) / 3);
+  width: 100%;
   aspect-ratio: 1 / 1;
   border: 1px dashed rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.01);
+  box-sizing: border-box;
 }
+
 
 
 
