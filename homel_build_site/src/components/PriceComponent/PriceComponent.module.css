@@ -1,11 +1,12 @@
+
 .section {
   width: 100%;
   max-width: 1440px;
-  margin: 115px auto 0 auto;
-  padding-inline: 120px;
+  margin: clamp(64px, 7.99vw, 115px) auto 0 auto;
+  padding-inline: clamp(32px, 8.33vw, 120px);
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: 20px;
 }
 
@@ -14,9 +15,9 @@
   justify-self: center;
   display: block;
   color: rgba(255, 255, 255, 1);
-  font-size: 30px;
+  font-size: clamp(22px, 2.08vw, 30px);
   font-weight: 400;
-  line-height: 37px;
+  line-height: 1.23;
   text-transform: uppercase;
   text-align: center;
 }
@@ -24,13 +25,13 @@
 .mainWrapper {
   grid-column: 2 / 12;
   width: 100%;
-  margin: 69px 0 0 0;
+  margin: clamp(36px, 4.79vw, 69px) 0 0 0;
   background-color: rgba(61, 61, 61, 1);
   box-sizing: border-box;
   position: relative;
 }
 
-/* Вся сложная механика табов и рамок сохранена 1-в-1 */
+
 .tabContainer {
   display: flex;
   align-items: center;
@@ -43,16 +44,19 @@
 
 .tabItem {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-size: 20px;
+  padding-inline: 8px;
+  font-size: clamp(15px, 1.39vw, 20px);
   font-weight: 500;
   letter-spacing: 1px;
   color: #ffffff;
   cursor: pointer;
   box-sizing: border-box;
+  text-align: center;
   border-top: 4px solid rgba(49, 49, 49, 1);
   border-right: 4px solid rgba(49, 49, 49, 1);
 }
@@ -109,12 +113,12 @@
   z-index: 1;
 }
 
-/* Шапка и строки таблицы на Grid (3fr 1fr 1fr = 1-в-1 с flex: 3 / 1 / 1) */
+
 .tableHeader {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr);
   width: 100%;
-  height: 55px;
+  min-height: 55px;
   margin-top: 25px;
   align-items: stretch;
   background-color: rgba(61, 61, 61, 1);
@@ -125,12 +129,13 @@
 .headerCell {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: clamp(13px, 1.11vw, 16px);
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.05em;
   color: #ffffff;
   box-sizing: border-box;
+  padding-block: 8px;
 }
 
 .headerCell:nth-child(1) {
@@ -139,31 +144,37 @@
 }
 
 .cellText {
-  padding-left: 60px;
+  padding-left: clamp(16px, 4.17vw, 60px);
+  padding-right: 12px;
 }
 
 .headerCell:nth-child(2) {
   justify-content: center;
+  text-align: center;
+  padding-inline: 8px;
   border-right: 1px solid rgba(255, 255, 255, 1);
 }
 
 .headerCell:nth-child(3) {
   justify-content: center;
+  text-align: center;
+  padding-inline: 8px;
 }
 
 .rowCellText {
-  padding-left: 40px;
+  padding-left: clamp(16px, 2.78vw, 40px);
+  padding-right: 12px;
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.4;
   color: #ffffff;
 }
 
 .tableRow {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr);
   width: 100%;
-  height: 31px;
+  min-height: 31px;
   align-items: stretch;
   box-sizing: border-box;
   background-color: rgba(61, 61, 61, 1);
@@ -179,39 +190,40 @@
   border-right: 1px solid rgba(255, 255, 255, 1);
   color: #ffffff;
   box-sizing: border-box;
+  padding-block: 6px;
 }
 
 .unitCell {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border-right: 1px solid rgba(255, 255, 255, 1);
   box-sizing: border-box;
   color: #ffffff;
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.4;
+  padding: 6px 8px;
 }
 
 .priceCell {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   box-sizing: border-box;
   color: #ffffff;
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
-}
-
-.tableRow:last-child {
-  height: 31px;
+  line-height: 1.4;
+  padding: 6px 8px;
 }
 
 .btnWrapper {
   grid-column: 2 / 12;
   width: 100%;
-  margin: 40px 0 0 0;
+  margin: clamp(24px, 2.78vw, 40px) 0 0 0;
   display: flex;
   justify-content: flex-end;
   padding-right: 0;
@@ -228,6 +240,7 @@
   border: solid 3px #ff7a00;
   background-color: #1c1d1e;
   color: #ffffff;
+  font-size: 16px;
   text-decoration: none;
   box-sizing: border-box;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -239,274 +252,377 @@
 }
 
 
-@media (max-width: 1366px) {
-  .priceSection {
-    margin-top: 109px;
+@media (max-width: 1220px) and (min-width: 901px) {
+  .mainWrapper,
+  .btnWrapper {
+    grid-column: 1 / -1;
   }
-  .title {
-    font-size: 28.4px;
-    line-height: 35px;
+
+  .tabItem {
+    letter-spacing: 0.3px;
   }
+}
+
+/* Планшет: 900px -> 541px */
+@media (max-width: 900px) {
+  .section {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
   .mainWrapper {
-    width: 945px;
-    margin-top: 65.4px;
+    grid-column: 1 / -1;
+    border: 4px solid rgba(255, 122, 0, 1);
   }
+
+  .mainWrapper::after {
+    display: none;
+  }
+
   .tabContainer {
-    height: 54px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: auto;
     border-bottom: 4px solid rgba(255, 122, 0, 1);
   }
+
   .tabItem {
-    font-size: 19px;
-    border-top: 4px solid rgba(49, 49, 49, 1);
-    border-right: 4px solid rgba(49, 49, 49, 1);
+    height: 46px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(49, 49, 49, 1);
   }
-  .tabItem:first-child {
-    border-left: 4px solid rgba(49, 49, 49, 1);
-  }
+
+  .tabItem:first-child,
   .tabItem:last-child {
-    border-right: 4px solid rgba(49, 49, 49, 1);
+    border-left: 1px solid rgba(49, 49, 49, 1);
+    border-right: 1px solid rgba(49, 49, 49, 1);
   }
+
+  .tabItem:last-child {
+    grid-column: 1 / -1;
+  }
+
   .tabItem.active {
-    border-top: 4px solid rgba(255, 122, 0, 1);
-    background-color: rgba(61, 61, 61, 1);
-    box-shadow: 0 4px 0 rgba(61, 61, 61, 1);
-    z-index: 3;
+    background-color: rgba(255, 122, 0, 1);
+    color: #1c1d1e;
+    border-color: rgba(255, 122, 0, 1);
   }
-  .tabItem.active::before {
-    top: -4px;
-    bottom: -4px;
-    left: -4px;
-    right: -4px;
-    border-left: 4px solid rgba(255, 122, 0, 1);
-    border-right: 4px solid rgba(255, 122, 0, 1);
-  }
+
+  .tabItem.active::before,
   .tabItem.active::after {
     display: none;
   }
-  .mainWrapper::after {
-    top: 54px;
-    border: 4px solid rgba(255, 122, 0, 1);
-    border-top: none;
-  }
+
   .tableHeader {
-    height: 52px;
-    margin-top: 23.7px;
+    margin-top: 18px;
+    grid-template-columns: minmax(0, 1fr) 96px 116px;
+    border-left: none;
+    border-right: none;
   }
-  .headerCell {
-    font-size: 15.2px;
-    line-height: 19px;
+
+  .tableRow {
+    grid-template-columns: minmax(0, 1fr) 96px 116px;
+    border-left: none;
+    border-right: none;
   }
-  .cellText {
-    padding-left: 57px;
-  }
-  .rowCellText {
-    padding-left: 38px;
-  }
-  .tableRow,
+
   .tableRow:last-child {
-    height: 29.4px;
+    border-bottom: none;
   }
+
+  .cellText,
+  .rowCellText {
+    padding-left: 20px;
+  }
+
   .btnWrapper {
-    padding-right: 211px;
-    margin-top: 38px;
-  }
-  .downloadBtn {
-    height: 48.4px;
-    padding: 0 30.3px;
-    font-size: 13.3px;
+    grid-column: 1 / -1;
   }
 }
 
 
-@media (max-width: 1200px) {
-  .priceSection {
-    margin-top: 95.8px;
+.section {
+  width: 100%;
+  max-width: 1440px;
+  margin: clamp(64px, 7.99vw, 115px) auto 0 auto;
+  padding-inline: clamp(32px, 8.33vw, 120px);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 20px;
+}
+
+.title {
+  grid-column: 1 / -1;
+  justify-self: center;
+  display: block;
+  color: rgba(255, 255, 255, 1);
+  font-size: clamp(20px, 2.08vw, 30px);
+  font-weight: 400;
+  line-height: 1.23;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.mainWrapper {
+  grid-column: 2 / 12;
+  width: 100%;
+  margin: clamp(36px, 4.79vw, 69px) 0 0 0;
+  background-color: rgba(61, 61, 61, 1);
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+.tabContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: clamp(44px, 3.96vw, 57px);
+  background-color: rgba(61, 61, 61, 1);
+  box-sizing: border-box;
+  border-bottom: 4px solid rgba(255, 122, 0, 1);
+}
+
+.tabItem {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-inline: 6px;
+  font-size: clamp(14px, 1.39vw, 20px);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ffffff;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  border-top: 4px solid rgba(49, 49, 49, 1);
+  border-right: 4px solid rgba(49, 49, 49, 1);
+}
+
+.tabItem:first-child {
+  border-left: 4px solid rgba(49, 49, 49, 1);
+}
+
+.tabItem:last-child {
+  border-right: 4px solid rgba(49, 49, 49, 1);
+}
+
+.tabItem.active {
+  font-weight: 600;
+  letter-spacing: normal;
+  position: relative;
+  border-top: 4px solid rgba(255, 122, 0, 1);
+}
+
+.tabItem.active::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  bottom: 0;
+  left: -4px;
+  right: -4px;
+  border-left: 4px solid rgba(255, 122, 0, 1);
+  border-right: 4px solid rgba(255, 122, 0, 1);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tabItem.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 4px;
+  background-color: rgba(61, 61, 61, 1);
+  z-index: 3;
+}
+
+.mainWrapper::after {
+  content: '';
+  position: absolute;
+  top: clamp(44px, 3.96vw, 57px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 4px solid rgba(255, 122, 0, 1);
+  border-top: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr);
+  width: 100%;
+  min-height: clamp(42px, 3.82vw, 55px);
+  margin-top: clamp(18px, 1.74vw, 25px);
+  align-items: stretch;
+  background-color: rgba(61, 61, 61, 1);
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.headerCell {
+  display: flex;
+  align-items: center;
+  font-size: clamp(12px, 1.11vw, 16px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding-block: 6px;
+}
+
+.headerCell:nth-child(1) {
+  justify-content: flex-start;
+  border-right: 1px solid rgba(255, 255, 255, 1);
+}
+
+.cellText {
+  padding-left: clamp(20px, 4.17vw, 60px);
+  padding-right: 12px;
+}
+
+.headerCell:nth-child(2) {
+  justify-content: center;
+  text-align: center;
+  padding-inline: 8px;
+  border-right: 1px solid rgba(255, 255, 255, 1);
+}
+
+.headerCell:nth-child(3) {
+  justify-content: center;
+  text-align: center;
+  padding-inline: 8px;
+}
+
+.rowCellText {
+  padding-left: clamp(20px, 2.78vw, 40px);
+  padding-right: 12px;
+  font-size: clamp(12px, 0.97vw, 14px);
+  font-weight: 400;
+  line-height: 1.35;
+  color: #ffffff;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr);
+  width: 100%;
+  min-height: 31px;
+  align-items: stretch;
+  box-sizing: border-box;
+  background-color: rgba(61, 61, 61, 1);
+  border-left: 1px solid rgba(255, 255, 255, 1);
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.nameCell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  color: #ffffff;
+  box-sizing: border-box;
+  padding-block: 5px;
+}
+
+.unitCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: clamp(12px, 0.97vw, 14px);
+  font-weight: 400;
+  line-height: 1.35;
+  padding: 5px 8px;
+}
+
+.priceCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: clamp(12px, 0.97vw, 14px);
+  font-weight: 400;
+  line-height: 1.35;
+  padding: 5px 8px;
+}
+
+.btnWrapper {
+  grid-column: 2 / 12;
+  width: 100%;
+  margin: clamp(24px, 2.78vw, 40px) 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(40px, 3.54vw, 51px);
+  padding: 0 clamp(22px, 2.22vw, 32px);
+  border-radius: 10px;
+  border: solid 3px #ff7a00;
+  background-color: #1c1d1e;
+  color: #ffffff;
+  font-size: clamp(13px, 1.11vw, 16px);
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.downloadBtn:hover {
+  background-color: #ff7a00;
+  color: #1c1d1e;
+}
+
+
+@media (max-width: 1150px) and (min-width: 901px) {
+  .mainWrapper,
+  .btnWrapper {
+    grid-column: 1 / -1;
   }
-  .title {
-    font-size: 25px;
-    line-height: 30.8px;
-  }
-  .mainWrapper {
-    width: 830px;
-    margin-top: 57.5px;
-  }
-  .tabContainer {
-    height: 47.5px;
-    border-bottom: 4px solid rgba(255, 122, 0, 1);
-  }
+
   .tabItem {
-    font-size: 16.6px;
-    border-top: 4px solid rgba(49, 49, 49, 1);
-    border-right: 4px solid rgba(49, 49, 49, 1);
-  }
-  .tabItem:first-child {
-    border-left: 4px solid rgba(49, 49, 49, 1);
-  }
-  .tabItem:last-child {
-    border-right: 4px solid rgba(49, 49, 49, 1);
-  }
-  .tabItem.active {
-    border-top: 4px solid rgba(255, 122, 0, 1);
-    background-color: rgba(61, 61, 61, 1);
-    box-shadow: 0 4px 0 rgba(61, 61, 61, 1);
-    z-index: 3;
-  }
-  .tabItem.active::before {
-    top: -4px;
-    bottom: -4px;
-    left: -4px;
-    right: -4px;
-    border-left: 4px solid rgba(255, 122, 0, 1);
-    border-right: 4px solid rgba(255, 122, 0, 1);
-  }
-  .tabItem.active::after {
-    display: none;
-  }
-  .mainWrapper::after {
-    top: 47.5px;
-    border: 4px solid rgba(255, 122, 0, 1);
-    border-top: none;
-  }
-  .tableHeader {
-    height: 45.8px;
-    margin-top: 20.8px;
-  }
-  .headerCell {
-    font-size: 13.3px;
-    line-height: 16.6px;
-  }
-  .cellText {
-    padding-left: 50px;
-  }
-  .rowCellText {
-    padding-left: 33.3px;
-  }
-  .tableRow,
-  .tableRow:last-child {
-    height: 25.8px;
-  }
-  .btnWrapper {
-    padding-right: 185px;
-    margin-top: 33.3px;
-  }
-  .downloadBtn {
-    height: 42.5px;
-    padding: 0 26.6px;
-    font-size: 11.6px;
+    letter-spacing: 0.3px;
   }
 }
 
 
-@media (max-width: 1024px) {
-  .priceSection {
-    margin-top: 81.7px;
+@media (max-width: 900px) {
+  .section {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .title {
-    font-size: 21.3px;
-    line-height: 26.3px;
+    font-size: 22px;
+    line-height: 26px;
   }
 
   .mainWrapper {
-    width: 708px;
-    margin-top: 49.3px;
-    height: auto;
-    padding-bottom: 15px;
-    box-sizing: border-box;
-  }
-
-  .mainWrapper::after {
-    top: 40.5px;
-    bottom: 0;
-    height: auto;
-  }
-
-  .tabContainer {
-    height: 40.5px;
-  }
-
-  .tabItem {
-    font-size: 14.2px;
-  }
-
-  .tableHeader {
-    height: 39px;
-    margin-top: 17.7px;
-  }
-
-  .headerCell {
-    font-size: 11.3px;
-    line-height: 14.2px;
-  }
-
-  .cellText {
-    padding-left: 42.6px;
-  }
-
-  .rowCellText {
-    padding-left: 28.4px;
-  }
-
-  .tableRow,
-  .tableRow:last-child {
-    height: auto;
-    min-height: 22px;
-    padding: 6px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    box-sizing: border-box;
-  }
-
-  .nameCell,
-  .unitCell,
-  .priceCell {
-    display: flex;
-    align-items: center;
-    font-size: 11.3px;
-    box-sizing: border-box;
-  }
-
-  .unitCell,
-  .priceCell {
-    justify-content: center;
-  }
-
-  .rowCell {
-    font-size: 11.3px;
-  }
-
-  .btnWrapper {
-    padding-right: 157px;
-    margin-top: 28.4px;
-  }
-
-  .downloadBtn {
-    height: 36.2px;
-    padding: 0 22.7px;
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .priceSection {
-    margin-top: 61.3px;
-  }
-
-  .title {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .mainWrapper {
-    width: 100%;
-    max-width: 600px;
-    margin: 37px auto 0 auto;
+    grid-column: 1 / -1;
+    margin-top: 36px;
     background-color: rgba(61, 61, 61, 1);
-    box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
-    padding: 0;
+    overflow: hidden;
   }
 
   .mainWrapper::after {
@@ -514,18 +630,24 @@
   }
 
   .tabContainer {
-    height: 38px;
+    height: 42px;
     border-bottom: 2px solid rgba(255, 122, 0, 1);
   }
 
   .tabItem {
     font-size: 13px;
+    letter-spacing: 0;
     border-top: none;
     border-right: 1px solid rgba(49, 49, 49, 0.5);
   }
 
-  .tabItem:first-child { border-left: none; }
-  .tabItem:last-child { border-right: none; }
+  .tabItem:first-child {
+    border-left: none;
+  }
+
+  .tabItem:last-child {
+    border-right: none;
+  }
 
   .tabItem.active {
     border-top: none;
@@ -538,8 +660,9 @@
   }
 
   .tableHeader {
-    height: 40px;
-    margin-top: 15px;
+    height: 42px;
+    min-height: 42px;
+    margin-top: 14px;
     background-color: rgba(49, 49, 49, 1);
     border: none;
     border-bottom: 2px solid rgba(255, 122, 0, 1);
@@ -548,6 +671,7 @@
   .headerCell {
     font-size: 12px;
     font-weight: 700;
+    letter-spacing: 0.02em;
   }
 
   .headerCell:nth-child(1),
@@ -562,13 +686,13 @@
   .rowCellText {
     padding-left: 20px;
     padding-right: 10px;
+    font-size: 13px;
   }
 
-  .tableRow,
-  .tableRow:last-child {
+  .tableRow {
     height: auto;
     min-height: 38px;
-    padding: 8px 0;
+    padding-block: 6px;
     align-items: center;
     border-left: none;
     border-right: none;
@@ -580,20 +704,13 @@
   }
 
   .nameCell,
-  .unitCell,
-  .priceCell {
-    font-size: 12px;
-  }
-
-  .tableRow > .nameCell,
-  .tableRow > .unitCell {
+  .unitCell {
     border-right-color: rgba(61, 61, 61, 1);
   }
 
   .unitCell,
   .priceCell {
-    justify-content: center;
-    text-align: center;
+    font-size: 13px;
   }
 
   .priceCell {
@@ -602,103 +719,82 @@
   }
 
   .btnWrapper {
-    padding-right: 0;
+    grid-column: 1 / -1;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 28px;
   }
 
   .downloadBtn {
-    height: 38px;
-    padding: 0 25px;
-    font-size: 12px;
-    width: auto;
-    min-width: 200px;
+    height: 42px;
+    padding: 0 28px;
+    font-size: 14px;
+    min-width: 220px;
+    border-radius: 8px;
   }
 }
 
 
-
-
-
-@media (max-width: 480px) {
-  .priceSection {
-    margin-top: 25px;
-    width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 540px) {
+  .section {
+    margin-top: 48px;
+    padding-inline: 16px;
+    grid-template-columns: minmax(0, 1fr);
   }
-  
+
   .title {
-    font-size: 15px;
-    line-height: 19px;
-    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
     white-space: normal;
-    padding: 0 5px;
   }
-  
+
   .mainWrapper {
-    margin-top: 20px;
+    margin-top: 22px;
     width: 100%;
-    max-width: 320px;
-    height: auto;
-    padding: 0; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
     background-color: transparent;
     border: none;
-  }
-  
-  .mainWrapper::after {
-    display: none;
+    border-radius: 0;
   }
 
-  .tabContainer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+ .tabContainer {
+    display: grid;
+    grid-template-columns: 1fr 1.45fr 1fr;
     width: 100%;
-    justify-content: flex-start;
     height: auto;
     border-bottom: none;
     background-color: transparent;
-    gap: 6px 4px;
+    gap: 6px;
   }
 
   .tabItem {
-    flex-grow: 1;
-    text-align: center;
+    grid-column: auto;
+    height: 36px;
+    padding: 0 6px;
     font-size: 11px;
-    height: 30px;
+    letter-spacing: 0;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     background-color: rgba(49, 49, 49, 1);
     color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 8px;
-    box-sizing: border-box;
+    white-space: nowrap;
   }
 
-  .tabItem:first-child { margin-left: 0; }
-  .tabItem:last-child { margin-right: 0; }
+  .tabItem:nth-child(4) {
+    grid-column: 1 / 3;
+  }
 
- 
+  .tabItem:nth-child(5) {
+    grid-column: 3 / 4;
+  }
+
+  .tabItem:first-child,
+  .tabItem:last-child {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
   .tabItem.active {
     background-color: rgba(74, 74, 74, 1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    outline: none;
-    box-shadow: none;
-  }
-
-  .tabItem.active::before,
-  .tabItem.active::after {
-    display: none;
+    border: 1px solid #ff7a00;
+    color: #ffffff;
   }
 
   .tableHeader {
@@ -710,93 +806,56 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 16px;
   }
 
-  .tableRow,
+.tableRow,
   .tableRow:last-child {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 8px;
+    column-gap: 12px;
     height: auto;
+    min-height: 0;
     padding: 12px;
     background-color: rgba(61, 61, 61, 1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 6px;
-    gap: 8px;
   }
 
   .nameCell {
-    width: 100%;
+    grid-column: 1 / -1;
     border-right: none;
+    padding: 0;
     font-weight: 500;
     color: #ffffff;
-    font-size: 12px;
   }
 
   .rowCellText {
-    padding-left: 0;
-    line-height: 1.3;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1.35;
   }
 
   .unitCell {
-    display: inline-flex;
-    align-items: center;
-    width: auto;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0;
     border-right: none;
-    font-size: 11px;
+    font-size: 12px;
     color: #ffffff;
-    float: left;
-  }
-
-  .priceCell {
-    display: inline-flex;
-    align-items: center;
-    width: auto;
-    border-right: none;
-    font-size: 11px;
-    color: #ff7a00;
-    font-weight: 600;
-    float: right;
-    white-space: nowrap;
   }
 
   .unitCell::before {
     content: 'Ед. изм.: ';
     color: rgba(255, 255, 255, 0.5);
+    margin-right: 4px;
   }
 
-  .priceCell::before {
-    content: 'Цена от: ';
-    color: rgba(255, 255, 255, 0.5);
-    margin-right: 3px;
-  }
-
-  .tableRow::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .btnWrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding-right: 0;
-  }
-
-  .downloadBtn {
-    width: 100%;
-    max-width: 260px;
-    height: 38px;
+  .priceCell {
+    justify-content: flex-end;
+    text-align: right;
+    padding: 0;
+    border-right: none;
     font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    border: 1.5px solid #ff7a00;
-    background-color: #1c1d1e;
-    color: #FFFFFF;
-    text-decoration: none;
-  }
-}
+  }}
