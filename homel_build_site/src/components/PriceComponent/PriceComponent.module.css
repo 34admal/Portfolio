@@ -1,16 +1,17 @@
-.priceSection {
-  margin-top: 115px;
-}
-
-.mainWrapper {
-  width: 996px;
-  margin: 69px auto 0 auto;
-  background-color: rgba(61, 61, 61, 1);
+.section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 115px auto 0 auto;
+  padding-inline: 120px;
   box-sizing: border-box;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
 }
 
 .title {
+  grid-column: 1 / -1;
+  justify-self: center;
   display: block;
   color: rgba(255, 255, 255, 1);
   font-size: 30px;
@@ -20,6 +21,16 @@
   text-align: center;
 }
 
+.mainWrapper {
+  grid-column: 2 / 12;
+  width: 100%;
+  margin: 69px 0 0 0;
+  background-color: rgba(61, 61, 61, 1);
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Вся сложная механика табов и рамок сохранена 1-в-1 */
 .tabContainer {
   display: flex;
   align-items: center;
@@ -98,15 +109,16 @@
   z-index: 1;
 }
 
+/* Шапка и строки таблицы на Grid (3fr 1fr 1fr = 1-в-1 с flex: 3 / 1 / 1) */
 .tableHeader {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
   width: 100%;
   height: 55px;
   margin-top: 25px;
   align-items: stretch;
   background-color: rgba(61, 61, 61, 1);
   box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 1);
   border: 1px solid rgba(255, 255, 255, 1);
 }
 
@@ -117,14 +129,11 @@
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.05em;
-  color: #FFFFFF;
+  color: #ffffff;
   box-sizing: border-box;
 }
 
 .headerCell:nth-child(1) {
-  flex: 3;
-  display: flex;
-  align-items: center;
   justify-content: flex-start;
   border-right: 1px solid rgba(255, 255, 255, 1);
 }
@@ -134,32 +143,25 @@
 }
 
 .headerCell:nth-child(2) {
-  flex: 1;
   justify-content: center;
   border-right: 1px solid rgba(255, 255, 255, 1);
 }
 
 .headerCell:nth-child(3) {
-  flex: 1;
   justify-content: center;
-}
-
-.rowCell {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #FFFFFF;
-  box-sizing: border-box;
 }
 
 .rowCellText {
   padding-left: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
 }
 
 .tableRow {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
   width: 100%;
   height: 31px;
   align-items: stretch;
@@ -171,32 +173,35 @@
 }
 
 .nameCell {
-  flex: 3;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   border-right: 1px solid rgba(255, 255, 255, 1);
-  color: #FFFFFF;
+  color: #ffffff;
   box-sizing: border-box;
 }
 
 .unitCell {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   border-right: 1px solid rgba(255, 255, 255, 1);
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .priceCell {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .tableRow:last-child {
@@ -204,12 +209,12 @@
 }
 
 .btnWrapper {
+  grid-column: 2 / 12;
   width: 100%;
-  max-width: 996px; 
-  margin: 40px auto 0 auto;
+  margin: 40px 0 0 0;
   display: flex;
   justify-content: flex-end;
-  padding-right: 0; 
+  padding-right: 0;
   box-sizing: border-box;
 }
 
@@ -222,7 +227,7 @@
   border-radius: 10px;
   border: solid 3px #ff7a00;
   background-color: #1c1d1e;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   box-sizing: border-box;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -232,6 +237,7 @@
   background-color: #ff7a00;
   color: #1c1d1e;
 }
+
 
 @media (max-width: 1366px) {
   .priceSection {
