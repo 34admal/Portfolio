@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin-top: 56px;
   width: 100%;
- 
   background-image: url("images/bg-brick-wall.png");
   background-repeat: no-repeat;
   background-position: center 101px;
@@ -11,6 +10,11 @@
 
 .title {
   display: block;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 120px;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 30px;
   font-weight: 400;
@@ -23,18 +27,22 @@
 
 .contentBlock {
   box-sizing: border-box;
-  margin-top: 64px;
-  width: 1440px;
+  margin: 64px auto 0 auto;
+  width: 100%;
+  max-width: 1440px;
   height: 680px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: 120px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
 }
 
 .workersColumn {
-  margin-left: 164px;
+  grid-column: 1 / 8;
+  padding-left: 44px;
   display: flex;
   align-items: flex-end;
+  box-sizing: border-box;
 }
 
 .workersImg {
@@ -44,34 +52,17 @@
 }
 
 .formColumn {
-  flex-grow: 1;
+  grid-column: 8 / 13;
   box-sizing: border-box;
   position: relative;
 }
 
 
-@media (max-width: 1440px) {
-  .workersColumn {
-    margin-left: 164px;
-  }
-}
 
-.workersImg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.formColumn {
-  flex-grow: 1;
-  box-sizing: border-box;
-  position: relative;
-  max-width: 500px; 
-}
+/* ============================================= 
 
 
-
-@media (max-width: 1366px) {
+/* @media (max-width: 1366px) {
   .wrapper {
     margin-top: 53.1px;
     width: 100%;
@@ -247,7 +238,7 @@
   }
 }
 
-/* ================1024================== */
+
 @media (max-width: 1024px) {
   .wrapper {
     margin-top: 39.8px;
@@ -331,7 +322,7 @@
   }
 }
 
-/* ================1000================== */
+
 @media (max-width: 1000px) {
   .wrapper {
     margin-top: 38.9px;
@@ -439,19 +430,19 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: center; /* Центрируем всю группу элементов на странице */
-    gap: 20px;               /* Фиксированный зазор между людьми и формой */
+    justify-content: center;
+    gap: 20px;        
     box-sizing: border-box;
     padding: 0 15px;
     background-image: none;
     background-color: transparent;
   }
   
-  /* Колонки стоят в один ряд без хаотичных отступов */
+ 
   .workersColumn {
     margin-left: 0;
     width: 100%;
-    max-width: 340px;        /* Твоя рабочая пропорция людей */
+    max-width: 340px;        
     height: auto;
     display: flex;
     align-items: flex-end;
@@ -469,7 +460,7 @@
     align-items: flex-end;
   }
 
-  /* Твоя оригинальная компактная форма возвращается в свой чистый вид */
+ 
   .formColumn :global([class*="ContactForm_form"]) {
     margin-top: 0;
     margin-left: 0;
@@ -679,4 +670,4 @@
       line-height: 13px;
     }
   }
-}
+} */
