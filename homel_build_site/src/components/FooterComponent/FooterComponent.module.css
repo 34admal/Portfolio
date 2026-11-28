@@ -1,4 +1,119 @@
 .footer {
+  width: 100%;
+  max-width: 1440px;
+  height: 168px;
+  margin: 0 auto;
+  padding-inline: 120px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+}
+
+.columnLeft,
+.columnCenter,
+.columnRight {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.columnLeft {
+  grid-column: 1 / 5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.columnCenter {
+  grid-column: 5 / 9;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.columnRight {
+  grid-column: 10 / 13;
+  align-items: flex-start;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.phoneRow {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 39px;
+}
+
+.phoneIcon {
+  display: block;
+}
+
+.phoneNumber {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-left: 29px;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+.emailRow {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 13px;
+}
+
+.docIcon {
+  display: block;
+}
+
+.emailText {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-left: 29px;
+  margin-top: 14px;
+  white-space: nowrap;
+}
+
+.owner {
+  display: block;
+  margin-top: 30px;
+  white-space: nowrap;
+}
+
+.unp {
+  display: block;
+  margin-top: 19px;
+  white-space: nowrap;
+}
+
+.address {
+  display: block;
+  margin-top: 19px;
+  white-space: nowrap;
+}
+
+
+/* .footer {
   box-sizing: border-box;
   height: 168px;
   display: flex;
@@ -95,6 +210,7 @@
   margin-top: 19px;   
   margin-right: 134px; 
 }
+ */
 
 
 @media (max-width: 1366px) {
