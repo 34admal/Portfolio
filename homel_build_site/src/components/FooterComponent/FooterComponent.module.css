@@ -1,12 +1,12 @@
 .footer {
   width: 100%;
   max-width: 1440px;
-  height: 168px;
+  min-height: 168px;
   margin: 0 auto;
-  padding-inline: 120px;
+  padding-inline: clamp(32px, 8.33vw, 120px);
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: 20px;
 }
 
@@ -20,9 +20,9 @@
 
 .columnLeft {
   grid-column: 1 / 5;
-  font-size: 16px;
+  font-size: clamp(14px, 1.11vw, 16px);
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.05em;
   color: #ffffff;
 }
@@ -32,9 +32,9 @@
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 16px;
-  font-size: 20px;
+  font-size: clamp(16px, 1.39vw, 20px);
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.2;
   letter-spacing: 0.05em;
   color: #ffffff;
 }
@@ -42,9 +42,9 @@
 .columnRight {
   grid-column: 10 / 13;
   align-items: flex-start;
-  font-size: 16px;
+  font-size: clamp(14px, 1.11vw, 16px);
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.05em;
   color: #ffffff;
 }
@@ -62,12 +62,12 @@
 .phoneNumber {
   display: block;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: clamp(14px, 1.11vw, 16px);
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.05em;
   color: #ffffff;
-  margin-left: 29px;
+  margin-left: clamp(14px, 2.01vw, 29px);
   margin-top: 10px;
   white-space: nowrap;
 }
@@ -84,12 +84,12 @@
 
 .emailText {
   display: block;
-  font-size: 16px;
+  font-size: clamp(14px, 1.11vw, 16px);
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.05em;
   color: #ffffff;
-  margin-left: 29px;
+  margin-left: clamp(14px, 2.01vw, 29px);
   margin-top: 14px;
   white-space: nowrap;
 }
@@ -112,491 +112,108 @@
   white-space: nowrap;
 }
 
+/* Узкий десктоп (1150px -> 901px): даём чуть больше ширины боковым колонкам */
+@media (max-width: 1150px) and (min-width: 901px) {
+  .columnLeft {
+    grid-column: 1 / 6;
+  }
 
-/* .footer {
-  box-sizing: border-box;
-  height: 168px;
-  display: flex;
-}
+  .columnCenter {
+    grid-column: 6 / 9;
+  }
 
-.columnLeft,
-.columnCenter,
-.columnRight {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.columnLeft,
-.columnRight {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-}
-
-.columnCenter {
-  align-items: center;
-  justify-content: end;
-  margin-bottom: 16px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-}
-
-.phoneRow {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 39px; 
-  margin-left: 121px;
-}
-
-.phoneIcon {
-  display: block;
-}
-
-.phoneNumber {
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  margin-left: 29px;
-  margin-top: 10px;
-}
-
-.emailRow {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 13px;
-  margin-left: 121px;
-}
-
-.docIcon {
-  display: block;
-}
-
-.emailText {
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  margin-left: 29px;
-  margin-top: 14px;
-}
-
-.owner {
-  display: block;
-  margin-top: 30px;    
-  margin-right: 185px;
-}
-
-.unp {
-  display: block;
-  margin-top: 19px;   
-  margin-right: 128px;
-}
-
-.address {
-  display: block;
-  margin-top: 19px;   
-  margin-right: 134px; 
-}
- */
-
-
-@media (max-width: 1366px) {
-  .footer :global {
-    display: flex;
-    height: 159.3px;
-    width: 100%;
-    
-    .columnLeft,
-    .columnCenter,
-    .columnRight {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-    }
-    .columnLeft,
-    .columnRight {
-      font-size: 15.2px;
-      line-height: 19px;
-    }
-    .columnCenter {
-      font-size: 19px;
-      line-height: 22.8px;
-      margin-bottom: 15.2px;
-      align-items: center;
-      justify-content: end;
-    }
-    .phoneRow,
-    .emailRow {
-      margin-left: 114.8px;
-    }
-    .phoneRow {
-      margin-top: 37px;
-    }
-    .phoneNumber,
-    .emailText {
-      font-size: 15.2px;
-      line-height: 19px;
-      margin-left: 27.5px;
-    }
-    .phoneNumber {
-      margin-top: 9.5px;
-    }
-    .emailRow {
-      margin-top: 12.3px;
-    }
-    .emailText {
-      margin-top: 13.3px;
-    }
-    .owner {
-      margin-top: 28.4px;
-      margin-right: 175.5px;
-    }
-    .unp {
-      margin-top: 18px;
-      margin-right: 121.4px;
-    }
-    .address {
-      margin-top: 18px;
-      margin-right: 127.1px;
-    }
+  .columnRight {
+    grid-column: 9 / 13;
+    justify-self: end;
   }
 }
 
+/* Планшет: 900px -> 541px */
+@media (max-width: 900px) {
+  .footer {
+    min-height: auto;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    padding-block: 36px 24px;
+    row-gap: 32px;
+  }
 
-@media (max-width: 1200px) {
-  .footer :global {
-    display: flex;
-    height: 140px;
-    width: 100%;
-    
-    .columnLeft,
-    .columnCenter,
-    .columnRight {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-    }
-    .columnLeft,
-    .columnRight {
-      font-size: 13.3px;
-      line-height: 16.6px;
-    }
-    .columnCenter {
-      font-size: 16.6px;
-      line-height: 20px;
-      margin-bottom: 13.3px;
-      align-items: center;
-      justify-content: end;
-    }
-    .phoneRow,
-    .emailRow {
-      margin-left: 100.8px;
-    }
-    .phoneRow {
-      margin-top: 32.5px;
-    }
-    .phoneNumber,
-    .emailText {
-      font-size: 13.3px;
-      line-height: 16.6px;
-      margin-left: 24.1px;
-    }
-    .phoneNumber {
-      margin-top: 8.3px;
-    }
-    .emailRow {
-      margin-top: 10.8px;
-    }
-    .emailText {
-      margin-top: 11.6px;
-    }
-    .owner {
-      margin-top: 25px;
-      margin-right: 154.1px;
-    }
-    .unp {
-      margin-top: 15.8px;
-      margin-right: 106.6px;
-    }
-    .address {
-      margin-top: 15.8px;
-      margin-right: 111.6px;
-    }
+  .columnLeft {
+    grid-column: 1 / 4;
+    font-size: 15px;
+  }
+
+  .phoneRow {
+    margin-top: 0;
+  }
+
+  .phoneNumber,
+  .emailText {
+    font-size: 15px;
+    margin-left: 16px;
+  }
+
+  .columnRight {
+    grid-column: 4 / 7;
+    justify-self: end;
+    font-size: 15px;
+  }
+
+  .owner {
+    margin-top: 0;
+  }
+
+  .unp,
+  .address {
+    margin-top: 14px;
+  }
+
+  .columnCenter {
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin-bottom: 0;
+    font-size: 17px;
   }
 }
 
-
-@media (max-width: 1024px) {
-  .footer :global {
-    display: flex;
-    height: 119.4px;
-    width: 100%;
-    
-    .columnLeft,
-    .columnCenter,
-    .columnRight {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-    }
-    .columnLeft,
-    .columnRight {
-      font-size: 11.3px;
-      line-height: 14.2px;
-    }
-    .columnCenter {
-      font-size: 14.2px;
-      line-height: 17px;
-      margin-bottom: 11.3px;
-      align-items: center;
-      justify-content: end;
-    }
-    .phoneRow,
-    .emailRow {
-      margin-left: 86px;
-    }
-    .phoneRow {
-      margin-top: 27.7px;
-    }
-    .phoneNumber,
-    .emailText {
-      font-size: 11.3px;
-      line-height: 14.2px;
-      margin-left: 20.6px;
-    }
-    .phoneNumber {
-      margin-top: 7.1px;
-    }
-    .emailRow {
-      margin-top: 9.2px;
-    }
-    .emailText {
-      margin-top: 9.9px;
-    }
-    .owner {
-      margin-top: 21.3px;
-      margin-right: 131.5px;
-    }
-    .unp {
-      margin-top: 13.5px;
-      margin-right: 91px;
-    }
-    .address {
-      margin-top: 13.5px;
-      margin-right: 95.2px;
-    }
+/* Мобилка: 540px и ниже (до 320px) */
+@media (max-width: 540px) {
+  .footer {
+    grid-template-columns: minmax(0, 1fr);
+    padding-inline: 16px;
+    padding-block: 32px 24px;
+    row-gap: 24px;
+    justify-items: center;
+    text-align: center;
   }
-}
 
-
-@media (max-width: 1000px) {
-  .footer :global {
-    display: flex;
-    height: 116.6px;
-    width: 100%;
-    
-    .columnLeft,
-    .columnCenter,
-    .columnRight {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-    }
-    .columnLeft,
-    .columnRight {
-      font-size: 11.1px;
-      line-height: 13.9px;
-    }
-    .columnCenter {
-      font-size: 13.9px;
-      line-height: 16.6px;
-      margin-bottom: 11.1px;
-      align-items: center;
-      justify-content: end;
-    }
-    .phoneRow,
-    .emailRow {
-      margin-left: 84px;
-    }
-    .phoneRow {
-      margin-top: 27px;
-    }
-    .phoneNumber,
-    .emailText {
-      font-size: 11.1px;
-      line-height: 13.9px;
-      margin-left: 20.1px;
-    }
-    .phoneNumber {
-      margin-top: 6.9px;
-    }
-    .emailRow {
-      margin-top: 9px;
-    }
-    .emailText {
-      margin-top: 9.7px;
-    }
-    .owner {
-      margin-top: 20.8px;
-      margin-right: 128.4px;
-    }
-    .unp {
-      margin-top: 13.2px;
-      margin-right: 88.8px;
-    }
-    .address {
-      margin-top: 13.2px;
-      margin-right: 93px;
-    }
-  }
-}
-
-
-@media (max-width: 768px) {
-  .footer :global {
-    display: flex;
-    height: 89.6px;
-    width: 100%;
-    
-    .columnLeft,
-    .columnCenter,
-    .columnRight {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-    }
-    .columnLeft,
-    .columnRight {
-      font-size: 8.5px;
-      line-height: 10.6px;
-    }
-    .columnCenter {
-      font-size: 10.6px;
-      line-height: 12.8px;
-      margin-bottom: 8.5px;
-      align-items: center;
-      justify-content: end;
-    }
-    .phoneRow,
-    .emailRow {
-      margin-left: 64.5px;
-    }
-    .phoneRow {
-      margin-top: 20.8px;
-    }
-    .phoneNumber,
-    .emailText {
-      font-size: 8.5px;
-      line-height: 10.6px;
-      margin-left: 15.4px;
-    }
-    .phoneNumber {
-      margin-top: 5.3px;
-    }
-    .emailRow {
-      margin-top: 6.9px;
-    }
-    .emailText {
-      margin-top: 7.4px;
-    }
-    .owner {
-      margin-top: 16px;
-      margin-right: 98.6px;
-    }
-    .unp {
-      margin-top: 10.1px;
-      margin-right: 68.2px;
-    }
-    .address {
-      margin-top: 10.1px;
-      margin-right: 71.4px;
-    }
-  }
-}
-
-
-@media (max-width: 480px) {
-  .footer :global {
-    display: flex;
-    flex-direction: column;
+  .columnLeft,
+  .columnRight,
+  .columnCenter {
+    grid-column: 1 / -1;
+    justify-self: center;
     align-items: center;
-    height: auto;
-    width: 100%;
-    padding: 30px 15px;
-    box-sizing: border-box;
-    
-    .columnLeft,
-    .columnCenter,
-    .columnRight {
-      width: 100%;
-      flex: none;
-      align-items: center;
-      text-align: center;
-      color: #ffffff;
-    }
-    .columnLeft {
-      margin-bottom: 25px;
-    }
-    .phoneRow,
-    .emailRow {
-      margin-left: 0;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-    }
-    .phoneRow {
-      margin-top: 0;
-    }
-    .emailRow {
-      margin-top: 15px;
-    }
-    .phoneNumber,
-    .emailText {
-      font-size: 14px;
-      line-height: 18px;
-      margin-left: 10px;
-      margin-top: 0;
-      color: #ffffff;
-    }
-    .columnRight {
-      margin-bottom: 30px;
-      font-size: 13px;
-      line-height: 17px;
-      color: #ffffff;
-    }
-    .owner {
-      margin-top: 0;
-      margin-right: 0;
-    }
-    .unp,
-    .address {
-      margin-top: 8px;
-      margin-right: 0;
-    }
-    .columnCenter {
-      margin-bottom: 0;
-      font-size: 13px;
-      line-height: 16px;
-      color: rgba(255, 255, 255, 0.4);
-      order: 3;
-    }
+  }
+
+  .phoneRow,
+  .emailRow {
+    align-items: center;
+  }
+
+  .phoneNumber,
+  .emailText {
+    margin-top: 0;
+    margin-left: 12px;
+    font-size: 14px;
+  }
+
+  .unp,
+  .address {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .columnCenter {
+    margin-top: 8px;
+    font-size: 15px;
   }
 }
